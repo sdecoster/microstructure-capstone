@@ -1,0 +1,326 @@
+[
+  {
+    "sample": 8,
+    "market": "0xdaaa26275cd69824389624d8bfe69a59317d16b7b49d2743084a14780c0fb232",
+    "category": "Crypto",
+    "tags": [
+      "1H",
+      "bitcoin",
+      "crypto",
+      "crypto-prices",
+      "hide-from-new",
+      "multi-strikes",
+      "recurring"
+    ],
+    "title": "Bitcoin above 63,800 on July 27, 1AM ET?",
+    "updates": 1716,
+    "start": "2026-07-27T03:40:23Z",
+    "end": "2026-07-27T05:00:00Z",
+    "event_start": null,
+    "created": "2026-07-27T03:40:09.547625Z",
+    "token_ids": "[\"28520102132025072281941626841762245797156354797670729016462057821160197469892\", \"57067619516983545723234032984365774929123547488660455003855281803680289586303\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 8,
+    "market": "0x811c0f97a906de43241a84e8b88a1067bc1b2ed942085057478ecac659c43245",
+    "category": "Sports/esports",
+    "tags": [
+      "chinese-super-league",
+      "games",
+      "soccer",
+      "sports"
+    ],
+    "title": "Exact Score: Zhejiang Zhiye FC 3 - 1 Wuhan San Zhen FC?",
+    "updates": 4,
+    "start": "2026-07-26T20:46:13Z",
+    "end": "2026-09-18T11:35:00Z",
+    "event_start": null,
+    "created": "2026-07-26T20:45:46.188751Z",
+    "token_ids": "[\"48242169811504862820618761006127426547561154750705912392423920839954154542798\", \"54923314653365727875668444665747833684624562207553220902499524525627400113456\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 8,
+    "market": "0x46c6584f9ed96fb74d2633acfbcc70c9e4906255aea1ad23bba68dabf8b46695",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "recurring",
+      "sao-paulo",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Sao Paulo be 28\u00b0C on July 28?",
+    "updates": 32,
+    "start": "2026-07-27T01:03:28Z",
+    "end": "2026-07-28T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-27T01:03:04.763113Z",
+    "token_ids": "[\"20689543824946783830271225749982373528767541614528209519029682234613308862992\", \"21937686290099023668638231522734899739314090213118553872343156327576273821084\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 8,
+    "market": "0xff2c7a51830a6849f20ca3fdae2152b31d6ae6f5c0499893da047477a0ba4d13",
+    "category": "Sports/esports",
+    "tags": [
+      "chinese-super-league",
+      "games",
+      "soccer",
+      "sports"
+    ],
+    "title": "Exact Score: Chongqing Tonglianglong FC 3 - 2 Shanghai Haigang FC?",
+    "updates": 14,
+    "start": "2026-07-26T20:46:20Z",
+    "end": "2026-08-09T11:35:00Z",
+    "event_start": null,
+    "created": "2026-07-26T20:45:54.930855Z",
+    "token_ids": "[\"3105904719185252606377140696621887939676996196917541341866481890789374618851\", \"55441068812261187442930286142461552943382897082204075808710958759891110125423\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 8,
+    "market": "0x8c3b75f9af398d8657c82587253c0687552590bddc5960d2840bd1568e0722e4",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "panama",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Panama City be 29\u00b0C on July 28?",
+    "updates": 8,
+    "start": "2026-07-27T01:05:37Z",
+    "end": "2026-07-28T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-27T01:05:21.489834Z",
+    "token_ids": "[\"70590024539627702886466643894452028939833728470202499024688297802867254741153\", \"91361533804149115392055899003921601300870393879754393194399096336769078341645\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 8,
+    "market": "0x0d1dfa168602b59673f9540fb6f619f8828f22bcc99e03c76bbc8509b92e2a5c",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "recurring",
+      "san-fransisco",
+      "weather"
+    ],
+    "title": "Will the highest temperature in San Francisco be between 62-63\u00b0F on July 28?",
+    "updates": 2,
+    "start": "2026-07-27T01:05:07Z",
+    "end": "2026-07-28T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-27T01:04:51.994107Z",
+    "token_ids": "[\"23117776175936580471832004804348413911485268922119365304653325917507823730134\", \"12243397468638817825805460789434986453206256667855714902231026135678695434354\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 8,
+    "market": "0x30c6414aba40117a914b83012d50bae742b49e570c82d2947474cdd6f8f2fe7f",
+    "category": "Sports/esports",
+    "tags": [
+      "chinese-super-league",
+      "games",
+      "soccer",
+      "sports"
+    ],
+    "title": "Exact Score: Yunnan Yukun FC 2 - 1 Chengdu Rongcheng FC?",
+    "updates": 4,
+    "start": "2026-07-26T20:46:14Z",
+    "end": "2026-08-08T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-26T20:45:50.589539Z",
+    "token_ids": "[\"103024452643177168183852518207621178060444052079692053620191901784218388765292\", \"70240823192457755639990989246518272212870084668595293519100992061661865607362\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 8,
+    "market": "0x82448d72deb5ed48d60c160d33c2150120682547f864abe553d3fcd452150029",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "rus",
+      "soccer",
+      "sports"
+    ],
+    "title": "Exact Score: FK Dinamo Moskva 2 - 0 FK Dinamo Makhachkala?",
+    "updates": 8,
+    "start": "2026-07-26T17:45:48Z",
+    "end": "2026-08-09T11:30:00Z",
+    "event_start": null,
+    "created": "2026-07-26T17:45:28.245142Z",
+    "token_ids": "[\"52979676148507182270341594052488384555566402174849000902665345782573439576330\", \"69611698297330838828152518715834364141681286445202258118181680470796571088286\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 8,
+    "market": "0xbcdde75ffa649c0762e9b30d038ef58d699b051e1f66ecebe3b349bc193e04a7",
+    "category": "Sports/esports",
+    "tags": [
+      "dota-2",
+      "esports",
+      "games",
+      "sports"
+    ],
+    "title": "Games Total: O/U 2.5",
+    "updates": 12,
+    "start": "2026-07-26T20:41:33Z",
+    "end": "2026-07-27T21:30:00Z",
+    "event_start": "2026-07-27T15:30:00Z",
+    "created": "2026-07-26T20:41:13.208831Z",
+    "token_ids": "[\"55256753707728526890327587863519751384549691598344579482916801733919296012530\", \"44094627367778064397257041467700033857181387922877806706703017753311891983073\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 8,
+    "market": "0xf68bd008930de797cf152e965ec9608e9f5c971c86db88f49154e6def1453b36",
+    "category": "Sports/esports",
+    "tags": [
+      "baseball",
+      "games",
+      "mlb",
+      "sports"
+    ],
+    "title": "Bryson Stott: Home Runs O/U 1.5",
+    "updates": 2,
+    "start": "2026-07-27T01:46:07Z",
+    "end": "2026-07-27T22:40:00Z",
+    "event_start": null,
+    "created": "2026-07-27T01:45:45.465031Z",
+    "token_ids": "[\"13281022223134753958158571106346394739153411287805399730421065243182961796267\", \"21735942123887537708923296606638884306058842635861698524260930077892719924507\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 8,
+    "market": "0xb31d0f7ce149fc07d799b66cb43518fd7a24d28840babc224a4463f5cc8a55ec",
+    "category": "Sports/esports",
+    "tags": [
+      "esports",
+      "games",
+      "sports",
+      "valorant"
+    ],
+    "title": "Valorant: Natus Vincere vs Pcific Esports (BO3) - VCT EMEA Group Alpha",
+    "updates": 2,
+    "start": "2026-07-26T20:01:54Z",
+    "end": "2026-07-30T21:00:00Z",
+    "event_start": "2026-07-30T15:00:00Z",
+    "created": "2026-07-26T20:01:06.476551Z",
+    "token_ids": "[\"70345686549351087871091613874993352907199709399943385336331409731456280926136\", \"43863529007987737741327919076044926519005499340999350165656405717533820590662\"]",
+    "outcomes": "[\"Natus Vincere\", \"Pcific Esports\"]"
+  },
+  {
+    "sample": 8,
+    "market": "0xf88334704e9781b78f3e4da3724d5db06083ad76ab32f66f16d92310e8f3c62a",
+    "category": "Politics",
+    "tags": [
+      "august-18-primaries",
+      "democratic-primary",
+      "elections",
+      "florida",
+      "florida-primary",
+      "house-primary",
+      "politics",
+      "primaries",
+      "primary-elections",
+      "us-presidential-election"
+    ],
+    "title": "Will Jared Moskowitz be the FL-25 Democratic nominee?",
+    "updates": 2,
+    "start": "2026-07-26T20:54:11.082635Z",
+    "end": "2026-08-18T23:59:00Z",
+    "event_start": null,
+    "created": "2026-07-26T20:49:11.640808Z",
+    "token_ids": "[\"16203253306963236499580758948652292549592411307432323971281959060872767186659\", \"85443085066356083281998349639936331132194407730395060926169855233389384867602\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 8,
+    "market": "0x2942ef1d55d5f9900fb215cf4b6b17322038ccfe6761321dfea5a7796230797c",
+    "category": "Sports/esports",
+    "tags": [
+      "dota-2",
+      "esports",
+      "games",
+      "sports"
+    ],
+    "title": "Game 2: Ends in Daytime?",
+    "updates": 4,
+    "start": "2026-07-27T02:12:56Z",
+    "end": "2026-07-27T18:10:00Z",
+    "event_start": "2026-07-27T12:10:00Z",
+    "created": "2026-07-27T02:12:42.418774Z",
+    "token_ids": "[\"96790646900018387514573187428853285341822121552648331426205480165118354841492\", \"20047201057403135451876433955519874983331028180630753448614917123796276398563\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 8,
+    "market": "0x46a482aad7834906d3e776bb2a987bf4b963085f8e1378e0be73eb8d69b53d61",
+    "category": "Crypto",
+    "tags": [
+      "1H",
+      "bitcoin",
+      "crypto",
+      "crypto-prices",
+      "hide-from-new",
+      "multi-strikes",
+      "recurring"
+    ],
+    "title": "Bitcoin above 64,800 on July 27, 1AM ET?",
+    "updates": 1592,
+    "start": "2026-07-27T03:40:24Z",
+    "end": "2026-07-27T05:00:00Z",
+    "event_start": null,
+    "created": "2026-07-27T03:40:08.486463Z",
+    "token_ids": "[\"94721385471271470033638380125359735016574498139026383389730286239900279040332\", \"16585843933649186519928867035042899697185317319182586739288996767470903998139\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 8,
+    "market": "0x083a56285f4fb3631364e12eff25a7a26a1477241a3858be184c6292483d2af6",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "denver",
+      "hide-from-new",
+      "highest-temperature",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Denver be between 90-91\u00b0F on July 28?",
+    "updates": 26,
+    "start": "2026-07-27T01:05:01Z",
+    "end": "2026-07-28T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-27T01:04:39.366645Z",
+    "token_ids": "[\"57213487236645966513466721606799832019153456823132593239651697931153840042508\", \"97158472337407787078548182529365806402438133801369914239757493189128311192316\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 8,
+    "market": "0x2797c63dbfcf4b27e1770d083253e9c18ecbf3d8498414892e0d0e7f4edaba7c",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "ligue-2",
+      "soccer",
+      "sports"
+    ],
+    "title": "Rodez Aveyron Football vs. Stade Lavallois Mayenne FC: O/U 0.5",
+    "updates": 26,
+    "start": "2026-07-26T20:01:16Z",
+    "end": "2026-08-08T18:45:00Z",
+    "event_start": null,
+    "created": "2026-07-26T20:00:23.587583Z",
+    "token_ids": "[\"30990804085047605626919131368150958007715828368750969154473781053434381722894\", \"90056080131528294534511397463117448308431582025917758826681579799038461617495\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  }
+]

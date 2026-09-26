@@ -1,0 +1,15 @@
+{
+  "source": "raw/_index/2026-07-02/polymarket_index.json",
+  "generated_at": "2026-07-02T00:01:33.230693504+00:00",
+  "next_day_matches": 0,
+  "markets": 783,
+  "categories": {
+    "Unmapped": 16,
+    "Crypto": 195,
+    "Mentions": 59,
+    "Unclassified": 129,
+    "Sports/esports": 365,
+    "Economics/finance": 18,
+    "Politics": 1
+  }
+}

@@ -1,0 +1,319 @@
+[
+  {
+    "sample": 7,
+    "market": "0xc1822a6ea6932ce42a52bd18b6ad22453de5ef7ffabeea2353ffe46e1ab4ab9b",
+    "category": "Crypto",
+    "tags": [
+      "1H",
+      "crypto",
+      "crypto-prices",
+      "ethereum",
+      "hide-from-new",
+      "multi-strikes",
+      "recurring"
+    ],
+    "title": "Ethereum above 1,930 on July 22, 5AM ET?",
+    "updates": 10,
+    "start": "2026-07-22T07:40:27Z",
+    "end": "2026-07-22T09:00:00Z",
+    "event_start": null,
+    "created": "2026-07-22T07:40:10.801616Z",
+    "token_ids": "[\"39281697423576823688147533327888991274173671980879796991297579750927133764338\", \"8324058588926378886242530796233407956098086675459973935232077654975874929157\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 7,
+    "market": "0x37faf28b57e82f4f66b255a0d5158fb4332c58543dc9cfeb592544d5016c4268",
+    "category": "Sports/esports",
+    "tags": [
+      "europa-conference-league",
+      "games",
+      "soccer",
+      "sports"
+    ],
+    "title": "Exact Score: FK Sutjeska Nik\u0161i\u0107 1 - 3 FK ML Viciebsk?",
+    "updates": 8,
+    "start": "2026-07-21T19:01:08Z",
+    "end": "2026-07-30T19:00:00Z",
+    "event_start": null,
+    "created": "2026-07-21T19:00:50.319378Z",
+    "token_ids": "[\"76635406968937221990989341681254449859359358155211500697450481323631085723618\", \"98681717196599537756399157635413337773698386234038134624207828048304279659596\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 7,
+    "market": "0x151f7a5cb6eb8ccbd4d92f9f0ef8f97b9414fb378cdd1405a588f2ed80b0e173",
+    "category": "Sports/esports",
+    "tags": [
+      "counter-strike-2",
+      "esports",
+      "games",
+      "sports"
+    ],
+    "title": "Map 2 Total Rounds: Over/Under 21.5",
+    "updates": 2,
+    "start": "2026-07-21T19:43:08.14867Z",
+    "end": "2026-07-22T14:10:00Z",
+    "event_start": "2026-07-22T08:10:00Z",
+    "created": "2026-07-21T19:40:44.31177Z",
+    "token_ids": "[\"73182584908494058576524984159401634922366993908216305429400402167023369981013\", \"112735772055322817358977862461943979762769443814336998925083241421378501866867\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 7,
+    "market": "0x13e367a5b4e7c9024ac66cd098d98cd9eb4bd0334b93b2e661300990ac973173",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "recurring",
+      "taipei",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Taipei be 30\u00b0C on July 24?",
+    "updates": 24,
+    "start": "2026-07-22T04:03:24Z",
+    "end": "2026-07-24T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-22T04:03:07.640074Z",
+    "token_ids": "[\"78729918977753577182938999788227383464425918539667963787483623472929407287973\", \"78358878147397519220946844158290097950427971000481208867414118177502953371371\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 7,
+    "market": "0xca1e4c6e31ec0768c07e3f77e69672af1e79e01372f4a663fba3034f029ed334",
+    "category": "Politics",
+    "tags": [
+      "elections",
+      "global-elections",
+      "israel",
+      "israel-election",
+      "likud",
+      "main-election",
+      "netanyahu",
+      "politics"
+    ],
+    "title": "Will Moshe Saada win the 2026 Likud party primary elections?",
+    "updates": 4,
+    "start": "2026-07-21T23:37:26.002452Z",
+    "end": "2026-10-26T23:59:00Z",
+    "event_start": null,
+    "created": "2026-07-21T23:33:14.061181Z",
+    "token_ids": "[\"113421633129580100430958105557798802793214342931030763693873943055705772497550\", \"32575906413142116284219154776975924228960885457039439955322280473001309820507\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 7,
+    "market": "0x8d952eead52ebb73ce7c866419f6bf06be8888d5f0e32de5d107e92c138d9a30",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "soccer",
+      "sports"
+    ],
+    "title": "C\u00facuta Deportivo FC leading at halftime?",
+    "updates": 4,
+    "start": "2026-07-21T19:00:26Z",
+    "end": "2026-08-04T01:00:00Z",
+    "event_start": null,
+    "created": "2026-07-21T19:00:13.111834Z",
+    "token_ids": "[\"100758184724052347224723518182670211074761308038221009331402645250906166588858\", \"47497022353772370273699936890247143819713002116664372816578298767288332415659\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 7,
+    "market": "0x6cac4411b6ee5033d949f92ba6fc108448dd0ac47799615d2be208bdd4ceb859",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "new-york-city",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in New York City be between 82-83\u00b0F on July 23?",
+    "updates": 96,
+    "start": "2026-07-22T01:02:28Z",
+    "end": "2026-07-23T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-22T01:02:11.854Z",
+    "token_ids": "[\"94691813856317057208622740352171664019190497639277548594436202628704220994825\", \"46190429608193967026979487387785177886923895721792252213979655110281229415219\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 7,
+    "market": "0x0679d0c07ac7b2beddb83d94762d71b60687a32e00481b11e51353f8db8a7185",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "scottish-premiership",
+      "soccer",
+      "sports"
+    ],
+    "title": "Celtic FC vs. Dundee FC: Dundee FC O/U 0.5",
+    "updates": 4,
+    "start": "2026-07-21T23:30:29Z",
+    "end": "2026-08-03T18:30:00Z",
+    "event_start": null,
+    "created": "2026-07-21T23:30:09.144164Z",
+    "token_ids": "[\"62868360677090525861370943245082750581703514619404852865340140152757193215162\", \"89611211894700721835369698130601075777499647037352889715926848443155775997601\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 7,
+    "market": "0xdc851fb9bd860bd3651dbc78cb17816e48158f8fdd501f64352c72051bd814da",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "sports",
+      "tennis"
+    ],
+    "title": "Singeorzan vs. Pushkar: Set 1 Games O/U 9.5",
+    "updates": 4,
+    "start": "2026-07-21T23:02:51Z",
+    "end": "2026-07-29T09:30:00Z",
+    "event_start": null,
+    "created": "2026-07-21T23:01:40.848319Z",
+    "token_ids": "[\"88154184895531085542566837123884159997829758467089580946864750305736142538890\", \"25333874746136551851670702512242863598885902475054902286966802713326715904704\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 7,
+    "market": "0xf04befb41ac6d68ba1105374b6d0b9176a2efb6c8eab33a5c73b25b37eee8114",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "sports",
+      "tennis"
+    ],
+    "title": "Navarro vs. Krom: Set 1 Games O/U 10.5",
+    "updates": 4,
+    "start": "2026-07-21T23:02:56Z",
+    "end": "2026-07-29T08:00:00Z",
+    "event_start": null,
+    "created": "2026-07-21T23:02:17.664913Z",
+    "token_ids": "[\"24779330496951570602708528754667504733008554027341379514042361984912375269784\", \"1300629869878939895527711591187725519873362589598006765502667559074589821025\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 7,
+    "market": "0xb9cde37ed3c5365a8dd4ee8f35040c801bf1a805a9739710219073e56398a68e",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "soccer",
+      "soccer-fpd",
+      "sports"
+    ],
+    "title": "Sporting FC vs. LD Alajuelense: LD Alajuelense 2nd Half O/U 0.5",
+    "updates": 40,
+    "start": "2026-07-22T07:45:26Z",
+    "end": "2026-07-26T02:00:00Z",
+    "event_start": null,
+    "created": "2026-07-22T07:45:08.094036Z",
+    "token_ids": "[\"107153523385871642816928271724648707479945342617738791833206268688334868996696\", \"47010618694003315574076854626583954586758817626205654296266946474244706341855\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 7,
+    "market": "0x93f3b5d940d37827992623b9838d1d85e80ab00523cc00bbeb1aae43e77e14fc",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "hong-kong",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Hong Kong be 33\u00b0C on July 24?",
+    "updates": 16,
+    "start": "2026-07-22T04:03:02Z",
+    "end": "2026-07-24T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-22T04:02:47.493742Z",
+    "token_ids": "[\"35110154046133592382425317567733304195779006232994914789637861646518559424639\", \"366161971414149139216155919642732522197669120002645275756464913058231742917\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 7,
+    "market": "0x8696e7c76ec0b5f02f0a81b5d92551953246babd643f02fd11ac0b6efd21e380",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "soccer",
+      "soccer-fpd",
+      "sports"
+    ],
+    "title": "Sporting FC vs. LD Alajuelense: Both Teams to Score in Second Half",
+    "updates": 36,
+    "start": "2026-07-22T07:45:23Z",
+    "end": "2026-07-26T02:00:00Z",
+    "event_start": null,
+    "created": "2026-07-22T07:45:07.214248Z",
+    "token_ids": "[\"22865172259573302933788866580222354932236890589467064826011935026836350179298\", \"30583591117676271073904827200701504597553294380089209431733103567302703526018\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 7,
+    "market": "0xbc9b89bd73203cc4d0647830067928cafcc2df76bc01cd34ae1f948bc2ea7764",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "sports",
+      "tennis"
+    ],
+    "title": "Boian vs. Miron: Match O/U 23.5",
+    "updates": 8,
+    "start": "2026-07-21T23:02:50Z",
+    "end": "2026-07-29T06:30:00Z",
+    "event_start": null,
+    "created": "2026-07-21T23:02:21.070834Z",
+    "token_ids": "[\"99212246436512037581921099116833916495693052570034699314793705459392913740118\", \"74221096703685364417177046649404870427367365401577527783423676081171568065214\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 7,
+    "market": "0x2a85e0c8896c236688245e5fa0e1731cec69cdea56a9d621c349b9346b78f160",
+    "category": "Weather",
+    "tags": [
+      "austin",
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Austin be between 110-111\u00b0F on July 23?",
+    "updates": 114,
+    "start": "2026-07-22T01:03:07Z",
+    "end": "2026-07-23T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-22T01:02:53.012149Z",
+    "token_ids": "[\"83287644532442755449799495428125985208173388168676179061523828531844638923560\", \"68221051758831257493740262265659791118060309204910751898368760356227948447754\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 7,
+    "market": "0x0d3f2d145e9dc51d7f5013887d61d9e8583b4bf5f1bce7029acabac3726c8d94",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "lowest-temperature",
+      "recurring",
+      "seoul",
+      "weather"
+    ],
+    "title": "Will the lowest temperature in Seoul be 28\u00b0C on July 24?",
+    "updates": 58,
+    "start": "2026-07-22T04:30:36Z",
+    "end": "2026-07-24T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-22T04:30:20.94406Z",
+    "token_ids": "[\"100870231626662394163938728312131559589795059992918289334275919142407751601708\", \"18669063414089372992033595935091186670787650513840589836966435993021957998580\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  }
+]

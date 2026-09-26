@@ -1,0 +1,72 @@
+{
+  "sample": 1,
+  "source_first": "2026-05-28T16:00:00.000Z",
+  "source_last": "2026-05-28T16:00:34.684Z",
+  "records": 819500,
+  "contracts": [
+    {
+      "market": "0xefcb8141e1f4ba870d9738812ec95c6de665c12777f5b5e125fca1dc51ab0e83",
+      "slug": "sol-updown-15m-1779984000",
+      "question": "Solana Up or Down - May 28, 12:00PM-12:15PM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0x16ac6dad0a4f29769f2ae436ffdac3e8b4ec2dd19cf6318c94e525c64899e7b8",
+      "slug": "eth-updown-5m-1779984000",
+      "question": "Ethereum Up or Down - May 28, 12:00PM-12:05PM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0xd514240eae55dab2ca521980dbfbdd51cd52b1e353d0abbff4482a4ee0fc8959",
+      "slug": "xrp-updown-15m-1779984000",
+      "question": "XRP Up or Down - May 28, 12:00PM-12:15PM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0x13e9c4168990d8fa4205171bf34a3d334bada94dc94a24615d5909b6c7c24697",
+      "slug": "eth-updown-15m-1779984000",
+      "question": "Ethereum Up or Down - May 28, 12:00PM-12:15PM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0x70aa5ab0dac3357e83c20cf807b6b07b7f9ab23a4c9d251aea82620106e970e7",
+      "slug": "btc-updown-15m-1779984000",
+      "question": "Bitcoin Up or Down - May 28, 12:00PM-12:15PM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0x7bdf181059ffd174bedde7e3b9f0bb65a8e1d128090ee548d3f5704231ec12aa",
+      "slug": "sol-updown-5m-1779984000",
+      "question": "Solana Up or Down - May 28, 12:00PM-12:05PM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0x4cff0dff3d6403cdc2ec9a380027dc0d41fd18678fd12dfee1afab5a2158286f",
+      "slug": "xrp-updown-5m-1779984000",
+      "question": "XRP Up or Down - May 28, 12:00PM-12:05PM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0x7c4383691ff6bd5b9c627ff0de3fb371e7cbc26a4111e30a16f4c8ef4a431180",
+      "slug": "btc-updown-5m-1779984000",
+      "question": "Bitcoin Up or Down - May 28, 12:00PM-12:05PM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    }
+  ]
+}

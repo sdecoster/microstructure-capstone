@@ -1,0 +1,222 @@
+{
+  "seed": 20260925,
+  "prefix_bytes": 8388608,
+  "samples": [
+    {
+      "path": "raw/2026-05-25/0800.jsonl.zst",
+      "bytes": 5429209349,
+      "stratum": [
+        "2026-05-23",
+        "2026-05-27"
+      ],
+      "index": "raw/_index/2026-05-25/polymarket_index.json"
+    },
+    {
+      "path": "raw/2026-05-28/1600.jsonl.zst",
+      "bytes": 7325121886,
+      "stratum": [
+        "2026-05-28",
+        "2026-06-01"
+      ],
+      "index": "raw/_index/2026-05-28/polymarket_index.json"
+    },
+    {
+      "path": "raw/2026-06-02/1500.jsonl.zst",
+      "bytes": 7464349349,
+      "stratum": [
+        "2026-06-02",
+        "2026-06-04"
+      ],
+      "index": "raw/_index/2026-06-02/polymarket_index.json"
+    },
+    {
+      "path": "raw/2026-06-22/2200.jsonl.zst",
+      "bytes": 881355569,
+      "stratum": [
+        "2026-06-18",
+        "2026-06-24"
+      ],
+      "index": "raw/_index/2026-06-22/polymarket_index.json"
+    },
+    {
+      "path": "raw/2026-07-01/0000.jsonl.zst",
+      "bytes": 693456775,
+      "stratum": [
+        "2026-06-25",
+        "2026-07-01"
+      ],
+      "index": "raw/_index/2026-07-01/polymarket_index.json"
+    },
+    {
+      "path": "raw/2026-07-08/1300.jsonl.zst",
+      "bytes": 1084686112,
+      "stratum": [
+        "2026-07-02",
+        "2026-07-08"
+      ],
+      "index": "raw/_index/2026-07-08/polymarket_index.json"
+    },
+    {
+      "path": "raw/2026-07-11/1200.jsonl.zst",
+      "bytes": 843536607,
+      "stratum": [
+        "2026-07-09",
+        "2026-07-15"
+      ],
+      "index": "raw/_index/2026-07-11/polymarket_index.json"
+    },
+    {
+      "path": "raw/2026-07-22/0800.jsonl.zst",
+      "bytes": 884822218,
+      "stratum": [
+        "2026-07-16",
+        "2026-07-22"
+      ],
+      "index": "raw/_index/2026-07-22/polymarket_index.json"
+    },
+    {
+      "path": "raw/2026-07-27/0500.jsonl.zst",
+      "bytes": 614182368,
+      "stratum": [
+        "2026-07-23",
+        "2026-07-29"
+      ],
+      "index": "raw/_index/2026-07-27/polymarket_index.json"
+    },
+    {
+      "path": "raw/2026-07-30/2100.jsonl.zst",
+      "bytes": 448029382,
+      "stratum": [
+        "2026-07-30",
+        "2026-08-05"
+      ],
+      "index": "raw/_index/2026-07-30/polymarket_index.json"
+    },
+    {
+      "path": "raw/2026-08-11/1200.jsonl.zst",
+      "bytes": 571539614,
+      "stratum": [
+        "2026-08-06",
+        "2026-08-12"
+      ],
+      "index": "raw/_index/2026-08-11/polymarket_index.json"
+    },
+    {
+      "path": "raw/2026-08-14/0900.jsonl.zst",
+      "bytes": 594060778,
+      "stratum": [
+        "2026-08-13",
+        "2026-08-16"
+      ],
+      "index": "raw/_index/2026-08-14/polymarket_index.json"
+    },
+    {
+      "path": "raw/2026-08-16/1500.jsonl.zst",
+      "local": "data/exploration_sample/raw/2026-08-16/1500.jsonl.zst",
+      "index": "raw/_index/2026-08-16/polymarket_index.json",
+      "start_fraction": 0.606,
+      "stratum": [
+        "local_within_hour_supplement"
+      ]
+    },
+    {
+      "path": "raw/2026-08-16/1600.jsonl.zst",
+      "local": "data/exploration_sample/raw/2026-08-16/1600.jsonl.zst",
+      "index": "raw/_index/2026-08-16/polymarket_index.json",
+      "start_fraction": 0.642,
+      "stratum": [
+        "local_within_hour_supplement"
+      ]
+    },
+    {
+      "path": "raw/2026-08-16/2000.jsonl.zst",
+      "local": "data/exploration_sample/raw/2026-08-16/2000.jsonl.zst",
+      "index": "raw/_index/2026-08-16/polymarket_index.json",
+      "start_fraction": 0.371,
+      "stratum": [
+        "local_within_hour_supplement"
+      ]
+    },
+    {
+      "path": "raw/2026-08-16/2100.jsonl.zst",
+      "local": "data/exploration_sample/raw/2026-08-16/2100.jsonl.zst",
+      "index": "raw/_index/2026-08-16/polymarket_index.json",
+      "start_fraction": 0.536,
+      "stratum": [
+        "local_within_hour_supplement"
+      ]
+    },
+    {
+      "path": "raw/2026-05-25/2300.jsonl.zst",
+      "bytes": 5232489579,
+      "index": "raw/_index/2026-05-25/polymarket_index.json",
+      "stratum": [
+        "sports_evening_supplement"
+      ],
+      "supplement": true
+    },
+    {
+      "path": "raw/2026-06-22/2300.jsonl.zst",
+      "bytes": 885210860,
+      "index": "raw/_index/2026-06-22/polymarket_index.json",
+      "stratum": [
+        "sports_evening_supplement"
+      ],
+      "supplement": true
+    },
+    {
+      "path": "raw/2026-07-11/2300.jsonl.zst",
+      "bytes": 668527666,
+      "index": "raw/_index/2026-07-11/polymarket_index.json",
+      "stratum": [
+        "sports_evening_supplement"
+      ],
+      "supplement": true
+    },
+    {
+      "path": "raw/2026-08-11/2300.jsonl.zst",
+      "bytes": 454480087,
+      "index": "raw/_index/2026-08-11/polymarket_index.json",
+      "stratum": [
+        "sports_evening_supplement"
+      ],
+      "supplement": true
+    },
+    {
+      "path": "raw/2026-05-25/0800.jsonl.zst",
+      "bytes": 5429209349,
+      "stratum": [
+        "2026-05-23",
+        "2026-05-27"
+      ],
+      "index": "raw/_index/2026-05-25/polymarket_index.json",
+      "local": "data\\market_filter_investigation\\raw\\2026-05-25\\0800.jsonl.zst.prefix-134217728",
+      "start_fraction": 0.7,
+      "calibration_replacement_of": 0
+    },
+    {
+      "path": "raw/2026-05-28/1600.jsonl.zst",
+      "bytes": 7325121886,
+      "stratum": [
+        "2026-05-28",
+        "2026-06-01"
+      ],
+      "index": "raw/_index/2026-05-28/polymarket_index.json",
+      "local": "data\\market_filter_investigation\\raw\\2026-05-28\\1600.jsonl.zst.prefix-134217728",
+      "start_fraction": 0.7,
+      "calibration_replacement_of": 1
+    },
+    {
+      "path": "raw/2026-06-02/1500.jsonl.zst",
+      "bytes": 7464349349,
+      "stratum": [
+        "2026-06-02",
+        "2026-06-04"
+      ],
+      "index": "raw/_index/2026-06-02/polymarket_index.json",
+      "local": "data\\market_filter_investigation\\raw\\2026-06-02\\1500.jsonl.zst.prefix-134217728",
+      "start_fraction": 0.7,
+      "calibration_replacement_of": 2
+    }
+  ]
+}

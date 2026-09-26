@@ -1,0 +1,315 @@
+[
+  {
+    "sample": 3,
+    "market": "0xbe7fd2a771e93349191ee1cc8653ac234d9b9486507adb3533dcc255724749b7",
+    "category": "Sports/esports",
+    "tags": [
+      "golf",
+      "pga",
+      "pga-tour",
+      "sports"
+    ],
+    "title": "Will Sepp Straka win the 2026 Travelers Championship?",
+    "updates": 4,
+    "start": "2026-06-22T16:34:07.111455Z",
+    "end": "2026-06-28T00:00:00Z",
+    "event_start": null,
+    "created": "2026-06-22T16:00:15.151596Z",
+    "token_ids": "[\"113119574018835409295492851356081110878736040515403593153618597500669579385808\", \"76248723521545337855686017326076875923841130349213626946366243379225567881700\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 3,
+    "market": "0xcccb151cc08fdc79593e633619ed9736544a4af8b0ba7e30f84320216e8a6b6f",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "sports",
+      "tennis",
+      "wimbledon"
+    ],
+    "title": "Set 1 Winner: Rus vs Podrez",
+    "updates": 4,
+    "start": "2026-06-22T17:19:26.303194Z",
+    "end": "2026-06-30T14:30:00Z",
+    "event_start": null,
+    "created": "2026-06-22T17:02:36.664011Z",
+    "token_ids": "[\"34859555978822068720233475709962300687449270190757713223410718329056526528117\", \"27253278335072844386335714317243875142845132239915205871544293471256420074563\"]",
+    "outcomes": "[\"Rus\", \"Podrez\"]"
+  },
+  {
+    "sample": 3,
+    "market": "0x99965424b95bccd458e3c77fbea1ec0653d1d8f9d97ae15a62be507397647469",
+    "category": "Crypto",
+    "tags": [
+      "1H",
+      "crypto",
+      "crypto-prices",
+      "ethereum",
+      "hide-from-new",
+      "multi-strikes",
+      "recurring"
+    ],
+    "title": "Ethereum above 1,720 on June 22, 7PM ET?",
+    "updates": 16,
+    "start": "2026-06-22T21:43:56.722535Z",
+    "end": "2026-06-22T23:00:00Z",
+    "event_start": null,
+    "created": "2026-06-22T21:40:09.377364Z",
+    "token_ids": "[\"47881366222512545352854943207594184142278422844002660932166874132829418566572\", \"68156632323049849339230700857161228205477963545020800607449203965758960097184\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 3,
+    "market": "0x0b542a007c99cca048e28f283fbd460b9fe54036599d765da65c99d976bfba71",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "sports",
+      "tennis",
+      "wimbledon"
+    ],
+    "title": "Grabher vs. Bolkvadze: Set 1 Games O/U 8.5",
+    "updates": 4,
+    "start": "2026-06-22T17:29:30.445308Z",
+    "end": "2026-06-30T14:30:00Z",
+    "event_start": null,
+    "created": "2026-06-22T17:01:53.852039Z",
+    "token_ids": "[\"87614804608702313821607354343355934977581006972552963081481123576698360403800\", \"107118731079789669547260584663005719950882072118288546032176921665287526385790\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 3,
+    "market": "0x802250e253d26405dc5543dc382e9d384df528acb5b5bd877caf9860a70586a1",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "soccer",
+      "soccer-nwsl",
+      "sports"
+    ],
+    "title": "Boston Legacy FC vs. Bay FC: Bay FC 2nd Half O/U 1.5",
+    "updates": 2,
+    "start": "2026-06-22T14:21:26.067344Z",
+    "end": "2026-07-05T16:00:00Z",
+    "event_start": null,
+    "created": "2026-06-22T14:15:20.880944Z",
+    "token_ids": "[\"29886951183932870293580873297777759017892562289382099290751882510718995303342\", \"86314792717540137948569575887604271829947599937282269173964394754547845614814\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 3,
+    "market": "0xece801505204404bb07358f8918a388907a43b0c023f731db939f0c2a4d121ea",
+    "category": "Weather",
+    "tags": [
+      "earthquake",
+      "earthquakes",
+      "natural-disaster",
+      "science",
+      "weather"
+    ],
+    "title": "Will there be exactly 11 earthquakes of magnitude 5.5 or higher worldwide from June 22 - 28?",
+    "updates": 6,
+    "start": "2026-06-22T15:21:24.887624Z",
+    "end": "2026-06-28T23:59:00Z",
+    "event_start": null,
+    "created": "2026-06-22T15:17:18.230389Z",
+    "token_ids": "[\"82650795949279711042556473583116999599664424568993459461919141004874428283168\", \"102856842067287386571869633079859674217867356594895710493438304303776970778142\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 3,
+    "market": "0xc929c92023adfb392716fc60966665a0226eea34f77a57c4ba6080162bafc6d0",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "sports",
+      "tennis",
+      "wimbledon"
+    ],
+    "title": "Set 2 Winner: Gojo vs Smith",
+    "updates": 2,
+    "start": "2026-06-22T17:07:57.827305Z",
+    "end": "2026-07-01T10:00:00Z",
+    "event_start": null,
+    "created": "2026-06-22T17:00:43.612167Z",
+    "token_ids": "[\"100534386653580220882465040834293455624656091544197386111891814694503054891023\", \"55082861710355530057760857275866786048838992387247878427269985899387942857524\"]",
+    "outcomes": "[\"Gojo\", \"Smith\"]"
+  },
+  {
+    "sample": 3,
+    "market": "0xf49df851a02159ba577a327983806e574c1c8d62fa33fbb567fdcd39a3c2f208",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "soccer",
+      "soccer-nwsl",
+      "sports"
+    ],
+    "title": "Boston Legacy FC vs. Bay FC: O/U 5.5",
+    "updates": 8,
+    "start": "2026-06-22T14:18:26.28194Z",
+    "end": "2026-07-05T16:00:00Z",
+    "event_start": null,
+    "created": "2026-06-22T14:15:17.473823Z",
+    "token_ids": "[\"114990069395670505850835903131607441102406558070076805600129379301354260170483\", \"83501647128697390320654185299814916755127360869675768330647026515465739778150\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 3,
+    "market": "0x9776fe51bd9d6f5681784b49591bd6cc2798d7f943b20ce57e476c8f3908023b",
+    "category": "Crypto",
+    "tags": [
+      "1H",
+      "bitcoin",
+      "crypto",
+      "crypto-prices",
+      "hide-from-new",
+      "multi-strikes",
+      "recurring"
+    ],
+    "title": "Bitcoin above 65,200 on June 22, 6PM ET?",
+    "updates": 30,
+    "start": "2026-06-22T20:43:08.927961Z",
+    "end": "2026-06-22T22:00:00Z",
+    "event_start": null,
+    "created": "2026-06-22T20:40:04.398863Z",
+    "token_ids": "[\"33860426356679629091117846792417380896518932366755866756684501995648771185159\", \"36916038600004766077140478415227680240863488047126728153665086877026889887385\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 3,
+    "market": "0x51f18848e129abe071fbd30860f87c15a618a23cefc7c8760c4d556f2dbdba09",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "sports",
+      "tennis",
+      "wimbledon"
+    ],
+    "title": "Ella McDonald vs. Elvina Kalieva: Total Sets O/U 2.5",
+    "updates": 4,
+    "start": "2026-06-22T17:54:05.755048Z",
+    "end": "2026-06-30T14:30:00Z",
+    "event_start": null,
+    "created": "2026-06-22T17:02:18.181565Z",
+    "token_ids": "[\"20883302759291636151188993844950963382601397938716231467796523044726757686608\", \"80377204164797649057894025580433095818097178986366131986451702405931113908506\"]",
+    "outcomes": "[\"Over 2.5\", \"Under 2.5\"]"
+  },
+  {
+    "sample": 3,
+    "market": "0x9dd8ea65d5f0a7c2751de38c754af9d7d58edfe6793522cb054d876d50eff6d2",
+    "category": "Sports/esports",
+    "tags": [
+      "esports",
+      "games",
+      "sports",
+      "valorant"
+    ],
+    "title": "Map 1 Rounds Handicap: Elevate (-3.5) vs F4TALITY (+3.5)",
+    "updates": 16,
+    "start": "2026-06-22T20:05:24.350786Z",
+    "end": "2026-06-23T02:00:00Z",
+    "event_start": "2026-06-22T20:00:00Z",
+    "created": "2026-06-22T20:03:24.709355Z",
+    "token_ids": "[\"101145098257397591114777841037125578688626084743151447383077180057276660666613\", \"95133057218792526768946740837260956309386051105958189498948914923755486705044\"]",
+    "outcomes": "[\"Elevate\", \"F4TALITY\"]"
+  },
+  {
+    "sample": 3,
+    "market": "0x6c864d818ec0bcc7ceee60bb0e9c238103f6432c4e636d3231097e01bdf12103",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "sports",
+      "tennis"
+    ],
+    "title": "Jan-Lennard Struff vs. Nuno Borges: Total Sets O/U 2.5",
+    "updates": 8,
+    "start": "2026-06-22T18:27:41.696948Z",
+    "end": "2026-06-30T11:30:00Z",
+    "event_start": null,
+    "created": "2026-06-22T17:01:08.581805Z",
+    "token_ids": "[\"7690777045464596562607966353887614481248888866035558774257155669325072244354\", \"43885368631085357466986410141693795099115396160982163646503058933790704130229\"]",
+    "outcomes": "[\"Over 2.5\", \"Under 2.5\"]"
+  },
+  {
+    "sample": 3,
+    "market": "0x3f5d87d32d3623867718620bd716b0da23804e86b78e84bf7b3675b4169c9b14",
+    "category": "Sports/esports",
+    "tags": [
+      "dota-2",
+      "esports",
+      "games",
+      "sports"
+    ],
+    "title": "Dota 2: Power Rangers vs TEAM VISION - Game 2 Winner",
+    "updates": 4,
+    "start": "2026-06-22T21:53:43.646532Z",
+    "end": "2026-06-24T23:10:00Z",
+    "event_start": "2026-06-24T17:10:00Z",
+    "created": "2026-06-22T21:50:43.57305Z",
+    "token_ids": "[\"6994371910513230360306626347291354272790525365307797144314573609252459789609\", \"46200720093227842636969361799943069432035128611386406331467747992498135827019\"]",
+    "outcomes": "[\"Power Rangers\", \"TEAM VISION\"]"
+  },
+  {
+    "sample": 3,
+    "market": "0xf2582ddc32139e3f0d52974cc5296a42a4030eece4d084a5d839e1881d8244d7",
+    "category": "Sports/esports",
+    "tags": [
+      "counter-strike-2",
+      "esports",
+      "games",
+      "sports"
+    ],
+    "title": "Map 2 Total Rounds: Over/Under 24.5",
+    "updates": 10,
+    "start": "2026-06-22T20:22:25.246333Z",
+    "end": "2026-06-23T01:15:00Z",
+    "event_start": "2026-06-22T19:15:00Z",
+    "created": "2026-06-22T20:20:35.405843Z",
+    "token_ids": "[\"66485221351087375830665618871494886219655223965797838929709573103072206009184\", \"43781681933874766693176760105903624563637320385660465017989136161649011945764\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 3,
+    "market": "0x789ff30939e176dc42d168d715594ebeacd92fa92510f02764b7df67e7464a48",
+    "category": "Crypto",
+    "tags": [
+      "crypto",
+      "crypto-prices",
+      "ethereum",
+      "hide-from-new",
+      "neg-risk",
+      "recurring",
+      "weekly"
+    ],
+    "title": "Will the price of Ethereum be greater than $2,200 on June 29?",
+    "updates": 8,
+    "start": "2026-06-22T16:24:37.720988Z",
+    "end": "2026-06-29T16:00:00Z",
+    "event_start": null,
+    "created": "2026-06-22T16:00:07.224426Z",
+    "token_ids": "[\"45865776985769077561167950678184585454169264335223738563407043414199633389786\", \"36734319397927818824023243107183861183358702835813141554189065297625346996176\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 3,
+    "market": "0x2eb377b4642b20deb40533ce7f33e5838406ad45dc1e511855ad2485eadc7ce4",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "sports",
+      "tennis",
+      "wimbledon"
+    ],
+    "title": "Set Handicap: Canas (-1.5) vs Mayot (+1.5)",
+    "updates": 8,
+    "start": "2026-06-22T17:03:42.884474Z",
+    "end": "2026-07-01T10:00:00Z",
+    "event_start": null,
+    "created": "2026-06-22T17:00:34.012638Z",
+    "token_ids": "[\"4423848780993431893102646746456317442081691897320801774535400913676216807835\", \"13801152797043096756691037010646522168594405451625688702412673233891791711133\"]",
+    "outcomes": "[\"Canas\", \"Mayot\"]"
+  }
+]

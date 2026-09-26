@@ -1,0 +1,139 @@
+{
+  "path": "raw/2026-07-11/1200.jsonl.zst",
+  "sample": 6,
+  "outer_messages": 100000,
+  "schema": {
+    "price_change": 99425,
+    "book": 385,
+    "last_trade_price": 190
+  },
+  "unique_events": {
+    "price_change": 49918,
+    "book": 385,
+    "last_trade_price": 190
+  },
+  "duplicates": 49507,
+  "span_seconds": 16.802,
+  "decision_seconds": 1,
+  "receive_start_ms": 1783771200000,
+  "receive_end_ms": 1783771216802,
+  "event_reversals": 27503,
+  "markets": 1430,
+  "assets": 2860,
+  "assets_per_market": {
+    "2": 1430
+  },
+  "matched_index_markets": 256,
+  "categories": {
+    "Unmapped": 1174,
+    "Unclassified": 128,
+    "Sports/esports": 108,
+    "Politics": 6,
+    "Economics/finance": 10,
+    "Crypto": 4
+  },
+  "scales": {
+    "price_scale_2": 72070,
+    "price_scale_3": 21224,
+    "price_scale_1": 6542
+  },
+  "rows": {
+    "price_changes": 99836,
+    "trades": 190,
+    "book_levels": 31592,
+    "snapshots": 385
+  },
+  "recompressed_complete_json_bytes": 5521458,
+  "complete_json_bytes": 77645655,
+  "parquet_bytes": {
+    "3": {
+      "price_changes": 1066316,
+      "trades": 12394,
+      "book_levels": 41451,
+      "snapshots": 13475,
+      "assets": 114050,
+      "markets": 53372
+    },
+    "9": {
+      "price_changes": 1003620,
+      "trades": 12356,
+      "book_levels": 39299,
+      "snapshots": 13479,
+      "assets": 114035,
+      "markets": 53372
+    }
+  },
+  "compression_seconds": {
+    "3": 0.08331360000000032,
+    "9": 0.14535860000000156
+  },
+  "scan_and_benchmark_seconds": 14.622860600000001,
+  "policies": [
+    {
+      "policy": "all",
+      "selected": 1430,
+      "markets": 1430,
+      "late_rows": 120130,
+      "all_late_rows": 120130
+    },
+    {
+      "policy": "early_2_updates",
+      "selected": 548,
+      "markets": 1430,
+      "late_rows": 97521,
+      "all_late_rows": 120130
+    },
+    {
+      "policy": "early_10_updates",
+      "selected": 159,
+      "markets": 1430,
+      "late_rows": 87726,
+      "all_late_rows": 120130
+    },
+    {
+      "policy": "early_50_updates",
+      "selected": 33,
+      "markets": 1430,
+      "late_rows": 65804,
+      "all_late_rows": 120130
+    },
+    {
+      "policy": "early_10_and_spread_le_5c",
+      "selected": 68,
+      "markets": 1430,
+      "late_rows": 73113,
+      "all_late_rows": 120130
+    },
+    {
+      "policy": "top_10pct_early_activity",
+      "selected": 55,
+      "markets": 1430,
+      "late_rows": 74152,
+      "all_late_rows": 120130
+    },
+    {
+      "policy": "stable_hash_10pct",
+      "selected": 57,
+      "markets": 1430,
+      "late_rows": 1812,
+      "all_late_rows": 120130
+    }
+  ],
+  "parquet_round_trip_verified": true,
+  "round_trip_seconds": {
+    "3": 0.05293189999999903,
+    "9": 0.029942800000000602
+  },
+  "index": {
+    "generated_at": "2026-07-11T00:01:34.572855451+00:00",
+    "tokens": 9392,
+    "distinct_markets": 4696,
+    "categories": {
+      "Sports/esports": 2897,
+      "Crypto": 925,
+      "Unclassified": 787,
+      "Economics/finance": 64,
+      "Politics": 23
+    }
+  }
+}

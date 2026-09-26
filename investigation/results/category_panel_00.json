@@ -1,0 +1,334 @@
+[
+  {
+    "sample": 0,
+    "market": "0x8a1b19d55089b910bb4cf90d8ef6b77a1f43d4f62282788af35c0245dfdfb823",
+    "category": "Politics",
+    "tags": [
+      "elections",
+      "global-elections",
+      "politics",
+      "slovenia",
+      "slovenia-elections"
+    ],
+    "title": "Will New Slovenia \u2013 Christian Democrats (NSi) be part of the next Government of Slovenia?",
+    "updates": 8,
+    "start": "2026-03-13T15:15:37.23182Z",
+    "end": "2026-03-22T00:00:00Z",
+    "event_start": null,
+    "created": "2026-03-12T14:30:07.414568Z",
+    "token_ids": "[\"37384945655563169674835353283613535996945853468070278069158544950355515269328\", \"78743902036746767970781453408960519154658687867175950491253782514173356319101\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 0,
+    "market": "0x0f0f98af5e535e0e02ad10c7f72ce887ce8fdc8f8a4461fcf106530099be08e0",
+    "category": "Politics",
+    "tags": [
+      "ag",
+      "attorney-general",
+      "bondi",
+      "pam-bondi",
+      "politics",
+      "trump",
+      "trump-cabinet",
+      "zeldin"
+    ],
+    "title": "Will Donald Trump announce Harmeet Dhillon as the next United States Attorney General by June 30?",
+    "updates": 4,
+    "start": "2026-04-02T18:24:01.093Z",
+    "end": "2026-06-30T00:00:00Z",
+    "event_start": null,
+    "created": "2026-04-02T17:49:41.051677Z",
+    "token_ids": "[\"37698267132177894787240665342833649734282031113102575778808452374865489755487\", \"5028746388496987360979123638771164749681473389453348421644963546413875713607\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 0,
+    "market": "0x3784d4428d9b4ae3b83a9d89c07c2ca6d476a720f5018be3a8e2768f80b0718d",
+    "category": "Sports/esports",
+    "tags": [
+      "roland-garros",
+      "sports",
+      "tennis",
+      "wta"
+    ],
+    "title": "Will Yulia Putintseva win the 2026 Women\u2019s French Open?",
+    "updates": 2,
+    "start": "2026-01-02T20:32:55.069488Z",
+    "end": "2026-06-06T00:00:00Z",
+    "event_start": null,
+    "created": "2026-01-02T16:29:27.951807Z",
+    "token_ids": "[\"25536657777601241535111253233031180799378297068975125075102731724552969614164\", \"42145358862493441776838222858614182023256634372214952072109809786306170707578\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 0,
+    "market": "0x7c506faba59481a6320dd77f61470316359cb5d1dcac777d174794d59848459a",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "soccer",
+      "sports"
+    ],
+    "title": "Spread: Athletic Club (-2.5)",
+    "updates": 12,
+    "start": "2026-04-29T12:03:54.042145Z",
+    "end": "2026-05-25T22:00:00Z",
+    "event_start": null,
+    "created": "2026-04-29T12:00:04.393281Z",
+    "token_ids": "[\"43682442110957579660525661472233747512319553758657679129898077737442185561138\", \"81083953441666296173783938111624181537525284204963058269587586202608874983209\"]",
+    "outcomes": "[\"Athletic Club\", \"Botafogo FC\"]"
+  },
+  {
+    "sample": 0,
+    "market": "0xf63caf20875e7ac593d1157942ac90ac5e44c7181a4389e8c3c2c55a8092144e",
+    "category": "Crypto",
+    "tags": [
+      "bitcoin",
+      "crypto",
+      "crypto-prices",
+      "hide-from-new",
+      "multi-strikes",
+      "recurring",
+      "weekly"
+    ],
+    "title": "Will the price of Bitcoin be above $82,000 on May 30?",
+    "updates": 6,
+    "start": "2026-05-23T16:05:54.78166Z",
+    "end": "2026-05-30T16:00:00Z",
+    "event_start": null,
+    "created": "2026-05-23T16:00:08.036722Z",
+    "token_ids": "[\"91648414349190261344850899446149397662259156479036697378214547343040252030566\", \"11977712633897045437474141093468276788439937541799259444801318483266636832986\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 0,
+    "market": "0xabc5309a11cb0efccfb51c7eecf650f921f32cac0f99b8a6396be0d113183a6c",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "helsinki",
+      "hide-from-new",
+      "highest-temperature",
+      "recurring",
+      "rewards-automation-50-4pt5-50",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Helsinki be 20\u00b0C on May 26?",
+    "updates": 12,
+    "start": "2026-05-24T04:56:10.707925Z",
+    "end": "2026-05-26T12:00:00Z",
+    "event_start": null,
+    "created": "2026-05-24T04:06:17.427075Z",
+    "token_ids": "[\"73015578746466806745762480468266983216144854911099005481449192972667002989434\", \"39668257902954777858457170219406882913906442737379747780548469733979314699091\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 0,
+    "market": "0x582532c6acae7f86917143c3dcfb584819a95398d3eadb26c1944764537b0e20",
+    "category": "Economics/finance",
+    "tags": [
+      "big-tech",
+      "climate-science",
+      "elon-musk",
+      "finance",
+      "ipo",
+      "ipos",
+      "science",
+      "space",
+      "spacex"
+    ],
+    "title": "Will SpaceX's market cap be between $1.0T and $1.2T at market close on IPO day?",
+    "updates": 2,
+    "start": "2026-01-23T20:41:45.869786Z",
+    "end": "2027-12-31T00:00:00Z",
+    "event_start": null,
+    "created": "2026-01-23T18:32:32.987572Z",
+    "token_ids": "[\"101276397800121043395353126600112196266741828942971563334359366251730429276265\", \"29902109124606134021006265465510657323726090836695044652038022314956716240509\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 0,
+    "market": "0xa43ecfc141e4b6c414127b1c9feb992b5a2dfcda744473341adbd2902138fe64",
+    "category": "Weather",
+    "tags": [
+      "cape-town",
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "recurring",
+      "rewards-automation-50-4pt5-50",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Cape Town be 18\u00b0C on May 27?",
+    "updates": 4,
+    "start": "2026-05-25T04:31:27.096063Z",
+    "end": "2026-05-27T12:00:00Z",
+    "event_start": null,
+    "created": "2026-05-25T04:06:16.57973Z",
+    "token_ids": "[\"17638466914052957308358627857822659287112072449959198158644478546266614819320\", \"27157696026197291719717994674127811816532986409410061402274683561897387001439\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 0,
+    "market": "0xba7fc89b3a7cd7a9a6949c9b02bd103264435f2b5f8828bae916ead4505bea02",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "new-york-city",
+      "recurring",
+      "rewards-automation-100-1",
+      "weather"
+    ],
+    "title": "Will the highest temperature in New York City be between 56-57\u00b0F on May 25?",
+    "updates": 4,
+    "start": "2026-05-23T04:48:22.188937Z",
+    "end": "2026-05-25T12:00:00Z",
+    "event_start": null,
+    "created": "2026-05-23T04:03:53.943948Z",
+    "token_ids": "[\"7427933578488166707029410866063970980224733905233739602661762849995295371020\", \"59138822981829538369676848358968293004403521145908019571240752180388144712011\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 0,
+    "market": "0x5c0d50c08f4339837b1559b4c25386c553b0abf0666eb8ad039f6fa5009c24d4",
+    "category": "Sports/esports",
+    "tags": [
+      "esports",
+      "games",
+      "league-of-legends",
+      "sports"
+    ],
+    "title": "LoL: G2 Esports vs Movistar KOI - Game 1 Winner",
+    "updates": 10,
+    "start": "2026-05-24T18:12:56.824247Z",
+    "end": "2026-05-25T19:00:00Z",
+    "event_start": "2026-05-25T15:00:00Z",
+    "created": "2026-05-24T18:10:09.105047Z",
+    "token_ids": "[\"35469388994455521916718665119949413626190961600852416330476856861923239511887\", \"87964434705359120439176717122358026346784562134711128976869436795762982753705\"]",
+    "outcomes": "[\"G2 Esports\", \"Movistar KOI\"]"
+  },
+  {
+    "sample": 0,
+    "market": "0x447f025ab6cf41b3176e2f5a7422e7df9ab25b3420d14f9e69e0937b5a09f3a6",
+    "category": "Sports/esports",
+    "tags": [
+      "esports",
+      "games",
+      "league-of-legends",
+      "sports"
+    ],
+    "title": "LoL: BIG vs G2 NORD (BO5) - Prime League 1st Division Playoffs",
+    "updates": 4,
+    "start": "2026-05-21T22:03:10.595704Z",
+    "end": "2026-05-27T21:00:00Z",
+    "event_start": "2026-05-27T15:00:00Z",
+    "created": "2026-05-21T22:00:22.523514Z",
+    "token_ids": "[\"18119735953247755225980128199644138762009470017015880310390948182314124545215\", \"114933016898114873303144370092782162397995288883097028043814699223830994245258\"]",
+    "outcomes": "[\"BIG\", \"G2 NORD\"]"
+  },
+  {
+    "sample": 0,
+    "market": "0x80bca855bd6c19563b25144c980ca4fe11eab6e6c40efbe07f4b675a1b316970",
+    "category": "Politics",
+    "tags": [
+      "elections",
+      "politics",
+      "primary-elections",
+      "us-presidential-election"
+    ],
+    "title": "Will Rudy Salas advance from the CA-22 Primary?",
+    "updates": 10,
+    "start": "2025-12-11T17:52:19.151892Z",
+    "end": "2026-06-02T00:00:00Z",
+    "event_start": null,
+    "created": "2025-11-26T17:47:03.796267Z",
+    "token_ids": "[\"35448113139273714491778293706091335853200286064498872568916318473315807497394\", \"26977079785845872671544287343803196214862719156799511293490885666586263190681\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 0,
+    "market": "0x80a849ac73eefe56d4d613e44b45e32b9f91f0bfc77173b732cffac7daab3b3b",
+    "category": "Politics",
+    "tags": [
+      "elections",
+      "geopolitics",
+      "global-elections",
+      "israel",
+      "israel-election",
+      "main-election",
+      "middle-east",
+      "politics",
+      "trump-netanyahu",
+      "world"
+    ],
+    "title": "Will Ayelet Shaked be the next Prime Minister of Israel?",
+    "updates": 56,
+    "start": "2025-11-15T00:27:07.363Z",
+    "end": "2026-10-27T23:59:00Z",
+    "event_start": null,
+    "created": "2025-11-14T18:50:48.624232Z",
+    "token_ids": "[\"20847822223909889861535421917104908467512615252569123202591433051136381225081\", \"51335026900511121172886671510765892467376178035614364304866967243515317632750\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 0,
+    "market": "0xed92875e17da66a98ac377636af9f2c42aff6cb3350b18b03e1034ea9df8c795",
+    "category": "Crypto",
+    "tags": [
+      "crypto",
+      "fdv",
+      "pre-market",
+      "reppo"
+    ],
+    "title": "Reppo FDV above $800M one day after launch?",
+    "updates": 2,
+    "start": "2026-04-22T21:56:15.185Z",
+    "end": "2028-01-01T05:00:00Z",
+    "event_start": null,
+    "created": "2026-04-22T21:53:18.982055Z",
+    "token_ids": "[\"62939675651796316873559525254014115349059865481487923246697737682971482014973\", \"64109498921470357373087746958625600042767816820460218301232982845663644791863\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 0,
+    "market": "0x9c6136a403de1acc879821e356b166528fc0a5ab75fabc01f9bea8f8b66088c8",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "soccer",
+      "sports"
+    ],
+    "title": "CF Universidad de Chile leading at halftime?",
+    "updates": 12,
+    "start": "2026-05-17T20:36:06.374341Z",
+    "end": "2026-06-14T19:00:00Z",
+    "event_start": null,
+    "created": "2026-05-17T19:00:07.961463Z",
+    "token_ids": "[\"87075931011305184850796241266229656075807127640776873844317205053994092071880\", \"82793289018647384623810940849837306118500507597744879077136086258132059653997\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 0,
+    "market": "0x8d62f20324e9e7f1a3c663ab6aac9a2f6e7adb96c6a69ac2cea7e08a71a7f2ef",
+    "category": "Politics",
+    "tags": [
+      "california-governor",
+      "california-midterm",
+      "elections",
+      "governor-midterms",
+      "politics",
+      "us-presidential-election"
+    ],
+    "title": "Will Tom Steyer win the California Governor Election in 2026?",
+    "updates": 2,
+    "start": "2025-10-09T23:29:54.339Z",
+    "end": "2026-11-04T04:59:00Z",
+    "event_start": null,
+    "created": "2025-10-09T19:56:35.234031Z",
+    "token_ids": "[\"20705956847651355292903061592334315186019059728484478747049630947764308652621\", \"36038186568927998467509291483985866554521847803798174147820946484272760262519\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  }
+]

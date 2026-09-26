@@ -1,0 +1,377 @@
+[
+  {
+    "url": "https://gamma-api.polymarket.com/tags/slug/sports",
+    "params": null,
+    "fetched_at": "2026-09-25T04:37:12.787180+00:00",
+    "status": 200,
+    "bytes": 307,
+    "seconds": 0.118,
+    "result_count": null,
+    "keys": [
+      "$schema",
+      "id",
+      "label",
+      "slug",
+      "forceShow",
+      "publishedAt",
+      "updatedBy",
+      "createdAt",
+      "updatedAt",
+      "forceHide",
+      "requiresTranslation"
+    ]
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/tags/slug/crypto",
+    "params": null,
+    "fetched_at": "2026-09-25T04:37:12.904863+00:00",
+    "status": 200,
+    "bytes": 291,
+    "seconds": 0.164,
+    "result_count": null,
+    "keys": [
+      "$schema",
+      "id",
+      "label",
+      "slug",
+      "forceShow",
+      "publishedAt",
+      "updatedBy",
+      "createdAt",
+      "updatedAt",
+      "requiresTranslation"
+    ]
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/tags/slug/mentions",
+    "params": null,
+    "fetched_at": "2026-09-25T04:37:13.071521+00:00",
+    "status": 404,
+    "bytes": 52,
+    "seconds": 0.182,
+    "result_count": null,
+    "keys": [
+      "type",
+      "error"
+    ]
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/tags/slug/politics",
+    "params": null,
+    "fetched_at": "2026-09-25T04:37:13.253370+00:00",
+    "status": 200,
+    "bytes": 312,
+    "seconds": 0.077,
+    "result_count": null,
+    "keys": [
+      "$schema",
+      "id",
+      "label",
+      "slug",
+      "forceShow",
+      "publishedAt",
+      "updatedBy",
+      "createdAt",
+      "updatedAt",
+      "forceHide",
+      "requiresTranslation"
+    ]
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/tags/slug/weather",
+    "params": null,
+    "fetched_at": "2026-09-25T04:37:13.362585+00:00",
+    "status": 200,
+    "bytes": 278,
+    "seconds": 0.092,
+    "result_count": null,
+    "keys": [
+      "$schema",
+      "id",
+      "label",
+      "slug",
+      "forceShow",
+      "publishedAt",
+      "createdAt",
+      "updatedAt",
+      "requiresTranslation"
+    ]
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/markets",
+    "params": {
+      "condition_ids": "0x5d61eecf4b6cc2d78ab116ad3da932f97e845af303b1f73a570af2c084ea5f0e",
+      "closed": "false",
+      "limit": 2,
+      "include_tag": "true"
+    },
+    "fetched_at": "2026-09-25T04:37:13.537029+00:00",
+    "status": 200,
+    "bytes": 5869,
+    "seconds": 0.228,
+    "result_count": 1,
+    "keys": null
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/markets",
+    "params": {
+      "condition_ids": "0x5d61eecf4b6cc2d78ab116ad3da932f97e845af303b1f73a570af2c084ea5f0e",
+      "closed": "true",
+      "limit": 2,
+      "include_tag": "true"
+    },
+    "fetched_at": "2026-09-25T04:37:13.765912+00:00",
+    "status": 200,
+    "bytes": 3,
+    "seconds": 0.172,
+    "result_count": 0,
+    "keys": null
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/markets",
+    "params": {
+      "condition_ids": "0xb21c480a978a1ad358430a026aa4a7208999550eb1cdcc48a8c6698f9ad4f522",
+      "closed": "false",
+      "limit": 2,
+      "include_tag": "true"
+    },
+    "fetched_at": "2026-09-25T04:37:13.940412+00:00",
+    "status": 200,
+    "bytes": 7315,
+    "seconds": 0.214,
+    "result_count": 1,
+    "keys": null
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/markets",
+    "params": {
+      "condition_ids": "0xb21c480a978a1ad358430a026aa4a7208999550eb1cdcc48a8c6698f9ad4f522",
+      "closed": "true",
+      "limit": 2,
+      "include_tag": "true"
+    },
+    "fetched_at": "2026-09-25T04:37:14.155005+00:00",
+    "status": 200,
+    "bytes": 3,
+    "seconds": 0.19,
+    "result_count": 0,
+    "keys": null
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/markets",
+    "params": {
+      "condition_ids": "0x13b1baab6e0076bc485e06b2a7afa6b13909875d9028d35d223eab2e752935f7",
+      "closed": "false",
+      "limit": 2,
+      "include_tag": "true"
+    },
+    "fetched_at": "2026-09-25T04:37:14.369839+00:00",
+    "status": 200,
+    "bytes": 3,
+    "seconds": 0.179,
+    "result_count": 0,
+    "keys": null
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/markets",
+    "params": {
+      "condition_ids": "0x13b1baab6e0076bc485e06b2a7afa6b13909875d9028d35d223eab2e752935f7",
+      "closed": "true",
+      "limit": 2,
+      "include_tag": "true"
+    },
+    "fetched_at": "2026-09-25T04:37:14.552617+00:00",
+    "status": 200,
+    "bytes": 6782,
+    "seconds": 0.243,
+    "result_count": 1,
+    "keys": null
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/markets",
+    "params": {
+      "condition_ids": "0x8ae497887a1ad4912b34a425e26c3aa9a1bb4468d7496598c2c08b7c6071d16b",
+      "closed": "false",
+      "limit": 2,
+      "include_tag": "true"
+    },
+    "fetched_at": "2026-09-25T04:37:14.800930+00:00",
+    "status": 200,
+    "bytes": 3,
+    "seconds": 0.205,
+    "result_count": 0,
+    "keys": null
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/markets",
+    "params": {
+      "condition_ids": "0x8ae497887a1ad4912b34a425e26c3aa9a1bb4468d7496598c2c08b7c6071d16b",
+      "closed": "true",
+      "limit": 2,
+      "include_tag": "true"
+    },
+    "fetched_at": "2026-09-25T04:37:15.003391+00:00",
+    "status": 200,
+    "bytes": 7071,
+    "seconds": 0.254,
+    "result_count": 1,
+    "keys": null
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/markets",
+    "params": {
+      "condition_ids": "0x612449278e9ab3055b005e6fd416898b37132d2fef9cbdb823289654f86ce37b",
+      "closed": "false",
+      "limit": 2,
+      "include_tag": "true"
+    },
+    "fetched_at": "2026-09-25T04:40:04.364939+00:00",
+    "status": 200,
+    "bytes": 3,
+    "seconds": 0.43,
+    "result_count": 0,
+    "keys": null
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/markets",
+    "params": {
+      "condition_ids": "0x612449278e9ab3055b005e6fd416898b37132d2fef9cbdb823289654f86ce37b",
+      "closed": "true",
+      "limit": 2,
+      "include_tag": "true"
+    },
+    "fetched_at": "2026-09-25T04:40:04.802570+00:00",
+    "status": 200,
+    "bytes": 8751,
+    "seconds": 0.379,
+    "result_count": 1,
+    "keys": null
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/markets",
+    "params": {
+      "condition_ids": "0x9f4432891daacc26741b8c4f4ca9678d34502b7a2583c718969ed6178d265e76",
+      "closed": "false",
+      "limit": 2,
+      "include_tag": "true"
+    },
+    "fetched_at": "2026-09-25T04:40:05.184417+00:00",
+    "status": 200,
+    "bytes": 3,
+    "seconds": 0.303,
+    "result_count": 0,
+    "keys": null
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/markets",
+    "params": {
+      "condition_ids": "0x9f4432891daacc26741b8c4f4ca9678d34502b7a2583c718969ed6178d265e76",
+      "closed": "true",
+      "limit": 2,
+      "include_tag": "true"
+    },
+    "fetched_at": "2026-09-25T04:40:05.489656+00:00",
+    "status": 200,
+    "bytes": 6858,
+    "seconds": 0.365,
+    "result_count": 1,
+    "keys": null
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/markets/3616667",
+    "params": null,
+    "fetched_at": "2026-09-25T04:37:15.258869+00:00",
+    "status": 200,
+    "bytes": 3110,
+    "seconds": 0.186,
+    "result_count": null,
+    "keys": [
+      "$schema",
+      "id",
+      "question",
+      "conditionId",
+      "slug",
+      "resolutionSource",
+      "endDate",
+      "startDate",
+      "image",
+      "icon",
+      "description",
+      "outcomes",
+      "outcomePrices",
+      "volume",
+      "active",
+      "closed",
+      "marketMakerAddress",
+      "createdAt",
+      "updatedAt",
+      "closedTime",
+      "new",
+      "featured",
+      "archived",
+      "resolvedBy",
+      "restricted",
+      "questionID",
+      "umaEndDate",
+      "enableOrderBook",
+      "orderPriceMinTickSize",
+      "orderMinSize",
+      "umaResolutionStatus",
+      "volumeNum",
+      "endDateIso",
+      "startDateIso",
+      "hasReviewedDates",
+      "clobTokenIds",
+      "comboStatus",
+      "umaBond",
+      "umaReward",
+      "volumeClob",
+      "makerBaseFee",
+      "takerBaseFee",
+      "customLiveness",
+      "acceptingOrders",
+      "negRisk",
+      "ready",
+      "funded",
+      "acceptingOrdersTimestamp",
+      "cyom",
+      "pagerDutyNotificationEnabled",
+      "approved",
+      "rewardsMinSize",
+      "rewardsMaxSpread",
+      "spread",
+      "automaticallyResolved",
+      "oneHourPriceChange",
+      "lastTradePrice",
+      "bestAsk",
+      "automaticallyActive",
+      "clearBookOnStart",
+      "manualActivation",
+      "negRiskOther",
+      "umaResolutionStatuses",
+      "pendingDeployment",
+      "deploying",
+      "deployingTimestamp",
+      "rfqEnabled",
+      "eventStartTime",
+      "holdingRewardsEnabled",
+      "feesEnabled",
+      "requiresTranslation",
+      "feeType",
+      "feeSchedule",
+      "version"
+    ]
+  },
+  {
+    "url": "https://gamma-api.polymarket.com/tags",
+    "params": {
+      "limit": 3
+    },
+    "fetched_at": "2026-09-25T04:37:15.446424+00:00",
+    "status": 200,
+    "bytes": 562,
+    "seconds": 0.205,
+    "result_count": 3,
+    "keys": null
+  }
+]

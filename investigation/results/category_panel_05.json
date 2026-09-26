@@ -1,0 +1,335 @@
+[
+  {
+    "sample": 5,
+    "market": "0xde3ace29b213757612516100a226b3250eec1a2659474f00b01f4a5686c16aa2",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "new-york-city",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in New York City be between 80-81\u00b0F on July 9?",
+    "updates": 20,
+    "start": "2026-07-08T02:02:29Z",
+    "end": "2026-07-09T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-08T02:02:08.012551Z",
+    "token_ids": "[\"29631294074184419823535108096765115919320259270806013163881760607281858140209\", \"101450772143267195573112969552052538416270072660122642772108829809453237039101\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 5,
+    "market": "0x7850ee9337356bf9bbe82a35b858d5f5e98d5539749f844c4b1728b550e0909a",
+    "category": "Other",
+    "tags": [
+      "movies",
+      "netflix",
+      "pop-culture",
+      "top-netflix"
+    ],
+    "title": "Will \"Swapped\" be the #2 US Netflix movie this week?",
+    "updates": 4,
+    "start": "2026-07-08T00:57:39.314356Z",
+    "end": "2026-07-14T23:59:00Z",
+    "event_start": null,
+    "created": "2026-07-08T00:51:26.399977Z",
+    "token_ids": "[\"29097396239079516971353215437716345512099907393521857258384097193021894454098\", \"43692863087804031074073647961877531441789294331166150770286287622895180241124\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 5,
+    "market": "0xf64012ebd40bc164f270661c0961189410b46b8904ba75b577b402a7b0ca7ce9",
+    "category": "Politics",
+    "tags": [
+      "clacton",
+      "elections",
+      "global-elections",
+      "international-election-props",
+      "nigel-farage",
+      "politics",
+      "reform",
+      "reform-uk",
+      "uk",
+      "united-kingdom"
+    ],
+    "title": "Will Nigel Farage up his vote share in Clacton?",
+    "updates": 20,
+    "start": "2026-07-08T01:52:37.58Z",
+    "end": "2026-08-13T23:59:00Z",
+    "event_start": null,
+    "created": "2026-07-08T01:50:23.590501Z",
+    "token_ids": "[\"82332282561901622691535287105748110296369369475300273459288378187297993831469\", \"94327660451067008243462185876500477983798022089695358522273475972619244340911\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 5,
+    "market": "0x4597762216cd9c1efea5fba67608d00b70ef972b96e9e961adcb213e3886cf0f",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "recurring",
+      "toronto",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Toronto be 31\u00b0C on July 9?",
+    "updates": 26,
+    "start": "2026-07-08T02:02:23Z",
+    "end": "2026-07-09T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-08T02:02:01.085883Z",
+    "token_ids": "[\"56381824143891119652637051873322244716716597544655064367307376395475178495746\", \"13463307171899494415330910393180822629928699672146038494430766791411957591783\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 5,
+    "market": "0xee70d0a6b5dbef0f08d6be3714379876a5946e9024a7f0cb475e11962d0fcb2e",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "france",
+      "hide-from-new",
+      "lowest-temperature",
+      "paris",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the lowest temperature in Paris be 20\u00b0C on July 10?",
+    "updates": 32,
+    "start": "2026-07-08T04:30:30Z",
+    "end": "2026-07-10T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-08T04:30:14.832561Z",
+    "token_ids": "[\"78503206587475865705629928960379861424680658659060547842672266450931931982096\", \"43579330947533389485473500978940302496960314648431291828356198220556168139812\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 5,
+    "market": "0x2158bf358f0b37077ba265258d24dbe2f25acf791c07adfa0c504dcb8d5a0f40",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "recurring",
+      "tokyo",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Tokyo be 34\u00b0C on July 10?",
+    "updates": 10,
+    "start": "2026-07-08T04:02:36Z",
+    "end": "2026-07-10T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-08T04:02:22.996416Z",
+    "token_ids": "[\"103737053570412389354009455764100158920077415041155826420310414320279385459226\", \"33155643120696498558824457021244883748026497825744879231086478392975197731993\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 5,
+    "market": "0xa1b48b0082906c5ba3526dc7fb227923885bc3f7cf9b09e2a564017e549af165",
+    "category": "Other",
+    "tags": [
+      "movies",
+      "netflix",
+      "pop-culture",
+      "top-netflix"
+    ],
+    "title": "Will \"Avatar: The Last Airbender: Season 2\" be the top US Netflix show this week?",
+    "updates": 20,
+    "start": "2026-07-08T01:04:38.956159Z",
+    "end": "2026-07-14T23:59:00Z",
+    "event_start": null,
+    "created": "2026-07-08T00:58:06.814568Z",
+    "token_ids": "[\"44102562111725308122667576400216679871637928332091005298414995839225655145728\", \"26793260365473229048084819683954151819242720943986761493285171158390060853822\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 5,
+    "market": "0xb87fdc2f8069425ed8c8a7314a3b247610d4fd99d6f5d419c3bc1516ea7a6d57",
+    "category": "Sports/esports",
+    "tags": [
+      "counter-strike-2",
+      "esports",
+      "games",
+      "sports"
+    ],
+    "title": "Map Handicap: IMP (-1.5) vs Isurus (+1.5)",
+    "updates": 4,
+    "start": "2026-07-08T02:53:43.875415Z",
+    "end": "2026-07-09T01:00:00Z",
+    "event_start": "2026-07-08T19:00:00Z",
+    "created": "2026-07-08T02:50:45.843795Z",
+    "token_ids": "[\"114352745265845040046195935632030862065652694588046364083711997871984684102965\", \"47366806343458873077129700097346416920214951987693367684907979663206636399509\"]",
+    "outcomes": "[\"Imperial\", \"Isurus\"]"
+  },
+  {
+    "sample": 5,
+    "market": "0x6d8cfb298953845bba597bc3a24df75e7e3d2aae28467382b4f79998a189e2a1",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "milan",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Milan be 37\u00b0C on July 10?",
+    "updates": 34,
+    "start": "2026-07-08T05:02:53Z",
+    "end": "2026-07-10T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-08T05:02:29.916385Z",
+    "token_ids": "[\"114995254681660263470703645448988764107835286353862182604895055897824587212138\", \"89812006530644903366908226105758599874815290330280153571673094543810638608985\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 5,
+    "market": "0xf72e102ce90a4c8e0b8464a5957d92ea8f03b895d6048b3b1d2ed966a60f42a7",
+    "category": "Sports/esports",
+    "tags": [
+      "counter-strike-2",
+      "esports",
+      "games",
+      "sports"
+    ],
+    "title": "Counter-Strike: maybe vs Tricksters - Map 1 Winner",
+    "updates": 64,
+    "start": "2026-07-08T04:22:54.873991Z",
+    "end": "2026-07-09T00:40:00Z",
+    "event_start": "2026-07-08T18:40:00Z",
+    "created": "2026-07-08T04:20:42.057328Z",
+    "token_ids": "[\"33219753191011009673614373027698512453410521093199304894526749341670004053605\", \"109321460133274465958159169049830556958519460660107867610168818590006640145642\"]",
+    "outcomes": "[\"maybe\", \"Tricksters\"]"
+  },
+  {
+    "sample": 5,
+    "market": "0xadc2dea636f3fe68fc0c7f562e19270bb285ccf1252a95adec20df9fdf405997",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "karachi",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Karachi be 29\u00b0C on July 10?",
+    "updates": 24,
+    "start": "2026-07-08T05:03:40Z",
+    "end": "2026-07-10T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-08T05:03:21.296495Z",
+    "token_ids": "[\"63557010049011113640495684411994821080672773307458492401751502147241589308973\", \"24949751486199446102728405328888904948630921727183607116148157108720359191124\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 5,
+    "market": "0x46e05d29964715c0f4e12fd1ca18439f66fcfc28a42f55cac69b384abc4f1be7",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "france",
+      "hide-from-new",
+      "lowest-temperature",
+      "paris",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the lowest temperature in Paris be 19\u00b0C on July 10?",
+    "updates": 24,
+    "start": "2026-07-08T04:30:30Z",
+    "end": "2026-07-10T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-08T04:30:14.670735Z",
+    "token_ids": "[\"97741179876712423498039650735257890606641394690200512152813338770087415367015\", \"3349206722557594913066759942718613821148606257838375609798859947868803015915\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 5,
+    "market": "0xc144fc5420928ebd84fbbbedf51692ac48d554690ac7e82b61592044458a9301",
+    "category": "Crypto",
+    "tags": [
+      "5M",
+      "bitcoin",
+      "crypto",
+      "crypto-prices",
+      "hide-from-new",
+      "recurring",
+      "up-or-down"
+    ],
+    "title": "Bitcoin Up or Down - July 8, 8:55AM-9:00AM ET",
+    "updates": 1080,
+    "start": "2026-07-07T13:02:37.169671Z",
+    "end": "2026-07-08T13:00:00Z",
+    "event_start": "2026-07-08T12:55:00Z",
+    "created": "2026-07-07T13:01:37.747937Z",
+    "token_ids": "[\"9522923301407916411516238802806478729662782007771936785825785666128961153559\", \"5593128526735892726639423459652157531830072272577114802081310007474615432292\"]",
+    "outcomes": "[\"Up\", \"Down\"]"
+  },
+  {
+    "sample": 5,
+    "market": "0x340528452b38ae15ab9e41cf4bbee4f23e7e7a05e115842435ecb92139322e09",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "mexico",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Mexico City be 27\u00b0C or higher on July 9?",
+    "updates": 8,
+    "start": "2026-07-08T02:03:22Z",
+    "end": "2026-07-09T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-08T02:03:01.953317Z",
+    "token_ids": "[\"48639762066834609719750880418663516984241895554666806761463494783518679436332\", \"87829246965777464186596629719711375988390913927918308130347313769978892214065\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 5,
+    "market": "0x82ff727c1bcf27d6310ced5e9e87d3dc1b59e8f77e95d46afccf6a0bc1c5d979",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "helsinki",
+      "hide-from-new",
+      "highest-temperature",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Helsinki be 24\u00b0C on July 10?",
+    "updates": 50,
+    "start": "2026-07-08T05:03:18Z",
+    "end": "2026-07-10T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-08T05:03:05.551815Z",
+    "token_ids": "[\"111546361123768360034413141880839702776922982055991314743360588787575367515027\", \"99096709541096726811558893193180821890703436841826142076897322839303581050128\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 5,
+    "market": "0x51af68b6cb0173a514415323cfa29d89080eb57fc1bbcbec4d01a5f627670ccf",
+    "category": "Sports/esports",
+    "tags": [
+      "esports",
+      "games",
+      "sports",
+      "valorant"
+    ],
+    "title": "Map 1 Rounds Handicap: Yi-Jing (-2.5) vs No Salary Peek (+2.5)",
+    "updates": 20,
+    "start": "2026-07-08T06:24:03.494558Z",
+    "end": "2026-07-08T17:00:00Z",
+    "event_start": "2026-07-08T11:00:00Z",
+    "created": "2026-07-08T06:20:39.453705Z",
+    "token_ids": "[\"108793432663248064290350583204950827460767809839514819333115575019310551537862\", \"107392466408484138731240340170896641738895054159473945259187571011161509614148\"]",
+    "outcomes": "[\"Yi-Jing\", \"No Salary Peek\"]"
+  }
+]

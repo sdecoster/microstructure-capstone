@@ -1,0 +1,337 @@
+[
+  {
+    "sample": 6,
+    "market": "0xf046d405fc1b0a5f77d8f5bc1ea99070ef7c20df79cc523e88dd123c18685275",
+    "category": "Sports/esports",
+    "tags": [
+      "dota-2",
+      "esports",
+      "games",
+      "sports"
+    ],
+    "title": "Game 3: Both Teams Beat Roshan?",
+    "updates": 12,
+    "start": "2026-07-10T21:54:07.51829Z",
+    "end": "2026-07-11T18:15:00Z",
+    "event_start": "2026-07-11T12:15:00Z",
+    "created": "2026-07-10T21:50:39.872913Z",
+    "token_ids": "[\"109066664278054293114766025044939596882618418039013495894261702162133055248235\", \"41598667439230587066682058298344865848061854585086316048542719846457050491628\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 6,
+    "market": "0x92629159ea81dd0703e45e48a6ca719f8cb4e35cd78392823d501acdbaed4f7d",
+    "category": "Weather",
+    "tags": [
+      "ankara",
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Ankara be 33\u00b0C on July 13?",
+    "updates": 28,
+    "start": "2026-07-11T04:02:36Z",
+    "end": "2026-07-13T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-11T04:02:22.431646Z",
+    "token_ids": "[\"15488314821409382630994607083595794407821084295756345296885489254144094262466\", \"454115362298527003135697493031530428404838230557851810771670186213247326758\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 6,
+    "market": "0xe4b89f9cbbc39f5c86fe92734365a48ee262a19d2d46f3800f5810c9794b75e6",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "mexico",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Mexico City be 26\u00b0C on July 12?",
+    "updates": 24,
+    "start": "2026-07-11T01:03:40Z",
+    "end": "2026-07-12T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-11T01:03:20.504966Z",
+    "token_ids": "[\"41840447750237844896624523430862503850002562169922817193412120374516880329994\", \"95232888652927455266008573649464676552582958841888763168793482494156628784654\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 6,
+    "market": "0xc7f36321055a7a303f49e981cfca74fa522f50f566ea377ef981e555a41582c2",
+    "category": "Crypto",
+    "tags": [
+      "1H",
+      "crypto",
+      "crypto-prices",
+      "ethereum",
+      "hide-from-new",
+      "multi-strikes",
+      "recurring"
+    ],
+    "title": "Ethereum above 1,790 on July 11, 9AM ET?",
+    "updates": 14,
+    "start": "2026-07-11T11:42:46.531822Z",
+    "end": "2026-07-11T13:00:00Z",
+    "event_start": null,
+    "created": "2026-07-11T11:40:09.318487Z",
+    "token_ids": "[\"97695885714209319521921267301001283568931352816852448960205341603307287697013\", \"74905680052821103520199488067206971552431545802214981896110958811444245278124\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 6,
+    "market": "0x02c55d2f53c30a3e006f23e23aec886605828ee8fa26487f1d3c68427d335f89",
+    "category": "Crypto",
+    "tags": [
+      "1H",
+      "bitcoin",
+      "crypto",
+      "crypto-prices",
+      "hide-from-new",
+      "multi-strikes",
+      "recurring"
+    ],
+    "title": "Bitcoin above 65,600 on July 11, 9AM ET?",
+    "updates": 2,
+    "start": "2026-07-11T11:42:16.989156Z",
+    "end": "2026-07-11T13:00:00Z",
+    "event_start": null,
+    "created": "2026-07-11T11:40:05.24998Z",
+    "token_ids": "[\"83849583582857172730804388180789047393211923479421857035647546692946536568365\", \"42482484729223549480195379473828687912069707324819797209458977356945662380855\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 6,
+    "market": "0xae591458f5aa3c7b78baecc4893a58a8850a49d91392f9019537023277c9fe5c",
+    "category": "Economics/finance",
+    "tags": [
+      "equities",
+      "finance",
+      "hide-from-new",
+      "multi-strikes",
+      "pltr",
+      "stock-prices",
+      "stocks",
+      "weekly"
+    ],
+    "title": "Will Palantir (PLTR) close at $118-$120 on the final day of trading of the week of Jul 13 \u2013 Jul 17?",
+    "updates": 12,
+    "start": "2026-07-10T22:01:23Z",
+    "end": "2026-07-17T20:00:00Z",
+    "event_start": null,
+    "created": "2026-07-10T22:00:36.622337Z",
+    "token_ids": "[\"1870005866376511573380024800380376321306970127068857929014020426005193373253\", \"81459103844134182200803888315144292372105945264966370310662067681004280495124\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 6,
+    "market": "0xce5ea4c8dca4ab2f2a878b9172cbc5d033d8577a2da2011becdeb6f9b49fd377",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "recurring",
+      "seattle",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Seattle be between 70-71\u00b0F on July 12?",
+    "updates": 38,
+    "start": "2026-07-11T01:02:28Z",
+    "end": "2026-07-12T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-11T01:02:07.018963Z",
+    "token_ids": "[\"75145119057071757853518692085863097668042776245428212384983436086949873700572\", \"90485425832126401420910855460153272732745975063132008660975585987748933504798\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 6,
+    "market": "0xdccd3553a8f4a173b5153cbec718d218cdfab90bc16384e08e0dad7d5a6108ca",
+    "category": "Sports/esports",
+    "tags": [
+      "dota-2",
+      "esports",
+      "games",
+      "sports"
+    ],
+    "title": "Games Total: O/U 2.5",
+    "updates": 12,
+    "start": "2026-07-10T21:54:11.524563Z",
+    "end": "2026-07-11T18:15:00Z",
+    "event_start": "2026-07-11T12:15:00Z",
+    "created": "2026-07-10T21:50:36.640776Z",
+    "token_ids": "[\"90566436071479193049916299127383202555061484139062469415814018198432948021323\", \"107865924897180115865031361625165393583159219455175891431347803039096155179746\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 6,
+    "market": "0x58caad6faeab0121c1072d436cadd3f54938a8a08fb2a3c4d7ada23c9ccfaf0e",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "france",
+      "hide-from-new",
+      "lowest-temperature",
+      "paris",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the lowest temperature in Paris be 31\u00b0C or higher on July 13?",
+    "updates": 4,
+    "start": "2026-07-11T04:30:28Z",
+    "end": "2026-07-13T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-11T04:30:14.712354Z",
+    "token_ids": "[\"91495062379568895586822808233517293674416828245819230586854199329780307015695\", \"108962056294000167282216837347687951435861515293163100800847148860032275030091\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 6,
+    "market": "0x93b3359ca9ebcda8957877571ec8a6ca16f216eacade037d843146ff2dffed9c",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "los-angeles",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Los Angeles be between 80-81\u00b0F on July 12?",
+    "updates": 88,
+    "start": "2026-07-11T01:03:30Z",
+    "end": "2026-07-12T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-11T01:03:08.79792Z",
+    "token_ids": "[\"56047608807482190052399203375017645633519963942373899654986757308366855842339\", \"82150144963848879503157027092135073414104847641886795937208469402456311259952\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 6,
+    "market": "0xe0edfd85aa8aab15865e447be9a8a824672d5a6652ebe1fff436b76dc5ccd9f5",
+    "category": "Crypto",
+    "tags": [
+      "1H",
+      "bitcoin",
+      "crypto",
+      "crypto-prices",
+      "hide-from-new",
+      "multi-strikes",
+      "recurring"
+    ],
+    "title": "Bitcoin above 62,400 on July 11, 8AM ET?",
+    "updates": 26,
+    "start": "2026-07-11T10:44:08.124029Z",
+    "end": "2026-07-11T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-11T10:40:02.290038Z",
+    "token_ids": "[\"83649721170759727865311887458641405249489721174498243773709203545910576871853\", \"73279530072958069003104496133605444843397628294946605717945852472855924833040\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 6,
+    "market": "0xcbd81e4660b4979d16254042ef2f95296d2396eaa3368ecc1723aec5b00e06f4",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "nba-summer-league",
+      "sports"
+    ],
+    "title": "NBA Summer League: Atlanta Hawks vs. Memphis Grizzlies",
+    "updates": 4,
+    "start": "2026-07-11T04:02:23.020176Z",
+    "end": "2026-07-17T00:00:00Z",
+    "event_start": null,
+    "created": "2026-07-11T04:00:06.099712Z",
+    "token_ids": "[\"26415540799787598601692916727720834184784624590242305650446067530164106694240\", \"29983092473051579074263426474591519138854584508808589717716936414589994513656\"]",
+    "outcomes": "[\"Atlanta Hawks\", \"Memphis Grizzlies\"]"
+  },
+  {
+    "sample": 6,
+    "market": "0x5d435e0f066049a9e176c7b5fb94f6197abcf10a3551637e76e5eca44c711f61",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "miami",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Miami be between 84-85\u00b0F on July 12?",
+    "updates": 12,
+    "start": "2026-07-11T01:02:46Z",
+    "end": "2026-07-12T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-11T01:02:23.660414Z",
+    "token_ids": "[\"32441861834892327119898745397233606873853114162554838997465078519623157116721\", \"75282667118229168426214215626137952989037356497898715286550088865673624134144\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 6,
+    "market": "0x444137a1954a4f2b1640b4112652df47828512913b45c56a7fa1057e32c8bf3a",
+    "category": "Sports/esports",
+    "tags": [
+      "baseball",
+      "games",
+      "mlb",
+      "sports"
+    ],
+    "title": "Bobby Witt Jr.: Home Runs O/U 0.5",
+    "updates": 6,
+    "start": "2026-07-11T06:48:41.504Z",
+    "end": "2026-07-11T23:05:00Z",
+    "event_start": null,
+    "created": "2026-07-11T06:45:34.726277Z",
+    "token_ids": "[\"46388638265806146366147923708524165915425833808559366000302901617096339256792\", \"16234967352627805636805992118441990664872206184338344688728975068479703103671\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 6,
+    "market": "0xcf848b9aa98e4b63777ff52f884e279a1715c9c04efdcba0db6b08f33baf82fb",
+    "category": "Economics/finance",
+    "tags": [
+      "commodities",
+      "finance",
+      "finance-updown",
+      "gold",
+      "hide-from-new",
+      "hit-price",
+      "pyth-finance",
+      "weekly"
+    ],
+    "title": "Will Gold (XAUUSD) hit (HIGH) $4,400 Week of July 13 2026?",
+    "updates": 8,
+    "start": "2026-07-10T22:01:47Z",
+    "end": "2026-07-17T21:00:00Z",
+    "event_start": "2026-07-10T22:01:23.113Z",
+    "created": "2026-07-10T22:01:23.780276Z",
+    "token_ids": "[\"94006903756313962115875483450341158957642546714901552159307119511767351716554\", \"14633871303434339616920363336177908139109094303523304369795933662524657970306\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 6,
+    "market": "0x48b7cce9378f4be2e3ecc982a631e86399f6901f167edbdcc5fa7fd920d3a201",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "guangzhou",
+      "hide-from-new",
+      "highest-temperature",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Guangzhou be 32\u00b0C on July 13?",
+    "updates": 64,
+    "start": "2026-07-11T04:04:24Z",
+    "end": "2026-07-13T12:00:00Z",
+    "event_start": null,
+    "created": "2026-07-11T04:04:08.760693Z",
+    "token_ids": "[\"88425703349871244287617016610315699679775397591193714797919696660637835801255\", \"19426546175811189470707357544215911438299704217300439569353646401647826719626\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  }
+]

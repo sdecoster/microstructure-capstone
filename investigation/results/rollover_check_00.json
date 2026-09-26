@@ -1,0 +1,72 @@
+{
+  "sample": 0,
+  "source_first": "2026-05-25T08:00:00.000Z",
+  "source_last": "2026-05-25T08:00:50.599Z",
+  "records": 900000,
+  "contracts": [
+    {
+      "market": "0x0265aca079710f31a5aaae4f266c01ec7d8c625f13ef7e557117220824830082",
+      "slug": "sol-updown-15m-1779696000",
+      "question": "Solana Up or Down - May 25, 4:00AM-4:15AM ET",
+      "messages": 1248,
+      "first": "2026-05-25T08:00:42.645Z",
+      "last": "2026-05-25T08:00:50.585Z"
+    },
+    {
+      "market": "0x4d8b286c28b65c6a8ced7f147fe098e32b456c5e0f4edaa0cf4ce9608180d8e8",
+      "slug": "eth-updown-15m-1779696000",
+      "question": "Ethereum Up or Down - May 25, 4:00AM-4:15AM ET",
+      "messages": 1493,
+      "first": "2026-05-25T08:00:42.715Z",
+      "last": "2026-05-25T08:00:50.597Z"
+    },
+    {
+      "market": "0xfc8d97d7af67c5c4012e0f4d300d47ea3c3d1e70714aee54fe06e5512f7b49c1",
+      "slug": "xrp-updown-15m-1779696000",
+      "question": "XRP Up or Down - May 25, 4:00AM-4:15AM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0x7dc590a0a886f399328c8baf9bc2b4889f5303b7c5b0600fddcc50934d5546b9",
+      "slug": "xrp-updown-5m-1779696000",
+      "question": "XRP Up or Down - May 25, 4:00AM-4:05AM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0xc540db6747c24f522494d1fb993afc67044e9fb2897be0808f71deb9e69e519a",
+      "slug": "btc-updown-15m-1779696000",
+      "question": "Bitcoin Up or Down - May 25, 4:00AM-4:15AM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0x19d5c993b793ab69f691414c8d9e93394596dd2f5919304d0d73099c8c3a503b",
+      "slug": "btc-updown-5m-1779696000",
+      "question": "Bitcoin Up or Down - May 25, 4:00AM-4:05AM ET",
+      "messages": 13089,
+      "first": "2026-05-25T08:00:32.957Z",
+      "last": "2026-05-25T08:00:50.593Z"
+    },
+    {
+      "market": "0x93b639ee185bc272b75ded9c2c76f0655ceb2385ff2762fed40badce81b26265",
+      "slug": "eth-updown-5m-1779696000",
+      "question": "Ethereum Up or Down - May 25, 4:00AM-4:05AM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0x097d4ddc34378ef2bfc2afeaa97319912b38acfedf66f0840d3315b82905d9f5",
+      "slug": "sol-updown-5m-1779696000",
+      "question": "Solana Up or Down - May 25, 4:00AM-4:05AM ET",
+      "messages": 1070,
+      "first": "2026-05-25T08:00:41.395Z",
+      "last": "2026-05-25T08:00:50.594Z"
+    }
+  ]
+}

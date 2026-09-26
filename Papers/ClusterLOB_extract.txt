@@ -1,0 +1,1679 @@
+Quantitative Finance
+ISSN: 1469-7688 (Print) 1469-7696 (Online) Journal homepage: www.tandfonline.com/journals/rquf20
+ClusterLOB: enhancing trading strategies by
+clustering orders in limit order books
+Yichi Zhang, Mihai Cucuringu, Alexander Y. Shestopaloﬀ & Stefan Zohren
+To cite this article: Yichi Zhang, Mihai Cucuringu, Alexander Y. Shestopaloﬀ & Stefan Zohren
+(2026) ClusterLOB: enhancing trading strategies by clustering orders in limit order books,
+Quantitative Finance, 26:8, 1285-1309, DOI: 10.1080/14697688.2026.2665153
+To link to this article:  https://doi.org/10.1080/14697688.2026.2665153
+© 2026 The Author(s). Published by Informa
+UK Limited, trading as Taylor & Francis
+Group.
+Published online: 16 Jun 2026.
+Submit your article to this journal 
+Article views: 1629
+View related articles 
+View Crossmark data
+This article has been awarded the Centre
+for Open Science 'Open Materials' badge.
+Full Terms & Conditions of access and use can be found at
+https://www.tandfonline.com/action/journalInformation?journalCode=rquf20\n\nQuantitative Finance, 2026
+V ol. 26, No. 8, 1285–1309, https://doi.org/10.1080/14697688.2026.2665153
+ClusterLOB: enhancing trading strategies by
+clustering orders in limit order books
+YICHI ZHANG †‡††*, MIHAI CUCURINGU †‡§, ALEXANDER Y . SHESTOPALOFF ¶∥
+and STEFAN ZOHREN ∗∗
+†Department of Statistics, University of Oxford, Oxford, UK
+‡Oxford-Man Institute of Quantitative Finance, University of Oxford, Oxford, UK
+§Department of Mathematics, University of California Los Angeles, Los Angeles, CA, USA
+¶School of Mathematical Sciences, Queen Mary University of London, London, UK
+∥Department of Mathematics and Statistics, University of Guelph, Guelph, Canada
+∗∗Department of Engineering, University of Oxford, Oxford, UK
+††Feishu Institute, Shanghai, China
+(Received 18 May 2025; accepted 4 April 2026 )
+In the rapidly evolving world of ﬁnancial markets, understanding the dynamics of limit order
+book (LOB) is crucial for unraveling market microstructure and participant behavior. We introduce
+ClusterLOB
+‡ as a method to cluster individual order in a stream of market-by-order (MBO) data
+into different groups. To do so, each order is augmented with six time-dependent features. By apply-
+ing the K-means++ clustering algorithm to the resulting order features, we are then able to assign
+each new order to one of three distinct clusters, which we identify as directional, opportunistic, and
+market-making participants, each capturing unique trading behaviors. Our experimental results are
+performed on one year of MBO data containing small-tick, medium-tick, and large-tick stocks from
+NASDAQ. To validate the usefulness of our clustering, we compute order ﬂow imbalances across
+each cluster within 30-min buckets during the trading day. We treat each cluster’s imbalance as a
+signal that provides insights into trading strategies and participants’ responses to varying market
+conditions. To assess the effectiveness of these signals, we identify the trading strategy with the
+highest Sharpe ratio in the training dataset, and demonstrate that its performance in the test dataset is
+superior to benchmark trading strategies that do not incorporate clustering. We also evaluate trading
+strategies based on order ﬂow imbalance decompositions across different market event types, includ-
+ing add, cancel, and trade events, to assess their robustness in various market conditions. This work
+establishes a robust framework for clustering orders in LOB, which enhances our understanding
+of market microstructure and participant behavior, and informs the development of more effective
+predictive trading signals with practical applications in algorithmic trading and quantitative ﬁnance.
+Keywords: Limit order book; Order ﬂow imbalance; Order ﬂow imbalance decomposition; Unsu-
+pervised learning; Clustering; High frequency trading; Market microstructure
+1. Introduction
+Financial markets are complex systems composed of diverse
+participants, each employing distinct trading strategies that
+shape market microstructure and liquidity dynamics. Under-
+standing the behavior of these participants is essential
+for unraveling the underlying mechanisms that drive price
+∗Corresponding author. Email: yichi.zhang@stats.ox.ac.uk
+‡The source code for ClusterLOB is available on GitHub:
+https://github.com/YichiZhang-Oxford/ClusterLOB.
+formation, order ﬂow dynamics, and market stability. The
+LOB, a continuously evolving record of all outstanding buy
+and sell orders, serves as a crucial lens for analyzing these
+interactions. By examining LOBs, traders, researchers, and
+regulators can gain insights into market efﬁciency, trading
+strategies, and the mechanisms that govern liquidity provision
+and price discovery.
+Traditional approaches to market microstructure analysis
+primarily focus on aggregated trade data or summary statistics
+of order ﬂow. However, the emergence of MBO data, which
+captures every individual market order and its attributes,
+provides a more granular view of trading behavior. MBO
+© 2026 The Author(s). Published by Informa UK Limited, trading as Taylor & Francis Group.
+This is an Open Access article distributed under the terms of the Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/), which permits unrestricted
+use, distribution, and reproduction in any medium, provided the original work is properly cited. The terms on which this article has been published allow the posting of the
+Accepted Manuscript in a repository by the author(s) or with their consent.\n\n1286 Y. Zhang et al.
+data enables a deeper understanding of how different mar-
+ket participants add, cancel, and trade orders, facilitating the
+classiﬁcation of traders based on real-time execution pat-
+terns. In a synthetic MBO setting, Mahfouz et al. (2021)
+built an agent-based model with four trading agent archetypes,
+each following commonly used strategies, and systemati-
+cally varies their behaviour to span a wide range of trad-
+ing styles. They then formulated opponent modelling in
+the LOB as a supervised learning task of classifying agent
+archetypes explicitly designed in the agent-based model. In
+addition, Wilinski et al. (2025) constructed an agent-based
+LOB environment with 15 investor types: market makers,
+market takers, several categories of chartists and fundamen-
+talists, plus noise traders. Their results showed that classi-
+ﬁcation methods recover agent types with very high accu-
+racy, whereas clustering performs much less reliably, par-
+ticularly for fundamentalist agents and in the presence of
+noise.
+In realistic MBO settings, however, the sheer volume
+and complexity pose signiﬁcant challenges for analysis. To
+address these challenges, researchers have increasingly turned
+to machine learning techniques. For example, using client
+order ﬂow data from a large broker, Cont et al. (2023)
+analyzed the properties of variables within this repre-
+sentation. The heterogeneity of the order ﬂow was cap-
+tured by segmenting clients into distinct clusters, each
+represented by a prototype. In addition, several studies
+(Zhang et al. 2019, 2021,K o l m et al. 2023, Kolm and
+Westray 2024,B r i o l aet al. 2024a) have employed deep learn-
+ing methods to extract meaningful patterns and insights from
+this high-dimensional data.
+We introduce ClusterLOB to examine execution
+behaviour of different market participants using one year of
+MBO data for a selection of small-tick, medium-tick, and
+large-tick stocks, where each market order is characterized
+by six time-dependent features. These features capture varia-
+tions in execution behavior across different market conditions,
+enabling a structured analysis of trading dynamics. To classify
+distinct trading behaviors, we apply the K-means++ cluster-
+ing algorithm, segmenting daily MBO data into three clusters,
+which we interpret as directional, opportunistic, and market-
+making traders, as described in Cartea et al. (2025). Direc-
+tional traders execute informed trades with signiﬁcant market
+impact, opportunistic traders react to short-term price ﬂuc-
+tuations, and market-making traders provide liquidity while
+minimizing inventory risk.
+To quantify the impact of these trading behaviors, we com-
+pute order ﬂow imbalances across different clusters within
+30-min buckets, generating alpha signals that provide insights
+into market participants’ trading strategies and responses to
+changing conditions. To evaluate the effectiveness of these
+signals, we identify the best trading strategy with the high-
+est Sharpe ratio (SR) in the training dataset and compare its
+performance against benchmark trading strategies that do not
+incorporate clustering in the test dataset. The results show that
+the best clustering-driven trading strategy outperforms bench-
+mark trading strategies, leading to improved trading perfor-
+mance and highlighting its predictive power. We also evaluate
+trading strategies based on order ﬂow imbalance decomposi-
+tion across different market event types, including add, cancel,
+and trade events, to assess its robustness in various market
+conditions.\n\nClusterLOB: enhancing trading strategies by clustering orders in limit order books 1287
+This study explores both contemporaneous market dynam-
+ics, analyzing real-time participant interactions, and forward-
+looking scenarios, evaluating how cluster-speciﬁc behaviors
+inﬂuence future price movements. To the best of our knowl-
+edge, this work is the ﬁrst to establish a robust framework
+for clustering participant behavior in realistic MBO data,
+that does not rely on any proprietary data sources (such
+as exchange or broker’s data), enhancing the understand-
+ing of market structure and informing the development of
+more effective predictive trading strategies with practical
+applications in algorithmic trading and quantitative ﬁnance.
+Our main contributions are summarized as follows.
+Paper outline. This paper is organized as follows. Section2
+provides an overview of the primary concepts, including the
+LOB, the order ﬂow imbalance, and the order ﬂow imbalance
+decomposition. In Section 3, we describe the dataset used in
+this research, outline the data pre-processing steps, and intro-
+duce the independent and dependent variables, performance
+evaluation metrics, clustering model, and cluster-based trad-
+ing strategy for the LOB. Section 4 discusses the empirical
+results across different event types for small-tick, medium-
+tick, and large-tick stocks. Finally, we conclude by summariz-
+ing our ﬁndings and exploring potential directions for future
+research in Section 5.
+2. Background
+In Section 2.1, we provide the mathematical description of
+the LOB, following the deﬁnitions and most of the nota-
+t i o nu s e di nG o u l det al. (2013). We introduce order ﬂow
+imbalance (OFI) in Section 2.2, and then decomposed order
+ﬂow imbalance (Decomposed OFI) in Section A.1.
+2.1. Limit order books (LOBs)
+First, we introduce the vector x = (p
+x, qx, tx) to deﬁne a buy
+and sell order, respectively.
+Deﬁnition An order x = (p
+x, qx, tx), submitted at time t x
+with price p x and size q x < 0 (qx > 0), is a commitment to
+buy (sell) up to |qx| units of the traded asset at a price no
+greater (less) than p x.
+Second, we introduce the resolution parameters of the
+LOB: the lot size σ and the tick size π.
+Deﬁnition The lot size σ of the LOB represents the smallest
+quantity of the asset that can be traded.
+All orders must have a size qx such that qx ∈{ ±kσ| k ∈
+N+}, which means all orders must be in whole units of the
+lot size σ, and these units can either be positive or negative,
+corresponding to selling or buying the asset, respectively.
+Deﬁnition The tick size π of the LOB represents the small-
+est allowable price difference between various orders.
+All orders must be submitted with prices accurate to some
+precision π. In this paper, we focus on the Nasdaq exchange,
+where the tick size π is $0.01. Next, we deﬁne the LOB L(t),
+followed by the buy orders B(t) and sell orders A(t).
+Deﬁnition An LOB L(t) represents the set of all order
+events in the market at time t, which can be divided into two
+sets: the set of active buy orders B(t), where q x < 0, and the
+set of active sell orders A(t), where qx > 0.
+Next, we deﬁne the best bid price b1(t) and the best ask
+price a1(t), respectively.
+Deﬁnition The best bid price b 1(t) at time t, deﬁned as the
+highest price (level 1) among all active buy orders B(t) at time
+t, is given by
+b1(t) := max
+x∈B(t)
+px.( 1)
+Deﬁnition The best ask price a 1(t) at time t, deﬁned as the
+lowest price (level 1) among all active sell orders A(t) at time
+t, is given by
+a1(t) := min
+x∈A(t)
+px.( 2)
+Subsequently, we establish the bid-side volume vb(p, t) and the
+ask-side volume v a(p, t), which are accessible at price p and
+at time t, respectively.
+Deﬁnition The bid-side volume v b(p, t) available at price p
+and at time t, is given by
+vb(p, t) :=
+∑
+{x∈B(t) | px=p}
+qx.( 3)
+Deﬁnition The ask-side volume v a(p, t) available at price p
+and at time t, is given by
+va(p, t) :=
+∑
+{x∈A(t) | px=p}
+qx.( 4)
+Deﬁnition The state ψ( t) of the LOB L(t) at time t,
+deﬁned as the vector containing information about the top 10
+(nonempty) levels of ask and bid prices and volumes at time t,
+is given by
+ψ( t) := [a
+1(t), va(a1(t), t), b1(t), vb(b1(t), t), ... ,
+a10(t), va(a10(t), t), b10(t), vb(b10(t), t)] ∈ R40.( 5 )
+Finally, the bid-ask spread s (t) and mid-price m(t ) can be
+calculated from the best ask price a 1(t) and best bid price
+b1(t).
+Deﬁnition The bid-ask spread s(t) at time t, is given by
+s(t) := a1(t) − b1(t).( 6)
+Deﬁnition The mid-price m(t) at time t, is given by
+m(t) := a1(t) + b1(t)
+2 .( 7 )\n\n1288 Y. Zhang et al.
+Figure 1. Example of a snapshot of the LOB.
+Figure 1 presents a summarized overview of the previously
+discussed deﬁnitions of the LOB, highlighting its structure,
+key components, and the role of buy and sell limit orders in
+shaping market dynamics.
+2.2. Order ﬂow imbalance
+Cont et al. (2014) demonstrated that the OFI, deﬁned as the
+imbalance between supply and demand at the best bid and ask
+prices, mainly drives price changes over short time intervals.
+Xu et al. (2018) built upon the work of Cont et al. (2014)
+by conducting a more detailed analysis of the relationship
+between net order ﬂow at the top M price levels on both
+sides of the LOB and the contemporaneous changes in the
+mid-price. Later, Cont et al. (2023) combined the OFI from
+the top levels of the limit order book into an integrated OFI
+single variable that provides a more comprehensive expla-
+nation of price impact, in comparison to the best-level OFI.
+Kolm et al. (2023) also illustrated that deep learning mod-
+els trained on OFI exhibit superior performance compared
+to the majority of models trained directly on order books.
+Shortly after, Kolm and Westray ( 2024) predicted future
+mid-price stock returns across multiple time horizons for indi-
+vidual stocks using deep learning models, with OFI serving
+as the regression variable. We employ the same deﬁnitions
+of OFI as those in the initial study by Cont et al. (2014).
+To further reﬁne our analysis, we introduce two variations
+of OFI: Size-based OFI and Count-based OFI, deﬁned as
+follows.
+Deﬁnition Within the time interval (t − h, t], the best-level
+Size-based OFI of LOB L(t), denoted by OFI
+S
+L(t), compares
+the cumulative OFIs on the order size of the best ask and bid
+side over the time interval, is given by
+OFIS
+L(t) := Lb,S(t) − Db,S(t) + M b,S(t) − La,S(t)
++ Da,S(t) − M a,S(t).( 8)
+where La,S(t) and Lb,S(t) represent the total order size of sell
+and buy orders arriving at the current best ask and bid dur-
+ing the time interval (t − h, t], respectively; Da,S(t) and Db,S(t)
+denotes the total order size of sell and buy orders cancelled
+from the current best ask and bid during the same interval,
+respectively; and M a,S(t) and M b,S(t) indicates the total order
+size of sell and buy orders traded to the current best ask and
+bid during the same interval, respectively.
+Deﬁnition Within the time interval (t − h, t], the best-level
+Count-based OFI of LOB L(t), denoted by OFI C
+L(t), compares
+the cumulative OFIs on the order count of the best ask and bid
+side over the time interval, is given by
+OFIC
+L(t) := Lb,C(t) − Db,C(t) + M b,C(t) − La,C(t)
++ Da,C(t) − M a,C(t).( 9)\n\nClusterLOB: enhancing trading strategies by clustering orders in limit order books 1289
+where L a,C(t) and L b,C(t) represent the total order count of
+sell and buy orders arriving at the current best ask and bid
+during the time interval (t − h, t], respectively; D a,C(t) and
+Db,C(t) denotes the total order count of sell and buy orders
+cancelled from the current best ask and bid during the same
+interval, respectively; and M
+a,C(t) and M b,C(t) indicates the
+total order count of sell and buy orders traded to the current
+best ask and bid during the same interval, respectively.
+3. Data and methodology
+In Section 3.1, we describe the dataset used in this research
+and outline the data preprocessing steps. Section 3.2 intro-
+duces the independent and dependent variables, the K-
+means++ clustering algorithm applied in our research, the
+cluster-based trading strategy, and performance evaluation
+metrics.
+3.1. Data
+3.1.1. Data description. We gather our data through LOB-
+STER by Huang and Polak (2011 ), which uses ITCH data
+from NASDAQ to reproduce the LOB for any stock on NAS-
+DAQ to any speciﬁed level. For each active trading day of
+a selected stock, LOBSTER generates two ﬁles: an ‘order-
+book’ ﬁle and a ‘message’ ﬁle. The ‘orderbook’ ﬁle records
+the evolution of the LOB up to the speciﬁed number of lev-
+els. The ‘message’ ﬁle contains event indicators specifying
+the type of update that modiﬁes the LOB within the requested
+price range. Each event is timestamped in seconds after mid-
+night, with a decimal precision ranging from milliseconds to
+nanoseconds, depending on the selected time period.
+In particular, we analyze 15 stocks spanning six differ-
+ent sectors throughout the entire year of 2021, with the
+summary information of the stocks provided in table 1.
+The sector classiﬁcation of stocks is proposed by NAS-
+DAQ, while the stock’s capitalization in 2021 is provided by
+https://companiesmarketcap.com. We categorize these stocks
+into three groups based on their tick size, in line with the
+work of Eisler et al. (2012) and Briola et al. (2024a, 2024b).
+The small-tick group comprises CHTR, GOOG , GS, IBM,
+MCD, and NVDA, with an average bid-ask spread ¯s ≳ 3π.
+The medium-tick group consists of AAPL, ABBV , and PM,
+with the average bid-ask spread satisfying 1.5 π ≲ ¯s ≲ 3π.
+The large-tick group includes CMCSA, CSCO, INTC, MSFT,
+KO, and VZ, with an average bid-ask spread ¯s that meets the
+condition ¯s ≲ 1.5π.
+3.1.2. Data pre-processing. In our analysis, we exclusively
+consider complete trading days in 2021, excluding weekends,
+public holidays, and any days with missing data in LOB-
+STER. For each trading day, we only analyze data from 09:30
+am to 16:00 pm, aligning with NASDAQ’s opening hours. We
+also ﬁlter out any orders related to auction trades and trad-
+ing halts, corresponding to event types 6 and 7 in LOBSTER,
+respectively. To avoid memory leaks, for each stock, we par-
+allelize the processing of data day by day using the Python
+library joblib. This is executed on an Intel(R) Xeon(R)
+Gold 6140 CPU @ 2.30GHz with 72 cores and a total memory
+of 502.51 GB.
+3.2. Methodology
+3.2.1. Independent variables. In Section 3.2.1.1, we out-
+line the deﬁnition for creating six time-dependent features for
+new
+orders on each trading day, and then discuss the forward
+rolling normalization of these features.
+Feature engineering. We distinguish the new order by creat-
+ing six time-dependent features on each trading day, which
+captures key aspects of order dynamics, such as arrival pat-
+terns, execution timing, and price impact. By leveraging
+these engineered features, we apply K-means++ clustering
+(Algorithm 1) to classify orders and systematically identify
+distinct market participant trading behaviors. Below are the
+deﬁnitions for the displayed features.
+Deﬁnition The available bid-side (ask-side) volume V (p
+x,
+tx) of the new order x with price p x and at time t x is given by
+V(px, tx) :=
+{vb(px, tx) bid-side,
+va(px, tx) ask-side. (10)
+Table 1. Summary of 15 stocks categorized by tick size along with their sector and market capitalization.
+Tick Symbol Name Sector Cap (2021)
+Small CHTR Charter Communications, Inc. Telecommunications $112.62 B
+GOOG Alphabet Inc. (Google) Technology $1.917 T
+GS Goldman Sachs Group, Inc. Finance $127.61 B
+IBM International Business Machines Corporation Technology $119.86 B
+MCD McDonald’s Corporation Consumer Discretionary $200.31 B
+NVDA NVIDIA Corporation Technology $735.27 B
+Medium AAPL Apple Inc. Technology $2.901 T
+ABBV AbbVie Inc. Health Care $239.37 B
+PM Philip Morris International Inc. Health Care $147.89 B
+Large CMCSA Comcast Corporation Telecommunications $229.95 B
+CSCO Cisco Systems, Inc. Telecommunications $267.26 B
+INTC Intel Corporation Technology $209.60 B
+MSFT Microsoft Corporation Technology $2.522 T
+KO Coca-Cola Company Consumer Staples $255.75 B
+VZ Verizon Communications Inc. Telecommunications $218.11 B\n\n1290 Y. Zhang et al.
+Deﬁnition The time elapsed between the time t x of the new
+order x and the time t m of the mid-price m(t m) last changing,
+denoted by T m(tx), is given by
+Tm(tx) := tx − tm.( 11)
+Deﬁnition The time elapsed between the time t x of the new
+order x with price px and the time tx1 of the ﬁrst order x1, which
+ﬁrstly arrived at the same price p x, denoted by T 1(tx), is given
+by
+T1(tx) := tx − tx1 . (12)
+Deﬁnition The time elapsed between the time t x of the new
+order x with price p x and the time t x′ of the previous order
+x′, which previously arrived at the same price p x, denoted by
+T′(tx), is given by
+T′(tx) := tx − tx′ . (13)
+Deﬁnition The sum of the available bid-side (ask-side) vol-
+ume v(px, tx) of the new buy (sell) order x with price p x and at
+time tx until the volume of the best bid price v (b1(tx), tx) (vol-
+ume of the best ask price v (a1(tx), tx)), denoted by same book
+side SBS(px, tx), is given by
+SBS(px, tx) :=
+⎧
+⎪⎪
+⎪
+⎪
+⎪
+⎨
+⎪⎪
+⎪
+⎪
+⎪
+⎩
+b1(tx)∑
+p=px
+v(p, tx) bid-side,
+px∑
+p=a1(tx)
+v(p, tx) ask-side.
+(14)
+Deﬁnition The sum of the available bid-side (ask-side) vol-
+ume v(p′
+x, tx) of the new sell (buy) order x with price p x and at
+time tx until the volume of the best bid price v (b1(tx), tx) (vol-
+ume of the best ask price v(a 1(tx), tx)), denoted by opposite
+book side OBS(px, tx), is given by
+OBS(px, tx) :=
+⎧
+⎪⎪
+⎪⎪⎪
+⎨
+⎪⎪
+⎪
+⎪⎪⎩
+px′∑
+p=a1(tx)
+v(p, tx) bid-side,
+b1(tx)∑
+p=p′x
+v(p, tx) ask-side.
+(15)
+where px and p′
+x are symmetric with respect to the mid-price
+m(tx).
+Deﬁnition The six time-dependent features F (px, tx) of the
+new buy (sell) order x with price p x and at time t x,a r e
+encapsulated in the six-dimensional feature vector , is given
+by
+F(px, tx) := [V(px, tx), Tm(tx), T1(tx), T′(tx),
+SBS(px, tx), OBS(px, tx)] ∈ R6. (16)
+Normalization. To ensure proper clustering across different
+stocks, we apply a forward-rolling normalization technique to
+the six time-dependent features. This approach standardizes
+each feature dynamically within a forward moving window,
+capturing local variations in trading behavior rather than
+relying on static global normalization. To avoid look-ahead
+bias, we calculate forward-rolling normalization for a new
+order using a sliding window of the most recent 100 orders
+to eliminate the inﬂuence of future data on historical cal-
+culations. Also, this method helps mitigate differences in
+scale across stocks and ensures that clustering is driven by
+relative feature variations rather than absolute magnitudes.
+By applying forward-rolling normalization, we enhance the
+robustness of the clustering process, allowing for a more accu-
+rate classiﬁcation of trading behaviors across diverse market
+conditions.
+Deﬁnition The forward-rolling normalization of each
+feature f (p, t)
+i ∈ [V(p, t), Tm(t), T1(t), T′(t), SBS(p, t), OBS
+(p, t)] (i = 1,... ,6), denoted by N(f (p, j)i), dynamically
+within a moving window of size w, is given by
+MA(f (p, t)i) = 1
+w
+t∑
+j=t−w+1
+f (p, j)i,
+STD(f (p, t)i) =
+√ 1
+w
+t∑
+j=t−w+1
+(f (p, j)i − MA(f (p, t)i))2,
+N(f (p, j)i) = f (p, j)i − MA(f (p, t)i)
+STD(f (p, t)i) .
+(17)
+where MA(f (p, t)i) and STD(f (p, t)i) are the forward-rolling
+mean and the forward-rolling standard deviation of f (p, t)i at
+time t, respectively.
+Deﬁnition Within the time interval (t − h, t], during which
+the LOB L(t) contains at least w orders, the forward rolling
+normalization of the six time-dependent features of the LOB
+L(t), denoted by N(F(L(t))) ∈ R(|L(t)|− w+1)×6, represents all
+order features dynamically normalized within a moving win-
+dow of size w over the time interval.
+Deﬁnition Within the time interval (t − h, t], during
+which the LOB L(t) for add (cancel, trade) events con-
+tains at least w orders, the forward rolling normal-
+ization of the six time-dependent features of the LOB
+L(t) for add (cancel, trade) events, denoted by N(F(e
+(L(t)) = add)) ∈ R
+(|e(L(t))=add|− w+1)×6 (N(F(e(L(t)) =
+cancel)) ∈ R(|e(L(t))=cancel|− w+1)×6, N(F(e(L(t)) = trade)) ∈
+R(|e(L(t))=trade|− w+1)×6), represents all order features dynam-
+ically normalized within a moving window of size w corre-
+sponding type of events over the time interval, respectively.
+3.2.2. Dependent variable. We analyze three categories of
+returns as our dependent variable. Each trading day T,t h e
+trading hours from 9:30 am to 16:00 pm are segmented into
+thirteen 30-min buckets /Delta1
+i (i = 1,... , 13). Then, we deﬁne
+the contemporaneous return, denoted by CONR(/Delta1i, T),t h e
+future return in the next bucket, denoted byFRNB(/Delta1i, T), and
+the future return in the end bucket, denoted by FREB(/Delta1i, T),
+for each bucket /Delta1i as follows.\n\nClusterLOB: enhancing trading strategies by clustering orders in limit order books 1291
+Figure 2. An illustration of the return calculations for CONR(/Delta11, T), FRNB(/Delta11, T),a n dFREB(/Delta11, T) on a single trading day T. Here, we
+use the ﬁrst bucket /Delta11 as an example to demonstrate the computation process.
+Deﬁnition The CONR(/Delta1i, T) for each bucket /Delta1i on day T,
+is given by
+CONR(/Delta1i, T) := log
+( m(ti)
+m(ti−1 )
+)
+i = 1,... , 13. (18)
+where m(ti) and m(ti−1 ) are the close and open mid-prices for
+the current bucket /Delta1i on day T.
+Deﬁnition The FRNB(/Delta1i, T) for each bucket /Delta1i on day T,
+is given by
+FRNB(/Delta1i, T) := log
+( m(ti+1)
+m(ti)
+)
+i = 1,... , 12. (19)
+where m(ti) and m(ti+1) are the close mid-prices for the cur-
+rent bucket /Delta1i and the next bucket /Delta1i+1 on day T, respectively.
+Deﬁnition The FREB(/Delta1i, T) for each bucket /Delta1i on day T,
+is given by
+FREB(/Delta1i, T) := log
+( m(t13)
+m(ti)
+)
+i = 1,... , 12. (20)
+where m(ti) and m(t13) are the close mid-prices for the current
+bucket /Delta1i and the end bucket /Delta113 on day T, respectively.
+The following schematic diagrams illustrate the struc-
+tures and relationships of CONR(/Delta1i, T), FRNB(/Delta1i, T), and
+FREB(/Delta1i, T) (Figure 2).
+3.2.3. Clustering model. This section outlines the K-
+means++ clustering algorithm presented by Arthur and Vassil-
+vitskii (2006), which is employed in our research. Clustering
+is a fundamental unsupervised learning technique used to
+group similar observations based on their underlying struc-
+ture. The K-means++ clustering algorithm is an enhancement
+of the standard K-means clustering algorithm, designed to
+improve the initialization process of cluster centroids. Unlike
+traditional K-means clustering algorithm, which initializes
+centroids randomly, K-means++ clustering algorithm strate-
+gically selects initial centroids in a manner that reduces the
+likelihood of poor local minima, thereby improving conver-
+gence speed and cluster quality. This version of the algorithm
+also provides an expected O(log k)-approximation theoretical
+guarantee relative to the optimal k-means cost. For complete-
+ness, we provide a summary of the K-means++ clustering in
+Algorithm 1 below.
+Algorithm 1 K-means++ clustering
+Input: A set of n data points X ⊂ Rd , the total number of
+clusters K.
+Output: Clusters φ1,φ2,... ,φK with corresponding cen-
+ters c1, c2,... , cK .
+1: Choose an initial center c1 uniformly at random from X .
+2: Choose the next center ci, selecting ci = x′ ∈ X with
+probability D(x′)2
+∑
+x∈X D(x)2 , where D(x) denotes the shortest
+distance from a data point x to the closest center we have
+already chosen.
+3: Repeat previous step until we have chosen a total of K
+centers.
+4: Proceed as with the standard k-means algorithm.
+3.2.4. ClusterLOB. In this section, we introduce Cluster
+LOB, a methodology designed to enhance trading perfor-
+mance by leveraging clustering techniques. Speciﬁcally, we
+classify market participants into three distinct clusters repre-
+senting directional, opportunistic, and market-making traders,
+which allows for a more nuanced approach to market
+microstructure modelling and signal generation.
+To assess the effectiveness of ClusterLOB, we conduct
+experiments across small-tick, medium-tick, and large-tick
+stocks separately, as shown in table 1. The rationale behind
+this classiﬁcation is that tick size signiﬁcantly inﬂuences
+market microstructure properties, which in turn inﬂuences liq-
+uidity provision and order placement strategies. By analyzing
+different tick size groups, we evaluate whetherClusterLOB
+consistently improves performance across various market
+conditions.
+We preprocess the data following the procedure outlined
+in Section 3.1.2. The dataset comprises a full year of MBO
+data in 2021. To ensure robust model training and evaluation,
+we divide the dataset into a training dataset, which includes
+trading day data from January 1, 2021, to June 30, 2021, and
+a test dataset, which includes trading day data from July 1,
+2021, to December 31, 2021.
+In the training dataset for each tick size groups, we cre-
+ate six time-dependent features for each stock, denoted as V,
+T
+m, T1, T′, SBS, and OBS, as described in Section 3.2.1.1, to
+capture essential order ﬂow characteristics. To ensure feature
+consistency across different stocks, we apply forward-rolling
+normalization, as outlined in Section 3.2.1.2. The normalized
+six-month feature dataset is then used as input for the K-
+means++ clustering Algorithm 1. We setK = 3 as the number\n\n1292 Y. Zhang et al.
+of clusters, which we retrospectively interpret as three trader
+types: directional, opportunistic, and market-making. One
+critical challenge in applying clustering to multiple stocks is
+ensuring that cluster labels remain consistent across differ-
+ent stocks. A naive application of K-means++ may lead to
+inconsistent cluster assignments, where labels do not align
+across different stocks. To address this issue, we employ a
+base initialization Algorithm 2, as demonstrated below. By
+using this base initialization scheme, we maintain a consistent
+mapping of cluster labels across stocks, ensuring that clusters
+are interpretable and comparable.
+Algorithm 2 Base initialization
+1: Select a randomly chosen stock from the training dataset
+as the reference stock.
+2: Apply K-means++ clustering to this reference stock’s nor-
+malized six-month feature dataset and store the resulting
+cluster centroids.
+3: For all remaining stocks, initialize the K-means++ clus-
+tering using the centroids obtained from Step 2 rather than
+using random initialization.
+After clustering the training dataset, each order is assigned
+a corresponding cluster label, allowing us to analyze order
+ﬂow patterns within each cluster. For each stock in the dataset,
+we calculate two OFIs (Size-based OFI and Count-based
+OFI) at the cluster level, which are formally introduced in
+Section 2.2, aggregating them within 30-min buckets through-
+out the trading day for the entire training dataset. This ensures
+that two OFIs are measured over short-term trading windows,
+allowing for an assessment of how different types of market
+participants interact with price movements over time. These
+calculations are performed consistently across all stocks in the
+training dataset to maintain comparability.
+To systematically classify trading behaviors, for each stock,
+we assess the correlation between two OFIs and three cate-
+gories of returns (CONR, FRNB, and FREB) for the entire
+training dataset, as deﬁned in Section 3.2.2. The correlation
+structure provides insights into how each cluster interacts
+with price changes and helps us deﬁne the type of traders.
+The clusters are deﬁned based on the following correlation
+patterns.
+• Cluster φ
+1: The cluster that exhibits the highest cor-
+relation between two OFIs and CONR is identiﬁed
+as the directional trading class. This classiﬁcation
+is based on the premise that traders in this cluster
+execute aggressive orders that signiﬁcantly impact
+price movements within the same bucket.
+• Cluster φ
+2: The cluster that has the highest corre-
+lation between the two OFIs and FREB is classi-
+ﬁed as the opportunistic trading class. Traders in
+this cluster strategically time their order executions
+based on short-term predictive signals, seeking to
+capitalize on market inefﬁciencies.
+• Cluster φ
+3: The remaining cluster, whose two OFIs
+do not exhibit strong correlations with CONR or
+FREB, is categorized as the market-making trad-
+ing class. These traders primarily provide liquid-
+ity, maintaining bid-ask spreads while minimizing
+exposure to directional market movements.
+• Cluster φ
+∗: A benchmark scenario in which no
+clustering is applied.
+Algorithm 3 ClusterLOB
+Training:
+1: For each stock in the same tick size group:
+• Create six time-dependent features and apply forward
+rolling normalization on each trading day.
+• Apply K-means++ clustering with K = 3 based on six
+time-dependent features following Algorithm 2, and
+assign each order a cluster label.
+• Compute two OFIs (Size-based OFI and Count-based
+OFI) across different clusters within 30-min buck-
+ets, and calculate correlations between two OFIs and
+three returns (CONR, FRNB, and FREB) for the entire
+training dataset.
+• Deﬁne clusters:
+− The highest correlation with CONR as the direc-
+tional trading class.
+− The highest correlation with FREB as the oppor-
+tunistic trading class.
+− The remaining as the market-making trading class.
+2: Apply mode estimation across stocks to ensure stable
+trading class assignments, and reassign labels for consis-
+tency.
+3: Select the highest SR from the strategies based on two
+OFIs as the best trading strategy for the FRNB and FREB.
+Test:
+1: For each stock in the same tick size group:
+• Create six time-dependent features and apply forward
+rolling normalization on each trading day.
+• Apply K-means++ clustering model with K = 3
+trained on the training dataset to predict the cluster
+assignments of orders based on six time-dependent
+features.
+• Compute two OFIs only for the orders belonging to the
+same cluster as the best trading strategy.
+2: Compare the best trading strategy with a benchmark trad-
+ing strategy that does not incorporate clustering for the
+FRNB and FREB.
+Although we maintain a consistent clustering methodol-
+ogy across different stocks, the classiﬁcation of traders may
+vary slightly between stocks due to differences in correlation
+structures. This variability may arise because the relation-
+ship between two OFIs and price movements is not uniform
+across all securities. To ensure a more robust and stable clas-
+siﬁcation, we aggregate the trading class labels across stocks
+using mode estimation. This approach determines the most
+frequently assigned trading class for each cluster across all
+stocks. To further enforce consistency and facilitate mean-
+ingful comparisons across different tick sizes of stocks, we
+systematically adjust cluster labels as needed. Without loss
+of generality, we reassign cluster labels until they satisfy the\n\nClusterLOB: enhancing trading strategies by clustering orders in limit order books 1293
+following standardized classiﬁcation: Cluster φ1 as the direc-
+tional trading class, Cluster φ2 as the opportunistic trading
+class, and Cluster φ3 as the market-making trading class.
+For each stock, after identifying the traders in the training
+dataset, we compute proﬁt and loss (PnL) based on Size-based
+OFI OFIS
+(φi,/Delta1j,T) across different clusters φi within bucket /Delta1j
+for FRNB(/Delta1j, T) on day T as follows.
+Deﬁnition The PnL based on Size-based OFI OFI S
+(φi,/Delta1j,T)
+across different clusters φi within bucket /Delta1j for FRNB(/Delta1j, T)
+on day T, is given by
+pnlS
+FRNB(φi, T) :=
+12∑
+j=1
+sign(OFIS
+(φi,/Delta1j,T))
+· FRNB(/Delta1j, T) i = 1,... , 3. (21)
+where sign(·) is the sign function, OFI S
+(φi,/Delta1j,T) represents Size-
+based OFI across different clusters φi within bucket /Delta1j on day
+T, respectively.
+Next, we compute the equal-weighted PnL by aggregating
+the PnL of all stocks on each trading day in the training dataset
+as follows.
+Deﬁnition The equal-weighted PnL, denoted by PNL S
+FRNB
+(φi), by averaging the pnl S
+FRNB(φi, T) of all stocks on each
+trading day, is given by
+PNLS
+FRNB(φi) := [E[pnlS
+FRNB(φi,1)], ... ,
+E[pnlS
+FRNB
+(φi, 126)]] ∈ R126 i = 1,... ,3 .
+(22)
+Then, we rescale the equal-weighted PnL by their volatility to
+target equal risk assignment, and set our annualized volatility
+target σtgt to be 0.15.
+Deﬁnition The rescaled equal-weighted PnL, denoted by
+ˆPNL
+S
+FRNB(φi), with the annualized volatility target σtgt set to
+0.15, is given by
+ˆPNL
+S
+FRNB
+(φi) := σtgt
+STD(PNLS
+FRNB(φi)) ·
+√
+252
+· PNLS
+FRNB(φi) i = 1,... , 3. (23)
+To determine the optimal strategy among the three clus-
+ters, we evaluate the annualized SR, which measures the
+risk-adjusted return of each strategy.
+Deﬁnition The annualized SR, denoted by SR( ˆPNL
+S
+FRNB
+(φi)), measures the risk-adjusted return of a portfolio, is given
+by
+SR( ˆPNL
+S
+FRNB
+(φi))
+= E[ ˆPNL
+S
+FRNB
+(φi)]
+STD( ˆPNL
+S
+FRNB
+(φi))
+·
+√
+252 i = 1,... , 3. (24)
+By a similar deﬁnition, we compute the annualized
+SR, denoted by SR ( ˆPNL
+C
+FRNB(φi)), based on Count-based
+OFI OFI C
+(φi,/Delta1j,T) across different clusters φi within bucket
+/Delta1j for FRNB(/Delta1j, T). Then, we select the highest SR,
+max{SR( ˆPNL
+S
+FRNB
+(φi)), SR( ˆPNL
+C
+FRNB
+(φi))} (i = 1,... ,3 ),
+which is identiﬁed as the best trading strategy in the training
+dataset.
+After selecting the best trading strategy, we follow the
+same process to create six time-dependent features and apply
+forward rolling normalization on each trading day. We then
+use the K-means++ clustering model trained on the training
+dataset to predict the cluster assignments of orders in the test
+dataset. After this step, we compute the two OFIs only for the
+orders belonging to the same cluster as the best trading strat-
+egy. Finally, we conduct a comparative evaluation against a
+benchmark trading strategy that does not incorporate cluster-
+ing and thus relies on the entire order ﬂow. The benchmark
+strategy follows a standard approach where trading signals are
+generated based on Size-based OFI OFI
+S
+(φ∗,/Delta1j,T) and Count-
+based OFI OFIC
+(φ∗,/Delta1j,T) within bucket /Delta1j for FRNB(/Delta1j, T)
+directly, without using different clusters φi on each trading
+day T in the test dataset.
+By a similar process as above, we also run the clus-
+tering experiment for FREB. First, we select the highest
+SR, max{SR( ˆPNL
+S
+FREB(φi)), SR( ˆPNL
+C
+FREB
+(φi))} (i = 1,... ,3 ) ,
+from strategies based on two OFIs, as the best trading strat-
+egy in the training dataset, and then evaluate its performance
+by comparing it with a benchmark trading strategy that does
+not incorporate clustering in the test dataset. We summarize
+the ClusterLOB Algorithm 3 as follows, detailing the key
+steps involved in its implementation and evaluation.
+We also evaluate trading strategies based on the decom-
+posed OFI, deﬁned in Section A.1, across different market
+event types, including add, cancel, and trade events, to assess
+its robustness in various market conditions. This analysis
+helps determine how the ClusterLOB adapts to differ-
+ent order ﬂow dynamics and execution patterns. In addition,
+we provide a schematic diagram of the ClusterLOB in
+ﬁgure 3, which visually illustrate its overall structure and the
+interactions between its main components.
+3.2.5. Performance evaluation. To evaluate the Cluster
+LOB, we compute a set of annualized performance met-
+rics, ensuring consistency with the evaluation framework
+adopted in recent literature (Lim et al. 2019, Wood et
+al. 2022,T a n et al. 2023, Poh et al. 2022, Wood et
+al. 2021, 2021?, Liu and Zohren 2023,L i uet al. 2023). These
+metrics provide a comprehensive view of the model’s effec-
+tiveness across proﬁtability, risk management, and trading
+performance.
+• Proﬁtability: annualized expected excess return
+(E[Returns]), hit rate.
+• Risk: volatility, downside deviation, maximum
+drawdown.
+• Performance: SR, Sortino ratio, Calmar ratio, aver-
+age proﬁt / average loss, PnL per trade (PPT).
+4. Empirical results
+In this section, we ﬁrst illustrate the empirical results using
+Comcast Corporation (CMCSA) as an example. We then\n\n1294 Y. Zhang et al.
+Figure 3. Schematic diagram of the ClusterLOB: We identify the best trading strategy with the highest SR in the training dataset, and
+demonstrate that its performance outperforms benchmark trading strategies that do not incorporate clustering in the test dataset.
+discuss the cumulative PnL results for FRNB and FREB
+across all events, speciﬁcally focusing on small-tick stocks.
+Additionally, we provide a comparative analysis of the results
+from FRNB and FREB across all event types, segmented
+by small-tick, medium-tick, and large-tick stocks. Finally,
+detailed results for the add, cancel, and trade event strategies
+are presented in the Appendix.
+Figure 4 presents the correlation analysis of CMCSA
+between two OFIs and CONR, FRNB, and FREB across the
+training and test datasets.
+C l u s t e rφ
+1 is strongly associated with directional traders.
+This is evidenced by the substantial positive correlation
+between the two OFIs and the CONR, indicating that activ-
+ity within this cluster exerts meaningful market impact. The
+correlation with forward-looking returns FRNB and FREB,
+however, is comparatively weaker, suggesting that the price
+impact induced by these traders is largely absorbed within the
+same bucket, often followed by partial price reversion. This
+aligns with typical directional strategies that aim to capital-
+ize on short-term price inefﬁciencies but are less predictive of
+longer-horizon returns.
+C l u s t e rφ
+2, in contrast, captures the behavior of oppor-
+tunistic traders. Two OFIs associated with this cluster display
+relatively weaker contemporaneous correlations but exhibit a
+higher degree of alignment with future returns, particularly
+FREB. This suggests that traders in this group are able to
+anticipate short-term price movements before they materi-
+alize, reﬂecting a high degree of intraday alpha generation.
+Their activity is more predictive than reactive, and thus more
+valuable from a forecasting perspective.
+C l u s t e rφ
+3 reﬂects market-making behavior. Here, the two
+OFIs show minimal correlation with all three return measures
+across both datasets. This indicates that these traders operate
+in a manner that minimizes market impact, providing liquidity
+without inducing or reacting to substantial price movement.
+Importantly, the correlation structures observed in the test
+set closely mirror those in the training set. This consistency
+suggests that the latent structure identiﬁed by ClusterLOB
+is stable and generalizable across different time periods. In
+particular, the roles of the three clusters–directional, oppor-
+tunistic, and market-making–remain distinguishable out-of-
+sample, supporting the robustness of the model in uncovering
+economically interpretable trading behaviors.
+In order to assess feature importance for the clustering, we
+apply a one-way ANOV AF-test. For each feature f
+i, one-way
+ANOV A computes
+Fi = between-cluster variance
+within-cluster variance
+=
+∑K
+j=1 nφj
+(¯fφj,i − ¯fi
+)2
+/(K − 1)
+∑K
+j=1
+∑
+r∈φj
+(
+fr,i − ¯fφj,i
+)2
+/(n − K)
+. (25)
+where K is the number of clusters, nφj is the size of cluster φj,
+¯fφj,i is the mean of feature i within cluster φj, ¯fi is the overall
+mean of feature i, fr,i denotes feature i for observation r, and
+n is the total number of observations. A large Fi indicates that
+the cluster means for featurei are well separated relative to the
+within-cluster dispersion, implying that the feature is strongly
+discriminative for the clustering.\n\nClusterLOB: enhancing trading strategies by clustering orders in limit order books 1295
+Figure 4. CMCSA: correlation analysis between two OFIs and CONR, FRNB, and FREB across training and test datasets.
+Table 2. CMCSA: one-way ANOV A F-test for fea-
+tures cross training and test datasets.
+Training Test
+Feature F Feature F
+OBS 84825045 Tm 57559403
+Tm 77695837 OBS 52377436
+SBS 76397429 SBS 46350695
+T′ 6897852 T′ 4769541
+V 849586.3 V 1026959
+T1 124413.8 T1 85057.13
+Table 2 reports the one-way ANOV A F-statistics in each
+feature for CMCSA, computed separately on the training and
+test datasets. In both splits, the ranking is dominated by OBS,
+Tm, and SBS, whose F-values are orders of magnitude larger
+than those of the remaining features, indicating that these fea-
+tures exhibit the strongest between-cluster separation relative
+to within-cluster dispersion. By contrast,T
+′ shows a moderate
+but clearly smaller F-statistic, while V and T1 consistently
+have the lowest values, implying a comparatively limited
+contribution to cluster separation in both training and test.
+In ﬁgure 5, we present heatmaps illustrating the mean,
+median and standard deviation values of six time-dependent
+features across the identiﬁed clusters in both the training
+and test datasets. These features include V, T
+m, T1, T′, SBS,
+and OBS, as shown in Section 3.2.1.1. The heatmaps offer
+a comprehensive view of the feature distributional charac-
+teristics within each cluster, enabling an interpretation of
+the trading behaviors encoded by the ClusterLOB. First,
+we observe strong alignment between the mean, median and
+standard deviation patterns within each dataset, indicating
+that the feature distributions are relatively symmetric and
+free from extreme outliers. This consistency across statistical
+moments reinforces the stability and reliability of the clus-
+ter assignments. For instance, cluster φ
+3 consistently exhibits
+the highest values for SBS, OBS, and Tm, in both mean
+and median estimates, across training and test sets. Cluster
+φ
+2, by contrast, demonstrates the highest value of Tm, and
+Cluster φ1 maintains relatively moderate values across most
+features in the training and test datasets. On the other hand,
+the standard deviation heatmap shows that cluster φ
+3 consis-
+tently exhibits the highest variability in Tm and T′ across both
+the training and test sets. In contrast, cluster φ∗ maintains
+relatively moderate variability across most features in both
+datasets. Importantly, the feature-level patterns are highly
+preserved when transitioning from the training to the test
+set, which provides further empirical support for the robust-
+ness and generalization ability of ClusterLOB. The model
+is not only able to identify economically meaningful trad-
+ing behaviors in-sample but also replicates these behavioral
+patterns reliably in out-of-sample data. This cross-period con-
+sistency in all mean, median, and standard deviation statistics
+underscores the interpretability and stability of the learned
+clusters.
+Tables 3 and 4 report cluster sizes by event type in the
+training and test datasets for CMCSA, respectively. In both
+splits, orders are concentrated in φ
+1 and φ2, with φ3 acting
+as a smaller cluster. In the training dataset, φ1 accounts for
+45.2% of all events and φ2 for 39.4%, while φ3 contributes
+15.4%. In the test dataset, the mass shifts toward φ1, which
+accounts for 51.9%, with φ2 decreasing to 34.6% and φ3 to
+13.5%. This indicates that the clustering remains structurally
+similar out-of-sample, while relative cluster prevalence varies
+over time.\n\n1296 Y. Zhang et al.
+Figure 5. CMCSA: heatmap of mean, median, and standard deviation values of six time-dependent features across different clusters in
+training and test datasets.
+Table 3. CMCSA: cluster sizes by event type in the training dataset.
+Submission Cancellation Deletion Execution (visible) Execution (hidden) All event
+φ1 16186544 133789 14677705 968683 181526 32148247
+φ2 13313476 212956 13152107 1139547 151920 27970006
+φ3 5598724 4954 5337022 452 0 10941152
+φ∗ 35098744 351699 33166834 2108682 333446 71059405
+Table 4. CMCSA: cluster sizes by event type in the test dataset.
+Submission Cancellation Deletion Execution (visible) Execution (hidden) All event
+φ1 14469600 68471 12826728 1029416 196430 28590645
+φ2 8903540 106498 8792796 1117282 173331 19093447
+φ3 3853924 7017 3593278 979 7 7455205
+φ∗ 27227064 181986 25212802 2147677 369768 55139297\n\nClusterLOB: enhancing trading strategies by clustering orders in limit order books 1297
+Figure 6. Cumulative PnL of FRNB and FREB across all events for small-tick stocks in the test dataset, rescaled to a target volatility of
+15%.
+Across both datasets, the dominant event types within each
+cluster are submissions and deletions, and together they com-
+prise the vast majority of events. In the training dataset,
+submissions account for 49.4% and deletions for 46.7%; in the
+test dataset, submissions remain at 49.4% while deletions are
+45.7%. Cancellations are uniformly rare, remaining below 1%
+in every cluster, with φ
+2 exhibiting the highest cancellation
+share at 0.76% in training and 0.56% in test. Executions,
+combining visible and hidden trades, are primarily concen-
+trated in φ
+1 and φ2 and become more prevalent in the test
+dataset, where the overall execution share rises from 3.44%
+in training to 4.57% in test. Notably, φ
+3 contains almost no
+executions, at 0.004% in training and 0.013% in test, suggest-
+ing that it predominantly captures non-trade activity driven
+by submissions and deletions rather than liquidity-taking
+events.
+After conﬁrming that the ClusterLOB produces con-
+sistent clustering behavior across both the training and test
+datasets, we now turn our attention to evaluating its out-of-
+sample performance. In particular, the opportunistic cluster
+achieves the highest SR in the training dataset with respect
+to both FRNB and FREB, motivating an analysis of its
+performance across all events for small-tick stocks in the test
+dataset.
+The ﬁgure 6 presents the cumulative PnL curves for FRNB
+and FREB in the test dataset, each rescaled to a target volatil-
+ity of 15%. The top panel shows the performance of OFI
+signals in forecasting FRNB. Here, we observe that the OFI
+C\n\n1298 Y. Zhang et al.
+Figure 7. All cumulative PnL of FRNB and FREB across all events for small-tick stocks in the training and test dataset, rescaled to a target
+volatility of 15%.
+signal derived from the opportunistic cluster φ2 clearly out-
+performs the benchmark models that use unclustered OFIs.
+The cumulative return steadily increases over the second half
+of 2021, achieving a SR of 1.34 and a PPT of 0.66. In contrast,
+the baseline model without clustering OFI
+S
+φ∗ yields a lower
+Sharpe ratio of 0.6 and a PPT of 0.3, while OFIC
+φ∗ results in
+negative performance, with a Sharpe ratio of − 0.78 and PPT
+of − 0.39. These results provide strong evidence that behav-
+iorally informed clustering enhances the predictive power of
+OFIs for short-horizon returns.
+The bottom panel of ﬁgure 6 displays the performance
+on FREB, which captures longer-horizon return movements.
+Once again, the opportunistic cluster φ
+2 achieves superior
+performance relative to the no-cluster benchmarks, albeit
+with smaller returns. Speciﬁcally, the opportunistic cluster φ2
+records a modest SR of 0.23 and a PPT of 0.11, while both
+unclustered benchmarks remain sharply negative, with SRs
+below −2.35 and large cumulative drawdowns. The fact that
+the opportunistic cluster φ
+2 retains some predictive power
+even at longer horizons is particularly notable, given that
+OFIs are typically most effective for short-term forecasting.
+Together, these ﬁndings demonstrate that ClusterLOB not
+only provides a meaningful decomposition of trader behav-
+ior, but also translates into substantial economic gains in
+predictive trading strategies.
+The ﬁgure 7 reports all cumulative FRNB and FREB PnL
+across all events for small-tick stocks, split into training and
+test datasets, with each curve rescaled to a 15% target volatil-
+ity. For FRNB, performance is dominated by the opportunistic
+cluster φ
+2, and the ranking is stable across splits. In the train-
+ing dataset, OFIC
+φ2 is the clear best, delivering the strongest
+upward cumulative PnL and the best risk-adjusted perfor-
+mance among all clustered and unclustered alternatives; the
+directional cluster φ
+1 and the no cluster benchmark φ∗ are
+materially weaker and, in several cases, drift negative. This
+ordering persists out-of-sample, in the test dataset, OFIC
+φ2
+remains the top performer, indicating that the opportunistic
+cluster captures a robust component of event-driven alpha for
+FRNB rather than an in-sample artifact.
+For FREB, the opportunistic cluster is also the main source
+of in-sample proﬁtability, but leadership rotates in the test
+dataset. In training dataset, OFI
+S
+φ2 achieves the best SR and
+performance metrics, with OFIC
+φ2 close behind, both clearly
+ahead of the benchmark. In the test dataset, OFIS
+φ2 is no
+longer the single best strategy, but it remains top three
+and critically still outperforms the no cluster benchmark
+φ
+∗, which underperforms meaningfully. Overall, FREB sug-
+gests clustering is beneﬁcial and portable, even if the exact
+best clustered speciﬁcation is less temporally stable than in
+FRNB.\n\nClusterLOB: enhancing trading strategies by clustering orders in limit order books 1299
+Table 5. Performance metric results for FRNB across all events for small-tick, medium-tick, and large-tick stocks in the test dataset.
+Small-tick stocks Medium-tick stocks Large-tick stocks
+All events Opportunistic No cluster Directional No cluster Opportunistic No cluster
+FRNB OFIC
+φ2
+OFIS
+φ∗
+OFIC
+φ∗
+OFIS
+φ1
+OFIS
+φ∗
+OFIC
+φ∗
+OFIC
+φ2
+OFIS
+φ∗
+OFIC
+φ∗
+E[Return] 0.201 0.089 − 0.117 0.187 − 0.07 − 0.089 0.232 − 0.002 0.141
+V olatility 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15
+Downside deviation 0.09 0.116 0.078 0.088 0.078 0.093 0.099 0.088 0.082
+Maximum drawdown − 0.071 − 0.112 − 0.173 − 0.108 − 0.129 − 0.161 − 0.06 − 0.132 − 0.057
+Sortino ratio 2.226 0.773 − 1.505 2.125 − 0.897 − 0.964 2.344 − 0.021 1.734
+Calmar ratio 2.831 0.798 − 0.675 1.733 − 0.543 − 0.555 3.869 − 0.014 2.482
+Hit rate 0.569 0.534 0.414 0.517 0.466 0.457 0.552 0.491 0.509
+Avg. proﬁt / avg. loss 0.94 0.963 1.256 1.159 1.059 1.075 1.053 1.033 1.128
+PnL per trade 0.665 0.296 − 0.386 0.619 − 0.232 − 0.296 0.768 − 0.006 0.468
+Sharpe ratio 1.34 0.596 − 0.779 1.248 − 0.467 − 0.596 1.548 − 0.013 0.943
+Note: The highest SR within each tick-size group is highlighted.
+Table 6. Performance metric results for FREB across all events for small-tick, medium-tick, and large-tick stocks in the test dataset.
+Small-tick stocks Medium-tick stocks Large-tick stocks
+All events Opportunistic No cluster Directional No cluster Opportunistic No cluster
+FREB OFIC
+φ2
+OFIS
+φ∗
+OFIC
+φ∗
+OFIS
+φ1
+OFIS
+φ∗
+OFIC
+φ∗
+OFIC
+φ2
+OFIS
+φ∗
+OFIC
+φ∗
+E[Return] 0.035 − 0.358 − 0.352 0.08 − 0.069 − 0.3 0.066 − 0.342 − 0.134
+V olatility 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15
+Downside deviation 0.111 0.117 0.124 0.089 0.088 0.098 0.121 0.112 0.086
+Maximum drawdown − 0.087 − 0.174 − 0.202 − 0.075 − 0.088 − 0.211 − 0.094 − 0.182 − 0.105
+Sortino ratio 0.312 − 3.073 − 2.836 0.894 − 0.785 − 3.072 0.545 − 3.043 − 1.557
+Calmar ratio 0.397 − 2.06 − 1.742 1.061 − 0.787 − 1.423 0.699 − 1.879 − 1.278
+Hit rate 0.56 0.431 0.457 0.517 0.448 0.448 0.5 0.431 0.474
+Avg. proﬁt / avg. loss 0.814 0.879 0.794 1.021 1.137 0.89 1.088 0.881 0.969
+PnL per trade 0.114 − 1.185 − 1.164 0.263 − 0.229 − 0.993 0.217 − 1.131 − 0.444
+Sharpe ratio 0.23 − 2.389 − 2.346 0.531 − 0.462 − 2.002 0.438 − 2.28 − 0.895
+Note: The highest SR within each tick-size group is highlighted.
+Table 5 reports the performance metrics for FRNB across
+all events, separated by small-tick, medium-tick, and large-
+tick stocks in the test dataset. For each tick-size group, we
+compare OFIs derived from ClusterLOB against bench-
+mark models without clustering. The highest SR within each
+group is highlighted.
+In the small-tick group, the opportunistic cluster φ
+2
+achieves the best overall performance, with the highest SR of
+1.34, a Sortino ratio of 2.226, and a Calmar ratio of 2.831. It
+also has the highest expected return 0.201 and a strong hit rate
+0.569. In contrast, the benchmark models without clustering
+yield signiﬁcantly lower or even negative Sharpe ratios, such
+as − 0.779 for OFI
+C
+φ∗. These results provide strong evidence
+that behaviorally informed clustering signiﬁcantly improves
+returns for small-tick stocks. For medium-tick stocks, the
+directional cluster φ
+1 delivers the best performance, achieving
+a SR of 1.248, slightly below that of the opportunistic cluster
+φ
+2 in the small-tick group. This cluster also yields high values
+for other performance metrics, such as a Sortino ratio of 2.125
+and a PPT of 0.619. This suggests that directional strategies
+tend to be more effective for assets with slightly wider spreads
+and lower quote update frequencies, where market impact
+may persist longer. In the large-tick group, the opportunistic
+cluster φ
+2 again yields the highest SR 1.548, outperforming
+both no-cluster benchmarks. Although the expected return
+0.232 and PPT 0.768 are comparable to those in smaller tick
+group, the improvement in risk-adjusted metrics is especially
+noteworthy. The large-tick structure may offer more persis-
+tent price inefﬁciencies that opportunistic traders can exploit,
+while market-making strategies become less effective due to
+larger tick sizes and reduced quote granularity.
+Compared to the results for FRNB in table 5, the per-
+formance metrics for FREB in table 6 are generally weaker
+across all tick-size groups. While the opportunistic cluster φ
+2
+still yields the highest SR in both the small-tick and large-
+tick groups (0.23 and 0.438, respectively), these values are
+substantially lower than their FRNB counterparts (1.34 and
+1.548, respectively). In the medium-tick group, the directional
+cluster φ
+1 again performs best with a SR of 0.531, but this too
+is below the 1.248 observed for FRNB. These results conﬁrm
+that OFIs, while still informative, are more effective for short-
+horizon targets such as FRNB than for longer-horizon targets
+such as FREB.
+Overall, the ﬁndings from Tables 5 and 6 afﬁrm the robust-
+ness of ClusterLOB across different return horizons and
+tick-size groups. The ClusterLOB adapts well to vary-
+ing tick-size environments, generalizes effectively out-of-
+sample, and provides meaningful improvements over bench-
+mark models. By uncovering latent structure in trader behav-
+ior and aligning clusters with distinct predictive regimes,\n\n1300 Y. Zhang et al.
+ClusterLOB offers a powerful and interpretable approach
+to high frequency trading forecasting. We also provide
+detailed performance results for the add, cancel, and trade
+event types across different tick-size groups. In line with the
+work of Sitaru et al. (2023), integrating event type infor-
+mation through the decomposition of OFI does not lead to
+improved performance in the forward-looking price impact,
+the results are presented in Appendix.
+5. Conclusion
+In this study, we propose ClusterLOB, a robust algorithm
+for analyzing high-frequency LOB data to uncover latent
+trader behaviors and enhance short-term return predictabil-
+ity. By clustering MBO data based on six time-dependent
+features using the K-means++ algorithm, we classify mar-
+ket activity into three clusters: directional, opportunistic, and
+market-making traders. These clusters reﬂect distinct behav-
+ioral patterns and interactions with the market microstructure,
+providing a foundation for more nuanced signal construction.
+We compute OFIs in 30-min buckets and evaluate their
+predictive power across a selection of small-tick, medium-
+tick, and large-tick stocks. Empirical results demonstrate that
+signals derived from clusters consistently outperform bench-
+mark models without clustering in all event types, especially
+in terms of SR and other risk-adjusted metrics. We further
+assess the robustness of ClusterLOB by decomposing per-
+formance across different event types (add, cancel, and trade),
+conﬁrming that the ClusterLOB remains effective across a
+wide range of market conditions.
+Overall, ClusterLOB advances our understanding of
+market microstructure by isolating meaningful trader behav-
+iors from noisy high-frequency data. The framework not only
+enhances interpretability but also provides practical improve-
+ments for return forecasting and alpha generation, with broad
+implications for algorithmic trading and quantitative ﬁnance.
+Several promising directions remain for future exploration.
+First, we aim to extend the clustering methodology to incor-
+porate temporally adaptive or online clustering techniques,
+allowing for the identiﬁcation of dynamic shifts in trader
+behavior over time. Second, integrating additional features
+such as order duration, queue position, and market state indi-
+cators could further enrich the trader behavioral clusters.
+Finally, applying ClusterLOB across multiple asset classes
+or international markets may help uncover universal patterns
+in order ﬂow behavior, broadening its applicability.
+6. Open Scholarship
+This article has earned the Center for Open Science badge
+for Open Materials. The materials are openly accessible at
+https://github.com/YichiZhang-Oxford/ClusterLOB .
+Disclosure statement
+No potential conﬂict of interest was reported by the author(s).
+Funding
+Alexander Y . Shestopaloff gratefully acknowledges this work
+was supported by the NSERC Discovery under Grant RGPIN-
+2024-05996.
+ORCID
+Yichi Zhang
+http://orcid.org/0000-0001-6367-2355
+Mihai Cucuringu http://orcid.org/0000-0002-8464-2152
+Alexander Y. Shestopaloff http://orcid.org/0000-0003-
+2228-5708
+Stefan Zohren http://orcid.org/0000-0002-3392-0394
+References
+Arthur, D. and Vassilvitskii, S., K-means++: the advantages of
+careful seeding. Tech report, 2006.
+Briola, A., Bartolucci, S. and Aste, T., Deep limit order book
+forecasting. Preprint, 2024. Available online at: arXiv:2403.
+09267.
+Briola, A., Bartolucci, S. and Aste, T., HLOB–information persis-
+tence and structure in limit order books. Preprint, 2024. Available
+online at: arXiv:2405.18938.
+Cartea, Á., Cohen, S.N., Graumans, R., Labyad, S., Sánchez-
+Betancourt, L. and Veldhuijzen, L., Statistical predictions of trad-
+ing strategies in electronic markets. J. Financ. Econom., 2025,
+23(2), nbae025.
+Cont, R., Cucuringu, M., Glukhov, V . and Prenzel, F., Analysis
+and modeling of client order ﬂow in limit order markets. Quant.
+Finance, 2023, 23(2), 187–205.
+Cont, R., Cucuringu, M. and Zhang, C., Cross-impact of order ﬂow
+imbalance in equity markets.Quant. Finance, 2023, 23(10), 1373–
+1393.
+Cont, R., Kukanov, A. and Stoikov, S., The price impact of order
+book events. J. Financ. Econom., 2014, 12(1), 47–88.
+Eisler, Z., Bouchaud, J.-P. and Kockelkoren, J., The price impact of
+order book events: market orders, limit orders and cancellations.
+Quant. Finance, 2012, 12(9), 1395–1419.
+Gould, M.D., Porter, M.A., Williams, S., McDonald, M., Fenn, D.J.
+and Howison, S.D., Limit order books. Quant. Finance, 2013,
+13(11), 1709–1742.
+Huang, R. and Polak, T., Lobster: Limit order book reconstruction
+system, 2011. Available at SSRN 1977207.
+Kolm, P.N., Turiel, J. and Westray, N., Deep order ﬂow imbalance:
+Extracting alpha at multiple horizons from the limit order book.
+Math. Finance, 2023, 33(4), 1044–1081.
+Kolm, P.N. and Westray, N., Improving deep learning of alpha term
+structures from the order book, 2024. Available at SSRN.
+Lim, B., Zohren, S. and Roberts, S., Enhancing time-series momen-
+tum strategies using deep neural networks. J. Financ. Data Sci.,
+2019, 1(4), 19–38.
+Liu, T., Roberts, S. and Zohren, S., Deep inception networks: A gen-
+eral end-to-end framework for multi-asset quantitative strategies.
+Preprint, 2023. Available online at: arXiv:2307.05522.
+Liu, T. and Zohren, S., Multi-factor inception: What to do
+with all of these features? Preprint, 2023. Available online at:
+arXiv:2307.13832.
+Mahfouz, M., Balch, T., Veloso, M. and Mandic, D., Learning to
+classify and imitate trading agents in continuous double auction
+markets. In Proceedings of the Second ACM International Con-
+ference on AI in Finance, Association for Computing Machinery,
+New York, NY , USA, pp. 1–8, 2021.
+Poh, D., Roberts, S. and Zohren, S., Transfer ranking in ﬁnance:
+applications to cross-sectional momentum with data scarcity,
+2022. Available online at: arXiv:2208.09968.\n\nClusterLOB: enhancing trading strategies by clustering orders in limit order books 1301
+Sitaru, B., Calinescu, A. and Cucuringu, M., Order ﬂow decompo-
+sition for price impact analysis in equity limit order books. In
+Proceedings of the Fourth ACM International Conference on AI in
+Finance, Association for Computing Machinery, New York, NY ,
+USA, pp. 637–645, 2023.
+Tan, W.L., Roberts, S. and Zohren, S., Spatio-temporal momentum:
+Jointly learning time-series and cross-sectional strategies, 2023.
+Available online at: arXiv:2302.10175.
+Wilinski, M., Goel, A., Iosiﬁdis, A. and Kanniainen, J., Classifying
+and clustering trading agents. Preprint, 2025. Available online at:
+arXiv:2505.21662.
+Wood, K., Giegerich, S., Roberts, S. and Zohren, S., Trading with the
+momentum transformer: An intelligent and interpretable architec-
+ture, 2021. Available online at: arXiv:2112.08534.
+Wood, K., Roberts, S. and Zohren, S., Slow momentum with fast
+reversion: A trading strategy using deep learning and changepoint
+detection. J. Financ. Data Sci., 2022, 4(1), 111–129.
+Wood, K., Roberts, S. and Zohren, S., Slow momentum with fast
+reversion: A trading strategy using deep learning and changepoint
+detection, 2021. Available online at: arXiv:2105.13727.
+Xu, K., Gould, M.D. and Howison, S.D., Multi-level order-ﬂow
+imbalance in a limit order book. Market Microstructure Liquidity,
+2018, 4(3-4), 1950011.
+Zhang, Z., Lim, B. and Zohren, S., Deep learning for market by order
+data. Appl. Math. Finance, 2021, 28(1), 75–95.
+Zhang, Z., Zohren, S. and Roberts, S., Deeplob: Deep convolu-
+tional neural networks for limit order books. IEEE. Trans. Signal.
+Process., 2019, 67(11), 3001–3012.
+Appendix
+A.1. Order ﬂow imbalance decomposition
+The order ﬂow imbalance decomposition (Decomposed OFI), intro-
+duced by Sitaru et al. (2023), integrates insights into order book
+event types with order ﬂow information. This work resulted in a
+notable enhancement in forward-looking predictive scenarios, both
+statistically and economically. Therefore, we adopt similar ideas as
+presented in this line of work.
+All order book events can be classiﬁed into one of the following
+event types:
+• Submission (add): Submitting a limit order, which is then
+placed in the corresponding price level in the LOB.
+• Deletion (cancel): Deleting (partially or entirely) an
+existing order, which results in the removal of the order
+from the LOB.
+• Execution (trade): Executing a trade, which happens
+when an ask order matches a bid order (either by a limit
+or market order), resulting in the removal of both orders
+from the LOB.
+Then, we deﬁne the Decomposed OFI, which creates a distinct
+variable for each event type of LOB.
+Deﬁnition Within the time interval (t − h, t], each event ℓ ∈ L(t)
+is assigned a type τ(ℓ)∈{ add, cancel, trade}. For a given type x ∈
+{add, cancel, trade}, the subset of events of type x at time t, denoted
+by L
+x(t), is given by
+Lx(t) :={ ℓ ∈ L(t) : τ(ℓ)= x} (A1)
+Deﬁnition Within the time interval (t − h, t], the add (cancel,
+trade) OFI, denoted by OFI S
+Ladd(t) (OFIS
+Lcancel(t),O F IS
+Ltrade(t)),i st h e
+sum of order size of order ﬂow contributions of total corresponding
+type of events over the time interval, respectively, is given by
+OFI
+S
+Ladd(t) := Lb,S(t) − La,S(t),
+OFIS
+Lcancel(t) :=− Db,S(t) + Da,S(t),
+OFIS
+Ltrade(t) := M b,S(t) − M a,S(t).
+(A2)
+Deﬁnition Within the time interval (t − h, t], the add (cancel,
+trade) OFI, denoted by OFI C
+Ladd(t) (OFIC
+Lcancel(t),O F IC
+Ltrade(t)),i st h e
+sum of order count of order ﬂow contributions of total corresponding
+type of events over the time interval, respectively, is given by
+OFI
+C
+Ladd(t) := Lb,C(t) − La,C(t),
+OFIC
+Lcancel(t) :=− Db,C(t) + Da,C(t),
+OFIC
+Ltrade(t) := M b,C(t) − M a,C(t).
+(A3)
+where Ladd(t) (Lcancel(t), Ltrade(t)) represents the set of all orders
+that are add (cancel, trade) events during the time interval (t − h, t],
+respectively, and the rest of the variables are deﬁned in the same
+manner as before.\n\n1302 Y. Zhang et al.
+A.2. Add events performance for different tick-size groups
+Table A1. Performance metric results for FRNB across add events for small-tick, medium-tick, and large-tick stocks in the test dataset. The
+highest SR within each tick-size group is highlighted.
+Add events Small-tick stocks Medium-tick stocks Large-tick stocks
+FRNB Market-making No cluster Directional No cluster Market-making No cluster
+OFIC
+φ3
+OFIS
+φ∗
+OFIC
+φ∗
+OFIS
+φ1
+OFIS
+φ∗
+OFIC
+φ∗
+OFIC
+φ3
+OFIS
+φ∗
+OFIC
+φ∗
+E[Return] 0.506 0.334 0.081 0.123 − 0.037 0.113 − 0.302 0.077 0.062
+V olatility 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15
+Downside deviation 0.089 0.113 0.078 0.081 0.086 0.082 0.128 0.087 0.093
+Maximum drawdown − 0.072 − 0.07 − 0.104 − 0.065 − 0.126 − 0.067 − 0.156 − 0.083 − 0.06
+Sortino ratio 5.71 2.953 1.042 1.518 − 0.433 1.377 − 2.357 0.887 0.67
+Calmar ratio 7.03 4.773 0.78 1.89 − 0.295 1.686 − 1.939 0.926 1.041
+Hit rate 0.569 0.578 0.474 0.466 0.474 0.483 0.466 0.474 0.491
+Avg. proﬁt / avg. loss 1.299 1.063 1.209 1.33 1.063 1.228 0.799 1.213 1.113
+PnL per trade 1.674 1.105 0.268 0.406 − 0.123 0.373 − 1 0.254 0.207
+Sharpe ratio 3.374 2.228 0.541 0.819 − 0.248 0.753 − 2.017 0.513 0.416
+Table A2. Performance metric results for FREB across add events for small-tick, medium-tick, and large-tick stocks in the test dataset. The
+highest SR within each tick-size group is highlighted.
+Add events Small-tick stocks Medium-tick stocks Large-tick stocks
+FREB Market-making No cluster Opportunistic No cluster Market-making No cluster
+OFIC
+φ2
+OFIS
+φ∗
+OFIC
+φ∗
+OFIS
+φ1
+OFIS
+φ∗
+OFIC
+φ∗
+OFIC
+φ1
+OFIS
+φ∗
+OFIC
+φ∗
+E[Return] 0.147 − 0.12 − 0.106 0.395 − 0.032 − 0.234 0.045 − 0.244 − 0.109
+V olatility 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15
+Downside deviation 0.093 0.102 0.114 0.072 0.095 0.104 0.148 0.092 0.074
+Maximum drawdown − 0.072 − 0.112 − 0.101 − 0.046 − 0.105 − 0.135 − 0.064 − 0.138 − 0.08
+Sortino ratio 1.583 − 1.171 − 0.928 5.445 − 0.332 − 2.247 0.306 − 2.655 − 1.476
+Calmar ratio 2.035 − 1.071 − 1.046 8.577 − 0.3 − 1.736 0.706 − 1.767 − 1.358
+Hit rate 0.466 0.431 0.466 0.56 0.466 0.44 0.543 0.414 0.414
+Avg. proﬁt / avg. loss 1.351 1.149 1.008 1.287 1.108 0.977 0.894 1.062 1.228
+PnL per trade 0.485 − 0.397 − 0.349 1.305 − 0.104 − 0.775 0.149 − 0.806 − 0.359
+Sharpe ratio 0.977 − 0.8 − 0.704 2.63 − 0.21 − 1.563 0.301 − 1.626 − 0.724
+A.3. Cancel events performance for different tick-size groups
+Table A3. Performance metric results for FRNB across cancel events for small-tick, medium-tick, and large-tick stocks in the test dataset.
+The highest SR within each tick-size group is highlighted.
+Cancel events Small-tick stocks Medium-tick stocks Large-tick stocks
+FRNB Opportunistic No cluster Directional No cluster Directional No cluster
+OFIC
+φ2
+OFIS
+φ∗
+OFIC
+φ∗
+OFIC
+φ1
+OFIS
+φ∗
+OFIC
+φ∗
+OFIS
+φ1
+OFIS
+φ∗
+OFIC
+φ∗
+E[Return] − 0.193 − 0.357 − 0.503 0.074 − 0.171 − 0.125 0.085 0.007 0.061
+V olatility 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15
+Downside deviation 0.098 0.107 0.119 0.101 0.127 0.134 0.095 0.098 0.118
+Maximum drawdown − 0.167 − 0.208 − 0.229 − 0.067 − 0.166 − 0.16 − 0.06 − 0.099 − 0.093
+Sortino ratio − 1.971 − 3.331 − 4.228 0.734 − 1.342 − 0.929 0.891 0.074 0.516
+Calmar ratio − 1.158 − 1.717 − 2.195 1.104 − 1.031 − 0.781 1.412 0.074 0.657
+Hit rate 0.5 0.474 0.5 0.534 0.491 0.5 0.5 0.491 0.526
+Avg. proﬁt / avg. loss 0.808 0.739 0.567 0.949 0.847 0.86 1.096 1.043 0.968
+PnL per trade − 0.64 − 1.181 − 1.662 0.245 − 0.566 − 0.413 0.28 0.024 0.202
+Sharpe ratio − 1.29 − 2.381 − 3.351 0.493 − 1.141 − 0.833 0.565 0.049 0.407\n\nClusterLOB: enhancing trading strategies by clustering orders in limit order books 1303
+Table A4. Performance metric results for FREB across cancel events for small-tick, medium-tick, and large-tick stocks in the test dataset.
+The highest SR within each tick-size group is highlighted.
+Cancel events Small-tick stocks Medium-tick stocks Large-tick stocks
+FREB Opportunistic No cluster Directional No cluster Market-making No cluster
+OFIC
+φ2
+OFIS
+φ∗
+OFIC
+φ∗
+OFIS
+φ1
+OFIS
+φ∗
+OFIC
+φ∗
+OFIC
+φ3
+OFIS
+φ∗
+OFIC
+φ∗
+E[Return] − 0.253 − 0.313 − 0.338 − 0.164 − 0.038 0.017 0.016 0.076 − 0.065
+V olatility 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15
+Downside deviation 0.117 0.121 0.124 0.126 0.116 0.121 0.181 0.17 0.155
+Maximum drawdown − 0.156 − 0.197 − 0.171 − 0.132 − 0.171 − 0.137 − 0.073 − 0.072 − 0.108
+Sortino ratio − 2.156 − 2.575 − 2.726 − 1.298 − 0.324 0.141 0.087 0.444 − 0.42
+Calmar ratio − 1.62 − 1.586 − 1.978 − 1.239 − 0.22 0.125 0.215 1.049 − 0.601
+Hit rate 0.431 0.474 0.457 0.517 0.569 0.578 0.595 0.586 0.534
+Avg. proﬁt / avg. loss 0.972 0.764 0.782 0.771 0.725 0.746 0.698 0.786 0.799
+PnL per trade − 0.836 − 1.033 − 1.119 − 0.541 − 0.124 0.057 0.052 0.25 − 0.214
+Sharpe ratio − 1.684 − 2.083 − 2.255 − 1.09 − 0.251 0.114 0.105 0.503 − 0.432
+A.4. Trade events performance for different tick-size groups
+Table A5. Performance metric results for FRNB across trade events for small-tick, medium-tick, and large-tick stocks in the test dataset.
+The highest SR within each tick-size group is highlighted.
+Trade events Small-tick stocks Medium-tick stocks Large-tick stocks
+FRNB Opportunistic No cluster Directional No cluster Opportunistic No cluster
+OFIC
+φ2
+OFIS
+φ∗
+OFIC
+φ∗
+OFIS
+φ1
+OFIS
+φ∗
+OFIC
+φ∗
+OFIC
+φ2
+OFIS
+φ∗
+OFIC
+φ∗
+E[Return] 0.098 0.035 0.102 − 0.09 − 0.134 − 0.053 0.07 0.121 0.211
+V olatility 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15
+Downside deviation 0.106 0.09 0.088 0.11 0.114 0.122 0.092 0.08 0.096
+Maximum drawdown − 0.061 − 0.119 − 0.062 − 0.154 − 0.154 − 0.132 − 0.092 − 0.07 − 0.084
+Sortino ratio 0.922 0.392 1.16 − 0.815 − 1.177 − 0.434 0.765 1.506 2.194
+Calmar ratio 1.609 0.298 1.642 − 0.582 − 0.872 − 0.401 0.764 1.724 2.517
+Hit rate 0.569 0.517 0.543 0.509 0.474 0.509 0.517 0.543 0.526
+Avg. proﬁt / avg. loss 0.844 0.969 0.937 0.877 0.956 0.909 1.005 0.95 1.127
+PnL per trade 0.325 0.117 0.337 − 0.296 − 0.444 − 0.175 0.232 0.399 0.699
+Sharpe ratio 0.654 0.236 0.679 − 0.597 − 0.896 -0.353 0.469 0.805 1.41
+Table A6. Performance metric results for FREB across trade events for small-tick, medium-tick, and large-tick stocks in the test dataset.
+The highest SR within each tick-size group is highlighted.
+Trade events Small-tick stocks Medium-tick stocks Large-tick stocks
+FREB Opportunistic No cluster Market-making No cluster Opportunistic No cluster
+OFIC
+φ2
+OFIS
+φ∗
+OFIC
+φ∗
+OFIS
+φ3
+OFIS
+φ∗
+OFIC
+φ∗
+OFIC
+φ2
+OFIS
+φ∗
+OFIC
+φ∗
+E[Return] 0.492 0.352 0.409 0.204 0.176 0.195 0.068 − 0.064 0.21
+V olatility 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15
+Downside deviation 0.079 0.08 0.09 0.116 0.077 0.092 0.11 0.156 0.139
+Maximum drawdown − 0.036 − 0.063 − 0.072 − 0.083 − 0.08 − 0.113 − 0.088 − 0.086 − 0.062
+Sortino ratio 6.22 4.397 4.528 1.761 2.29 2.114 0.616 − 0.413 1.512
+Calmar ratio 13.664 5.588 5.676 2.459 2.2 1.726 0.769 − 0.747 3.391
+Hit rate 0.56 0.509 0.543 0.586 0.552 0.595 0.509 0.5 0.56
+Avg. proﬁt / avg. loss 1.416 1.413 1.353 0.908 1.003 0.856 1.043 0.915 1.018
+PnL per trade 1.627 1.164 1.351 0.675 0.582 0.645 0.224 − 0.212 0.695
+Sharpe ratio 3.279 2.347 2.725 1.361 1.174 1.3 0.451 − 0.428 1.402\n\n1304 Y. Zhang et al.
+A.5. Small-tick stocks performance for different event types
+Figure A1. The average cumulative PnL of FRNB for small-tick stocks, rescaled to a target volatility of 15%. From top to bottom, this
+corresponds to all, add, cancel, and trade event types.\n\nClusterLOB: enhancing trading strategies by clustering orders in limit order books 1305
+Figure A2. The average cumulative PnL of FREB for small-tick stocks, rescaled to a target volatility of 15%. From top to bottom, this
+corresponds to all, add, cancel, and trade event types.\n\n1306 Y. Zhang et al.
+A.6. Medium-tick stocks performance for different event types
+Figure A3. The average cumulative PnL of FRNB for medium-tick stocks, rescaled to a target volatility of 15%. From top to bottom, this
+corresponds to all, add, cancel, and trade event types.\n\nClusterLOB: enhancing trading strategies by clustering orders in limit order books 1307
+Figure A4. The average cumulative PnL of FREB for medium-tick stocks, rescaled to a target volatility of 15%. From top to bottom, this
+corresponds to all, add, cancel, and trade event types.\n\n1308 Y. Zhang et al.
+A.7. Large-tick stocks performance for different event types
+Figure A5. The average cumulative PnL of FRNB for large-tick stocks, rescaled to a target volatility of 15%. From top to bottom, this
+corresponds to all, add, cancel, and trade event types.\n\nClusterLOB: enhancing trading strategies by clustering orders in limit order books 1309
+Figure A6. The average cumulative PnL of FREB for large-tick stocks, rescaled to a target volatility of 15%. From top to bottom, this
+corresponds to all, add, cancel, and trade event types.

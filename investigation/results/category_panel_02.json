@@ -1,0 +1,322 @@
+[
+  {
+    "sample": 2,
+    "market": "0x0f1b149dd7913bc096d02d1b1c1dc728b238dba015fb66677044a9618f4e7492",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "sports",
+      "ufc"
+    ],
+    "title": "Will Mitch Raposo win by KO or TKO?",
+    "updates": 4,
+    "start": "2026-05-30T22:07:12.91948Z",
+    "end": "2026-06-21T03:59:59.999Z",
+    "event_start": null,
+    "created": "2026-05-30T22:00:13.150544Z",
+    "token_ids": "[\"67754738425069569145816455006708064504013698310133063406968255889178358156564\", \"9573467307827715546263960021424192492329025635593846537167304099676536574577\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 2,
+    "market": "0x31563ec832a5f38691ac8f7e861af432a3cf7b9aa8a88c2fe0d307d795b27c47",
+    "category": "Sports/esports",
+    "tags": [
+      "baseball",
+      "division",
+      "mlb",
+      "mlb-national-league",
+      "nl-central",
+      "sports"
+    ],
+    "title": "Will Cincinnati Reds win the 2026 NL Central title?",
+    "updates": 4,
+    "start": "2026-02-19T18:06:08.20227Z",
+    "end": "2026-10-11T00:00:00Z",
+    "event_start": null,
+    "created": "2026-02-19T02:02:01.5164Z",
+    "token_ids": "[\"107779470538732630759503239340441197351901862502715916391095191634700439133672\", \"13087034081803704277974710570073753148287985754411625616171044635736292717846\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 2,
+    "market": "0x9ce3665494f24d727a6878c17c00ab98916eee0b4b69af2947cfe0fe3e748987",
+    "category": "Crypto",
+    "tags": [
+      "align",
+      "crypto",
+      "pre-market",
+      "public-sales",
+      "token-sales"
+    ],
+    "title": "Over $20M committed to the ALIGN public sale?",
+    "updates": 6,
+    "start": "2026-05-06T16:11:56.971Z",
+    "end": "2026-07-01T04:00:00Z",
+    "event_start": null,
+    "created": "2026-05-06T16:08:56.995756Z",
+    "token_ids": "[\"1685406874052505091165141962008993467771331242664258274057959292689424645135\", \"9792283770102794445816842107950540378918605862150051563741316671095995868654\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 2,
+    "market": "0xa9eaf619e878104545ff6a2be0be49e9a5e5e39e8fc013b21a9f2fbec4bed1e5",
+    "category": "Sports/esports",
+    "tags": [
+      "fifa-friendly",
+      "games",
+      "soccer",
+      "sports"
+    ],
+    "title": "Spread: Andorra (-2.5)",
+    "updates": 12,
+    "start": "2026-05-12T19:33:40.35008Z",
+    "end": "2026-06-07T17:00:00Z",
+    "event_start": null,
+    "created": "2026-05-12T19:30:17.345256Z",
+    "token_ids": "[\"79157266877018775873603345255032664721636735515878026767331323106433702121362\", \"66030999431170295211743029599528799920390597722779712205901698632057395837277\"]",
+    "outcomes": "[\"Andorra\", \"Kosovo\"]"
+  },
+  {
+    "sample": 2,
+    "market": "0xdb7dc5b7d56875a08de904414248ca545830b0c7db66837a29151a9adc7951a5",
+    "category": "Politics",
+    "tags": [
+      "politics",
+      "rewards-automation-50-4pt5-50",
+      "tweets-markets"
+    ],
+    "title": "Will Ted Cruz post 60-79 posts from May 29 to June 5, 2026?",
+    "updates": 16,
+    "start": "2026-05-26T04:05:50.59883Z",
+    "end": "2026-06-05T16:00:00Z",
+    "event_start": null,
+    "created": "2026-05-26T04:00:01.446987Z",
+    "token_ids": "[\"100822684984589566609199906480618223306845012636978735772188952545982727217446\", \"85650307412686951113100023321068550453135008879921912574528570533998016947601\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 2,
+    "market": "0x4cbd82e2e81c8599d379d0d95dc4262e8ffb0479ad6ed619d92605fd3bf196fe",
+    "category": "Sports/esports",
+    "tags": [
+      "mma",
+      "sports",
+      "ufc"
+    ],
+    "title": "Will Joaquin Buckley be the UFC Welterweight Champion on December 31, 2026?",
+    "updates": 4,
+    "start": "2026-01-04T19:54:17.642789Z",
+    "end": "2027-01-01T04:59:00Z",
+    "event_start": null,
+    "created": "2026-01-02T21:07:09.970978Z",
+    "token_ids": "[\"61289751392602752441468560728538943881396194029319752301315500675696599909473\", \"115253210953980326345185589142837441216459354832477950480112279580933830729554\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 2,
+    "market": "0x7ab41230cea8ef54639433223f1f61e3171f5d1d04aabff7a253a055bc40f449",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "sports",
+      "tennis"
+    ],
+    "title": "Centurion 2: Robin Bertrand vs Patrick Zahraj",
+    "updates": 134,
+    "start": "2026-05-30T22:07:20.89172Z",
+    "end": "2026-06-08T08:00:00Z",
+    "event_start": null,
+    "created": "2026-05-30T22:00:05.043572Z",
+    "token_ids": "[\"72450686553344093854011251070173339659089391630909825708830090907559854050173\", \"20877551238283106765376561544220181225230800371339900010849524095625282643480\"]",
+    "outcomes": "[\"Robin Bertrand\", \"Patrick Zahraj\"]"
+  },
+  {
+    "sample": 2,
+    "market": "0xf00252fdf9e9ee0d5d197dea681ed58856ddf3feebdda345b088fcac4891b7a4",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "london",
+      "recurring",
+      "rewards-automation-400-2",
+      "weather"
+    ],
+    "title": "Will the highest temperature in London be 16\u00b0C on June 2?",
+    "updates": 12,
+    "start": "2026-05-31T04:18:59.605418Z",
+    "end": "2026-06-02T12:00:00Z",
+    "event_start": null,
+    "created": "2026-05-31T04:03:49.356549Z",
+    "token_ids": "[\"8206824083034453245968071859058688126395609602331646210040301719975972512930\", \"82617049555102364304274116114554931515227956816294550434676748397138293548430\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 2,
+    "market": "0xf0432166a0651f9d6c4dc01cf8601b67d482bea62f2b651cf2cdd3596fc9daa9",
+    "category": "Other",
+    "tags": [
+      "2026-nba-playoffs",
+      "basketball",
+      "nba",
+      "nba-finals",
+      "rewards-50-4pt5-20",
+      "rewards-automation-50-4pt5-50"
+    ],
+    "title": "Will Cristiano Ronaldo attend any game at the 2026 NBA Finals?",
+    "updates": 30,
+    "start": "2026-06-02T14:47:52.528733Z",
+    "end": "2026-06-20T00:00:00Z",
+    "event_start": null,
+    "created": "2026-06-02T14:44:01.547295Z",
+    "token_ids": "[\"79082184124434121238495348929582182396790527641779750882680301884626255541743\", \"98365690506933669175018676937710064289930428219136198256748923410871355163361\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 2,
+    "market": "0x7f66241b4362e2c51f3fa0602565b8b93bc8d905603af2e9f0889d9a27d15884",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "japan-j-league",
+      "soccer",
+      "sports"
+    ],
+    "title": "Exact Score: T\u014dky\u014d Verdy 1 - 0 Gamba \u014csaka?",
+    "updates": 4,
+    "start": "2026-05-27T20:38:41.799697Z",
+    "end": "2026-06-06T07:00:00Z",
+    "event_start": null,
+    "created": "2026-05-27T19:30:42.857815Z",
+    "token_ids": "[\"61906297719853712029987215869717518168569347674393138500949470602700907831111\", \"6137256732339198911653957791241638442542377293038934561409863785820646443030\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 2,
+    "market": "0x93148ac4db80590c86e366e0a74a4e51964a0c4458e79d6d483308894a86524c",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "japan-j-league",
+      "soccer",
+      "sports"
+    ],
+    "title": "T\u014dky\u014d Verdy leading at halftime?",
+    "updates": 4,
+    "start": "2026-05-27T20:16:38.943286Z",
+    "end": "2026-06-06T07:00:00Z",
+    "event_start": null,
+    "created": "2026-05-27T19:30:42.296116Z",
+    "token_ids": "[\"71157292898784198988333892510097199802599831648172307134909890155904550559580\", \"85477507114440886670825059740229259109029459997339249696074142718832338096006\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 2,
+    "market": "0x21e88596ca45f30c9a2aaa37b23797a1b00d0a6d056d611e69abf95000e01be7",
+    "category": "Sports/esports",
+    "tags": [
+      "2026-fifa-world-cup",
+      "celebrities",
+      "music",
+      "pop-culture",
+      "soccer",
+      "sports",
+      "wc-culture-mentions",
+      "wc-tournament-futures"
+    ],
+    "title": "Will Post Malone perform at the 2026 FIFA World Cup Final halftime show?",
+    "updates": 14,
+    "start": "2026-04-16T19:19:17.879878Z",
+    "end": "2026-07-19T00:00:00Z",
+    "event_start": null,
+    "created": "2026-04-16T16:11:39.767606Z",
+    "token_ids": "[\"86770473140089007350689630460755188771884638595540801014616566228014389743305\", \"89373021069312108142851552219298720991979121100760751627859124950924407415261\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 2,
+    "market": "0x7a6867395b98399205a2811a45d76d4a21f188301683ae0c3d69236765b1abad",
+    "category": "Crypto",
+    "tags": [
+      "crypto",
+      "crypto-prices",
+      "ethereum",
+      "hit-price",
+      "monthly",
+      "recurring"
+    ],
+    "title": "Will Ethereum reach $2,600 in June?",
+    "updates": 8,
+    "start": "2026-06-01T14:40:57.960286Z",
+    "end": "2026-07-01T04:00:00Z",
+    "event_start": null,
+    "created": "2026-06-01T14:38:25.928019Z",
+    "token_ids": "[\"33518467438169338009022696051998527470154739290916237798837186019692738932223\", \"69337908846157114748977813047812218751077951399295417544846722473428709183252\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 2,
+    "market": "0x13e51c78c5a5c8d72f256f032bef4c1eb62cb9b6705238868bcbd3e226622394",
+    "category": "Sports/esports",
+    "tags": [
+      "esports",
+      "games",
+      "sports",
+      "starcraft-2"
+    ],
+    "title": "Map Handicap: Zoun (-1.5) vs Lambo (+1.5)",
+    "updates": 2,
+    "start": "2026-06-01T12:06:49.856829Z",
+    "end": "2026-06-02T17:40:00Z",
+    "event_start": null,
+    "created": "2026-06-01T12:00:54.023692Z",
+    "token_ids": "[\"9770186495959713550295044332678187261443526929247057859194521113644393230279\", \"2760660510524399518984255622066553394208497641056733843700459422254014397022\"]",
+    "outcomes": "[\"Zoun\", \"Lambo\"]"
+  },
+  {
+    "sample": 2,
+    "market": "0xf7327ee0a2475c2c9b4a1ac7bb4e1b49fce57c2a33ebf704e03630ec800f2944",
+    "category": "Politics",
+    "tags": [
+      "democratic-primary",
+      "elections",
+      "louisiana-primary",
+      "politics",
+      "primaries",
+      "primary-elections",
+      "senate-primary",
+      "us-presidential-election"
+    ],
+    "title": "Will Jamie Davis Jr. be the Democratic nominee for Senate in Louisiana?",
+    "updates": 4,
+    "start": "2025-12-22T18:28:53.172526Z",
+    "end": "2026-05-16T00:00:00Z",
+    "event_start": null,
+    "created": "2025-12-19T06:04:48.839701Z",
+    "token_ids": "[\"29749561734964419598023793890562285127717718335893452103866874107887951232446\", \"52379879834546348224908416911651012931193544868198143974767642766966993999950\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 2,
+    "market": "0x8fd8fa31b1ee99e1d72bdde2e0358414064575d90385b6619f8a8c888691dd5b",
+    "category": "Economics/finance",
+    "tags": [
+      "big-tech",
+      "economy",
+      "elon-musk",
+      "pop-culture",
+      "rewards-20-4pt5-50",
+      "tech"
+    ],
+    "title": "Will Elon Musk\u2019s net worth be at least $800b on June 30?",
+    "updates": 14,
+    "start": "2026-05-26T22:39:00.681714Z",
+    "end": "2026-06-30T00:00:00Z",
+    "event_start": null,
+    "created": "2026-05-26T18:29:31.668728Z",
+    "token_ids": "[\"26330996499653471563233494211778651916156560699518554442013741092812548981984\", \"30614175967240317419046158213478889107449044145166977708000065222378222283029\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  }
+]

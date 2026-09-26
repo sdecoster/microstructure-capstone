@@ -1,0 +1,19 @@
+# Python and notebooks
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+
+# Raw captures and cached API responses are large and/or reproducible locally.
+data/
+
+# Local generated artifacts
+*.log
+*.tmp

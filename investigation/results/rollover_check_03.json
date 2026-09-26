@@ -1,0 +1,72 @@
+{
+  "sample": 3,
+  "source_first": "2026-06-22T22:00:00.000Z",
+  "source_last": "2026-06-22T22:03:04.034Z",
+  "records": 900000,
+  "contracts": [
+    {
+      "market": "0x9cbbe88a93d65fa8035e8ad62bbfa2851cedb0e8b48461b85ad5124e8db0b386",
+      "slug": "btc-updown-15m-1782165600",
+      "question": "Bitcoin Up or Down - June 22, 6:00PM-6:15PM ET",
+      "messages": 79825,
+      "first": "2026-06-22T22:00:00.011Z",
+      "last": "2026-06-22T22:03:04.034Z"
+    },
+    {
+      "market": "0xa6e0a55efa5124e0e3a10536c2756a93a70402bd0f19566d90d713de7fae1f00",
+      "slug": "xrp-updown-15m-1782165600",
+      "question": "XRP Up or Down - June 22, 6:00PM-6:15PM ET",
+      "messages": 20887,
+      "first": "2026-06-22T22:00:00.008Z",
+      "last": "2026-06-22T22:03:04.005Z"
+    },
+    {
+      "market": "0x96aa556835a09541fa94259702db8b2a74e1176c6beeccce8975c9d9611ca268",
+      "slug": "btc-updown-5m-1782165600",
+      "question": "Bitcoin Up or Down - June 22, 6:00PM-6:05PM ET",
+      "messages": 323320,
+      "first": "2026-06-22T22:00:00.002Z",
+      "last": "2026-06-22T22:03:04.034Z"
+    },
+    {
+      "market": "0x58141e61f72de9eae387d673a280d53d71d8fdddf1f4d74ccf1f8881edf576db",
+      "slug": "eth-updown-5m-1782165600",
+      "question": "Ethereum Up or Down - June 22, 6:00PM-6:05PM ET",
+      "messages": 33895,
+      "first": "2026-06-22T22:00:00.011Z",
+      "last": "2026-06-22T22:03:03.974Z"
+    },
+    {
+      "market": "0x9dee284620e989a0e79373193b8f624df433cb500193fafa6f6a98612a58d290",
+      "slug": "eth-updown-15m-1782165600",
+      "question": "Ethereum Up or Down - June 22, 6:00PM-6:15PM ET",
+      "messages": 21884,
+      "first": "2026-06-22T22:00:00.008Z",
+      "last": "2026-06-22T22:03:04.027Z"
+    },
+    {
+      "market": "0x4ca0b6158ba3f2cb86cd1b782cbc755da86b5f1ebff49a3fd87789b1431239fd",
+      "slug": "sol-updown-5m-1782165600",
+      "question": "Solana Up or Down - June 22, 6:00PM-6:05PM ET",
+      "messages": 28311,
+      "first": "2026-06-22T22:00:00.009Z",
+      "last": "2026-06-22T22:03:04.022Z"
+    },
+    {
+      "market": "0xfdd97f7a92724affcd51c5a393d2cef288da4c486b188eda4335fe92099f4e96",
+      "slug": "sol-updown-15m-1782165600",
+      "question": "Solana Up or Down - June 22, 6:00PM-6:15PM ET",
+      "messages": 18208,
+      "first": "2026-06-22T22:00:00.010Z",
+      "last": "2026-06-22T22:03:03.949Z"
+    },
+    {
+      "market": "0x4c2f2b43b7b59e56800ebf29ef4637c29ec33ba069006e471bee9747ff8cfc60",
+      "slug": "xrp-updown-5m-1782165600",
+      "question": "XRP Up or Down - June 22, 6:00PM-6:05PM ET",
+      "messages": 24450,
+      "first": "2026-06-22T22:00:00.012Z",
+      "last": "2026-06-22T22:03:04.001Z"
+    }
+  ]
+}

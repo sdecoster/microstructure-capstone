@@ -1,0 +1,869 @@
+{
+  "sample": 14,
+  "source": "raw/2026-08-16/2000.jsonl.zst",
+  "outer_records": 196196,
+  "duplicates": 94838,
+  "outer_json_bytes": 156709914,
+  "span_seconds": 90.058,
+  "post_seconds": 80.058,
+  "post_compressed_bytes_approx": 9699550,
+  "first_receive_ms": 1786911780323,
+  "last_receive_ms": 1786911870381,
+  "kinds": {
+    "feed_message": 196095,
+    "token_index": 1,
+    "market_metadata": 88,
+    "event_metadata": 12
+  },
+  "schemas": [
+    {
+      "type": "price_change",
+      "keys": [
+        "event_type",
+        "market",
+        "price_changes",
+        "timestamp"
+      ],
+      "count": 193008
+    },
+    {
+      "type": "book",
+      "keys": [
+        "asks",
+        "asset_id",
+        "bids",
+        "event_type",
+        "hash",
+        "market",
+        "timestamp"
+      ],
+      "count": 2043
+    },
+    {
+      "type": "last_trade_price",
+      "keys": [
+        "asset_id",
+        "event_type",
+        "fee_rate_bps",
+        "market",
+        "price",
+        "side",
+        "size",
+        "timestamp",
+        "transaction_hash"
+      ],
+      "count": 988
+    }
+  ],
+  "feed_json_bytes": 153145202,
+  "post_outer_records": 176361,
+  "numeric_scale": 1000000,
+  "lag_seconds": {
+    "n": 9800,
+    "min": 0.003,
+    "median": 0.006,
+    "p95": 0.018,
+    "max": 0.147
+  },
+  "frame": {
+    "window_size": 2097152,
+    "checksum": false,
+    "dictionary_id": 0
+  },
+  "portfolios": {
+    "all": {
+      "bytes": 2239111,
+      "by_table": {
+        "price_changes": 1771828,
+        "trades": 47373,
+        "book_levels": 168047,
+        "snapshots": 60125,
+        "dimensions": 191738
+      },
+      "rows": 350064,
+      "markets": 1747
+    },
+    "crypto4": {
+      "bytes": 1092106,
+      "by_table": {
+        "price_changes": 899327,
+        "trades": 41802,
+        "book_levels": 96159,
+        "snapshots": 52836,
+        "dimensions": 1982
+      },
+      "rows": 245170,
+      "markets": 8
+    },
+    "crypto8": {
+      "bytes": 1792514,
+      "by_table": {
+        "price_changes": 1521916,
+        "trades": 46222,
+        "book_levels": 163364,
+        "snapshots": 58614,
+        "dimensions": 2398
+      },
+      "rows": 322929,
+      "markets": 12
+    },
+    "crypto12": {
+      "bytes": 1848195,
+      "by_table": {
+        "price_changes": 1572621,
+        "trades": 46961,
+        "book_levels": 166199,
+        "snapshots": 59603,
+        "dimensions": 2811
+      },
+      "rows": 329396,
+      "markets": 16
+    },
+    "crypto15": {
+      "bytes": 1848195,
+      "by_table": {
+        "price_changes": 1572621,
+        "trades": 46961,
+        "book_levels": 166199,
+        "snapshots": 59603,
+        "dimensions": 2811
+      },
+      "rows": 329396,
+      "markets": 16
+    },
+    "crypto15m4": {
+      "bytes": 718883,
+      "by_table": {
+        "price_changes": 683530,
+        "trades": 7417,
+        "book_levels": 19191,
+        "snapshots": 7178,
+        "dimensions": 1567
+      },
+      "rows": 77759,
+      "markets": 4
+    },
+    "crypto1h4": {
+      "bytes": 64810,
+      "by_table": {
+        "price_changes": 52736,
+        "trades": 3552,
+        "book_levels": 4288,
+        "snapshots": 2667,
+        "dimensions": 1567
+      },
+      "rows": 6467,
+      "markets": 4
+    },
+    "crypto15m1h8": {
+      "bytes": 779508,
+      "by_table": {
+        "price_changes": 736960,
+        "trades": 8179,
+        "book_levels": 24260,
+        "snapshots": 8136,
+        "dimensions": 1973
+      },
+      "rows": 84226,
+      "markets": 8
+    },
+    "crypto_slow12": {
+      "bytes": 803525,
+      "by_table": {
+        "price_changes": 759679,
+        "trades": 8270,
+        "book_levels": 24875,
+        "snapshots": 8307,
+        "dimensions": 2394
+      },
+      "rows": 85976,
+      "markets": 12
+    },
+    "crypto_all16": {
+      "bytes": 1866864,
+      "by_table": {
+        "price_changes": 1590041,
+        "trades": 47043,
+        "book_levels": 166819,
+        "snapshots": 59720,
+        "dimensions": 3241
+      },
+      "rows": 331146,
+      "markets": 20
+    },
+    "sports5": {
+      "bytes": 13126,
+      "by_table": {
+        "price_changes": 5430,
+        "trades": 2720,
+        "book_levels": 1763,
+        "snapshots": 1646,
+        "dimensions": 1567
+      },
+      "rows": 285,
+      "markets": 4
+    },
+    "sports15": {
+      "bytes": 13126,
+      "by_table": {
+        "price_changes": 5430,
+        "trades": 2720,
+        "book_levels": 1763,
+        "snapshots": 1646,
+        "dimensions": 1567
+      },
+      "rows": 285,
+      "markets": 4
+    },
+    "mixed8plus7": {
+      "bytes": 1795918,
+      "by_table": {
+        "price_changes": 1525034,
+        "trades": 46263,
+        "book_levels": 163142,
+        "snapshots": 58662,
+        "dimensions": 2817
+      },
+      "rows": 323214,
+      "markets": 16
+    },
+    "mixed12plus3": {
+      "bytes": 1846685,
+      "by_table": {
+        "price_changes": 1570706,
+        "trades": 47018,
+        "book_levels": 166165,
+        "snapshots": 59656,
+        "dimensions": 3140
+      },
+      "rows": 329609,
+      "markets": 19
+    }
+  },
+  "family_bytes": {
+    "ETH 5m": {
+      "bytes": 84765,
+      "by_table": {
+        "price_changes": 66668,
+        "trades": 4479,
+        "book_levels": 8575,
+        "snapshots": 3688,
+        "dimensions": 1355
+      },
+      "rows": 13254,
+      "markets": 2
+    },
+    "ETH 4h": {
+      "bytes": 15484,
+      "by_table": {
+        "price_changes": 7665,
+        "trades": 2720,
+        "book_levels": 2206,
+        "snapshots": 1646,
+        "dimensions": 1247
+      },
+      "rows": 711,
+      "markets": 1
+    },
+    "Other": {
+      "bytes": 64291,
+      "by_table": {
+        "price_changes": 52151,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 12140
+      },
+      "rows": 4940,
+      "markets": 103
+    },
+    "HYPE 15m": {
+      "bytes": 4133,
+      "by_table": {
+        "price_changes": 2886,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1247
+      },
+      "rows": 18,
+      "markets": 1
+    },
+    "SOL 5m": {
+      "bytes": 60218,
+      "by_table": {
+        "price_changes": 47061,
+        "trades": 4040,
+        "book_levels": 4660,
+        "snapshots": 3102,
+        "dimensions": 1355
+      },
+      "rows": 7636,
+      "markets": 2
+    },
+    "ETH 1h": {
+      "bytes": 26125,
+      "by_table": {
+        "price_changes": 18292,
+        "trades": 2788,
+        "book_levels": 2071,
+        "snapshots": 1727,
+        "dimensions": 1247
+      },
+      "rows": 1876,
+      "markets": 1
+    },
+    "SOL 1h": {
+      "bytes": 16894,
+      "by_table": {
+        "price_changes": 9332,
+        "trades": 2720,
+        "book_levels": 1957,
+        "snapshots": 1638,
+        "dimensions": 1247
+      },
+      "rows": 813,
+      "markets": 1
+    },
+    "BNB up/down other": {
+      "bytes": 10574,
+      "by_table": {
+        "price_changes": 3289,
+        "trades": 2720,
+        "book_levels": 1672,
+        "snapshots": 1646,
+        "dimensions": 1247
+      },
+      "rows": 69,
+      "markets": 1
+    },
+    "SOL 4h": {
+      "bytes": 6669,
+      "by_table": {
+        "price_changes": 5422,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1247
+      },
+      "rows": 308,
+      "markets": 1
+    },
+    "SOL 15m": {
+      "bytes": 80463,
+      "by_table": {
+        "price_changes": 71287,
+        "trades": 2977,
+        "book_levels": 3012,
+        "snapshots": 1940,
+        "dimensions": 1247
+      },
+      "rows": 8549,
+      "markets": 1
+    },
+    "XRP 5m": {
+      "bytes": 54055,
+      "by_table": {
+        "price_changes": 43147,
+        "trades": 3682,
+        "book_levels": 3078,
+        "snapshots": 2793,
+        "dimensions": 1355
+      },
+      "rows": 5390,
+      "markets": 2
+    },
+    "BTC 1h": {
+      "bytes": 31132,
+      "by_table": {
+        "price_changes": 20263,
+        "trades": 3388,
+        "book_levels": 3770,
+        "snapshots": 2464,
+        "dimensions": 1247
+      },
+      "rows": 3194,
+      "markets": 1
+    },
+    "XRP 1h": {
+      "bytes": 9033,
+      "by_table": {
+        "price_changes": 7786,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1247
+      },
+      "rows": 584,
+      "markets": 1
+    },
+    "ITF tennis": {
+      "bytes": 13814,
+      "by_table": {
+        "price_changes": 11830,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1984
+      },
+      "rows": 902,
+      "markets": 8
+    },
+    "BTC 4h": {
+      "bytes": 13252,
+      "by_table": {
+        "price_changes": 5425,
+        "trades": 2720,
+        "book_levels": 2214,
+        "snapshots": 1646,
+        "dimensions": 1247
+      },
+      "rows": 463,
+      "markets": 1
+    },
+    "BTC 15m": {
+      "bytes": 352342,
+      "by_table": {
+        "price_changes": 325752,
+        "trades": 5890,
+        "book_levels": 14176,
+        "snapshots": 5277,
+        "dimensions": 1247
+      },
+      "rows": 42994,
+      "markets": 1
+    },
+    "XRP 4h": {
+      "bytes": 6138,
+      "by_table": {
+        "price_changes": 4891,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1247
+      },
+      "rows": 268,
+      "markets": 1
+    },
+    "ETH 15m": {
+      "bytes": 178534,
+      "by_table": {
+        "price_changes": 165685,
+        "trades": 3689,
+        "book_levels": 5182,
+        "snapshots": 2731,
+        "dimensions": 1247
+      },
+      "rows": 19553,
+      "markets": 1
+    },
+    "DOGE up/down other": {
+      "bytes": 6062,
+      "by_table": {
+        "price_changes": 4815,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1247
+      },
+      "rows": 284,
+      "markets": 1
+    },
+    "BTC 5m": {
+      "bytes": 920638,
+      "by_table": {
+        "price_changes": 744611,
+        "trades": 38173,
+        "book_levels": 88186,
+        "snapshots": 48313,
+        "dimensions": 1355
+      },
+      "rows": 218890,
+      "markets": 2
+    },
+    "Counter-Strike": {
+      "bytes": 36382,
+      "by_table": {
+        "price_changes": 26022,
+        "trades": 2937,
+        "book_levels": 2397,
+        "snapshots": 1870,
+        "dimensions": 3156
+      },
+      "rows": 2410,
+      "markets": 19
+    },
+    "XRP 15m": {
+      "bytes": 63565,
+      "by_table": {
+        "price_changes": 53980,
+        "trades": 3231,
+        "book_levels": 2920,
+        "snapshots": 2187,
+        "dimensions": 1247
+      },
+      "rows": 6663,
+      "markets": 1
+    },
+    "ETH up/down other": {
+      "bytes": 5272,
+      "by_table": {
+        "price_changes": 4025,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1247
+      },
+      "rows": 130,
+      "markets": 1
+    },
+    "SOL up/down other": {
+      "bytes": 4392,
+      "by_table": {
+        "price_changes": 3145,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1247
+      },
+      "rows": 32,
+      "markets": 1
+    },
+    "ATP tennis": {
+      "bytes": 11812,
+      "by_table": {
+        "price_changes": 4267,
+        "trades": 2720,
+        "book_levels": 1717,
+        "snapshots": 1646,
+        "dimensions": 1462
+      },
+      "rows": 163,
+      "markets": 3
+    },
+    "XRP up/down other": {
+      "bytes": 4366,
+      "by_table": {
+        "price_changes": 3119,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1247
+      },
+      "rows": 44,
+      "markets": 1
+    },
+    "BTC up/down other": {
+      "bytes": 4433,
+      "by_table": {
+        "price_changes": 3186,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1247
+      },
+      "rows": 40,
+      "markets": 1
+    }
+  },
+  "sports_eligible": 4,
+  "sports_rank": [
+    {
+      "market": "0xdf28e945084d15b580c65d347165b4429dd9ea268f80298f239845c43947b8c8",
+      "family": "Counter-Strike",
+      "title": "Counter-Strike: LPH Gaming vs SAW Youngsters (BO3) - CCT Europe Challengers Series Playoffs",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 28
+    },
+    {
+      "market": "0x9773e9e7cf03e6156c03f6cf5ed0affa177210e73f0f9761859c85a2ac0527d0",
+      "family": "Counter-Strike",
+      "title": "Counter-Strike: Lavked vs INOX Division (BO3) - ESL Challenger League Europe Cup #3 Playoffs",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 22
+    },
+    {
+      "market": "0x49054f35f2a82fa371ad7338cbbeb972921074cf100d8ef02540f8a4308e1f57",
+      "family": "Counter-Strike",
+      "title": "Counter-Strike: Vitality Academy vs  Phantom Academy (BO3) - European Pro League Regular Playoffs",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 6
+    },
+    {
+      "market": "0xac86b6617fa27c8bcf3e9e5969eec2dc1a465e57b677314e1dc53ad52a6b972c",
+      "family": "Counter-Strike",
+      "title": "Counter-Strike: ENCE vs Esport BERG (BO3) - CCT Europe Challengers Series Playoffs",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 2
+    }
+  ],
+  "families": {
+    "ETH 5m": {
+      "markets": 2,
+      "updates": 8204,
+      "trades": 34
+    },
+    "ETH 4h": {
+      "markets": 1,
+      "updates": 550,
+      "trades": 1
+    },
+    "Other": {
+      "markets": 103,
+      "updates": 5584,
+      "trades": 0
+    },
+    "HYPE 15m": {
+      "markets": 1,
+      "updates": 18,
+      "trades": 0
+    },
+    "SOL 5m": {
+      "markets": 2,
+      "updates": 5982,
+      "trades": 27
+    },
+    "ETH 1h": {
+      "markets": 1,
+      "updates": 1860,
+      "trades": 2
+    },
+    "SOL 1h": {
+      "markets": 1,
+      "updates": 828,
+      "trades": 1
+    },
+    "BNB up/down other": {
+      "markets": 1,
+      "updates": 42,
+      "trades": 1
+    },
+    "SOL 4h": {
+      "markets": 1,
+      "updates": 324,
+      "trades": 0
+    },
+    "SOL 15m": {
+      "markets": 1,
+      "updates": 8364,
+      "trades": 5
+    },
+    "XRP 5m": {
+      "markets": 2,
+      "updates": 5470,
+      "trades": 20
+    },
+    "BTC 1h": {
+      "markets": 1,
+      "updates": 1840,
+      "trades": 13
+    },
+    "Unmapped": {
+      "markets": 1587,
+      "updates": 11342,
+      "trades": 0
+    },
+    "XRP 1h": {
+      "markets": 1,
+      "updates": 636,
+      "trades": 0
+    },
+    "ITF tennis": {
+      "markets": 8,
+      "updates": 1014,
+      "trades": 1
+    },
+    "BTC 4h": {
+      "markets": 1,
+      "updates": 288,
+      "trades": 1
+    },
+    "BTC 15m": {
+      "markets": 1,
+      "updates": 35566,
+      "trades": 63
+    },
+    "XRP 4h": {
+      "markets": 1,
+      "updates": 296,
+      "trades": 0
+    },
+    "ETH 15m": {
+      "markets": 1,
+      "updates": 17526,
+      "trades": 17
+    },
+    "DOGE up/down other": {
+      "markets": 1,
+      "updates": 284,
+      "trades": 0
+    },
+    "BTC 5m": {
+      "markets": 2,
+      "updates": 80944,
+      "trades": 788
+    },
+    "Counter-Strike": {
+      "markets": 19,
+      "updates": 2426,
+      "trades": 4
+    },
+    "XRP 15m": {
+      "markets": 1,
+      "updates": 6498,
+      "trades": 9
+    },
+    "ETH up/down other": {
+      "markets": 1,
+      "updates": 136,
+      "trades": 0
+    },
+    "SOL up/down other": {
+      "markets": 1,
+      "updates": 32,
+      "trades": 0
+    },
+    "ATP tennis": {
+      "markets": 3,
+      "updates": 136,
+      "trades": 1
+    },
+    "XRP up/down other": {
+      "markets": 1,
+      "updates": 68,
+      "trades": 0
+    },
+    "BTC up/down other": {
+      "markets": 1,
+      "updates": 82,
+      "trades": 0
+    }
+  },
+  "unknown_updates": 11342,
+  "total_updates": 196340,
+  "round_trip_verified": true,
+  "seconds": 17.4562937,
+  "identity_coverage_update_pct": 94.22328613629418,
+  "unmapped_leaders": [
+    {
+      "market": "0x8ab9c423a5e1240dca56f010b9d405d704fc74bc31128ecbaf22c9051257b186",
+      "updates": 42
+    },
+    {
+      "market": "0xb4fb9edfdb20245bcfa3c0da9cbd58da6800ff43cdd150d97a103b27207b34f0",
+      "updates": 40
+    },
+    {
+      "market": "0x6960e1f84a8aef2b7247aa10507d275e20b9ac7679e61e1a9ec6eded696447e6",
+      "updates": 40
+    },
+    {
+      "market": "0x616981a0baad219419eff3b20945c3d1d3b1520b43eedfa1d1da730532a8f87f",
+      "updates": 40
+    },
+    {
+      "market": "0xb74c6b1762901197efb56a9a7427018c166ddfe52fd5be460911c2512cbecfb3",
+      "updates": 38
+    },
+    {
+      "market": "0x6d6207bf46768721f2fb767497830beb58f1f8e3d254c7bdd2aa670ff53ed5a5",
+      "updates": 36
+    },
+    {
+      "market": "0x2c14369efb8a9d5ebe706a7b805b58570131db2749b2708184403ea2e1b66490",
+      "updates": 36
+    },
+    {
+      "market": "0x8b75ca7d95400e3a2f50e34e58d5807b97de4f70cbcf8d6918d8d7af1bad0811",
+      "updates": 36
+    },
+    {
+      "market": "0x14d10fd3e599bce682f18e9270614bc91b24d56f18df5291f399dba9b1a0a9d9",
+      "updates": 34
+    },
+    {
+      "market": "0x5c9682398db2ae91088638fd336eda975751be4a8f8593a47088178e8576a711",
+      "updates": 34
+    },
+    {
+      "market": "0x4c48dea85663b429096426997ffff9082870c4668b1ee20eb499dab611b6d211",
+      "updates": 34
+    },
+    {
+      "market": "0xfae6eaa67f0c5a8ed7b24af0042ae9294803f2f58ff67157ce1b0cb9a22f199f",
+      "updates": 32
+    },
+    {
+      "market": "0xa21a0c3dad1688fe8830c4182b7541958768a89ce8be212d6cb3f1a8b0b62f5f",
+      "updates": 32
+    },
+    {
+      "market": "0x4ef819c787c494fa486e71b4470af204f5b0c3de1e868b259a6e6a57001dcffc",
+      "updates": 32
+    },
+    {
+      "market": "0x96adc6088a7a811c8bcc9266b363a974d139f42e7388b763991927a48ec10ce6",
+      "updates": 32
+    },
+    {
+      "market": "0x6dbc6625c55290aea7b6e093d6fee83a3a1087c31d209d4b54eb658a3f8443a7",
+      "updates": 32
+    },
+    {
+      "market": "0x9c54fee0108cfd551ba7f7d2ed286ee84076e25c20a0b8620e0d8f91bdf2c182",
+      "updates": 32
+    },
+    {
+      "market": "0xc1254d349b6f00b2e7d419ada961aae3adc88c4cbb486927948cfae7791f73ab",
+      "updates": 32
+    },
+    {
+      "market": "0xf3e3a0f92448e0c53e87063cbfc3eefea856f9b98f44da37031697ef1760608e",
+      "updates": 32
+    },
+    {
+      "market": "0x60687704b109ad29ca606c77c14255e7302bc04defb813da427b3ddd84f6696a",
+      "updates": 32
+    },
+    {
+      "market": "0x833d1285b5514171f8fccf70b32d684fd5ff7eca85e29a15ba6a7e1800af35f2",
+      "updates": 32
+    },
+    {
+      "market": "0xf9c02358043a95816a20dfdbb375d0371a6896a7917246cf4b1d162d33405ec2",
+      "updates": 28
+    },
+    {
+      "market": "0x3078aa812db0c23fac363f2e0b7441e8f1a80880cf945b7639fe95ec566904dd",
+      "updates": 28
+    },
+    {
+      "market": "0xe8c0243c196f34c253194c1f0af74dd1fad3a07347eb8d2f92965641b857498d",
+      "updates": 26
+    },
+    {
+      "market": "0xe963d974e995e96008c61022abd395c997f74ecb8a7913852fd29af64143aaa4",
+      "updates": 26
+    },
+    {
+      "market": "0x648d4f91c14aa9fe877dee69e32c9b1acdd96cba37cee41a1b90cdec5c173ae7",
+      "updates": 26
+    },
+    {
+      "market": "0xa82de68abc6b193cb76cb0cb879d077297dd5c1195af1cf50705ab2f4b1f0503",
+      "updates": 26
+    },
+    {
+      "market": "0x61cb8a0515d2c59a758e379a492cc30750dbc6fe9a9d4811778f66ce2f9a861b",
+      "updates": 26
+    },
+    {
+      "market": "0x0089d4ddd1e65c2f9e746d0a8c2670021e503703e2208990ddb056bb8781f8f7",
+      "updates": 26
+    },
+    {
+      "market": "0x067bcc685059c86cf3ef2bbed588f081cdbaf347040d65e1779a6bc166b2be1f",
+      "updates": 26
+    }
+  ]
+}

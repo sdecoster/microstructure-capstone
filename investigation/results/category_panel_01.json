@@ -1,0 +1,319 @@
+[
+  {
+    "sample": 1,
+    "market": "0xdb325d6155da1aff31540ba2be6e4325dbc1b2d7f5e4e6c4657602230e558c5d",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "japan-j-league",
+      "soccer",
+      "sports"
+    ],
+    "title": "FC Machida Zelvia leading at halftime?",
+    "updates": 2,
+    "start": "2026-05-27T21:00:45.390761Z",
+    "end": "2026-05-30T05:00:00Z",
+    "event_start": null,
+    "created": "2026-05-27T19:30:03.928954Z",
+    "token_ids": "[\"57618781925054026491787629526943416664502237300075073068497455107404371555043\", \"28784267771317220241240235162287522397387866860393966338083570537934033989315\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 1,
+    "market": "0xff1e63f197af4d9a2d6d30947ebd71c277a28fa9dfaa7dbbdcc0cf3d3b2f186a",
+    "category": "Sports/esports",
+    "tags": [
+      "american-league",
+      "awards",
+      "baseball",
+      "cy-young",
+      "mlb",
+      "rewards-50-4pt5-20",
+      "sports"
+    ],
+    "title": "Will Cam Schlittler win the 2026 AL Cy Young Award?",
+    "updates": 38,
+    "start": "2026-02-19T03:22:04.095251Z",
+    "end": "2026-11-12T00:00:00Z",
+    "event_start": null,
+    "created": "2026-02-18T23:01:10.125964Z",
+    "token_ids": "[\"74470426416170661984316046810565678428396651333679092170145791334818081500216\", \"80072220742853778023574651733377327261246514267264529256755064030675020477372\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 1,
+    "market": "0x419f8769fea82bd1e5ccf1b04ef7e4e0bff404a36b6542e8abda3e71a7cee51e",
+    "category": "Sports/esports",
+    "tags": [
+      "esports",
+      "games",
+      "league-of-legends",
+      "sports"
+    ],
+    "title": "Game 3: Both Teams Slay a Dragon?",
+    "updates": 10,
+    "start": "2026-05-26T16:08:33.888968Z",
+    "end": "2026-05-28T21:00:00Z",
+    "event_start": null,
+    "created": "2026-05-26T16:00:50.878826Z",
+    "token_ids": "[\"87544942510575440480170900827345824643308162181184568841612584176309329410866\", \"6377179579805598656158576911125804899534276888934836714544746412845830595819\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 1,
+    "market": "0x5e70e03590538410218c1a7641f741fd6480d6a9ca1951feb497210514dbee27",
+    "category": "Politics",
+    "tags": [
+      "elections",
+      "house-elections",
+      "midterms",
+      "nov-4-elections",
+      "pennsylvania-midterm",
+      "politics",
+      "us-presidential-election"
+    ],
+    "title": "Will the Democratic Party win the PA-17 House seat?",
+    "updates": 4,
+    "start": "2025-12-16T18:15:54.354845Z",
+    "end": "2026-11-05T04:59:00Z",
+    "event_start": null,
+    "created": "2025-12-15T23:20:31.078438Z",
+    "token_ids": "[\"92766935796166214397022548007993643468606651430020985430987394684946156700742\", \"7042007033865268562879755746411238079752844334570914953464426152051941798427\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 1,
+    "market": "0x1f84c577ebac6f730370f166958a3455bcb79fb1cacfdb75edae81031ebbff97",
+    "category": "Politics",
+    "tags": [
+      "geopolitics",
+      "politics",
+      "ukraine-map"
+    ],
+    "title": "Will Russia capture Bilytske by June 30, 2026?",
+    "updates": 2,
+    "start": "2026-05-27T21:21:04.867633Z",
+    "end": "2026-07-01T03:59:00Z",
+    "event_start": null,
+    "created": "2026-05-27T21:18:38.547507Z",
+    "token_ids": "[\"32193193865039152173696820284968371697493826290889417904896687003037360273533\", \"110509231283178074846999399698746372521184070353707726481510464723478753238879\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 1,
+    "market": "0x80b826e312fd33b330fff6d177897d47713eeb3f3754305ce29fb372ac7d3c74",
+    "category": "Sports/esports",
+    "tags": [
+      "major-league-pickleball",
+      "mvp",
+      "pickleball",
+      "sports"
+    ],
+    "title": "Will Anna Leigh Waters win the 2026 Major League Pickleball MVP award?",
+    "updates": 4,
+    "start": "2026-05-21T02:42:30.11877Z",
+    "end": "2026-08-31T00:00:00Z",
+    "event_start": null,
+    "created": "2026-05-21T02:37:11.562904Z",
+    "token_ids": "[\"112153522501092028519343026853540649284013417513121348354817110920307990928169\", \"4356942387614996554534250966356479552858102082196970464756141828487017601112\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 1,
+    "market": "0xa745eff902c48aa61fd7478b3286623b38e979d0a5d89fef46964edf45e46219",
+    "category": "Politics",
+    "tags": [
+      "geopolitics",
+      "politics",
+      "putin",
+      "rewards-20-4pt5-50",
+      "russia",
+      "trump",
+      "trump-presidency",
+      "ukraine",
+      "world"
+    ],
+    "title": "Will Trump and Putin not meet?",
+    "updates": 14,
+    "start": "2026-05-26T22:51:38.428829Z",
+    "end": "2027-01-01T04:59:00Z",
+    "event_start": null,
+    "created": "2026-05-26T21:16:19.938867Z",
+    "token_ids": "[\"60721106651047318972353533272976554010468129253652681478570218681774510353152\", \"93755508598420461745823860603365033870586027786420875401840655590362174031227\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 1,
+    "market": "0x48cc555214eae2bf4f9c6cb6a59c2b44a3197e816f0cc71fb1e9a3b700f3c541",
+    "category": "Sports/esports",
+    "tags": [
+      "esports",
+      "games",
+      "league-of-legends",
+      "sports"
+    ],
+    "title": "Game 1: Any Player Quadra Kill?",
+    "updates": 12,
+    "start": "2026-05-26T16:05:13.914844Z",
+    "end": "2026-05-28T20:00:00Z",
+    "event_start": null,
+    "created": "2026-05-26T16:00:48.976682Z",
+    "token_ids": "[\"26487049180528226087544205751336748807495837482110404744770820738731389698304\", \"100213418690448733523672174344602440257296915267324211524129247622304900875112\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 1,
+    "market": "0x81ad6f4551dc467fb3530a3052241126a5d687aa7258a490f378472a4806c252",
+    "category": "Other",
+    "tags": [
+      "pop-culture",
+      "reality-tv"
+    ],
+    "title": "Will Rhoda Magbitang win Top Chef Season 23?",
+    "updates": 10,
+    "start": "2026-02-04T22:16:50.419Z",
+    "end": "2026-07-31T00:00:00Z",
+    "event_start": null,
+    "created": "2026-02-04T21:23:45.487483Z",
+    "token_ids": "[\"75053302536598925420168598737086602373623483872483669849345543643217904408494\", \"92859478639396611875033220808486731205515643207195866430493487226951678214895\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 1,
+    "market": "0x3441060caee88b49ff0853c9b8b254d8ce1dee94bb7d53c8cf66d04e8e066588",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "norway-eliteserien",
+      "soccer",
+      "sports"
+    ],
+    "title": "Molde FK vs. Sandefjord Fotball: O/U 0.5",
+    "updates": 2,
+    "start": "2026-05-03T16:05:49.502002Z",
+    "end": "2026-05-30T14:00:00Z",
+    "event_start": null,
+    "created": "2026-05-03T16:00:07.358536Z",
+    "token_ids": "[\"46293610364850450310197668978383481057081602463947213173598714744863651044129\", \"55113523150658414278243699020088383221172709697672499923914604310825706597070\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 1,
+    "market": "0xfec12b13c5859c51949fefd5fc1896e3d94e808244f3d068de5350f94308ada9",
+    "category": "Politics",
+    "tags": [
+      "geopolitics",
+      "israel",
+      "middle-east",
+      "politics",
+      "syria",
+      "yemen"
+    ],
+    "title": "Will Tunisia recognize Israel by June 30?",
+    "updates": 12,
+    "start": "2025-11-20T19:09:22.927562Z",
+    "end": null,
+    "event_start": null,
+    "created": "2025-11-20T17:43:30.485376Z",
+    "token_ids": "[\"84212578492948856413686432373630463760469136820188368086438210732294582469779\", \"23410952322149893257437562579227798509479926546073224280945837681010972369907\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 1,
+    "market": "0xd601b601aefef8a07136bf16bd72642827fa65bc14b1ad066cbe5c46987a4745",
+    "category": "Politics",
+    "tags": [
+      "business",
+      "economy",
+      "gov-shutdown",
+      "liquidate",
+      "politics",
+      "trump"
+    ],
+    "title": "US takes a stake in Spirit Airlines by May 31?",
+    "updates": 6,
+    "start": "2026-04-21T20:55:17.560411Z",
+    "end": "2026-06-30T00:00:00Z",
+    "event_start": null,
+    "created": "2026-04-21T19:56:56.764559Z",
+    "token_ids": "[\"113817938803053911566671078308283929015579561789039397394651409814069847762043\", \"33512574196252047355727988405130367527613204047522117227899140768350180174589\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 1,
+    "market": "0xda3ef046c470321eab987fcd92c61a1b50c75f899ccbeabf4c7e08bff111014f",
+    "category": "Politics",
+    "tags": [
+      "biden",
+      "politics",
+      "trump",
+      "voter-fraud"
+    ],
+    "title": "Will a US court rule that the 2020 election was fraudulent?",
+    "updates": 14,
+    "start": "2026-02-24T01:28:34.677241Z",
+    "end": "2027-01-01T04:59:00Z",
+    "event_start": null,
+    "created": "2026-02-23T23:43:48.318679Z",
+    "token_ids": "[\"6887424430107059514931214688775201209909014156101741542164756727167414833562\", \"57012685562430086373203888119651893471528122235343022243913855598034426402118\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 1,
+    "market": "0x06d11047d7ca77b9d32edb64e83991beffeef82cee40352481e2c60f79cf8b9c",
+    "category": "Politics",
+    "tags": [
+      "elections",
+      "politics",
+      "primaries",
+      "primary-elections",
+      "us-presidential-election"
+    ],
+    "title": "Will Ethan Agarwal advance from the CA-17 primary?",
+    "updates": 14,
+    "start": "2026-03-09T17:49:30.856721Z",
+    "end": "2026-06-02T00:00:00Z",
+    "event_start": null,
+    "created": "2026-03-09T17:44:17.606184Z",
+    "token_ids": "[\"14032583517699808814176226105569531034341874401740906442591793849300338444045\", \"29426895889456211375773317154316595604124202506402005583125404724814425951159\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 1,
+    "market": "0x30114a172dbeb6c43a21f3a47c3bea210dbc218b6eb9d2f919fca4a63603e654",
+    "category": "Other",
+    "tags": [
+      "geopolitics",
+      "hezbollah",
+      "israel",
+      "lebanon",
+      "middle-east"
+    ],
+    "title": "Israeli forces enter Beirut by May 31?",
+    "updates": 4,
+    "start": "2026-05-26T19:45:34.770403Z",
+    "end": "2026-05-31T20:59:00Z",
+    "event_start": null,
+    "created": "2026-05-26T16:10:17.689816Z",
+    "token_ids": "[\"90858317089996864680347263041675803203291645131632436905582892021016852510716\", \"102162256492404968932875029064804052627178701354003626365717651513204613681492\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 1,
+    "market": "0xf7e9b8872cd61a69a73edf3a5c65e52f5849aef32c23f847b24f2f3c60d40112",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "soccer",
+      "sports"
+    ],
+    "title": "Exact Score: Club Independiente Petrolero 1 - 0 Bamin Real Potos\u00ed?",
+    "updates": 8,
+    "start": "2026-05-08T22:31:02.730956Z",
+    "end": "2026-05-23T21:15:00Z",
+    "event_start": null,
+    "created": "2026-05-08T19:00:18.630146Z",
+    "token_ids": "[\"103072966165530144138162289295602676507329041325552046749848533845184651650083\", \"22218669922701961501915251588588601779868988619767437589859693371167074948297\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  }
+]

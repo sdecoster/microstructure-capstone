@@ -1,0 +1,132 @@
+{
+  "path": "raw/2026-08-16/1600.jsonl.zst",
+  "sample": 13,
+  "outer_messages": 100000,
+  "schema": {
+    "price_change": 98550,
+    "book": 979,
+    "last_trade_price": 471
+  },
+  "unique_events": {
+    "price_change": 61505,
+    "book": 979,
+    "last_trade_price": 471
+  },
+  "duplicates": 37045,
+  "span_seconds": 50.706,
+  "decision_seconds": 20,
+  "receive_start_ms": 1786898210848,
+  "receive_end_ms": 1786898261554,
+  "event_reversals": 23576,
+  "markets": 867,
+  "assets": 1734,
+  "assets_per_market": {
+    "2": 867
+  },
+  "matched_index_markets": 0,
+  "categories": {
+    "Unmapped": 867
+  },
+  "scales": {
+    "price_scale_2": 110118,
+    "price_scale_1": 9846,
+    "price_scale_3": 3046
+  },
+  "rows": {
+    "price_changes": 123010,
+    "trades": 471,
+    "book_levels": 92620,
+    "snapshots": 979
+  },
+  "recompressed_complete_json_bytes": 5651409,
+  "complete_json_bytes": 78148439,
+  "parquet_bytes": {
+    "3": {
+      "price_changes": 1261845,
+      "trades": 26176,
+      "book_levels": 61157,
+      "snapshots": 31317,
+      "assets": 68706,
+      "markets": 32410
+    },
+    "9": {
+      "price_changes": 1161728,
+      "trades": 25805,
+      "book_levels": 56362,
+      "snapshots": 31216,
+      "assets": 68712,
+      "markets": 32410
+    }
+  },
+  "compression_seconds": {
+    "3": 0.11357969999999895,
+    "9": 0.19259780000000148
+  },
+  "scan_and_benchmark_seconds": 28.9002356,
+  "policies": [
+    {
+      "policy": "all",
+      "selected": 867,
+      "markets": 867,
+      "late_rows": 139396,
+      "all_late_rows": 139396
+    },
+    {
+      "policy": "early_2_updates",
+      "selected": 389,
+      "markets": 867,
+      "late_rows": 136362,
+      "all_late_rows": 139396
+    },
+    {
+      "policy": "early_10_updates",
+      "selected": 64,
+      "markets": 867,
+      "late_rows": 135944,
+      "all_late_rows": 139396
+    },
+    {
+      "policy": "early_50_updates",
+      "selected": 29,
+      "markets": 867,
+      "late_rows": 134813,
+      "all_late_rows": 139396
+    },
+    {
+      "policy": "early_10_and_spread_le_5c",
+      "selected": 19,
+      "markets": 867,
+      "late_rows": 132667,
+      "all_late_rows": 139396
+    },
+    {
+      "policy": "top_10pct_early_activity",
+      "selected": 39,
+      "markets": 867,
+      "late_rows": 135810,
+      "all_late_rows": 139396
+    },
+    {
+      "policy": "stable_hash_10pct",
+      "selected": 47,
+      "markets": 867,
+      "late_rows": 5172,
+      "all_late_rows": 139396
+    }
+  ],
+  "parquet_round_trip_verified": true,
+  "round_trip_seconds": {
+    "3": 0.18637769999999776,
+    "9": 0.03888689999999073
+  },
+  "index": {
+    "generated_at": "2026-08-16T00:02:48.418463164+00:00",
+    "tokens": 21312,
+    "distinct_markets": 10656,
+    "categories": {
+      "Sports/esports": 9546,
+      "Crypto": 549,
+      "Weather": 561
+    }
+  }
+}

@@ -1,0 +1,328 @@
+[
+  {
+    "sample": 9,
+    "market": "0x866d206fdf2e29aaabdf456efa30a5737abca659786f5424e1878c2eb49c1265",
+    "category": "Crypto",
+    "tags": [
+      "1H",
+      "bitcoin",
+      "crypto",
+      "crypto-prices",
+      "hide-from-new",
+      "multi-strikes",
+      "recurring"
+    ],
+    "title": "Bitcoin above 62,800 on July 30, 6PM ET?",
+    "updates": 2,
+    "start": "2026-07-30T20:40:21Z",
+    "end": "2026-07-30T22:00:00Z",
+    "event_start": null,
+    "created": "2026-07-30T20:40:10.775704Z",
+    "token_ids": "[\"62123422656638910092664751044363203685957594042835983971247341678256763783272\", \"96113891020564706346742100944161899676749354436503135415118001172378775856653\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 9,
+    "market": "0x03eabc4c89367f872703f83cac0ba7837698d2fa6998a0e590dc923b17e5c497",
+    "category": "Politics",
+    "tags": [
+      "2028-presidential-election",
+      "elections",
+      "politics",
+      "president",
+      "trump",
+      "us-presidential-election"
+    ],
+    "title": "Will Donald Trump endorse Marjorie Taylor Greene in the 2028 US Presidential election?",
+    "updates": 20,
+    "start": "2026-07-30T19:00:22.481537Z",
+    "end": "2028-11-07T04:59:00Z",
+    "event_start": null,
+    "created": "2026-07-30T18:55:09.605162Z",
+    "token_ids": "[\"68256047511540983429218964667139775658577382147668748241825205813025053421050\", \"20112111924485819233364138685380151140094848821093323879688527804644098885680\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 9,
+    "market": "0x245e233ac28d2cce6b0449a5ff209182c612a85e8b11f20de13323f1a0cd28bf",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "serbian-superliga",
+      "soccer",
+      "sports"
+    ],
+    "title": "FK Zeleznicar Pancevo vs. FK Mladost Lucani: 1st Half O/U 2.5",
+    "updates": 2,
+    "start": "2026-07-30T16:31:07Z",
+    "end": "2026-08-03T19:00:00Z",
+    "event_start": null,
+    "created": "2026-07-30T16:30:16.837098Z",
+    "token_ids": "[\"94148752506813725994776428113015935530261927176272335575002362163643162862640\", \"88779856399165703093659525028148042539101362890441246772624807020600859278886\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 9,
+    "market": "0xf37cee7f8a1d20de9b9f355971fc746c81869065c1ccf3279f99cab88f3f77a2",
+    "category": "Economics/finance",
+    "tags": [
+      "aapl",
+      "daily",
+      "equities",
+      "finance",
+      "hide-from-new",
+      "stocks"
+    ],
+    "title": "Will Apple (AAPL) close above $335 on July 31?",
+    "updates": 20,
+    "start": "2026-07-30T12:00:15Z",
+    "end": "2026-07-31T20:00:00Z",
+    "event_start": null,
+    "created": "2026-07-30T12:00:02.374107Z",
+    "token_ids": "[\"53610449598028507272041284914300852472680545095588908852733156130244625470317\", \"26281355868357536406446372339273406857448678413547934460436103289858840512773\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 9,
+    "market": "0x75bd4179085047b968edcf4f1f9da6a77912e38b805d5586aff10e9a4bbf0612",
+    "category": "Sports/esports",
+    "tags": [
+      "col2",
+      "games",
+      "soccer",
+      "sports"
+    ],
+    "title": "Will CD Real Santander win on 2026-07-31?",
+    "updates": 8,
+    "start": "2026-07-30T16:00:20Z",
+    "end": "2026-07-31T21:00:00Z",
+    "event_start": null,
+    "created": "2026-07-30T16:00:03.352451Z",
+    "token_ids": "[\"76492356211630392930645104051636757264031912819578099038560565175931891409267\", \"110392816070624760660970007083134637657745612944004441632504321548055374916226\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 9,
+    "market": "0xac828dd29fa0e5343cd6371c21f54d81797c2dac5ab323ce828cc46922523c1d",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "soccer",
+      "sports",
+      "ucl"
+    ],
+    "title": "Spread: Aarhus GF (-2.5)",
+    "updates": 2,
+    "start": "2026-07-30T18:16:29Z",
+    "end": "2026-08-11T16:00:00Z",
+    "event_start": null,
+    "created": "2026-07-30T18:15:57.270417Z",
+    "token_ids": "[\"112935567912110575166095116639031199251999867856406048842408797792400357349230\", \"50743284622427431536769646346790024566599496568324219147149044626382813388782\"]",
+    "outcomes": "[\"Aarhus GF\", \"Sabah FK\"]"
+  },
+  {
+    "sample": 9,
+    "market": "0xbcf4bcce354e34a97668f81999e9eb0cbd08a34fca0e0acf007b11fdb7cf5bbf",
+    "category": "Sports/esports",
+    "tags": [
+      "col2",
+      "games",
+      "soccer",
+      "sports"
+    ],
+    "title": "Exact Score: CD Real Santander 0 - 0 Boyaca Patriotas?",
+    "updates": 2,
+    "start": "2026-07-30T16:01:11Z",
+    "end": "2026-07-31T21:00:00Z",
+    "event_start": null,
+    "created": "2026-07-30T16:00:20.19043Z",
+    "token_ids": "[\"4567160789803689474903436537315399632879578280862591342631560756994159635008\", \"103111992016315566473027812597329503428817630329158221285711784626987378294139\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 9,
+    "market": "0x6bcc698047f38c03acb68016e7fd52855473e7ac7874984fb3bf1095823e49ee",
+    "category": "Sports/esports",
+    "tags": [
+      "brazil-serie-a",
+      "games",
+      "soccer",
+      "sports"
+    ],
+    "title": "Gr\u00eamio FBPA vs. S\u00e3o Paulo FC: O/U 0.5",
+    "updates": 2,
+    "start": "2026-07-30T12:02:21Z",
+    "end": "2026-08-08T19:00:00Z",
+    "event_start": null,
+    "created": "2026-07-30T12:02:00.189898Z",
+    "token_ids": "[\"99600518302104788460166259922856407397173042276196161055885145048709503403190\", \"101881230763835844846518870023809231781269446139701658787687152449841336489654\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 9,
+    "market": "0x48d25359e616a427c2bf1c9df6404311d1ba2aaac12e8c4eb2b5232af2fc07a0",
+    "category": "Crypto",
+    "tags": [
+      "crypto",
+      "crypto-prices",
+      "ethereum",
+      "hide-from-new",
+      "neg-risk",
+      "recurring",
+      "weekly"
+    ],
+    "title": "Will the price of Ethereum be between $2,000 and $2,100 on August 6?",
+    "updates": 2,
+    "start": "2026-07-30T16:00:58Z",
+    "end": "2026-08-06T16:00:00Z",
+    "event_start": null,
+    "created": "2026-07-30T16:00:18.548269Z",
+    "token_ids": "[\"16687645627390695234347055626512796916775383912868084433166955816117435200272\", \"114375391927286000788566725588237272621618825589224690946651918314306847779796\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 9,
+    "market": "0xa9589893e6a44f0edfd6249b136800d5202e6ce97bab737e768330537d6a6ac8",
+    "category": "Sports/esports",
+    "tags": [
+      "col2",
+      "games",
+      "soccer",
+      "sports"
+    ],
+    "title": "CD Real Santander vs. Boyaca Patriotas: Draw at halftime?",
+    "updates": 14,
+    "start": "2026-07-30T16:00:34Z",
+    "end": "2026-07-31T21:00:00Z",
+    "event_start": null,
+    "created": "2026-07-30T16:00:13.575293Z",
+    "token_ids": "[\"95160080854911320366121778126299707052949517489461447827381684938899576347877\", \"83926328897746576703779617918274613241293173246916259330536031953957143604428\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 9,
+    "market": "0x775ade67f9eee347f3c5226abb64e9d2327488632c15d43261e69129d78595d2",
+    "category": "Sports/esports",
+    "tags": [
+      "golf",
+      "pga",
+      "pga-tour",
+      "sports"
+    ],
+    "title": "Will Adam Svensson finish in the Top 20 at the 2026 Rocket Classic?",
+    "updates": 14,
+    "start": "2026-07-30T18:26:29Z",
+    "end": "2026-08-02T04:00:00Z",
+    "event_start": "2026-07-30T04:00:00Z",
+    "created": "2026-07-30T18:25:20.739017Z",
+    "token_ids": "[\"113054706914789263342317286298830393900874337289445681922338250611647538257263\", \"69778374456090551952394704156865279507540052091119889432664111256646471290121\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 9,
+    "market": "0x4c4a5c77fbc2c01f52f1058d46bd46a90c2e3181a476a9979120f7392cc8c8b7",
+    "category": "Crypto",
+    "tags": [
+      "1H",
+      "crypto",
+      "crypto-prices",
+      "ethereum",
+      "hide-from-new",
+      "recurring",
+      "up-or-down"
+    ],
+    "title": "Ethereum Up or Down - July 30, 5PM ET",
+    "updates": 408,
+    "start": "2026-07-28T21:30:28Z",
+    "end": "2026-07-30T22:00:00Z",
+    "event_start": "2026-07-30T21:00:00Z",
+    "created": "2026-07-28T21:30:17.358676Z",
+    "token_ids": "[\"26064205077696839036801506519447891369882690485262171588906682686774450717376\", \"8470198472376249089526642351542728040497078309195262676204206001751592820832\"]",
+    "outcomes": "[\"Up\", \"Down\"]"
+  },
+  {
+    "sample": 9,
+    "market": "0x63677c62ea992dd9eed7f80f8e824cd33db1ecc23a87f45dc0182d372bc37562",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "soccer",
+      "sports",
+      "ven1"
+    ],
+    "title": "Exact Score: Portuguesa FC 2 - 0 Carabobo FC?",
+    "updates": 2,
+    "start": "2026-07-30T16:01:09Z",
+    "end": "2026-07-31T21:00:00Z",
+    "event_start": null,
+    "created": "2026-07-30T16:00:19.213123Z",
+    "token_ids": "[\"154131232082467567670094473860113602317622728292007407676690037099611305756\", \"35625580889650689387620071251222426253284478807993909451531792031403433713274\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 9,
+    "market": "0xbe45b35291749b0be98be07170cfb6124b47cb754dc6f295ae3412e6c5113d6a",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "soccer",
+      "sports",
+      "ucl"
+    ],
+    "title": "RU Saint-Gilloise vs. FK Bod\u00f8/Glimt: O/U 3.5",
+    "updates": 6,
+    "start": "2026-07-30T18:26:38Z",
+    "end": "2026-08-04T18:00:00Z",
+    "event_start": null,
+    "created": "2026-07-30T18:16:44.676581Z",
+    "token_ids": "[\"36309241705113343294727785165510487026297939808911029083971844929126190106212\", \"111351377533963908994895609582148582126435206759769778461640758505109779764025\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 9,
+    "market": "0x5543b16b2cc31b7468536e9a7013374b753296c75c617478630bb30c06209937",
+    "category": "Economics/finance",
+    "tags": [
+      "daily",
+      "daily-close",
+      "equities",
+      "finance",
+      "finance-updown",
+      "hide-from-new",
+      "meta",
+      "pyth-finance",
+      "stocks",
+      "up-or-down"
+    ],
+    "title": "Meta (META) Up or Down on July 31?",
+    "updates": 12,
+    "start": "2026-07-30T12:00:23Z",
+    "end": "2026-07-31T20:00:00Z",
+    "event_start": "2026-07-31T13:30:00Z",
+    "created": "2026-07-30T12:00:11.783121Z",
+    "token_ids": "[\"66731682772014681185953064174456659922804074645921817840242815858628390435891\", \"103871734733845944289740639717010735253163553881885181375966434405730628413534\"]",
+    "outcomes": "[\"Up\", \"Down\"]"
+  },
+  {
+    "sample": 9,
+    "market": "0xd6d01a531f2824a96c656c4d6017bf3504aeef07ccde6d28823b91748962a6af",
+    "category": "Crypto",
+    "tags": [
+      "1H",
+      "bitcoin",
+      "crypto",
+      "crypto-prices",
+      "hide-from-new",
+      "multi-strikes",
+      "recurring"
+    ],
+    "title": "Bitcoin above 63,000 on July 30, 5PM ET?",
+    "updates": 18,
+    "start": "2026-07-30T19:40:21Z",
+    "end": "2026-07-30T21:00:00Z",
+    "event_start": null,
+    "created": "2026-07-30T19:40:06.199555Z",
+    "token_ids": "[\"107311122405413220671985324422441120675921226199416378330618756126447439975155\", \"106980849535553772706692074271301693259867585441953937583382046537855868239807\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  }
+]

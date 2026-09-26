@@ -1,0 +1,1888 @@
+[
+  {
+    "sample": 0,
+    "requested": 12,
+    "matched": 12,
+    "categories": {
+      "other": 5,
+      "crypto": 2,
+      "politics": 3,
+      "sports": 2
+    },
+    "details": [
+      {
+        "market": "0xd5f41571f014b2bb83e4ac19c776d4470c0e0f599559c06f1c33ac77e51232aa",
+        "question": "Will the official USD to ARS exchange rate be between 1350.00 and 1399.99 at the end of December 2026?",
+        "createdAt": "2026-01-21T12:22:51.4484Z",
+        "startDate": "2026-01-21T15:27:59.456143Z",
+        "endDate": "2026-12-31T00:00:00Z",
+        "tags": [
+          "argentina",
+          "dollar",
+          "economy",
+          "exchange-rate",
+          "recurring",
+          "world"
+        ],
+        "token_ids": "[\"8632542454312896429634087740644750120248563067147687320279929366081684651200\", \"114392436153848174561334474256583377709368708603715268378697374194016922206400\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x4f622fe67a1a2c9bbda12d979b49a95544dd7edf940038aafe1e69cc1b608518",
+        "question": "MagicBlock FDV above $60M one day after launch?",
+        "createdAt": "2026-02-05T15:47:19.940102Z",
+        "startDate": "2026-02-05T15:50:09.673712Z",
+        "endDate": "2027-01-01T05:00:00Z",
+        "tags": [
+          "crypto",
+          "fdv",
+          "magicblock",
+          "pre-market"
+        ],
+        "token_ids": "[\"27458652885824293651861358981889602276385480892391353286006394148296486866485\", \"75989964307225252582326114473390737371217336016319941190622270320532021333604\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x1e6968ccb3b7c2c5a6cd90340d49d5fddf147d26313e2bd754b8e7c3cbae783f",
+        "question": "Will Mike Turitto win The Bachelorette Season 22?",
+        "createdAt": "2026-02-24T20:10:32.007553Z",
+        "startDate": "2026-02-24T23:54:02.108387Z",
+        "endDate": "2026-11-30T00:00:00Z",
+        "tags": [
+          "celebrities",
+          "pop-culture",
+          "reality-tv"
+        ],
+        "token_ids": "[\"60463295478835514714418492747708968406820110900114233640107515226076871710530\", \"91742802748813810627599941728345346405361480659599634887934304843942124329534\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x9a6092a31220c1d72ecb2b22785a54becd46681aa2480a9bc703344c32fba08e",
+        "question": "Will Tuyo launch a token by September 30, 2027?",
+        "createdAt": "2026-05-08T15:47:25.348612Z",
+        "startDate": "2026-05-08T15:50:38.958025Z",
+        "endDate": "2028-01-01T05:00:00Z",
+        "tags": [
+          "crypto",
+          "pre-market",
+          "token-launch",
+          "tuyo"
+        ],
+        "token_ids": "[\"92348480979482213356367490635195422959035162403379992026892871174527396127238\", \"51028179059587804881843818802174646243117287618681959004093747224579155862431\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x9d616524d75eb02d02b8cb7526f6eedb861a466519f20ff7c1dcdadd560e1815",
+        "question": "Will Nicolaus Sleister be the Democratic nominee for VA-02?",
+        "createdAt": "2025-11-25T20:37:56.099944Z",
+        "startDate": "2025-11-25T21:38:16.756246Z",
+        "endDate": "2026-06-16T00:00:00Z",
+        "tags": [
+          "august-4-primaries",
+          "democratic-primary",
+          "elections",
+          "house-primary",
+          "politics",
+          "primaries",
+          "primary-elections",
+          "us-presidential-election",
+          "virginia-primary"
+        ],
+        "token_ids": "[\"101888914476036936351804566243163159127304936528309145252783446714919565933823\", \"8427946957422625328717568788546267355020846247494632692713979133029772966982\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x171fe95e904a78fa89f99f52ec353d95490103d4d32463358d92598c0424ea41",
+        "question": "Will Elijah Dixon be the Democratic Nominee for NJ-12?",
+        "createdAt": "2026-02-26T16:12:39.03469Z",
+        "startDate": "2026-03-03T00:29:23.198342Z",
+        "endDate": "2026-06-02T00:00:00Z",
+        "tags": [
+          "democratic-primary",
+          "elections",
+          "house-primary",
+          "june-2-primaries",
+          "midterms",
+          "new-jersey",
+          "new-jersey-primary",
+          "politics",
+          "primaries",
+          "us-presidential-election"
+        ],
+        "token_ids": "[\"76709133436205961997343689417326184023107761967189316810822264208405695669667\", \"79275522032031529475970285741540013589653292472784279220152059463957878927214\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x1d2c7b5388eec07d71ab84914842f04deca9eeff04f97e4ceb821315b0b4db3f",
+        "question": "Will SpaceX raise between $40B and $50B in its IPO?",
+        "createdAt": "2026-03-25T21:29:24.887388Z",
+        "startDate": "2026-03-25T22:17:30.941Z",
+        "endDate": null,
+        "tags": [
+          "big-tech",
+          "business",
+          "elon-musk",
+          "finance",
+          "ipo",
+          "ipos",
+          "rewards-50-4pt5-100",
+          "space",
+          "spacex"
+        ],
+        "token_ids": "[\"32589986798035661932800415347631407046190992591717360317783996971845722413663\", \"89331616592857395447549321628237870901823141619139162778856089192921342909988\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x851cdbd72066ce814da1f201285ff6463c5e1f549c43a7c2ece983b475076632",
+        "question": "Will Bubba Watson leave LIV Golf by June 30th?",
+        "createdAt": "2026-04-15T17:14:49.694021Z",
+        "startDate": "2026-04-16T15:21:00.328443Z",
+        "endDate": "2026-06-30T00:00:00Z",
+        "tags": [
+          "golf",
+          "liv-golf",
+          "pga-tour",
+          "sports"
+        ],
+        "token_ids": "[\"96232957945573090102354431147505729376182370260909202620755979991349679875643\", \"23940196382510618687635339060477761180416177461905698919783197222537430937350\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xb14ed88bae8764ad19560fae8a3183822f61e360c2fe0352072092a780522984",
+        "question": "Will JD Vance visit Pakistan by May 31?",
+        "createdAt": "2026-04-29T20:00:29.398051Z",
+        "startDate": "2026-04-29T21:02:47.360955Z",
+        "endDate": "2026-05-31T00:00:00Z",
+        "tags": [
+          "diplomacy-ceasefire",
+          "german-elections",
+          "iran",
+          "politics",
+          "trump"
+        ],
+        "token_ids": "[\"74414547701898283860438300504326572929776014041153451486425890917667660974196\", \"94951511201598991084840460984384636194209210596440433826054122728835959886081\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x703db8f0938e44e3be7bcd8590e079cf344c84cf6ecb22ab2a7ec9fa6689e926",
+        "question": "Will the median home value in Miami be between $1,136,000 and $1,161,000 on May 31?",
+        "createdAt": "2026-05-04T18:09:07.440362Z",
+        "startDate": "2026-05-04T22:14:45.336864Z",
+        "endDate": "2026-05-31T00:00:00Z",
+        "tags": [
+          "economy",
+          "housing",
+          "parcl",
+          "real-estate"
+        ],
+        "token_ids": "[\"83303848500912655730656460637085519732505593930360640086117633261997531286878\", \"83891159181896831718103200285812036610295875400243819398987760033282973333703\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x718464c8223d9ec682cf01f90e21ac774cb53e4c055e04b2223a04ee7d5a5128",
+        "question": "Will the May 2026 unemployment rate be 4.6%?",
+        "createdAt": "2026-05-08T16:06:36.093248Z",
+        "startDate": "2026-05-08T16:48:06.72807Z",
+        "endDate": "2026-06-05T00:00:00Z",
+        "tags": [
+          "economy",
+          "jobs",
+          "macro-indicators",
+          "unemployment"
+        ],
+        "token_ids": "[\"105826162529845245153129244933209712793274648507793805858067730494474569539737\", \"110292554105549778229978962934684323258876466684156421901019535625551544371900\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xcad13d0c031df66217fa8a8e615e1a05f227843c668a569b2d06de33c720e864",
+        "question": "Will Xavi Hernandez be the next manager of SSC Napoli?",
+        "createdAt": "2026-05-19T15:38:16.55906Z",
+        "startDate": "2026-05-19T15:44:12.545723Z",
+        "endDate": "2026-09-01T00:00:00Z",
+        "tags": [
+          "napoli",
+          "serie-a",
+          "soccer",
+          "sports"
+        ],
+        "token_ids": "[\"43709125879951982451652254126244593089504465678210474419187524700560851708758\", \"52094862075356403413814558350633266604565226614978465337357053161105943604681\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      }
+    ]
+  },
+  {
+    "sample": 3,
+    "requested": 12,
+    "matched": 12,
+    "categories": {
+      "crypto": 8,
+      "sports": 4
+    },
+    "details": [
+      {
+        "market": "0xac30b60e9a2392d494b62e65d22b1416e6656b4e3a3d4c92d53504c9237aca91",
+        "question": "XRP Up or Down - June 22, 5PM ET",
+        "createdAt": "2026-06-20T21:00:06.423084Z",
+        "startDate": "2026-06-20T21:02:13.390921Z",
+        "endDate": "2026-06-22T22:00:00Z",
+        "tags": [
+          "1H",
+          "crypto",
+          "crypto-prices",
+          "hide-from-new",
+          "recurring",
+          "ripple",
+          "up-or-down",
+          "xrp"
+        ],
+        "token_ids": "[\"19000914096089685203447631815813143137734788094678251407228779653884986780503\", \"72913931410853008375269501284643182115085884332344120242481888116507465061475\"]",
+        "outcomes": "[\"Up\", \"Down\"]"
+      },
+      {
+        "market": "0x656e724313d2f2184406c213e1c14f1289bf245570c0837e73a7ccec69c2bfab",
+        "question": "Bitcoin Up or Down - June 22, 5:55PM-6:00PM ET",
+        "createdAt": "2026-06-21T22:02:35.961544Z",
+        "startDate": "2026-06-21T22:05:05.800765Z",
+        "endDate": "2026-06-22T22:00:00Z",
+        "tags": [
+          "5M",
+          "bitcoin",
+          "crypto",
+          "crypto-prices",
+          "hide-from-new",
+          "recurring",
+          "up-or-down"
+        ],
+        "token_ids": "[\"98421188236007920053365193897131227370278137632518173965096530952545727694228\", \"91026502376317642946623073616389276124749256170655985977645545397362122248229\"]",
+        "outcomes": "[\"Up\", \"Down\"]"
+      },
+      {
+        "market": "0x2a18e7aa1f479d543a8a07e987e47d4d5e3c8d9d5aaeccc649c4e22f58c1a736",
+        "question": "Games Total: O/U 3.5",
+        "createdAt": "2026-06-22T10:11:42.194045Z",
+        "startDate": "2026-06-22T10:13:46.391476Z",
+        "endDate": "2026-06-26T18:00:00Z",
+        "tags": [
+          "call-of-duty",
+          "esports",
+          "games",
+          "sports"
+        ],
+        "token_ids": "[\"59706954708265130166113808869935774495543383140856659937345422767605595868264\", \"19376561362465975557205383797736667334698401355900659889975411717084545638527\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      },
+      {
+        "market": "0xbfffafa234be63285fdde195da9d05b3de0cf4aba180a94ab3ec338b051c9a5e",
+        "question": "Call of Duty: OpTic Texas vs Boston Breach - Game 3 Winner",
+        "createdAt": "2026-06-22T10:11:43.408073Z",
+        "startDate": "2026-06-22T10:14:22.64656Z",
+        "endDate": "2026-06-26T18:10:00Z",
+        "tags": [
+          "call-of-duty",
+          "esports",
+          "games",
+          "sports"
+        ],
+        "token_ids": "[\"10177044064274015210584043833413363046825303335794305388710745470407143595193\", \"21936511038871438672339693966236667827218488110693590253159712432723387804849\"]",
+        "outcomes": "[\"OpTic Texas\", \"Boston Breach\"]"
+      },
+      {
+        "market": "0x0802afe235b6398eb277a17582a117de7ce866168ec7e2669da746f0dd5728d9",
+        "question": "Will the announcers say \"Adidas\" during the Argentina vs Austria FIFA World Cup Match?",
+        "createdAt": "2026-06-22T15:13:30.528757Z",
+        "startDate": "2026-06-22T15:15:39.567072Z",
+        "endDate": "2026-06-22T23:59:00Z",
+        "tags": [
+          "2026-fifa-world-cup",
+          "fifa",
+          "fifa-world-cup",
+          "mention-markets",
+          "pop-culture",
+          "sports"
+        ],
+        "token_ids": "[\"82080965036611508069224700397442574667101322446468011645971051248599211123362\", \"6810180828720696610606478757825879803500571314623190049068567620206210479242\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xd3ecbc5b903cbbd76de746875b632c9eb4ccc183cb8d2411879ddd80316dbbe8",
+        "question": "Map 2 Total Rounds: Over/Under 20.5",
+        "createdAt": "2026-06-22T19:50:39.442026Z",
+        "startDate": "2026-06-22T19:53:00.855181Z",
+        "endDate": "2026-06-23T04:00:00Z",
+        "tags": [
+          "esports",
+          "games",
+          "sports",
+          "valorant"
+        ],
+        "token_ids": "[\"56993537982723842519696829396181845179762699564948747404313289120387541204000\", \"18253817552585197466711879213994864480971107500076430189663488046053647583612\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      },
+      {
+        "market": "0x023dacc0cd3a950570742cbb1427217f8fc1a29628c9cf15653d08ab02744dd1",
+        "question": "Bitcoin above 65,000 on June 22, 6PM ET?",
+        "createdAt": "2026-06-22T20:40:04.164464Z",
+        "startDate": "2026-06-22T20:42:30.805006Z",
+        "endDate": "2026-06-22T22:00:00Z",
+        "tags": [
+          "1H",
+          "bitcoin",
+          "crypto",
+          "crypto-prices",
+          "hide-from-new",
+          "multi-strikes",
+          "recurring"
+        ],
+        "token_ids": "[\"27443316985033290141525905835087833482781551253031625247943391734016308906501\", \"104961356866641323828875563123238847966667388744606792871440851055393995247802\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x210cd03b37b0ea52562c2629a1da49d9835aa9e0233b94c0fd8bf86ba2e65cd4",
+        "question": "Bitcoin above 65,800 on June 22, 6PM ET?",
+        "createdAt": "2026-06-22T20:40:05.229074Z",
+        "startDate": "2026-06-22T20:43:17.976713Z",
+        "endDate": "2026-06-22T22:00:00Z",
+        "tags": [
+          "1H",
+          "bitcoin",
+          "crypto",
+          "crypto-prices",
+          "hide-from-new",
+          "multi-strikes",
+          "recurring"
+        ],
+        "token_ids": "[\"57544093718256161579797238575215464543492634252387082631379494509781701856873\", \"94021811465729886494407651120410456563895276399110099766446868345331321514665\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xcb8e4b31a98aefac7c22ae14f35b3504b93dc43c1dd32f41b28ffbde607fe969",
+        "question": "Ethereum above 1,710 on June 22, 6PM ET?",
+        "createdAt": "2026-06-22T20:40:09.493199Z",
+        "startDate": "2026-06-22T20:42:25.056336Z",
+        "endDate": "2026-06-22T22:00:00Z",
+        "tags": [
+          "1H",
+          "crypto",
+          "crypto-prices",
+          "ethereum",
+          "hide-from-new",
+          "multi-strikes",
+          "recurring"
+        ],
+        "token_ids": "[\"41204856817059911333298853775167431823560466342343162884738548298759004220721\", \"24072717259731185886131111909421834348902096024660402653540785804078253951734\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x324449f92cb1805ebeb7a2b510c369a85e62ea39a3e24c47dcd9c6a88f5ea643",
+        "question": "Ethereum above 1,800 on June 22, 6PM ET?",
+        "createdAt": "2026-06-22T20:40:11.618282Z",
+        "startDate": "2026-06-22T20:42:56.213938Z",
+        "endDate": "2026-06-22T22:00:00Z",
+        "tags": [
+          "1H",
+          "crypto",
+          "crypto-prices",
+          "ethereum",
+          "hide-from-new",
+          "multi-strikes",
+          "recurring"
+        ],
+        "token_ids": "[\"34404079351076123475394785756647316290393767045314947371265295335562655829447\", \"45727876457403297163046037103656900084159643193609288614060106229875289098028\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x68ecef69fe4dbdf58e05730c5149fc7a1ad3e1dc194df51fc00dcdbd10b2b156",
+        "question": "Ethereum above 1,750 on June 22, 7PM ET?",
+        "createdAt": "2026-06-22T21:40:09.919214Z",
+        "startDate": "2026-06-22T21:44:00.513026Z",
+        "endDate": "2026-06-22T23:00:00Z",
+        "tags": [
+          "1H",
+          "crypto",
+          "crypto-prices",
+          "ethereum",
+          "hide-from-new",
+          "multi-strikes",
+          "recurring"
+        ],
+        "token_ids": "[\"110182193145315594305591748749280504517704222065771163454918331540488569591973\", \"81028610721986280638121537521109591316899941855670566273459651848425332362954\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x8201c120bad1d1445d545cc2ff1a064735deaabf7696ebe2ad722c27bf3a4697",
+        "question": "Ethereum above 1,770 on June 22, 7PM ET?",
+        "createdAt": "2026-06-22T21:40:10.228481Z",
+        "startDate": "2026-06-22T21:45:20.382334Z",
+        "endDate": "2026-06-22T23:00:00Z",
+        "tags": [
+          "1H",
+          "crypto",
+          "crypto-prices",
+          "ethereum",
+          "hide-from-new",
+          "multi-strikes",
+          "recurring"
+        ],
+        "token_ids": "[\"103601956844628380137582781597965544874723855005675080264222277778845311017029\", \"100530686647474584979485916800519522203737654047678987427051891058306372370998\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      }
+    ]
+  },
+  {
+    "sample": 5,
+    "requested": 12,
+    "matched": 11,
+    "categories": {
+      "other": 3,
+      "weather": 5,
+      "sports": 2,
+      "crypto": 1
+    },
+    "details": [
+      {
+        "market": "0x4ca007d611ff7b57352f4bf4b8a2f83386b47487f61a6c012210535b37d7e4f5",
+        "question": "Will \"Swapped\" be the top global Netflix movie this week?",
+        "createdAt": "2026-07-08T00:37:07.893229Z",
+        "startDate": "2026-07-08T00:41:16.554895Z",
+        "endDate": "2026-07-14T23:59:00Z",
+        "tags": [
+          "movies",
+          "netflix",
+          "pop-culture",
+          "top-netflix"
+        ],
+        "token_ids": "[\"66875245135816131501354317435182950598856248709816549875198733648063786073592\", \"1819387228288046132167417278670928213238691214334754059924104349455775130680\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xfdaf833820e4a183f887609997b1e8ac814d68dc1330315f1c9ff692587525cc",
+        "question": "Will \"KPop Demon Hunters\" be the #2 global Netflix movie this week?",
+        "createdAt": "2026-07-08T00:48:41.749606Z",
+        "startDate": "2026-07-08T00:52:40.337068Z",
+        "endDate": "2026-07-14T23:59:00Z",
+        "tags": [
+          "movies",
+          "netflix",
+          "pop-culture",
+          "top-netflix"
+        ],
+        "token_ids": "[\"53542979755313153800700810036932503144712820348684495083688530530300116344871\", \"10412251655619210953254578994273589804770971067956574471371287049908999402927\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xc4cdd7f47de5d277b5b11d0b9ee59cbb31561b748e450d25ca59a3d1e52f2f46",
+        "question": "Will the next Grok model released by xAI debut at a score of at least 1440 by December 31, 2026?",
+        "createdAt": "2026-07-08T01:26:06.218156Z",
+        "startDate": "2026-07-08T01:28:09.249655Z",
+        "endDate": "2026-12-31T23:59:00Z",
+        "tags": [
+          "ai",
+          "ai-releases",
+          "debut",
+          "grok",
+          "tech",
+          "xai"
+        ],
+        "token_ids": "[\"52911614895288704572239979906208743211196671611058410564145712306475627338618\", \"47757516966409138402866013317182208701967410116700020257756246818174633389292\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xa791eaa94fcb73ee49f34c965e04af5038e6fc32813f53db67624c99b104f05d",
+        "question": "Will the lowest temperature in New York City be between 62-63\u00b0F on July 9?",
+        "createdAt": "2026-07-08T01:30:13.18392Z",
+        "startDate": "2026-07-08T01:30:26Z",
+        "endDate": "2026-07-09T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "lowest-temperature",
+          "new-york-city",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"32917974779036112184113095280186432583558199797526228968136970514194317392800\", \"16906784473336699713910567729520345947947130230743243684227446002512105126637\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xaf28686c639d2daf3a92662718c501ee431e850b4f68e3f49d2fe5b59632903d",
+        "question": "Will the highest temperature in Dallas be between 102-103\u00b0F on July 9?",
+        "createdAt": "2026-07-08T02:02:11.510096Z",
+        "startDate": "2026-07-08T02:05:41.641401Z",
+        "endDate": "2026-07-09T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "dallas",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"40688264321294769110457027136145525337638031108871772095415961000815801706695\", \"101942844636959107219029486463782384283563751669583800163032277483934056250394\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x03e86aa5b8f53b85e7a811fa60fccce0a81ec128f75a2873d6407497ce85c94b",
+        "question": "Set 2 Winner: Guerra vs Babel",
+        "createdAt": "2026-07-08T05:00:46.319855Z",
+        "startDate": "2026-07-08T05:01:20Z",
+        "endDate": "2026-07-15T13:00:00Z",
+        "tags": [
+          "games",
+          "sports",
+          "tennis"
+        ],
+        "token_ids": "[\"95703763498203381755471763529741912165378261971379185870743471341524460654797\", \"78019681114655405657736809082814577419737386626529335857409753900303101495063\"]",
+        "outcomes": "[\"Guerra\", \"Babel\"]"
+      },
+      {
+        "market": "0x1bd1429aecf36c9c8b41bd4bfda7ff193fbfb11df08d97135a3002897a39a329",
+        "question": "Will the highest temperature in Paris be 36\u00b0C on July 10?",
+        "createdAt": "2026-07-08T05:01:52.387399Z",
+        "startDate": "2026-07-08T05:02:07Z",
+        "endDate": "2026-07-10T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "france",
+          "hide-from-new",
+          "highest-temperature",
+          "paris",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"108673640298712286818808289175171337614922138055876498867562664167673318260207\", \"4139659297965432312252426898496356627670202786085529748288238469937953274502\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xe0a831b4caa2b356fe9bb26fc674d9eb6508bde20cb214f834eba7ebb610d895",
+        "question": "Will the highest temperature in Ankara be 25\u00b0C or below on July 10?",
+        "createdAt": "2026-07-08T05:02:10.186652Z",
+        "startDate": "2026-07-08T05:02:24Z",
+        "endDate": "2026-07-10T12:00:00Z",
+        "tags": [
+          "ankara",
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"18286661634287491854453383456268088300250003753810090427690831496205952683694\", \"18918975525373186495753142499823132637339954003903413671543825008151157414239\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x47820f6c21bdbf4e441b2b9b9863a4c6c615ad42b9377218ad2bf0c58e706eb9",
+        "question": "Will the highest temperature in Amsterdam be 29\u00b0C on July 10?",
+        "createdAt": "2026-07-08T05:03:01.351383Z",
+        "startDate": "2026-07-08T05:03:14Z",
+        "endDate": "2026-07-10T12:00:00Z",
+        "tags": [
+          "amsterdam",
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"104275934178311051653293593100522362985995508165871642813176984042671050508734\", \"52884734194878669418291202044551457116109020910225139256263513750276035882146\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x68064abecf25d5e0d480455cbaeb005c6897fa82224e16a2ebdcc741a83a4333",
+        "question": "Argentina leading at halftime?",
+        "createdAt": "2026-07-08T10:00:08.257734Z",
+        "startDate": "2026-07-08T10:03:29.548816Z",
+        "endDate": "2026-07-12T01:00:00Z",
+        "tags": [
+          "fifa-world-cup",
+          "games",
+          "soccer",
+          "sports"
+        ],
+        "token_ids": "[\"58224054089167896358473585756414278829318251611748212970471349112002651588462\", \"21320537539813979891236585597191185046772636042497821545741166596237656183775\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x5b1fb61f91b8549c87fc2d52c96cb90eaff4e216b0b6e13c5041bb9a7079bfcb",
+        "question": "Bitcoin above 60,800 on July 8, 9AM ET?",
+        "createdAt": "2026-07-08T11:40:01.39708Z",
+        "startDate": "2026-07-08T11:42:15.361595Z",
+        "endDate": "2026-07-08T13:00:00Z",
+        "tags": [
+          "1H",
+          "bitcoin",
+          "crypto",
+          "crypto-prices",
+          "hide-from-new",
+          "multi-strikes",
+          "recurring"
+        ],
+        "token_ids": "[\"80147808596924233171645750656023961410162714179135414916301864935850844675964\", \"30662158480867003003057929172732788718555332003397933974361886531046131076175\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      }
+    ]
+  },
+  {
+    "sample": 6,
+    "requested": 12,
+    "matched": 12,
+    "categories": {
+      "crypto": 1,
+      "weather": 6,
+      "other": 1,
+      "sports": 4
+    },
+    "details": [
+      {
+        "market": "0xc7820f34c759b7e15a6eab772678d935714c5e89969f94138ad12eab5f4c0fca",
+        "question": "Bitcoin Up or Down - July 11, 7:45AM-8:00AM ET",
+        "createdAt": "2026-07-10T11:51:36.048345Z",
+        "startDate": "2026-07-10T11:52:53.492853Z",
+        "endDate": "2026-07-11T12:00:00Z",
+        "tags": [
+          "15M",
+          "bitcoin",
+          "crypto",
+          "crypto-prices",
+          "hide-from-new",
+          "recurring",
+          "up-or-down"
+        ],
+        "token_ids": "[\"60975270583821022538433835155430428336523339111835813456060529575460767641464\", \"91091797406594009185436869970387522878156722501326484370085521278180366099484\"]",
+        "outcomes": "[\"Up\", \"Down\"]"
+      },
+      {
+        "market": "0x2d6f6a06c8639c02db55cbdf2dd4e5e77739192db61a354b38180af24d5e897a",
+        "question": "Will the highest temperature in New York City be between 82-83\u00b0F on July 12?",
+        "createdAt": "2026-07-11T01:02:11.149007Z",
+        "startDate": "2026-07-11T01:02:32Z",
+        "endDate": "2026-07-12T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "new-york-city",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"43559878004851106714115823190083899894465052361371254256658343493420927768849\", \"87634420560512218134829982735122789353052590955480561369394272534962936993795\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x6da4a45fa320d4741c430710cd47ea0db80da8dbd88aa5fe06945fcb065e224b",
+        "question": "Will JPMorgan say \"Cyber\" during earnings call?",
+        "createdAt": "2026-07-11T03:50:57.247471Z",
+        "startDate": "2026-07-11T03:53:36.789406Z",
+        "endDate": "2026-07-14T23:59:00Z",
+        "tags": [
+          "earnings-calls",
+          "finance",
+          "mention-markets"
+        ],
+        "token_ids": "[\"39369646693589085600851288422876975701327611320048006723775452096774013176293\", \"89447269125893677093180202826749272640783555156873332430531699060320620913025\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xc05d71d928fc36b22fefff7913754d7ead32422c58e0f9e10dd857e8a50d7a11",
+        "question": "ITF Kassel: Dominik Recek vs Max Wiskandt",
+        "createdAt": "2026-07-11T04:00:06.549487Z",
+        "startDate": "2026-07-11T04:10:42Z",
+        "endDate": "2026-07-18T10:30:00Z",
+        "tags": [
+          "games",
+          "sports",
+          "tennis"
+        ],
+        "token_ids": "[\"85951552291654305856376797951079412307361183439797340800767263295905019234705\", \"33486105306162941404393113817178065645387153228787617217855735665213792130530\"]",
+        "outcomes": "[\"Dominik Recek\", \"Max Wiskandt\"]"
+      },
+      {
+        "market": "0x19de0abd7c574c200c0c56e59177e85fba4a6dd7c55ad189dd321d7aedfd95a3",
+        "question": "ITF San Salvador De Jujuy: Juan Estevez vs Joaquin Aguilar Cardozo",
+        "createdAt": "2026-07-11T04:00:11.875192Z",
+        "startDate": "2026-07-11T04:05:40Z",
+        "endDate": "2026-07-18T13:30:00Z",
+        "tags": [
+          "games",
+          "sports",
+          "tennis"
+        ],
+        "token_ids": "[\"44484436532535520268899430740979309436508470337057016990170411863228481470264\", \"64630324303258926970139788766046122749906450090962735855074158832975590347552\"]",
+        "outcomes": "[\"Juan Estevez\", \"Joaquin Aguilar Cardozo\"]"
+      },
+      {
+        "market": "0x0063527a03d09f335af3126301596fd4bda5d320328e3626498af3dfb9e461a5",
+        "question": "Will the highest temperature in Seoul be 31\u00b0C on July 13?",
+        "createdAt": "2026-07-11T04:02:08.804113Z",
+        "startDate": "2026-07-11T04:02:24Z",
+        "endDate": "2026-07-13T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "seoul",
+          "weather"
+        ],
+        "token_ids": "[\"22692421198912774779687897384416401694910953086308762232561342014699068640091\", \"100661897466643460988820708864557800077909334072019094755316125590954359382188\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xfc28566f896a5780270f9f97e5e11bd868f752e8cd4356d05131ff190886cc4d",
+        "question": "Will the highest temperature in Tokyo be 23\u00b0C or below on July 13?",
+        "createdAt": "2026-07-11T04:02:43.379052Z",
+        "startDate": "2026-07-11T04:02:56Z",
+        "endDate": "2026-07-13T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "tokyo",
+          "weather"
+        ],
+        "token_ids": "[\"34834903584483806666581461013880218940875250945855338910414358453431846891168\", \"70196530952864005869925304457213926505890629723872592516125589128317403776684\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xc9d8f4be9079084ec61b9a5eb0157b51128f507369b9dbd0be0aea46ca3daefb",
+        "question": "Will the highest temperature in Madrid be 37\u00b0C on July 13?",
+        "createdAt": "2026-07-11T04:03:05.946913Z",
+        "startDate": "2026-07-11T04:03:32Z",
+        "endDate": "2026-07-13T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "madrid",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"90840855481124813916358106301242175614604197968460249106005532618670743247883\", \"100818692247045123453121762226243281243326742399994427559825046071361592290718\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xc700a9b517d07aeaa6b7c3a416b1f4ca2b348161bc5e390947acdf3f439ffcc1",
+        "question": "Will the highest temperature in Wuhan be 36\u00b0C on July 13?",
+        "createdAt": "2026-07-11T04:03:24.093803Z",
+        "startDate": "2026-07-11T04:03:38Z",
+        "endDate": "2026-07-13T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "weather",
+          "wuhan"
+        ],
+        "token_ids": "[\"63041911115271588586248858495643376177620182612791038647105568998931695778492\", \"43296691271473168046757015913761435900251002588111172933690093645791596161345\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x94d0c1f49940b5d42ae875f8b3f1c3fce9e7279ac70e8a96ca5497ddd1cc4132",
+        "question": "Will the highest temperature in Guangzhou be 37\u00b0C on July 13?",
+        "createdAt": "2026-07-11T04:04:10.308239Z",
+        "startDate": "2026-07-11T04:04:24Z",
+        "endDate": "2026-07-13T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "guangzhou",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"17780443154812104753597659924990107571837609363477075944462071285767630175365\", \"8169286716665648346961686187103132939739615866548269294818519385358168639936\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x19262355d767cfea7f777f2e5e124287bce95849abbd0ee2962a3fd7fbf83c71",
+        "question": "Jackson Merrill: Home Runs O/U 0.5",
+        "createdAt": "2026-07-11T06:45:12.524695Z",
+        "startDate": "2026-07-11T06:57:48.618684Z",
+        "endDate": "2026-07-12T00:40:00Z",
+        "tags": [
+          "baseball",
+          "games",
+          "mlb",
+          "sports"
+        ],
+        "token_ids": "[\"29782288936477202873907771149734112087210919293334774027813665203922320402788\", \"61522126019901366255980319100445818479571316479385889379559540528079241255145\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      },
+      {
+        "market": "0xe7001d1c1a9482c8798c4b6fd3f78daeab51c5d41209f101bab2da792cd6be91",
+        "question": "Logan Gilbert: Strikeouts O/U 5.5",
+        "createdAt": "2026-07-11T06:45:51.834305Z",
+        "startDate": "2026-07-11T06:58:00.593377Z",
+        "endDate": "2026-07-11T20:10:00Z",
+        "tags": [
+          "baseball",
+          "games",
+          "mlb",
+          "sports"
+        ],
+        "token_ids": "[\"37241720958130512872104448287290906103637133203757510983137398406137791509904\", \"39176278842168757443235746882119844198742108141694575770309919153778892570375\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      }
+    ]
+  },
+  {
+    "sample": 7,
+    "requested": 12,
+    "matched": 12,
+    "categories": {
+      "crypto": 1,
+      "weather": 9,
+      "sports": 2
+    },
+    "details": [
+      {
+        "market": "0x012c11841a73d11254987892ed5b5b8ed588c425b4cc26900da433a112e4f263",
+        "question": "Bitcoin Up or Down - July 22, 3:45AM-4:00AM ET",
+        "createdAt": "2026-07-21T07:51:38.951945Z",
+        "startDate": "2026-07-21T07:52:51.512607Z",
+        "endDate": "2026-07-22T08:00:00Z",
+        "tags": [
+          "15M",
+          "bitcoin",
+          "crypto",
+          "crypto-prices",
+          "hide-from-new",
+          "recurring",
+          "up-or-down"
+        ],
+        "token_ids": "[\"27313310586211905747583828673355434015795032874324343820514889277161363736753\", \"85483193063749234772972479736607468385463422667120177119358796014418153749459\"]",
+        "outcomes": "[\"Up\", \"Down\"]"
+      },
+      {
+        "market": "0xe94d5a218c93536998c174c0ddba414e351c7ef833d42d8c0e64691433f6dfe2",
+        "question": "Will the highest temperature in Chicago be between 74-75\u00b0F on July 23?",
+        "createdAt": "2026-07-22T01:02:28.821383Z",
+        "startDate": "2026-07-22T01:02:44Z",
+        "endDate": "2026-07-23T12:00:00Z",
+        "tags": [
+          "chicago",
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"26877177679676762096414788988734446638672333481257352630344246396738213910247\", \"23185573590937314950437586409034541766262331031800425417499810075031350010834\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x79fd98491619caaa0a047de980cfe260080f2e2a269f56221aa5e4d7ac0941b9",
+        "question": "Will the lowest temperature in Miami be 71\u00b0F or below on July 23?",
+        "createdAt": "2026-07-22T01:30:16.598008Z",
+        "startDate": "2026-07-22T01:30:36Z",
+        "endDate": "2026-07-23T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "lowest-temperature",
+          "miami",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"81960779126615673256461233555294478765726887998593196413255599567611014761185\", \"66117485861500372161546040129439329891594698881215976635766943524154466387089\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x53f42cc9462c426cef4c2435adb8311a61f772395ad6c4236f120f6b56cf3677",
+        "question": "Dominic Canzone: Home Runs O/U 1.5",
+        "createdAt": "2026-07-22T01:45:04.022965Z",
+        "startDate": "2026-07-22T01:48:35.033411Z",
+        "endDate": "2026-07-22T19:40:00Z",
+        "tags": [
+          "baseball",
+          "games",
+          "mlb",
+          "sports"
+        ],
+        "token_ids": "[\"51077997606907741251831605018397301877357965921625202678853063792152367366966\", \"66781916226853538426387687288267897132859520669872239626418140524959184902972\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      },
+      {
+        "market": "0x4f5d2b18e98f19b109d0662daec7ff0ab5959007933421adc1c50ad1ba2f944d",
+        "question": "Will the highest temperature in Paris be 29\u00b0C on July 24?",
+        "createdAt": "2026-07-22T04:02:06.375758Z",
+        "startDate": "2026-07-22T04:02:24Z",
+        "endDate": "2026-07-24T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "france",
+          "hide-from-new",
+          "highest-temperature",
+          "paris",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"11460436763273604096513715791347736619912616701994560557106591614280506391777\", \"90006127533378673482201099056626106240733254794394579818041470187199833288247\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x3c6111d065c907699be154d67564b9c00fd454a6e5597d6238fabe5427c0f744",
+        "question": "Will the highest temperature in Tel Aviv be 30\u00b0C on July 24?",
+        "createdAt": "2026-07-22T04:02:40.99325Z",
+        "startDate": "2026-07-22T04:02:56Z",
+        "endDate": "2026-07-24T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "tel-aviv",
+          "weather"
+        ],
+        "token_ids": "[\"73168811350641051131624676786977219316449959332257794380678019975355230560487\", \"6961620362615256222799331725325964444536449537155548662760461716555051024668\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x3f7b24fe11565f949ba4b6344e5e2fe6b05c7a0a4cc974919a8fe884dce5a72b",
+        "question": "Will the highest temperature in Warsaw be 24\u00b0C or higher on July 24?",
+        "createdAt": "2026-07-22T04:03:05.774834Z",
+        "startDate": "2026-07-22T04:03:20Z",
+        "endDate": "2026-07-24T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "warsaw",
+          "weather"
+        ],
+        "token_ids": "[\"74322686997920211304644336845942650656462429763682129575368769493428258427047\", \"103999800292382070732446115920415835710566688388954921797846475489146258494184\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xcb570a028ff7a9ce68adbc6437f684436fe63ae0c35bec8fa3166edbcd36d8d8",
+        "question": "Will the highest temperature in Istanbul be 29\u00b0C on July 24?",
+        "createdAt": "2026-07-22T04:03:37.364047Z",
+        "startDate": "2026-07-22T04:03:49Z",
+        "endDate": "2026-07-24T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "istanbul",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"17845019488670765385182728073711033518647487291280310876382783449651467362588\", \"115082859818749995545049364564437080278821838706698225549159269789911865277616\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x28c80b66baf62a958d98f609ae85f56cb5c0733302752c666056d96228568fd6",
+        "question": "Will the highest temperature in Cape Town be 16\u00b0C on July 24?",
+        "createdAt": "2026-07-22T04:04:05.837333Z",
+        "startDate": "2026-07-22T04:04:22Z",
+        "endDate": "2026-07-24T12:00:00Z",
+        "tags": [
+          "cape-town",
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"104295000773309120176888478477998358609315699262732727246941227289997687911531\", \"61630317059162796850984606011059761924901819731333447836459734546094660018432\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x397ac8b5c861ac87ecfe5bf78a45bc274979e3e21684dec3b46e4445db502ec3",
+        "question": "Will the highest temperature in Cape Town be 18\u00b0C on July 24?",
+        "createdAt": "2026-07-22T04:04:06.186843Z",
+        "startDate": "2026-07-22T04:04:22Z",
+        "endDate": "2026-07-24T12:00:00Z",
+        "tags": [
+          "cape-town",
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"90277168982973217795950691813608350515644284607840283205914913360004124630271\", \"103787424062680951018195171117600783771582844920150171564228360380867173958811\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xe6e9e5b465f5ba16e5825cedc23556f3ff1b1002480471165c2dbe36e0e3f5da",
+        "question": "Will the highest temperature in Manila be 34\u00b0C on July 24?",
+        "createdAt": "2026-07-22T04:04:24.285095Z",
+        "startDate": "2026-07-22T04:04:38Z",
+        "endDate": "2026-07-24T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "manila",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"25843958559822520574672215115813965581607232076516217326666279384760884596139\", \"67323634979787399051716016372535227127852044382850884800650196380189608637441\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xafe0ebb9dd3e0f50f6d95dbaef6ec151866bdfc531901f0ee282a7a1d6d9ef66",
+        "question": "Sporting FC vs. LD Alajuelense: O/U 5.5",
+        "createdAt": "2026-07-22T07:45:04.771077Z",
+        "startDate": "2026-07-22T07:45:22Z",
+        "endDate": "2026-07-26T02:00:00Z",
+        "tags": [
+          "games",
+          "soccer",
+          "soccer-fpd",
+          "sports"
+        ],
+        "token_ids": "[\"48832999525564494919132390100714321350115124326704606250040494033870526370695\", \"99674411818901690942621578722427122996399032856657012227383092476724246175463\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      }
+    ]
+  },
+  {
+    "sample": 8,
+    "requested": 12,
+    "matched": 12,
+    "categories": {
+      "sports": 7,
+      "weather": 3,
+      "crypto": 2
+    },
+    "details": [
+      {
+        "market": "0xc14ababf2a6c40ef34ac36c4a6766c10af03491346af326f36cfe3e9f69d47b1",
+        "question": "Payton Tolle: Strikeouts O/U 5.5",
+        "createdAt": "2026-07-27T00:45:23.642085Z",
+        "startDate": "2026-07-27T00:45:34Z",
+        "endDate": "2026-07-28T01:40:00Z",
+        "tags": [
+          "baseball",
+          "games",
+          "mlb",
+          "sports"
+        ],
+        "token_ids": "[\"86721759543671959668519262448320020632718780162124349500978640440159329104353\", \"61929123859805934518697869514435462830160381618410113127625468870845905718423\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      },
+      {
+        "market": "0x533413a0b719e090602e077b9b5274f3cfd24f77b523bd2c70989c07983031af",
+        "question": "Will the highest temperature in Buenos Aires be 17\u00b0C on July 28?",
+        "createdAt": "2026-07-27T01:03:21.971571Z",
+        "startDate": "2026-07-27T01:03:42Z",
+        "endDate": "2026-07-28T12:00:00Z",
+        "tags": [
+          "buenos-aires",
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"71593161592029773709812995399181825499384540678002560218930355330489270166238\", \"81279651672376298520689417291912408877942257769002195296548484921786094348656\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xfb4ee9bdccc60e59c3f43a5f8629d429db692b4c138e37104dd0cc52e1bba5d3",
+        "question": "Will the highest temperature in Seattle be between 72-73\u00b0F on July 28?",
+        "createdAt": "2026-07-27T01:03:30.419918Z",
+        "startDate": "2026-07-27T01:03:45Z",
+        "endDate": "2026-07-28T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "seattle",
+          "weather"
+        ],
+        "token_ids": "[\"56902309910472325647530120577505571655314327744000457663716971739263291689146\", \"98136203864466591124955254338090716533839934312164758490611548485691865611268\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x8e321e70ba56734ec1ec8bb3a01f32c9b690a6524ed159529b842c71b43e6649",
+        "question": "Will the highest temperature in Austin be 110\u00b0F or higher on July 28?",
+        "createdAt": "2026-07-27T01:04:32.51381Z",
+        "startDate": "2026-07-27T01:04:47Z",
+        "endDate": "2026-07-28T12:00:00Z",
+        "tags": [
+          "austin",
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"61642618740174575580661556371870777975514821677992838775809686983750046337050\", \"93664264786624371593826367285450501776469637189518867413648028156374864610507\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x14445bc46b46140ee4fa56ebf5943dbb3da2d73081c5d075ae133e84c8e21650",
+        "question": "Alec Bohm: Home Runs O/U 1.5",
+        "createdAt": "2026-07-27T01:45:44.332634Z",
+        "startDate": "2026-07-27T01:46:09Z",
+        "endDate": "2026-07-27T22:40:00Z",
+        "tags": [
+          "baseball",
+          "games",
+          "mlb",
+          "sports"
+        ],
+        "token_ids": "[\"74890660528780873922865442588326684540222723968179256202677127416624241857306\", \"44644084194720781143387104736526831422583001648667034536423431807969209400296\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      },
+      {
+        "market": "0xf3806005191cb7dbd37e2c565a17abfded5d27641d101c6fa6e92eac14643dbd",
+        "question": "Dota 2: Level UP vs PuckChamp - Game 1 Winner",
+        "createdAt": "2026-07-27T02:11:23.452952Z",
+        "startDate": "2026-07-27T02:12:21Z",
+        "endDate": "2026-07-27T15:10:00Z",
+        "tags": [
+          "dota-2",
+          "esports",
+          "games",
+          "sports"
+        ],
+        "token_ids": "[\"91515513568979114421331770792889715362547924622400761790172470378290453064848\", \"5516095892776943705556968759377827190456848273307351154019485799527934811465\"]",
+        "outcomes": "[\"Level UP\", \"PuckChamp\"]"
+      },
+      {
+        "market": "0x56939f8224b14583f3caf69e653e6ee806b443cfa971dec4b41a07b804b083f9",
+        "question": "Game 2: Both Teams Beat Roshan?",
+        "createdAt": "2026-07-27T02:13:22.323362Z",
+        "startDate": "2026-07-27T02:13:36Z",
+        "endDate": "2026-07-27T22:00:00Z",
+        "tags": [
+          "dota-2",
+          "esports",
+          "games",
+          "sports"
+        ],
+        "token_ids": "[\"5770172097978701020235090697145723583765979043303312464409507776995332650451\", \"113741477385464353206899823186422798883569394059760838598249458100449320772264\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x6debac09053a18f8131574a9b79f00c941e234f939007b65dd87a0a37516abd6",
+        "question": "Map 1 Total Rounds: Over/Under 21.5",
+        "createdAt": "2026-07-27T03:21:14.508553Z",
+        "startDate": "2026-07-27T03:21:31Z",
+        "endDate": "2026-07-27T14:10:00Z",
+        "tags": [
+          "counter-strike-2",
+          "esports",
+          "games",
+          "sports"
+        ],
+        "token_ids": "[\"18961752426665422799965586918892944617926011043973847242411952626367103240548\", \"49805453226730294822894085653689971191269063787558048220207219718438947329354\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      },
+      {
+        "market": "0x2bebef0f764d16ef5fa95b16d2042316ce52af571cbc6f24ccdbb752cd3a8d50",
+        "question": "Counter-Strike: ex-RUSTEC vs Inner Circle Academy - Map 1 Winner",
+        "createdAt": "2026-07-27T03:21:20.357356Z",
+        "startDate": "2026-07-27T03:21:45Z",
+        "endDate": "2026-07-27T20:15:00Z",
+        "tags": [
+          "counter-strike-2",
+          "esports",
+          "games",
+          "sports"
+        ],
+        "token_ids": "[\"96191580196847786574827331622677881330188344440606622073190882187066106626639\", \"20243705142726426146089704534408346462857665576175551775319562161260332612762\"]",
+        "outcomes": "[\"ex-RUSTEC\", \"Inner Circle Academy\"]"
+      },
+      {
+        "market": "0xe717d431e6c3d662fb37256539b6890a68814fcfad3dfc4188754dbeabd17caa",
+        "question": "Bitcoin above 65,600 on July 27, 1AM ET?",
+        "createdAt": "2026-07-27T03:40:07.780334Z",
+        "startDate": "2026-07-27T03:40:24Z",
+        "endDate": "2026-07-27T05:00:00Z",
+        "tags": [
+          "1H",
+          "bitcoin",
+          "crypto",
+          "crypto-prices",
+          "hide-from-new",
+          "multi-strikes",
+          "recurring"
+        ],
+        "token_ids": "[\"44175969262746422679365231037500077087568221154644554698688769799595736352454\", \"29726284301987481494895852465436405119996108358615853529961225316879085109226\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x7748770bb2acd54a5bdfea27d952c4440517b00c127bbf0c985c187e1d16ddf9",
+        "question": "Bitcoin above 63,600 on July 27, 1AM ET?",
+        "createdAt": "2026-07-27T03:40:09.856657Z",
+        "startDate": "2026-07-27T03:40:23Z",
+        "endDate": "2026-07-27T05:00:00Z",
+        "tags": [
+          "1H",
+          "bitcoin",
+          "crypto",
+          "crypto-prices",
+          "hide-from-new",
+          "multi-strikes",
+          "recurring"
+        ],
+        "token_ids": "[\"98734401328509030613712237699005097049453125568630405590733783530804899265441\", \"62547746071170211442649421803990843281463913064327144798133803885483116644615\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xf43ed289d28bf4bf8568fadf1eb5aac93152d8f92fa7dd22aee5cf47efb5016d",
+        "question": "Exact Score: IFK Goteborg 2 - 0 Degerfors IF?",
+        "createdAt": "2026-07-27T04:30:31.154327Z",
+        "startDate": "2026-07-27T04:30:57Z",
+        "endDate": "2026-08-02T12:00:00Z",
+        "tags": [
+          "games",
+          "soccer",
+          "sports",
+          "sweden-allsvenskan"
+        ],
+        "token_ids": "[\"42249359122421270775731802917367777153043212466950138798466133841923223737815\", \"91340646662914894376775032035694823085713450812825961610485457464391546886059\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      }
+    ]
+  },
+  {
+    "sample": 9,
+    "requested": 12,
+    "matched": 12,
+    "categories": {
+      "crypto": 7,
+      "other": 4,
+      "sports": 1
+    },
+    "details": [
+      {
+        "market": "0x199235d007c74685f756a2baef11dba68c49824fca26e5e5320950c2b47d71df",
+        "question": "XRP Up or Down - July 30, 4:00PM-8:00PM ET",
+        "createdAt": "2026-07-29T20:06:52.938212Z",
+        "startDate": "2026-07-29T20:07:51.457009Z",
+        "endDate": "2026-07-31T00:00:00Z",
+        "tags": [
+          "4h",
+          "crypto",
+          "crypto-prices",
+          "hide-from-new",
+          "recurring",
+          "ripple",
+          "up-or-down",
+          "xrp"
+        ],
+        "token_ids": "[\"12695761835601232659933801561817840891207572892840193101778290806793226386347\", \"66214285369998780668096916429936975075568463466717112540781607830343983560986\"]",
+        "outcomes": "[\"Up\", \"Down\"]"
+      },
+      {
+        "market": "0xc16ea1d81c87ef0b295577a785830dfa7878f8de5d3b34d71487fb73a70d4b0d",
+        "question": "Bitcoin Up or Down - July 30, 4:00PM-8:00PM ET",
+        "createdAt": "2026-07-29T20:06:53.210663Z",
+        "startDate": "2026-07-29T20:08:33.184521Z",
+        "endDate": "2026-07-31T00:00:00Z",
+        "tags": [
+          "4h",
+          "bitcoin",
+          "crypto",
+          "crypto-prices",
+          "hide-from-new",
+          "recurring",
+          "up-or-down"
+        ],
+        "token_ids": "[\"114329241597692190922457808882994032758540453442007607897217613233666991089205\", \"74338056596179757364894876367977136441812716260726414744997504235958500756502\"]",
+        "outcomes": "[\"Up\", \"Down\"]"
+      },
+      {
+        "market": "0x20cf3f107ea17956fd1c3d4fb7c47bb21eb83e6fc3db4c8caffaf25e01775cb6",
+        "question": "XRP Up or Down - July 30, 5:00PM-5:15PM ET",
+        "createdAt": "2026-07-29T21:06:37.820986Z",
+        "startDate": "2026-07-29T21:07:38.476866Z",
+        "endDate": "2026-07-30T21:15:00Z",
+        "tags": [
+          "15M",
+          "crypto",
+          "crypto-prices",
+          "hide-from-new",
+          "recurring",
+          "ripple",
+          "up-or-down",
+          "xrp"
+        ],
+        "token_ids": "[\"93398608695207832808149927677057063987880159110148127499785980796984688802822\", \"91068828423881639761008951666045160289920109345548241841826953124762041212531\"]",
+        "outcomes": "[\"Up\", \"Down\"]"
+      },
+      {
+        "market": "0x4a156e1ef23585f9dcadb0496c3090ed6a04bd57abd6cf2ba75ecb26ac6b5022",
+        "question": "Dow Jones (DJIA) Up or Down on July 31?",
+        "createdAt": "2026-07-30T12:00:05.994365Z",
+        "startDate": "2026-07-30T12:00:21Z",
+        "endDate": "2026-07-31T20:00:00Z",
+        "tags": [
+          "daily",
+          "daily-close",
+          "dji",
+          "finance",
+          "hide-from-new",
+          "indicies",
+          "up-or-down"
+        ],
+        "token_ids": "[\"52271465559797477529027907725757788134238261110120430539631310735402930141077\", \"78547260196613783645992465403025164643177938989115831649356278107206748959815\"]",
+        "outcomes": "[\"Up\", \"Down\"]"
+      },
+      {
+        "market": "0xb6990d028c192d9718c1262b2df05688da1fc43a9c0741faec95755faa230287",
+        "question": "Google (GOOGL) Up or Down on July 31?",
+        "createdAt": "2026-07-30T12:00:10.067156Z",
+        "startDate": "2026-07-30T12:00:23Z",
+        "endDate": "2026-07-31T20:00:00Z",
+        "tags": [
+          "daily",
+          "daily-close",
+          "equities",
+          "finance",
+          "finance-updown",
+          "googl",
+          "hide-from-new",
+          "pyth-finance",
+          "stocks",
+          "up-or-down"
+        ],
+        "token_ids": "[\"76732452316899735691084714967162528107293107820812935280976073883309346973169\", \"35316688932309534069849685307778557806869368347524555257520175758790115889753\"]",
+        "outcomes": "[\"Up\", \"Down\"]"
+      },
+      {
+        "market": "0xf5c422db5a4a69f1ed45da249feba3fa8651331247aaa587cc6bf7f63bc95a1a",
+        "question": "Will Google (GOOGL) close above $345 on July 31?",
+        "createdAt": "2026-07-30T12:00:13.298236Z",
+        "startDate": "2026-07-30T12:00:24Z",
+        "endDate": "2026-07-31T20:00:00Z",
+        "tags": [
+          "daily",
+          "equities",
+          "finance",
+          "googl",
+          "hide-from-new",
+          "stocks"
+        ],
+        "token_ids": "[\"6837266501745510836299031695670956769743341945009948251277501029736332348767\", \"92770587713519831912896832986284353141835624559415669968387005778457256485302\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xbfac404d3a6bf40bf63910ca9bbff4cbdfaa719378c42fe3c731caf026049558",
+        "question": "Will NVIDIA (NVDA) close above $195 on July 31?",
+        "createdAt": "2026-07-30T12:00:24.780731Z",
+        "startDate": "2026-07-30T12:00:42Z",
+        "endDate": "2026-07-31T20:00:00Z",
+        "tags": [
+          "daily",
+          "equities",
+          "finance",
+          "hide-from-new",
+          "nvda",
+          "stocks"
+        ],
+        "token_ids": "[\"94757330079176029407094721623449337226980919694264987191445570268951468718932\", \"18259813599031885043182593242598628309216112622104650931781579245803844308637\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x5245df07047d3f726be79a5f50180e5c794e461549e1b88014f417f0095e2c9c",
+        "question": "RU Saint-Gilloise vs. FK Bod\u00f8/Glimt: RU Saint-Gilloise O/U 0.5",
+        "createdAt": "2026-07-30T18:16:46.080834Z",
+        "startDate": "2026-07-30T18:26:18Z",
+        "endDate": "2026-08-04T18:00:00Z",
+        "tags": [
+          "games",
+          "soccer",
+          "sports",
+          "ucl"
+        ],
+        "token_ids": "[\"113980871637164661082607999493812267116670239481650148643250822737045784582397\", \"64069274898645568818606218360249618477658653333832365341092396447046484305220\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      },
+      {
+        "market": "0xd3659d0d00ffa5e2ad5a4d18e7c7d2c684100d535503c235a4dd1580bf07d918",
+        "question": "Bitcoin above 66,600 on July 30, 5PM ET?",
+        "createdAt": "2026-07-30T19:40:01.798271Z",
+        "startDate": "2026-07-30T19:40:23Z",
+        "endDate": "2026-07-30T21:00:00Z",
+        "tags": [
+          "1H",
+          "bitcoin",
+          "crypto",
+          "crypto-prices",
+          "hide-from-new",
+          "multi-strikes",
+          "recurring"
+        ],
+        "token_ids": "[\"104533850605548892666804919686084783745742394960820989539851813144405123893724\", \"6476728753380553872069352074613992202636173870293054012167617316283083088838\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x69a76fed46ed5789d8ff01359c5c8d576a97a6871cda292d814de6284318f333",
+        "question": "Bitcoin above 65,200 on July 30, 5PM ET?",
+        "createdAt": "2026-07-30T19:40:03.482973Z",
+        "startDate": "2026-07-30T19:40:19Z",
+        "endDate": "2026-07-30T21:00:00Z",
+        "tags": [
+          "1H",
+          "bitcoin",
+          "crypto",
+          "crypto-prices",
+          "hide-from-new",
+          "multi-strikes",
+          "recurring"
+        ],
+        "token_ids": "[\"13114500166888195485751315661469261924796945335273845040275297232117730657858\", \"6187055344873473738459065067409080136489832844646803460232912528183732347527\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xc418ab7d5eb621bd14c64a661c2a1be4beabd80825d79ca7a9741558f361d4a1",
+        "question": "Ethereum above 1,850 on July 30, 5PM ET?",
+        "createdAt": "2026-07-30T19:40:15.599942Z",
+        "startDate": "2026-07-30T19:40:30Z",
+        "endDate": "2026-07-30T21:00:00Z",
+        "tags": [
+          "1H",
+          "crypto",
+          "crypto-prices",
+          "ethereum",
+          "hide-from-new",
+          "multi-strikes",
+          "recurring"
+        ],
+        "token_ids": "[\"72963366563259370779795145721881774245942167175424939067293826895800408953635\", \"92988853449392444190568603328075414111905210749132065643317655695916987777041\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xe710c918370123adbabf450ddc41f2d2119c5aa2f51f7f5981c16f66c6068265",
+        "question": "Ethereum above 1,900 on July 30, 6PM ET?",
+        "createdAt": "2026-07-30T20:40:16.548878Z",
+        "startDate": "2026-07-30T20:40:30Z",
+        "endDate": "2026-07-30T22:00:00Z",
+        "tags": [
+          "1H",
+          "crypto",
+          "crypto-prices",
+          "ethereum",
+          "hide-from-new",
+          "multi-strikes",
+          "recurring"
+        ],
+        "token_ids": "[\"110095586836094041834861402733991979561603320004887358470012981896183505240736\", \"36412524900633525710436126105207147288806483760831421668053550862370973826260\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      }
+    ]
+  },
+  {
+    "sample": 10,
+    "requested": 12,
+    "matched": 12,
+    "categories": {
+      "weather": 4,
+      "sports": 7,
+      "crypto": 1
+    },
+    "details": [
+      {
+        "market": "0x1e4158e03b80810445945032389aa6325453b92c2bd48c4b1ca14820c4c2893d",
+        "question": "Will the highest temperature in Seattle be between 72-73\u00b0F on August 12?",
+        "createdAt": "2026-08-11T01:02:33.890595Z",
+        "startDate": "2026-08-11T01:02:54Z",
+        "endDate": "2026-08-12T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "seattle",
+          "weather"
+        ],
+        "token_ids": "[\"69452690224913822943154269263148911436546151398262806676561619225754690865381\", \"14109891428647944995031509873017316730981764215460920779420883645081670331941\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x234735428c3cca77cbd1e5aa2b241f915e92fd1febdb0a1f7e629f6acdb75c57",
+        "question": "Will the highest temperature in Houston be between 98-99\u00b0F on August 12?",
+        "createdAt": "2026-08-11T01:03:44.72019Z",
+        "startDate": "2026-08-11T01:04:01Z",
+        "endDate": "2026-08-12T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "houston",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"112032644926643123361717843807057575515545862979234812514694997442693185398928\", \"100401139718527747155594046729904154188825749649029688619296572642081174485570\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x27c405610d9d32e5def88bd9923ecdefae9e631aea85069aedab692ef11c3e0d",
+        "question": "Will the highest temperature in Shanghai be 28\u00b0C on August 13?",
+        "createdAt": "2026-08-11T04:03:20.720121Z",
+        "startDate": "2026-08-11T04:03:39Z",
+        "endDate": "2026-08-13T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "shanghai",
+          "weather"
+        ],
+        "token_ids": "[\"10677955339308619684573488837772550563198613348290641437264529688062654859034\", \"71713167599982387469980536695103320568486474744267733466605755451187187681108\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xddd051578fa9d83d253df8fa254732c0157503ed4a627e78f9999f2d6e593b15",
+        "question": "Fulham FC vs. Chelsea FC: O/U 10.5 Total Corners",
+        "createdAt": "2026-08-11T04:15:01.862549Z",
+        "startDate": "2026-08-11T04:15:21Z",
+        "endDate": "2026-08-24T19:00:00Z",
+        "tags": [
+          "EPL",
+          "games",
+          "premier-league",
+          "soccer",
+          "sports"
+        ],
+        "token_ids": "[\"106191376887706107716673495995676455092826293663551150375313267300610058320429\", \"21949509568985803063348793942917308950270718203751837975613086293793561769520\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      },
+      {
+        "market": "0x065976d903231fb1c97551857ee45266eb701d6a1f0a60d88fa603e7b0cb09aa",
+        "question": "Giron vs. Rocha: Set 1 Games O/U 8.5",
+        "createdAt": "2026-08-11T05:00:23.091556Z",
+        "startDate": "2026-08-11T05:01:47Z",
+        "endDate": "2026-08-18T20:30:00Z",
+        "tags": [
+          "games",
+          "sports",
+          "tennis"
+        ],
+        "token_ids": "[\"84889207769455997663025816314188463227195535419635210336929803622072563952682\", \"61275359306730149054611832609307528317764178902926330246887370367652197548359\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      },
+      {
+        "market": "0xf8a0be716026b10f5be83c846d3d92dbf2cb773128360136e9ac9cdf471b9eb9",
+        "question": "Giron vs. Rocha: Set 1 Games O/U 9.5",
+        "createdAt": "2026-08-11T05:00:23.615573Z",
+        "startDate": "2026-08-11T05:01:52Z",
+        "endDate": "2026-08-18T20:30:00Z",
+        "tags": [
+          "games",
+          "sports",
+          "tennis"
+        ],
+        "token_ids": "[\"104918634658574328540792192125409525720479608406419639290155339837217800418814\", \"108791591893816649223167816205555447961763147200984570033359696951656382977744\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      },
+      {
+        "market": "0x5775906c27be4b7847d00b29b4a41db1752a7cf5b0fa51c1f81a117119896f37",
+        "question": "Sramkova vs. Jacquemot: Set 1 Games O/U 9.5",
+        "createdAt": "2026-08-11T05:00:33.873874Z",
+        "startDate": "2026-08-11T05:01:59Z",
+        "endDate": "2026-08-18T17:30:00Z",
+        "tags": [
+          "games",
+          "sports",
+          "tennis"
+        ],
+        "token_ids": "[\"35838921296381278277556795368322248396652122440027879787899623178775012056862\", \"58158808257417865260969991990475776372862677130929445680667715618397455382490\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      },
+      {
+        "market": "0x6ba82a419760e9c7f60a5fcf69e07973a0b4172d04174a6f48ed61c8c1f2363a",
+        "question": "Will the highest temperature in Karachi be 37\u00b0C on August 13?",
+        "createdAt": "2026-08-11T05:04:42.463478Z",
+        "startDate": "2026-08-11T05:04:57Z",
+        "endDate": "2026-08-13T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "karachi",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"79326263765036770643189610498248808674957414576084918103097875998782290990929\", \"76661209212113487398531531588412962867196372657588416574230932094321524221326\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x4144c53d2245230b25b27c3770d963ecce2698be1603dc752ac2b1b6d3b8d7ca",
+        "question": "M\u00e1laga CF vs. RC Deportivo A Coru\u00f1a: O/U 8.5 Total Corners",
+        "createdAt": "2026-08-11T06:15:01.676303Z",
+        "startDate": "2026-08-11T06:15:17Z",
+        "endDate": "2026-08-24T19:30:00Z",
+        "tags": [
+          "games",
+          "la-liga",
+          "soccer",
+          "sports"
+        ],
+        "token_ids": "[\"13543515732194803945868792219265782045527685996337354958965224110526287890984\", \"75455106500749218700715436953746999901379914484610400714863808484412318689452\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      },
+      {
+        "market": "0x8e53f2dd8fb88b140f417d0a8b8a636603d5ee6fc39d7abaf47a0fb1c2c15805",
+        "question": "Ethereum above 1,820 on August 11, 8AM ET?",
+        "createdAt": "2026-08-11T10:40:24.645189Z",
+        "startDate": "2026-08-11T10:40:38Z",
+        "endDate": "2026-08-11T12:00:00Z",
+        "tags": [
+          "1H",
+          "crypto",
+          "crypto-prices",
+          "ethereum",
+          "hide-from-new",
+          "multi-strikes",
+          "recurring"
+        ],
+        "token_ids": "[\"65606648426971424280794268875713251440278348689368150578344679927289424583712\", \"107968437024393832549171138862808153047833144186585852418633925276993360917440\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xe7bec751a197894c80d6d0e67564d8414cc75565556b8ea39e95e5ffb5ca8ccf",
+        "question": "Fulham FC vs. VfB Stuttgart: Fulham FC O/U 5.5 Corners",
+        "createdAt": "2026-08-11T11:16:33.383592Z",
+        "startDate": "2026-08-11T11:16:45Z",
+        "endDate": "2026-08-15T15:00:00Z",
+        "tags": [
+          "clf",
+          "games",
+          "soccer",
+          "sports"
+        ],
+        "token_ids": "[\"55308103539344087027654866884394524565101703308634217028556475709283649159287\", \"19442135772727474395320966766032111134247494922971368944563647168686810077647\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      },
+      {
+        "market": "0x9f72233ca8e236852ee06475369c1cbebc319d0fe37c4a843b12c2c309af8e85",
+        "question": "Honor of Kings: WanZhen Esports Club vs TC Grouping (BO5) - KPL Growth League Group Stage",
+        "createdAt": "2026-08-11T11:21:31.621421Z",
+        "startDate": "2026-08-11T11:21:44Z",
+        "endDate": "2026-08-16T13:50:00Z",
+        "tags": [
+          "esports",
+          "games",
+          "honor-of-kings",
+          "sports"
+        ],
+        "token_ids": "[\"55658816378161420097940212739235901501372247426569377966491611002646963856026\", \"95083294156640616873627268534130799222049803630194444734985248946043482401830\"]",
+        "outcomes": "[\"WanZhen Esports Club\", \"TC Grouping\"]"
+      }
+    ]
+  },
+  {
+    "sample": 11,
+    "requested": 12,
+    "matched": 12,
+    "categories": {
+      "crypto": 2,
+      "weather": 7,
+      "sports": 3
+    },
+    "details": [
+      {
+        "market": "0x628ed1a210b1bf69d55048d0b0ad9062a096b76f6e56ed6ca9a0c3bbc4f06c2b",
+        "question": "Ethereum Up or Down - August 14, 4:45AM-5:00AM ET",
+        "createdAt": "2026-08-13T08:52:42.228274Z",
+        "startDate": "2026-08-13T08:53:45.632328Z",
+        "endDate": "2026-08-14T09:00:00Z",
+        "tags": [
+          "15M",
+          "crypto",
+          "crypto-prices",
+          "ethereum",
+          "hide-from-new",
+          "recurring",
+          "up-or-down"
+        ],
+        "token_ids": "[\"40530209393938129509763760788519406381031772742511537016041017758138375799729\", \"7498949250188612899870236858522119115687371484795762679157139769325238142896\"]",
+        "outcomes": "[\"Up\", \"Down\"]"
+      },
+      {
+        "market": "0xefbcb82456bda5d2fc9d2a9037a0bac5b17fd4acfec108f6ee76bc4055c04000",
+        "question": "Will the highest temperature in Buenos Aires be 15\u00b0C on August 15?",
+        "createdAt": "2026-08-14T00:55:52.513002Z",
+        "startDate": "2026-08-14T00:56:16Z",
+        "endDate": "2026-08-15T12:00:00Z",
+        "tags": [
+          "buenos-aires",
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"108852057653634585268221908901974488875363095258405722739480125438655923317995\", \"91941582015382072256665145216492121296792405166279452088028769736476593628561\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xc512aa8b5179d5862ebc5a46dbe48eb04c7ecd4f2458e25bbfa960f88ef05acf",
+        "question": "Will the highest temperature in Toronto be 25\u00b0C on August 15?",
+        "createdAt": "2026-08-14T00:55:57.426786Z",
+        "startDate": "2026-08-14T00:56:15Z",
+        "endDate": "2026-08-15T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "toronto",
+          "weather"
+        ],
+        "token_ids": "[\"78468254620531956207274911333128196803481834345065904086255217573832183002400\", \"63473631306194443486476249391675290523932526204463486167375216658852281705466\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0xd8b894ce5372e809b2a72f829b1f782a2c75e66af5c064907e5e183bfe7903dc",
+        "question": "Will the highest temperature in Atlanta be between 86-87\u00b0F on August 15?",
+        "createdAt": "2026-08-14T00:56:17.333626Z",
+        "startDate": "2026-08-14T00:56:39Z",
+        "endDate": "2026-08-15T12:00:00Z",
+        "tags": [
+          "atlanta",
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"56147433550055774565621682278255529055193349846506696395351521811504355578417\", \"59373615931366315690767034762730121275553235622446371480033657488235732488972\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x990130a798c5eb46ef73d67758fe5b51099e32a49f72283b9ba5f87e5cf4721a",
+        "question": "Will the highest temperature in Atlanta be between 96-97\u00b0F on August 15?",
+        "createdAt": "2026-08-14T00:56:19.040274Z",
+        "startDate": "2026-08-14T00:56:39Z",
+        "endDate": "2026-08-15T12:00:00Z",
+        "tags": [
+          "atlanta",
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"70448288878080299773850379208093161378757325214860987085971973735510518738870\", \"111714682982267407274152131244771866512636957441222059602546038626061816710095\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x209927d81871eeb6fb088408853f41ab6b3955648824b8287f308e84cfef9494",
+        "question": "Will the highest temperature in Denver be between 90-91\u00b0F on August 15?",
+        "createdAt": "2026-08-14T00:56:58.192502Z",
+        "startDate": "2026-08-14T00:57:25Z",
+        "endDate": "2026-08-15T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "denver",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"78343787640254137228514888826724923406272787274696790123660513503026162113867\", \"23354588327982413096450195388716852028169523779465232295623788142224659809029\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x3d9769f9ccb3182c9ba92a0c2f6e0a69ee4b3989fc6a2af2ad16f418a1c76d22",
+        "question": "Munetaka Murakami: Home Runs O/U 1.5",
+        "createdAt": "2026-08-14T04:32:33.899373Z",
+        "startDate": "2026-08-14T04:32:48Z",
+        "endDate": "2026-08-14T22:40:00Z",
+        "tags": [
+          "baseball",
+          "games",
+          "mlb",
+          "sports"
+        ],
+        "token_ids": "[\"101039154126687918908600260156177734593948442902900890437391602638606535633732\", \"41189968094099300271863936461532771114551239288964561387613642086695486180361\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      },
+      {
+        "market": "0xe679a70fd395c6c8fe482ff0a9f42b9eefd973061040370e93fe8cefb8edb0b9",
+        "question": "Will the highest temperature in Hong Kong be 37\u00b0C or higher on August 16?",
+        "createdAt": "2026-08-14T04:56:46.473627Z",
+        "startDate": "2026-08-14T04:57:09Z",
+        "endDate": "2026-08-16T12:00:00Z",
+        "tags": [
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "hong-kong",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"51271557265268924314206023690553948364240777834566464635939833944659107256851\", \"93269647649489032112454395296497163333370968147744047062178443617479149615757\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x03d2c78c9672f8cb0e2c8e91e80df8daec1824900eefcf255b70a6327ed5179b",
+        "question": "Will the highest temperature in Chengdu be 33\u00b0C on August 16?",
+        "createdAt": "2026-08-14T04:57:30.122485Z",
+        "startDate": "2026-08-14T04:57:51Z",
+        "endDate": "2026-08-16T12:00:00Z",
+        "tags": [
+          "chengdu",
+          "daily-temperature",
+          "hide-from-new",
+          "highest-temperature",
+          "recurring",
+          "weather"
+        ],
+        "token_ids": "[\"96635780850641292070019901352124455275334479935206305136482272692989729011882\", \"79179201346217364594512096097705003559827027988291314151792419778469765662434\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      },
+      {
+        "market": "0x6e00be17d084272134d8c2ff463651beb0459afcb20ab41fc1dffe96a7d213fa",
+        "question": "APIA Leichhardt FC vs. Melbourne Victory FC: O/U 3.5",
+        "createdAt": "2026-08-14T06:00:34.234633Z",
+        "startDate": "2026-08-14T06:01:00Z",
+        "endDate": "2026-08-19T09:30:00Z",
+        "tags": [
+          "games",
+          "soccer",
+          "soccer-auc",
+          "sports"
+        ],
+        "token_ids": "[\"808485923711743816824088934633876265236666459682549728261960693588014351337\", \"108483217858619480124802024198502088056877916307654169262357998031123922284696\"]",
+        "outcomes": "[\"Over\", \"Under\"]"
+      },
+      {
+        "market": "0x6232c73f3588b7e08c1600221e9029637ff1477868243805d8495494c8fa3fc0",
+        "question": "Dota 2: Xtreme Gaming vs HULIGANI - Game 2 Winner",
+        "createdAt": "2026-08-14T07:09:24.445724Z",
+        "startDate": "2026-08-14T07:09:38Z",
+        "endDate": "2026-08-14T14:35:00Z",
+        "tags": [
+          "dota-2",
+          "esports",
+          "games",
+          "sports"
+        ],
+        "token_ids": "[\"87721929443971140507551014724604288274684718302876676454623834916336518261153\", \"26369756164768503065258252194799764218068567942650493519842720798521973142367\"]",
+        "outcomes": "[\"Xtreme Gaming\", \"HULIGANI\"]"
+      },
+      {
+        "market": "0x1a972668e480f1431fc6a862f3ca21b1764e33179f2de35a44736908f51c6055",
+        "question": "Bitcoin above 63,200 on August 14, 5AM ET?",
+        "createdAt": "2026-08-14T07:40:02.96782Z",
+        "startDate": "2026-08-14T07:40:24Z",
+        "endDate": "2026-08-14T09:00:00Z",
+        "tags": [
+          "1H",
+          "bitcoin",
+          "crypto",
+          "crypto-prices",
+          "hide-from-new",
+          "multi-strikes",
+          "recurring"
+        ],
+        "token_ids": "[\"40639595269371945767629549311813162608498810117251270125393843916511195010829\", \"16587271918466623494704712834260888768499131971813406969777788056721544795220\"]",
+        "outcomes": "[\"Yes\", \"No\"]"
+      }
+    ]
+  }
+]

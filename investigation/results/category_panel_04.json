@@ -1,0 +1,341 @@
+[
+  {
+    "sample": 4,
+    "market": "0x306887982f25e15134015f6d3e01a9f10a9baef1f90c80b9137cc3dc065f7621",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "sports",
+      "tennis"
+    ],
+    "title": "Kusuhara vs. Takahata: Match O/U 21.5",
+    "updates": 2,
+    "start": "2026-06-30T17:01:59Z",
+    "end": "2026-07-08T03:00:00Z",
+    "event_start": null,
+    "created": "2026-06-30T17:00:45.010459Z",
+    "token_ids": "[\"82337467512811570252479124393826112891094204390453735334968865082475903125820\", \"77669093715023684772929882759140410074056388478500482165437163802217374474001\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 4,
+    "market": "0xaecf18786478db7afa14af431553c22e18f7f6179d66b28d9e66a60d08db0bcd",
+    "category": "Crypto",
+    "tags": [
+      "bitcoin",
+      "crypto",
+      "crypto-prices",
+      "hide-from-new",
+      "neg-risk",
+      "recurring",
+      "weekly"
+    ],
+    "title": "Will the price of Bitcoin be less than $50,000 on July 7?",
+    "updates": 640,
+    "start": "2026-06-30T16:00:25Z",
+    "end": "2026-07-07T16:00:00Z",
+    "event_start": null,
+    "created": "2026-06-30T16:00:01.08032Z",
+    "token_ids": "[\"68152929627275612406057328236985285285109865880047869016213938525352437487216\", \"26966375379460235042843801675620687690560315518193225040123213366089432265904\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 4,
+    "market": "0xfe1b2aa46d5d7c9fc9b191b692e4136df97f480760a6a11ea6f86c3a6c4ab849",
+    "category": "Sports/esports",
+    "tags": [
+      "games",
+      "sports",
+      "tennis"
+    ],
+    "title": "Stephens vs. Lemire: Match O/U 23.5",
+    "updates": 2,
+    "start": "2026-06-30T17:01:09Z",
+    "end": "2026-07-08T12:00:00Z",
+    "event_start": null,
+    "created": "2026-06-30T17:00:20.030205Z",
+    "token_ids": "[\"112076697179851419661219898215685138881709056719003064895995896250081891778695\", \"89345803543421000226315102987697454836637642822792358893207713531391946674573\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 4,
+    "market": "0xcc2dc6765049a723688fadab2c8a387ef7744bd9abba51b673767019be3a3d4a",
+    "category": "Crypto",
+    "tags": [
+      "5M",
+      "crypto",
+      "crypto-prices",
+      "hide-from-new",
+      "recurring",
+      "solana",
+      "up-or-down"
+    ],
+    "title": "Solana Up or Down - June 30, 7:55PM-8:00PM ET",
+    "updates": 362,
+    "start": "2026-06-30T00:03:36.634466Z",
+    "end": "2026-07-01T00:00:00Z",
+    "event_start": "2026-06-30T23:55:00Z",
+    "created": "2026-06-30T00:02:38.066609Z",
+    "token_ids": "[\"109800635774158869433758024243262651703502685251136306047641534801531929029446\", \"14955075654331225645638919548503642725362825862492262790416990700535724211960\"]",
+    "outcomes": "[\"Up\", \"Down\"]"
+  },
+  {
+    "sample": 4,
+    "market": "0xb988f1a4070ab95b67b781c9344e1ad59f2c19eb9384ac74226d8ab658714ea8",
+    "category": "Crypto",
+    "tags": [
+      "crypto",
+      "crypto-prices",
+      "ethereum",
+      "hide-from-new",
+      "multi-strikes",
+      "recurring",
+      "weekly"
+    ],
+    "title": "Will the price of Ethereum be above $1,500 on July 7?",
+    "updates": 18,
+    "start": "2026-06-30T16:02:10.138963Z",
+    "end": "2026-07-07T16:00:00Z",
+    "event_start": null,
+    "created": "2026-06-30T16:00:01.982199Z",
+    "token_ids": "[\"109727733219473024421748692913766346449140300440221172198748422539893258940159\", \"108109483644150102400610146815246596795466506039486106093273619006246089112334\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 4,
+    "market": "0x37ebab5edca1a0d7605c0ab387e54ae296816380f3212efa8d3e70d1ce984cc2",
+    "category": "Crypto",
+    "tags": [
+      "1H",
+      "bitcoin",
+      "crypto",
+      "crypto-prices",
+      "hide-from-new",
+      "multi-strikes",
+      "recurring"
+    ],
+    "title": "Bitcoin above 60,000 on June 30, 8PM ET?",
+    "updates": 28,
+    "start": "2026-06-30T22:42:44.08897Z",
+    "end": "2026-07-01T00:00:00Z",
+    "event_start": null,
+    "created": "2026-06-30T22:40:03.385482Z",
+    "token_ids": "[\"34964144908775048712580688489901032238664093588432324660987598840419101815436\", \"38836529795902086239905829859800896494206906999593713555735432645558093609559\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 4,
+    "market": "0xd03b4f9004d7624ae33461ed2582149005893396ec13f7a21326db93386d350e",
+    "category": "Economics/finance",
+    "tags": [
+      "business",
+      "kaito",
+      "polymarket",
+      "pop-culture",
+      "prediction-markets",
+      "recurring",
+      "tech"
+    ],
+    "title": "Will Polymarket mindshare hit 85% by December 31?",
+    "updates": 10,
+    "start": "2026-06-30T17:27:24.358317Z",
+    "end": "2027-01-01T04:59:00Z",
+    "event_start": null,
+    "created": "2026-06-30T17:25:05.554983Z",
+    "token_ids": "[\"259495790776019281476626577301285144665398749681130817858665286488723672689\", \"58077529988800271678605274531693325160176464028063064087823172802129952135053\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 4,
+    "market": "0x19047cae64d6403a7f3351c416d73c4d7234209100991aee388eb961577a37c9",
+    "category": "Crypto",
+    "tags": [
+      "bitcoin",
+      "crypto",
+      "crypto-prices",
+      "hide-from-new",
+      "multi-strikes",
+      "recurring",
+      "weekly"
+    ],
+    "title": "Will the price of Bitcoin be above $56,000 on July 7?",
+    "updates": 116,
+    "start": "2026-06-30T16:02:42.479053Z",
+    "end": "2026-07-07T16:00:00Z",
+    "event_start": null,
+    "created": "2026-06-30T16:00:06.345321Z",
+    "token_ids": "[\"5209113113286299453682822964882726212391569669350564778301837478035321366347\", \"99492547606593022690425515964737666384523478984202353148651092435973962903004\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 4,
+    "market": "0x9018a965a254d0095a7823f46e172f58a2187e915d5a27f70f98dfc35adf0fdb",
+    "category": "Crypto",
+    "tags": [
+      "crypto",
+      "crypto-prices",
+      "ethereum",
+      "hide-from-new",
+      "neg-risk",
+      "recurring",
+      "weekly"
+    ],
+    "title": "Will the price of Ethereum be between $1,300 and $1,400 on July 7?",
+    "updates": 238,
+    "start": "2026-06-30T16:00:32Z",
+    "end": "2026-07-07T16:00:00Z",
+    "event_start": null,
+    "created": "2026-06-30T16:00:05.843752Z",
+    "token_ids": "[\"33760737566788048293355675416311007254711957558378577434950932268119147016566\", \"25847325980757906282919282508612804639143682731947818313392840946915175266459\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 4,
+    "market": "0xe29b328d615547693dfec79194b22763f3d33893bc820420ec83041c0727bf83",
+    "category": "Other",
+    "tags": [
+      "movies",
+      "netflix",
+      "pop-culture",
+      "top-netflix"
+    ],
+    "title": "Will \"Little Brother\" be the top global Netflix movie this week?",
+    "updates": 8,
+    "start": "2026-06-30T20:57:57.020152Z",
+    "end": "2026-07-07T23:59:00Z",
+    "event_start": null,
+    "created": "2026-06-30T20:54:06.931366Z",
+    "token_ids": "[\"58792507266532782315935041887773722416217726867225276476748571582853795667983\", \"60201532554315545093620583544178207014044475254315869590636930096085200859364\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 4,
+    "market": "0x7329d7eaa93eb0eabeff170168d01c1407b6ae0e130c4ce719992eb8cc6c167d",
+    "category": "Crypto",
+    "tags": [
+      "1H",
+      "crypto",
+      "crypto-prices",
+      "ethereum",
+      "hide-from-new",
+      "multi-strikes",
+      "recurring"
+    ],
+    "title": "Ethereum above 1,630 on June 30, 8PM ET?",
+    "updates": 26,
+    "start": "2026-06-30T22:42:25.047052Z",
+    "end": "2026-07-01T00:00:00Z",
+    "event_start": null,
+    "created": "2026-06-30T22:40:07.799539Z",
+    "token_ids": "[\"54649388203255777942319709893152441540752627845435138131757699934988834742993\", \"79139623800410147692100313535328590593794381033573245596941952886656713272526\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 4,
+    "market": "0xaa876de0a72eaaff3c17c118b063b7150b73e61876f8713783007276e7daaec7",
+    "category": "Mentions",
+    "tags": [
+      "love-island",
+      "mention-markets",
+      "movies",
+      "pop-culture"
+    ],
+    "title": "Will anyone say \"Villa\" 20+ times during Love Island E27?",
+    "updates": 4,
+    "start": "2026-06-30T20:55:11.540598Z",
+    "end": "2026-07-03T23:59:00Z",
+    "event_start": null,
+    "created": "2026-06-30T20:53:01.506565Z",
+    "token_ids": "[\"74053856619412577146734881374110139873963949404930476181356776831450118563603\", \"33355006923115699475955899110400432729711567479398387494263035084292530367523\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 4,
+    "market": "0xd4d77f20403432ea45e0cc16eb0824cb4567262f5b86f1ed4f2702f8d1edde77",
+    "category": "Sports/esports",
+    "tags": [
+      "hockey",
+      "nhl",
+      "nhl-playoffs",
+      "sports"
+    ],
+    "title": "Will Vegas Golden Knights be the 2027 NHL Western Conference Champion?",
+    "updates": 4,
+    "start": "2026-06-30T19:01:27.840279Z",
+    "end": "2027-07-01T03:59:00Z",
+    "event_start": null,
+    "created": "2026-06-30T18:57:29.206612Z",
+    "token_ids": "[\"29592951747633721586501422495854312054046488036140527140027155445457213510794\", \"51288928625253180740272519233085058880763157885066349459814718354527671446513\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 4,
+    "market": "0x814017fdc6f965c3c3f459b6dc802a3c0465fca285c81a7d82055235a218e826",
+    "category": "Crypto",
+    "tags": [
+      "5M",
+      "crypto",
+      "crypto-prices",
+      "hide-from-new",
+      "recurring",
+      "ripple",
+      "up-or-down",
+      "xrp"
+    ],
+    "title": "XRP Up or Down - June 30, 8:00PM-8:05PM ET",
+    "updates": 4642,
+    "start": "2026-06-30T00:07:57.74618Z",
+    "end": "2026-07-01T00:05:00Z",
+    "event_start": "2026-07-01T00:00:00Z",
+    "created": "2026-06-30T00:06:38.279734Z",
+    "token_ids": "[\"77073758507243811255810237283727182826077883899009988670697282755380971909634\", \"85747540420575433436393788821071951452718491651346372314854547047117136295934\"]",
+    "outcomes": "[\"Up\", \"Down\"]"
+  },
+  {
+    "sample": 4,
+    "market": "0x77dc12cae53f00c0e7e5886994e80b47530d525cab3093b26f2b30c0cc408d26",
+    "category": "Crypto",
+    "tags": [
+      "1H",
+      "crypto",
+      "crypto-prices",
+      "ethereum",
+      "hide-from-new",
+      "multi-strikes",
+      "recurring"
+    ],
+    "title": "Ethereum above 1,620 on June 30, 9PM ET?",
+    "updates": 2,
+    "start": "2026-06-30T23:42:43.441894Z",
+    "end": "2026-07-01T01:00:00Z",
+    "event_start": null,
+    "created": "2026-06-30T23:40:09.215232Z",
+    "token_ids": "[\"27796373507496025552546894185568267776302911709141749129797229388437417949774\", \"45172743799455621539105242247845673018845041873931415736787113249660351279782\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 4,
+    "market": "0xae64270939d931a95c7c7847e5afc290ed2792770ef4ae85cb5d13a4013b59a6",
+    "category": "Economics/finance",
+    "tags": [
+      "daily",
+      "daily-close",
+      "equities",
+      "finance",
+      "finance-updown",
+      "hide-from-new",
+      "meta",
+      "pyth-finance",
+      "stocks",
+      "up-or-down"
+    ],
+    "title": "Meta (META) Up or Down on July 1?",
+    "updates": 88,
+    "start": "2026-06-30T12:03:46.424441Z",
+    "end": "2026-07-01T20:00:00Z",
+    "event_start": "2026-07-01T13:30:00Z",
+    "created": "2026-06-30T12:00:09.352876Z",
+    "token_ids": "[\"22944108085543335113037995874898744115763817469083667511459750085534196449950\", \"95723238822001375526248738349439003943348797273623281425802662507282214447183\"]",
+    "outcomes": "[\"Up\", \"Down\"]"
+  }
+]

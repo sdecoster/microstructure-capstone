@@ -1,0 +1,45 @@
+{
+  "sample": 0,
+  "markets": [
+    {
+      "market": "0xd6591e966aebf061547ef34cdf3494ed318969887c8b7fb53f10ed5d5461a547",
+      "trades": 1,
+      "notional": 68.71502
+    },
+    {
+      "market": "0xfe28cb84a714b1a964290d7fd2587e71d57e905678c8ab64488449b24be78e52",
+      "trades": 1,
+      "notional": 199.999788
+    },
+    {
+      "market": "0xfd431e070263b5f24e43a8fc44532bf41aa008d99cab2330d979913b1c580bd2",
+      "trades": 1,
+      "notional": 1038.85674
+    },
+    {
+      "market": "0x518a5b030b205706b8ffe6bbad9bd3de59548348e5c0471827f5de21e513333c",
+      "trades": 1,
+      "notional": 10.101449999999998
+    },
+    {
+      "market": "0x1945a8b23e313ed7423b6b6fd556f9ab5578900376b565a61dc480a5f4f35d21",
+      "trades": 1,
+      "notional": 778.4722800000001
+    },
+    {
+      "market": "0xa9c6b42a5104f27ff050f97c9276a7f9a0f01cef043ba60504a315148c22c863",
+      "trades": 1,
+      "notional": 0.13799999999999998
+    },
+    {
+      "market": "0x19214a01aba1618ad928398312194f660e470c18428a50f4d82dee4ad0c9a256",
+      "trades": 1,
+      "notional": 39.999919999999996
+    },
+    {
+      "market": "0x5532406291ecc97d5211ebdb1724140f6efeb8faa7d38a82b9284471429e4477",
+      "trades": 1,
+      "notional": 9.999999996
+    }
+  ]
+}

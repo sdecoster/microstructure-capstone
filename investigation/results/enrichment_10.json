@@ -1,0 +1,10 @@
+{
+  "source": "raw/_index/2026-08-12/polymarket_index.json",
+  "generated_at": "2026-08-12T00:02:47.390459605+00:00",
+  "next_day_matches": 0,
+  "markets": 537,
+  "categories": {
+    "Unmapped": 533,
+    "Crypto": 4
+  }
+}

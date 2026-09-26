@@ -1,0 +1,72 @@
+{
+  "sample": 2,
+  "source_first": "2026-06-02T15:00:00.000Z",
+  "source_last": "2026-06-02T15:00:35.225Z",
+  "records": 840842,
+  "contracts": [
+    {
+      "market": "0xffbea5a5b5100c7fadab1128653af06acd30de37845be2d2c847a4dd31318405",
+      "slug": "btc-updown-15m-1780412400",
+      "question": "Bitcoin Up or Down - June 2, 11:00AM-11:15AM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0xfc0f096779db527adacb8751209706ea26316768b3691913cdf3603ce041b899",
+      "slug": "xrp-updown-5m-1780412400",
+      "question": "XRP Up or Down - June 2, 11:00AM-11:05AM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0xa8974a0b5d597ae3f6072ec59febe7778058369d62ed5dfce4274347d45ed660",
+      "slug": "btc-updown-5m-1780412400",
+      "question": "Bitcoin Up or Down - June 2, 11:00AM-11:05AM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0xa5ae048f2e1b081529c3a2cf93ce7fe57082a82824ba61a6d698161343f1c32c",
+      "slug": "xrp-updown-15m-1780412400",
+      "question": "XRP Up or Down - June 2, 11:00AM-11:15AM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0x269ece76c295adcec5d11892550af568bb0dcce18cac7c3625bb88d2ba8efc5a",
+      "slug": "sol-updown-5m-1780412400",
+      "question": "Solana Up or Down - June 2, 11:00AM-11:05AM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0x4ff1b57156dd2f2079b3ec898ecb94cd9390f4dd8db0977323cb4581e1fbedb8",
+      "slug": "eth-updown-5m-1780412400",
+      "question": "Ethereum Up or Down - June 2, 11:00AM-11:05AM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0x5be2068293949ef16098b110e57608feb8b847a4145e6e4a967f5296c162513e",
+      "slug": "eth-updown-15m-1780412400",
+      "question": "Ethereum Up or Down - June 2, 11:00AM-11:15AM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    },
+    {
+      "market": "0x581cc4a2447f30879a57c3636bbc013a73b7a1420f1599d16a9da23b4c66027b",
+      "slug": "sol-updown-15m-1780412400",
+      "question": "Solana Up or Down - June 2, 11:00AM-11:15AM ET",
+      "messages": 0,
+      "first": null,
+      "last": null
+    }
+  ]
+}

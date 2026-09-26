@@ -1,0 +1,945 @@
+{
+  "sample": 11,
+  "source": "raw/2026-08-14/0900.jsonl.zst",
+  "outer_records": 430191,
+  "duplicates": 213777,
+  "outer_json_bytes": 327238280,
+  "span_seconds": 44.495,
+  "post_seconds": 34.495,
+  "post_compressed_bytes_approx": 11534600,
+  "first_receive_ms": 1786698000000,
+  "last_receive_ms": 1786698044495,
+  "kinds": {
+    "feed_message": 430191
+  },
+  "schemas": [
+    {
+      "type": "price_change",
+      "keys": [
+        "event_type",
+        "market",
+        "price_changes",
+        "timestamp"
+      ],
+      "count": 428002
+    },
+    {
+      "type": "book",
+      "keys": [
+        "asks",
+        "asset_id",
+        "bids",
+        "event_type",
+        "hash",
+        "market",
+        "timestamp"
+      ],
+      "count": 1489
+    },
+    {
+      "type": "last_trade_price",
+      "keys": [
+        "asset_id",
+        "event_type",
+        "fee_rate_bps",
+        "market",
+        "price",
+        "side",
+        "size",
+        "timestamp",
+        "transaction_hash"
+      ],
+      "count": 700
+    }
+  ],
+  "feed_json_bytes": 327238280,
+  "post_outer_records": 250060,
+  "numeric_scale": 1000000,
+  "lag_seconds": {
+    "n": 21509,
+    "min": 0.002,
+    "median": 0.005,
+    "p95": 0.023,
+    "max": 0.489
+  },
+  "frame": {
+    "window_size": 2097152,
+    "checksum": false,
+    "dictionary_id": 0
+  },
+  "portfolios": {
+    "all": {
+      "bytes": 2701517,
+      "by_table": {
+        "price_changes": 2349875,
+        "trades": 28128,
+        "book_levels": 143219,
+        "snapshots": 35978,
+        "dimensions": 144317
+      },
+      "rows": 350035,
+      "markets": 1315
+    },
+    "crypto4": {
+      "bytes": 934298,
+      "by_table": {
+        "price_changes": 782470,
+        "trades": 19864,
+        "book_levels": 105182,
+        "snapshots": 24814,
+        "dimensions": 1968
+      },
+      "rows": 149160,
+      "markets": 8
+    },
+    "crypto8": {
+      "bytes": 1388238,
+      "by_table": {
+        "price_changes": 1201455,
+        "trades": 24027,
+        "book_levels": 129178,
+        "snapshots": 30784,
+        "dimensions": 2794
+      },
+      "rows": 209166,
+      "markets": 16
+    },
+    "crypto12": {
+      "bytes": 1447626,
+      "by_table": {
+        "price_changes": 1250849,
+        "trades": 25870,
+        "book_levels": 133972,
+        "snapshots": 33389,
+        "dimensions": 3546
+      },
+      "rows": 219506,
+      "markets": 23
+    },
+    "crypto15": {
+      "bytes": 1447626,
+      "by_table": {
+        "price_changes": 1250849,
+        "trades": 25870,
+        "book_levels": 133972,
+        "snapshots": 33389,
+        "dimensions": 3546
+      },
+      "rows": 219506,
+      "markets": 23
+    },
+    "crypto15m4": {
+      "bytes": 495912,
+      "by_table": {
+        "price_changes": 452343,
+        "trades": 7195,
+        "book_levels": 26875,
+        "snapshots": 7530,
+        "dimensions": 1969
+      },
+      "rows": 60006,
+      "markets": 8
+    },
+    "crypto1h4": {
+      "bytes": 74187,
+      "by_table": {
+        "price_changes": 57416,
+        "trades": 4711,
+        "book_levels": 6096,
+        "snapshots": 4069,
+        "dimensions": 1895
+      },
+      "rows": 10340,
+      "markets": 7
+    },
+    "crypto15m1h8": {
+      "bytes": 570228,
+      "by_table": {
+        "price_changes": 516216,
+        "trades": 8942,
+        "book_levels": 32466,
+        "snapshots": 9901,
+        "dimensions": 2703
+      },
+      "rows": 70346,
+      "markets": 15
+    },
+    "crypto_slow12": {
+      "bytes": 591699,
+      "by_table": {
+        "price_changes": 537257,
+        "trades": 8942,
+        "book_levels": 32466,
+        "snapshots": 9901,
+        "dimensions": 3133
+      },
+      "rows": 72114,
+      "markets": 19
+    },
+    "crypto_all16": {
+      "bytes": 1466755,
+      "by_table": {
+        "price_changes": 1269567,
+        "trades": 25870,
+        "book_levels": 133972,
+        "snapshots": 33389,
+        "dimensions": 3957
+      },
+      "rows": 221274,
+      "markets": 27
+    },
+    "sports5": {
+      "bytes": 134530,
+      "by_table": {
+        "price_changes": 122587,
+        "trades": 3280,
+        "book_levels": 4687,
+        "snapshots": 2290,
+        "dimensions": 1686
+      },
+      "rows": 13236,
+      "markets": 5
+    },
+    "sports15": {
+      "bytes": 166227,
+      "by_table": {
+        "price_changes": 151778,
+        "trades": 3345,
+        "book_levels": 6010,
+        "snapshots": 2373,
+        "dimensions": 2721
+      },
+      "rows": 15065,
+      "markets": 15
+    },
+    "mixed8plus7": {
+      "bytes": 1540963,
+      "by_table": {
+        "price_changes": 1348794,
+        "trades": 24555,
+        "book_levels": 132620,
+        "snapshots": 31440,
+        "dimensions": 3554
+      },
+      "rows": 222728,
+      "markets": 23
+    },
+    "mixed12plus3": {
+      "bytes": 1609890,
+      "by_table": {
+        "price_changes": 1408167,
+        "trades": 26340,
+        "book_levels": 137454,
+        "snapshots": 34064,
+        "dimensions": 3865
+      },
+      "rows": 232061,
+      "markets": 26
+    }
+  },
+  "family_bytes": {
+    "SOL 4h": {
+      "bytes": 6924,
+      "by_table": {
+        "price_changes": 5677,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1247
+      },
+      "rows": 296,
+      "markets": 1
+    },
+    "SOL 5m": {
+      "bytes": 97012,
+      "by_table": {
+        "price_changes": 79325,
+        "trades": 4053,
+        "book_levels": 9122,
+        "snapshots": 3157,
+        "dimensions": 1355
+      },
+      "rows": 12980,
+      "markets": 2
+    },
+    "BTC up/down other": {
+      "bytes": 14526,
+      "by_table": {
+        "price_changes": 6636,
+        "trades": 2720,
+        "book_levels": 2277,
+        "snapshots": 1646,
+        "dimensions": 1247
+      },
+      "rows": 517,
+      "markets": 1
+    },
+    "BTC 5m": {
+      "bytes": 550584,
+      "by_table": {
+        "price_changes": 472076,
+        "trades": 13666,
+        "book_levels": 47270,
+        "snapshots": 16217,
+        "dimensions": 1355
+      },
+      "rows": 94454,
+      "markets": 2
+    },
+    "ETH 5m": {
+      "bytes": 193231,
+      "by_table": {
+        "price_changes": 152523,
+        "trades": 7024,
+        "book_levels": 25137,
+        "snapshots": 7192,
+        "dimensions": 1355
+      },
+      "rows": 32407,
+      "markets": 2
+    },
+    "ETH 1h": {
+      "bytes": 33348,
+      "by_table": {
+        "price_changes": 24120,
+        "trades": 3060,
+        "book_levels": 2808,
+        "snapshots": 2005,
+        "dimensions": 1355
+      },
+      "rows": 2862,
+      "markets": 2
+    },
+    "SOL 1h": {
+      "bytes": 15123,
+      "by_table": {
+        "price_changes": 7428,
+        "trades": 2801,
+        "book_levels": 1920,
+        "snapshots": 1727,
+        "dimensions": 1247
+      },
+      "rows": 620,
+      "markets": 1
+    },
+    "SOL up/down other": {
+      "bytes": 11439,
+      "by_table": {
+        "price_changes": 10192,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1247
+      },
+      "rows": 840,
+      "markets": 1
+    },
+    "ETH 4h": {
+      "bytes": 9163,
+      "by_table": {
+        "price_changes": 7916,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1247
+      },
+      "rows": 566,
+      "markets": 1
+    },
+    "BTC 4h": {
+      "bytes": 10129,
+      "by_table": {
+        "price_changes": 8882,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1247
+      },
+      "rows": 724,
+      "markets": 1
+    },
+    "XRP 5m": {
+      "bytes": 71637,
+      "by_table": {
+        "price_changes": 58153,
+        "trades": 3758,
+        "book_levels": 5396,
+        "snapshots": 2975,
+        "dimensions": 1355
+      },
+      "rows": 9319,
+      "markets": 2
+    },
+    "Counter-Strike": {
+      "bytes": 54533,
+      "by_table": {
+        "price_changes": 44670,
+        "trades": 2720,
+        "book_levels": 2349,
+        "snapshots": 1646,
+        "dimensions": 3148
+      },
+      "rows": 4021,
+      "markets": 19
+    },
+    "XRP 4h": {
+      "bytes": 5896,
+      "by_table": {
+        "price_changes": 4649,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1247
+      },
+      "rows": 182,
+      "markets": 1
+    },
+    "WTA tennis": {
+      "bytes": 7519,
+      "by_table": {
+        "price_changes": 4799,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 2720
+      },
+      "rows": 136,
+      "markets": 15
+    },
+    "XRP up/down other": {
+      "bytes": 14591,
+      "by_table": {
+        "price_changes": 13344,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1247
+      },
+      "rows": 1216,
+      "markets": 1
+    },
+    "BTC 15m": {
+      "bytes": 217516,
+      "by_table": {
+        "price_changes": 194251,
+        "trades": 4700,
+        "book_levels": 12936,
+        "snapshots": 4274,
+        "dimensions": 1355
+      },
+      "rows": 25887,
+      "markets": 2
+    },
+    "Other": {
+      "bytes": 602238,
+      "by_table": {
+        "price_changes": 591210,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 11028
+      },
+      "rows": 79986,
+      "markets": 93
+    },
+    "MLB": {
+      "bytes": 4210,
+      "by_table": {
+        "price_changes": 2855,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1355
+      },
+      "rows": 12,
+      "markets": 2
+    },
+    "XRP 1h": {
+      "bytes": 15463,
+      "by_table": {
+        "price_changes": 7394,
+        "trades": 2796,
+        "book_levels": 2194,
+        "snapshots": 1724,
+        "dimensions": 1355
+      },
+      "rows": 802,
+      "markets": 2
+    },
+    "BTC 1h": {
+      "bytes": 36870,
+      "by_table": {
+        "price_changes": 23049,
+        "trades": 4179,
+        "book_levels": 4910,
+        "snapshots": 3377,
+        "dimensions": 1355
+      },
+      "rows": 6056,
+      "markets": 2
+    },
+    "ETH up/down other": {
+      "bytes": 17690,
+      "by_table": {
+        "price_changes": 16443,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 1247
+      },
+      "rows": 1388,
+      "markets": 1
+    },
+    "SOL 15m": {
+      "bytes": 75130,
+      "by_table": {
+        "price_changes": 60417,
+        "trades": 3644,
+        "book_levels": 6889,
+        "snapshots": 2825,
+        "dimensions": 1355
+      },
+      "rows": 9311,
+      "markets": 2
+    },
+    "Weather temperature": {
+      "bytes": 21315,
+      "by_table": {
+        "price_changes": 18057,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 3258
+      },
+      "rows": 1542,
+      "markets": 20
+    },
+    "Dota 2": {
+      "bytes": 232644,
+      "by_table": {
+        "price_changes": 211669,
+        "trades": 4407,
+        "book_levels": 10637,
+        "snapshots": 3535,
+        "dimensions": 2396
+      },
+      "rows": 22657,
+      "markets": 12
+    },
+    "ATP tennis": {
+      "bytes": 10444,
+      "by_table": {
+        "price_changes": 7728,
+        "trades": 0,
+        "book_levels": 0,
+        "snapshots": 0,
+        "dimensions": 2716
+      },
+      "rows": 418,
+      "markets": 15
+    },
+    "ETH 15m": {
+      "bytes": 154033,
+      "by_table": {
+        "price_changes": 134965,
+        "trades": 4405,
+        "book_levels": 9642,
+        "snapshots": 3666,
+        "dimensions": 1355
+      },
+      "rows": 19377,
+      "markets": 2
+    },
+    "XRP 15m": {
+      "bytes": 58217,
+      "by_table": {
+        "price_changes": 49516,
+        "trades": 2879,
+        "book_levels": 2672,
+        "snapshots": 1795,
+        "dimensions": 1355
+      },
+      "rows": 5431,
+      "markets": 2
+    }
+  },
+  "sports_eligible": 36,
+  "sports_rank": [
+    {
+      "market": "0xf8bc89538e26048a5377d758cdfe4f3be32f9f37d33b512be899868be79f2446",
+      "family": "Dota 2",
+      "title": "Dota 2: Vici Gaming vs GamerLegion (BO3) - The International Group Stage",
+      "warmup_trade_notional": 1526.4226,
+      "warmup_updates": 1378
+    },
+    {
+      "market": "0x8b65d3bf652ab25430a076d9fe686d4f92afe536b8a5336f576f6424d9797563",
+      "family": "Dota 2",
+      "title": "Dota 2: Aurora vs Team Yandex (BO3) - The International Group Stage",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 5774
+    },
+    {
+      "market": "0xe08c83cd32d3b5066fe8b62bdf9fe850b6b03f51540ac89c6185ff22b1688231",
+      "family": "Counter-Strike",
+      "title": "Counter-Strike: Fire Flux Esports vs GUESS (BO3) - Exort Fiesta Closed Qualifier: Series #1 Group D",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 226
+    },
+    {
+      "market": "0x4b5c523f9004c1755685712c1068642035dfe61a1605613b558043df6a717e1d",
+      "family": "Counter-Strike",
+      "title": "Counter-Strike: The Last Resort vs Honv\u00e9d (BO3) - NODWIN Clutch Series Play-In Group B",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 112
+    },
+    {
+      "market": "0x9267f04b5faf1f90a5a28ee3a901c1dfc9f617db6463288dd5c0be45b4b2c772",
+      "family": "Counter-Strike",
+      "title": "Counter-Strike: MOUZ NXT vs ENJOY (BO3) - NODWIN Clutch Series Play-In Group A",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 76
+    },
+    {
+      "market": "0x606b07c8a0bbbc440dec93b26c8813b93b3e2c167ad65f96fafc8ae2500165d3",
+      "family": "ATP tennis",
+      "title": "Cincinnati Open: Coleman Wong vs Daniel Altmaier",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 60
+    },
+    {
+      "market": "0x68d7c5fd9ba6334214dc723806b02029d7451e5a514f2e227450c3471c99a89b",
+      "family": "Counter-Strike",
+      "title": "Counter-Strike: eternal premium vs Privateer Gaming (BO3) - Exort Fiesta Closed Qualifier: Series #1 Group C",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 60
+    },
+    {
+      "market": "0x5069a504569f23fe1f5121373d1ccd9d06563d89e073441764b0e649f13c3898",
+      "family": "Counter-Strike",
+      "title": "Counter-Strike: Lazer Cats vs MOUZ NXT (BO3) - ESL Challenger League Europe Cup #3 Group A",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 48
+    },
+    {
+      "market": "0x82a3a99ec84d2be432f7c362b04a51d920785b5be2a742fa12e330c6908b98c3",
+      "family": "Dota 2",
+      "title": "Dota 2: Team Liquid vs Team Spirit (BO3) - The International Group Stage",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 48
+    },
+    {
+      "market": "0x52559959370d49f7fc8488549b40c4f82ea6f6ee6f537fa7748d10e50399db02",
+      "family": "Counter-Strike",
+      "title": "Counter-Strike: Honv\u00e9d vs Noir Verse (BO3) - CCT Europe Closed Qualifier: Series #7 Group D",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 40
+    },
+    {
+      "market": "0x3ae1308e51206a98e16813ab3461b8456c505d8e54624d2c0b8861e0a0a2b4c3",
+      "family": "ATP tennis",
+      "title": "Cincinnati Open: Kyrian Jacquet vs Adolfo Vallejo",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 26
+    },
+    {
+      "market": "0x667e2389ed487f87968a27b9ef09b8415e05ccc831173482ffee0684524c0b58",
+      "family": "Counter-Strike",
+      "title": "Counter-Strike: NEW VISION vs Arch (BO3) - Exort Fiesta Closed Qualifier: Series #1 Group D",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 26
+    },
+    {
+      "market": "0x0864911b9bd3830c1de99c62b3c78db4b98f21cb1f0fc8b83bcc36b9f237f865",
+      "family": "Counter-Strike",
+      "title": "Counter-Strike: INOX Division vs ex-MANA eSports (BO3) - ESL Challenger League Europe Cup #3 Group A",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 22
+    },
+    {
+      "market": "0xe0794010dae79d0eb7607d7542a33097d01f721776b81242c61d53760e17913a",
+      "family": "Counter-Strike",
+      "title": "Counter-Strike: HyperSpirit vs Bebop (BO3) - NODWIN Clutch Series Play-In Group B",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 22
+    },
+    {
+      "market": "0x1a567d6db0f1e7ba3f60058e7c299ad33f318f27358decf3a43b6b0c56603623",
+      "family": "WTA tennis",
+      "title": "Cincinnati Open: Elisabetta Cocciaretto vs Lucrezia Stefanini",
+      "warmup_trade_notional": 0.0,
+      "warmup_updates": 18
+    }
+  ],
+  "families": {
+    "SOL 4h": {
+      "markets": 1,
+      "updates": 356,
+      "trades": 0
+    },
+    "SOL 5m": {
+      "markets": 2,
+      "updates": 10956,
+      "trades": 25
+    },
+    "BTC up/down other": {
+      "markets": 1,
+      "updates": 440,
+      "trades": 2
+    },
+    "BTC 5m": {
+      "markets": 2,
+      "updates": 57138,
+      "trades": 283
+    },
+    "ETH 5m": {
+      "markets": 2,
+      "updates": 20650,
+      "trades": 130
+    },
+    "ETH 1h": {
+      "markets": 2,
+      "updates": 2960,
+      "trades": 12
+    },
+    "SOL 1h": {
+      "markets": 1,
+      "updates": 580,
+      "trades": 2
+    },
+    "SOL up/down other": {
+      "markets": 1,
+      "updates": 1076,
+      "trades": 0
+    },
+    "ETH 4h": {
+      "markets": 1,
+      "updates": 1004,
+      "trades": 1
+    },
+    "BTC 4h": {
+      "markets": 1,
+      "updates": 786,
+      "trades": 0
+    },
+    "XRP 5m": {
+      "markets": 2,
+      "updates": 8608,
+      "trades": 23
+    },
+    "Counter-Strike": {
+      "markets": 19,
+      "updates": 5234,
+      "trades": 1
+    },
+    "XRP 4h": {
+      "markets": 1,
+      "updates": 284,
+      "trades": 0
+    },
+    "WTA tennis": {
+      "markets": 15,
+      "updates": 218,
+      "trades": 0
+    },
+    "XRP up/down other": {
+      "markets": 1,
+      "updates": 1816,
+      "trades": 0
+    },
+    "BTC 15m": {
+      "markets": 2,
+      "updates": 23160,
+      "trades": 53
+    },
+    "Other": {
+      "markets": 93,
+      "updates": 202054,
+      "trades": 2
+    },
+    "Unmapped": {
+      "markets": 1108,
+      "updates": 18220,
+      "trades": 11
+    },
+    "MLB": {
+      "markets": 2,
+      "updates": 16,
+      "trades": 0
+    },
+    "XRP 1h": {
+      "markets": 2,
+      "updates": 860,
+      "trades": 2
+    },
+    "BTC 1h": {
+      "markets": 2,
+      "updates": 3114,
+      "trades": 35
+    },
+    "ETH up/down other": {
+      "markets": 1,
+      "updates": 1952,
+      "trades": 0
+    },
+    "SOL 15m": {
+      "markets": 2,
+      "updates": 9640,
+      "trades": 20
+    },
+    "Weather temperature": {
+      "markets": 20,
+      "updates": 2116,
+      "trades": 0
+    },
+    "Dota 2": {
+      "markets": 12,
+      "updates": 28594,
+      "trades": 49
+    },
+    "ATP tennis": {
+      "markets": 15,
+      "updates": 570,
+      "trades": 0
+    },
+    "ETH 15m": {
+      "markets": 2,
+      "updates": 18694,
+      "trades": 44
+    },
+    "XRP 15m": {
+      "markets": 2,
+      "updates": 7354,
+      "trades": 5
+    }
+  },
+  "unknown_updates": 18220,
+  "total_updates": 428450,
+  "round_trip_verified": true,
+  "seconds": 26.6637272,
+  "identity_coverage_update_pct": 95.74746178083791,
+  "unmapped_leaders": [
+    {
+      "market": "0x1f784a1ba524d408c86ccd41717c8904dc08d081305ca6aad1e9fade2e28ac61",
+      "updates": 114
+    },
+    {
+      "market": "0x683e9c766fa5247b92ff7d6d16a04307c648025659e216ce270786ef602d2ba0",
+      "updates": 108
+    },
+    {
+      "market": "0xb12751a993dd0edbaee4c46bcb1dfc5598c48f75ffae907958f062265ba1c5df",
+      "updates": 106
+    },
+    {
+      "market": "0xf5a7627f303a4f052c48a7dc5b82e80752bf06f2c61f0ab6707b55b8f9eaa614",
+      "updates": 98,
+      "snapshots": 2,
+      "trades": 1
+    },
+    {
+      "market": "0x9280e949ef759345147373119f14e3e58bf6ef1f00d4a53e70da9e9b2e4fa262",
+      "updates": 98
+    },
+    {
+      "market": "0xb7c95e1bf64389fc1b7c73da71c954228f9f900b12d489d97b92bd131e79566b",
+      "updates": 96
+    },
+    {
+      "market": "0x99aaf2b69b401f15c3ffd5891d2aa45fdeae02ef58751cecff7954acd2c7d89c",
+      "updates": 94
+    },
+    {
+      "market": "0x63a26d70d49e731512051dd84046d6f8813054cc2c92ad56a1653b48ba5d407b",
+      "updates": 94
+    },
+    {
+      "market": "0x868bd62fe0616d98c9d95dccd103de935e73ffb20e6b633c721efff1bc331409",
+      "updates": 92
+    },
+    {
+      "market": "0xd576b94a80ac83c3b1f5dc5cd828267269ed69ce496669b79b7f3364a2d5f8eb",
+      "updates": 90
+    },
+    {
+      "market": "0x3568b31a3c6e90dc3e5243773988604f59e90605d38f8ebfddc91fc9c3aa30e9",
+      "updates": 90
+    },
+    {
+      "market": "0xe5b82cae73634e296cfa5acc2068ef9ba9f645b7b89fa5869e4af66aaf5db36e",
+      "updates": 88
+    },
+    {
+      "market": "0xe63d94717cc27a466ab07f3add9f0fc68d0dd33e6a2f360166f2e9e8e416cdf4",
+      "updates": 88
+    },
+    {
+      "market": "0x04463edb8d8d7a648e21e3289ed9528c7ca3e8a67583b7457babdc380f4ccb92",
+      "updates": 86
+    },
+    {
+      "market": "0x028a18ce2c77770981bfffffe9b53f3c670ff3e1e28713e89de265fa5a347ec7",
+      "updates": 82
+    },
+    {
+      "market": "0x2e007eb62dbd55129b11064fd9ffdde94f73e979b3059ce2a666daf6ace4c0d8",
+      "updates": 80
+    },
+    {
+      "market": "0xfc060c79e68865d276218ea5b3dc8e1860abf5ee45d84d8ee99b631034263404",
+      "updates": 80
+    },
+    {
+      "market": "0x0c54f4eb3e0abed2b90f099fbb0c48a3807ee901edc62302064ab27701df7cec",
+      "updates": 80
+    },
+    {
+      "market": "0xfe7e4074304dd3c9b76e7712a047a1b825f9b7ecfb4528eeec038b4870682656",
+      "updates": 78
+    },
+    {
+      "market": "0xdbb3abc9f2c231e7ead18b0999b35a34ba0e4ff0bdaf64ef0da2d812badacbb1",
+      "updates": 78
+    },
+    {
+      "market": "0x2f40a0a0fcd5eddd21aaaf4df3fe5765947249d62bcb9800254a8377e6dcbe6a",
+      "updates": 76
+    },
+    {
+      "market": "0x8ec1c2400b3c2cb593d7b1471ef717a96d0c0bb00ca9703589c0948b9739a0f4",
+      "updates": 76
+    },
+    {
+      "market": "0xdb5b8d5d455bde8cb434519f4e9cbd7d1e2f415d8f41e4a2e0cf02da11c60a08",
+      "updates": 74
+    },
+    {
+      "market": "0x948dbd90451838bc88978f9c68312d52812f7b54574fc337075d40db373bb145",
+      "updates": 72
+    },
+    {
+      "market": "0xa0979541efe00b301d7d0eb43fd58e4690feb3d78a5ffb91c87b36299afd3b50",
+      "updates": 70
+    },
+    {
+      "market": "0xdc1769d71cce265410944c29246c2804662a57bee375049b55a4fdd8317e72d7",
+      "updates": 68
+    },
+    {
+      "market": "0xd3743943e7f08b7fc18be0152dc11da553be2ff1a7c420af399fd722d4d07f29",
+      "updates": 66
+    },
+    {
+      "market": "0x3e8a73b036babfeb79ffa0e52d1b6b7b67027ec2202f90862afc63950e844413",
+      "updates": 66
+    },
+    {
+      "market": "0xce86971b21d98a55ef6bd3b600d2eb8a74271ea7510a9f74b21de57a8df3f45d",
+      "updates": 66
+    },
+    {
+      "market": "0xaf2961e03da7e4332907db480ae6d6c7ab860283a10aa7d789dbdf0dc31dd515",
+      "updates": 64
+    }
+  ]
+}

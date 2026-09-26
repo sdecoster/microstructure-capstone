@@ -1,0 +1,338 @@
+[
+  {
+    "sample": 11,
+    "market": "0xccbde85d4a113d47a6617a4e960cec762624123d268f7ad787e9d5e03d607d5b",
+    "category": "Sports/esports",
+    "tags": [
+      "esports",
+      "games",
+      "sports",
+      "valorant"
+    ],
+    "title": "Map 2 Total Rounds: Over/Under 21.5",
+    "updates": 4,
+    "start": "2026-08-14T05:09:26Z",
+    "end": "2026-08-16T03:00:00Z",
+    "event_start": null,
+    "created": "2026-08-14T05:09:16.14963Z",
+    "token_ids": "[\"49716059618567695097391495598116402905979839880653856566480624652801033095413\", \"3871779396544809519880017322530241255432629214884510217230294968777757188683\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 11,
+    "market": "0xde7288551282acee6217f00e263ac63ff8d4193006bfd1c48b330dc0e0072723",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "recurring",
+      "shanghai",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Shanghai be 30\u00b0C on August 16?",
+    "updates": 10,
+    "start": "2026-08-14T04:57:15Z",
+    "end": "2026-08-16T12:00:00Z",
+    "event_start": null,
+    "created": "2026-08-14T04:56:48.966005Z",
+    "token_ids": "[\"110815773078078826838571346157858512245738944150805200758879517158235300439265\", \"78775867104581900432194124651991148493014626112246685038336210444082020846563\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 11,
+    "market": "0x4d748ce056f86f378cbb5ae0d01c11ecac6abbeb9508326436cbf228f545f8c2",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "miami",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Miami be between 86-87\u00b0F on August 15?",
+    "updates": 2,
+    "start": "2026-08-14T00:56:49Z",
+    "end": "2026-08-15T12:00:00Z",
+    "event_start": null,
+    "created": "2026-08-14T00:56:25.514543Z",
+    "token_ids": "[\"46301950014351582012509471287732026613741837526723975545317550211482381341578\", \"90448085039406541781473942192587730446710517058118816823767319875376757397294\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 11,
+    "market": "0x287efb260441bda8562fa22da0dcbb6b4edd43911e15daa4354fdaa5b6916379",
+    "category": "Crypto",
+    "tags": [
+      "15M",
+      "bitcoin",
+      "crypto",
+      "crypto-prices",
+      "hide-from-new",
+      "recurring",
+      "up-or-down"
+    ],
+    "title": "Bitcoin Up or Down - August 14, 5:00AM-5:15AM ET",
+    "updates": 1764,
+    "start": "2026-08-13T09:08:39.317389Z",
+    "end": "2026-08-14T09:15:00Z",
+    "event_start": "2026-08-14T09:00:00Z",
+    "created": "2026-08-13T09:07:44.692369Z",
+    "token_ids": "[\"10784409993847517935355667580632903719213348827088983377473796256902689639233\", \"72027964280549102539841723417662798090636505795111788091893676639950106198190\"]",
+    "outcomes": "[\"Up\", \"Down\"]"
+  },
+  {
+    "sample": 11,
+    "market": "0x6bf90067ca5d7cb5b6183d433de100a5b01f6862049c59de0b47ae7ae65552e6",
+    "category": "Crypto",
+    "tags": [
+      "crypto",
+      "crypto-prices",
+      "daily",
+      "ethereum",
+      "hide-from-new",
+      "hit-price",
+      "recurring",
+      "today"
+    ],
+    "title": "Will Ethereum dip to $1,700 on August 14?",
+    "updates": 14,
+    "start": "2026-08-14T04:00:26Z",
+    "end": "2026-08-15T04:00:00Z",
+    "event_start": null,
+    "created": "2026-08-14T04:00:10.549328Z",
+    "token_ids": "[\"102325407420443895955087692581979662429086807849592762330008007529367864703703\", \"16879784056447247235518169142059734468373825581704721157389195409404885487214\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 11,
+    "market": "0x0639269aecb7845f0c2dff203770f0a8ae30656d4ac93bc32a17c931e4f48a1a",
+    "category": "Sports/esports",
+    "tags": [
+      "baseball",
+      "games",
+      "mlb",
+      "sports"
+    ],
+    "title": "Spencer Torkelson: Home Runs O/U 1.5",
+    "updates": 2,
+    "start": "2026-08-14T04:32:49Z",
+    "end": "2026-08-14T22:40:00Z",
+    "event_start": null,
+    "created": "2026-08-14T04:32:34.396444Z",
+    "token_ids": "[\"20869284608064481429251026222769611623313000834354287546623520283715331945246\", \"17774063242198133241936192463917878400286274215702622929546404277183023151760\"]",
+    "outcomes": "[\"Over\", \"Under\"]"
+  },
+  {
+    "sample": 11,
+    "market": "0xce0a88933123406d3aa063a824e8ec4a1ac0a44be40e969e29f0ee5271230297",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "london",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in London be 28\u00b0C on August 16?",
+    "updates": 4,
+    "start": "2026-08-14T04:56:15Z",
+    "end": "2026-08-16T12:00:00Z",
+    "event_start": null,
+    "created": "2026-08-14T04:55:52.216719Z",
+    "token_ids": "[\"95084260764759937328928465316582957285053899606930960389856370541144156096402\", \"112452853984620257068672711122122539538129422957789809100130950217607415075997\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 11,
+    "market": "0xeda771d62f5a0351c8292bd05eba8fe8426e7c4513d240561de6a37514534ead",
+    "category": "Other",
+    "tags": [
+      "ai",
+      "ai-rankings",
+      "recurring",
+      "tech"
+    ],
+    "title": "Will Baidu be the #3 AI Lab at the end of October 2026 (Style Control On)?",
+    "updates": 20,
+    "start": "2026-08-13T21:15:33Z",
+    "end": "2026-11-01T03:59:00Z",
+    "event_start": null,
+    "created": "2026-08-13T21:14:23.678378Z",
+    "token_ids": "[\"21327000537396478318004189744207529039615627732697296704088483442956152470688\", \"69645423921147348056030001126500802780380669674413846831049889051176036548908\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 11,
+    "market": "0xd405cd59f0890e2960b4488042a7939bfe0fe9b3df2c5ea1376450b4d7fd6bac",
+    "category": "Crypto",
+    "tags": [
+      "crypto",
+      "crypto-prices",
+      "daily",
+      "ethereum",
+      "hide-from-new",
+      "hit-price",
+      "recurring",
+      "today"
+    ],
+    "title": "Will Ethereum dip to $1,650 on August 14?",
+    "updates": 14,
+    "start": "2026-08-14T04:00:26Z",
+    "end": "2026-08-15T04:00:00Z",
+    "event_start": null,
+    "created": "2026-08-14T04:00:10.834578Z",
+    "token_ids": "[\"68164119797260845708050690963781808942138535499858612937032304163390557445028\", \"37049298282119619941656890097648348607476867999264438437494808727720989966911\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 11,
+    "market": "0x91817eef6ae76e98feb4ff464ad3cb5b1c842f40d31522719069dcafca908b40",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "lowest-temperature",
+      "recurring",
+      "tokyo",
+      "weather"
+    ],
+    "title": "Will the lowest temperature in Tokyo be 26\u00b0C on August 16?",
+    "updates": 32,
+    "start": "2026-08-14T04:28:45Z",
+    "end": "2026-08-16T12:00:00Z",
+    "event_start": null,
+    "created": "2026-08-14T04:28:23.684896Z",
+    "token_ids": "[\"60601765251732900245850009556746535426240470736882789867130004952961362422861\", \"64675869162214838275252311829267999675004014833382226035653116482843965939126\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 11,
+    "market": "0x7998f780e028fac7d1be962cd49226edf91c3909db417f4ce912f6e7d8a6874c",
+    "category": "Sports/esports",
+    "tags": [
+      "dota-2",
+      "esports",
+      "games",
+      "sports"
+    ],
+    "title": "Game Handicap: TS (-1.5) vs Team Liquid (+1.5)",
+    "updates": 16,
+    "start": "2026-08-14T07:36:13Z",
+    "end": "2026-08-14T13:30:00Z",
+    "event_start": "2026-08-14T07:30:00Z",
+    "created": "2026-08-14T07:36:02.543341Z",
+    "token_ids": "[\"59303192034099880812385879792180631795086562669122746329414269252958681390800\", \"42759816129222186219121132418906508576153506873195156106473031665597151272723\"]",
+    "outcomes": "[\"Team Spirit\", \"Team Liquid\"]"
+  },
+  {
+    "sample": 11,
+    "market": "0xd11e20a9c09d7e0eaf86f78770d3898212be7742123e5fc920cf2c05fa735d24",
+    "category": "Crypto",
+    "tags": [
+      "1H",
+      "crypto",
+      "crypto-prices",
+      "ethereum",
+      "hide-from-new",
+      "multi-strikes",
+      "recurring"
+    ],
+    "title": "Ethereum above 1,880 on August 14, 6AM ET?",
+    "updates": 40,
+    "start": "2026-08-14T08:40:28Z",
+    "end": "2026-08-14T10:00:00Z",
+    "event_start": null,
+    "created": "2026-08-14T08:40:11.300159Z",
+    "token_ids": "[\"15632310178792053140820709478262709426697181094218294849322921058909794448297\", \"53425105841482146458136752375992174244955882933824446364870449171951901382408\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 11,
+    "market": "0xb4b8adbb5844b86d6b7c78361669f7e04d0aecf11d7bcb3b1e4841bc481f44f8",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "hong-kong",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Hong Kong be 27\u00b0C or below on August 16?",
+    "updates": 8,
+    "start": "2026-08-14T04:57:09Z",
+    "end": "2026-08-16T12:00:00Z",
+    "event_start": null,
+    "created": "2026-08-14T04:56:44.956934Z",
+    "token_ids": "[\"24648510960180894617825995557383731459059311690368459541360763668740299846495\", \"10883800845530766820360194283465764142797847572458112198898490328483647358930\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 11,
+    "market": "0xaebad852cd2c0072047cb56be96ca4dc9a97ad1499ef12b14e2b025784833065",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "panama",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Panama City be 31\u00b0C on August 15?",
+    "updates": 8,
+    "start": "2026-08-14T00:57:55Z",
+    "end": "2026-08-15T12:00:00Z",
+    "event_start": null,
+    "created": "2026-08-14T00:57:27.373511Z",
+    "token_ids": "[\"20694461342984147056707123322859805820804024356764562921034621255369336120143\", \"61982371879125671469315365688176194973926848037430367785602602934649435160698\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 11,
+    "market": "0x8c20d0392f8b55992ea3be0309c212a5b6c60babb6b8e0d36d88eb7c68de087f",
+    "category": "Crypto",
+    "tags": [
+      "bitcoin",
+      "crypto",
+      "crypto-prices",
+      "daily",
+      "hide-from-new",
+      "hit-price",
+      "recurring",
+      "today"
+    ],
+    "title": "Will Bitcoin reach $70,000 on August 14?",
+    "updates": 12,
+    "start": "2026-08-14T04:00:22Z",
+    "end": "2026-08-15T04:00:00Z",
+    "event_start": null,
+    "created": "2026-08-14T04:00:00.819346Z",
+    "token_ids": "[\"104347847591634232295214986303767273477914948028481078423480096965355078632448\", \"33220443491020099230310113806679757152778684035416868923349384380436852501945\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  },
+  {
+    "sample": 11,
+    "market": "0xff074178e0b771dbef9e2a773931c541809abfa52cb9afc631d58e1461839dba",
+    "category": "Weather",
+    "tags": [
+      "daily-temperature",
+      "hide-from-new",
+      "highest-temperature",
+      "hong-kong",
+      "recurring",
+      "weather"
+    ],
+    "title": "Will the highest temperature in Hong Kong be 34\u00b0C on August 16?",
+    "updates": 6,
+    "start": "2026-08-14T04:57:09Z",
+    "end": "2026-08-16T12:00:00Z",
+    "event_start": null,
+    "created": "2026-08-14T04:56:46.034843Z",
+    "token_ids": "[\"82998186951721368448293387787122049560511990144306808121962597850118540304463\", \"72666471797361039563577031374660344692152050891904192604550217332022674575375\"]",
+    "outcomes": "[\"Yes\", \"No\"]"
+  }
+]
