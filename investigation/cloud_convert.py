@@ -1,6 +1,6 @@
 ﻿"""Stream a GCS raw object once into auditable sharded Parquet."""
 from __future__ import annotations
-import argparse, hashlib, io, json, shutil, tempfile
+import argparse, hashlib, io, json, shutil, tempfile, time
 from collections import Counter, defaultdict
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from dataclasses import asdict
@@ -66,7 +66,7 @@ def convert(source,raw,compact,run,stage_root,batch=50000):
  if source.kind!="regular_hour" or not source.date:raise ValueError("only classified regular hours are automatically scheduled")
  from google.cloud import storage
  import zstandard as zstd
- client=storage.Client();out=client.bucket(compact);s=key(source.uri)
+ client=storage.Client();out=client.bucket(compact);s=key(source.uri);started=time.monotonic();last_report=started;print(json.dumps({"phase":"reading","source":source.uri}),flush=True)
  if complete(out,run,source,s):return {"source":source.uri,"status":"skipped_valid_completion"}
  stage=Path(tempfile.mkdtemp(prefix="poly-"+s[:10]+"-",dir=stage_root));w=Writer(stage,source.date,s,batch);stats=Counter();seen=set();dims={"markets":{},"assets":{}}
  try:
@@ -75,6 +75,8 @@ def convert(source,raw,compact,run,stage_root,batch=50000):
    for o,line in enumerate(io.TextIOWrapper(z,encoding="utf8",errors="replace"),1):
     if not line.strip():continue
     stats["outer_messages"]+=1
+    if time.monotonic()-last_report >= 15:
+     print(json.dumps({"phase":"reading","source":source.uri,"outer_messages":stats["outer_messages"],"unique_payloads":stats["unique_payloads"],"duplicates_skipped":stats["duplicates_skipped"],"elapsed_seconds":round(time.monotonic()-started,1)}),flush=True);last_report=time.monotonic()
     try:e=json.loads(line)
     except json.JSONDecodeError:w.add("non_feed_envelopes",dict(source_id=s,source_ordinal=o,reason="invalid_json"));continue
     if e.get("message_type")!="feed_message":stats["non_feed_envelopes"]+=1;w.add("non_feed_envelopes",dict(source_id=s,source_ordinal=o,message_type=e.get("message_type"),reason="non_feed"));continue
@@ -91,11 +93,12 @@ def convert(source,raw,compact,run,stage_root,batch=50000):
   for t,values in dims.items():
    kc,ic=("market_key","market_id") if t=="markets" else ("asset_key","asset_id")
    for k,v in values.items():w.add(t,dict(source_id=s,**{kc:k,ic:v}))
-  w.close();files=[]
+  w.close();files=[];print(json.dumps({"phase":"uploading","source":source.uri,"rows":dict(w.count),"elapsed_seconds":round(time.monotonic()-started,1)}),flush=True)
   for p in sorted(stage.rglob("*.parquet")):
    n="runs/%s/data/%s"%(run,p.relative_to(stage).as_posix());b=out.blob(n);b.upload_from_filename(str(p));files.append(dict(name=n,bytes=p.stat().st_size,md5_hash=b.md5_hash))
+   if len(files)%20==0:print(json.dumps({"phase":"uploading","source":source.uri,"files_uploaded":len(files)}),flush=True)
   manifest=dict(version=VERSION,source=asdict(source),source_id=s,numeric_scale=SCALE,completed_at_utc=datetime.now(timezone.utc).isoformat(),stats=dict(stats),fact_rows=dict(w.count),files=files)
-  b=out.blob(cname(run,s));b.upload_from_string(json.dumps(manifest,sort_keys=True),content_type="application/json")
+  print(json.dumps({"phase":"finalizing","source":source.uri,"files_uploaded":len(files),"elapsed_seconds":round(time.monotonic()-started,1)}),flush=True);b=out.blob(cname(run,s));b.upload_from_string(json.dumps(manifest,sort_keys=True),content_type="application/json")
   if json.loads(b.download_as_text())!=manifest:raise RuntimeError("completion manifest verification failed")
   return {"source":source.uri,"status":"completed","rows":dict(w.count)}
  finally:shutil.rmtree(stage,ignore_errors=True)
