@@ -39,7 +39,7 @@ def rows(c,s,o):
                 p,z=(x.get("price"),x.get("size")) if isinstance(x,dict) else (x[:2] if isinstance(x,(list,tuple)) and len(x)>=2 else (None,None))
                 if p is not None: out.append(("book_levels",dict(b,**a,side=side,price_i=scale(p,"price"),size_i=scale(z,"size"))))
         return out
-    if t=="tick_size_change": return [("tick_size_changes",dict(b,**a,tick_size_i=scale(c.get("tick_size"),"tick_size")))]
+    if t=="tick_size_change": return [("tick_size_changes",dict(b,**a,old_tick_size_i=scale(c.get("old_tick_size"),"old_tick_size"),new_tick_size_i=scale(c.get("new_tick_size"),"new_tick_size")))]
     return [("other_feed_events",dict(b,event_type=t,payload_json=json.dumps(c,sort_keys=True,separators=(",",":"))))]
 class Writer:
  def __init__(self,root,date,s,batch):

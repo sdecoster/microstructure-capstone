@@ -9,6 +9,6 @@ def test_exact_scale_and_precision_rejection():
  assert scale("1","size")==SCALE
  with pytest.raises(ValueError):scale("0.0000001","price")
 def test_tick_size_is_preserved():
- assert rows({"event_type":"tick_size_change","market":"m","asset_id":"a","tick_size":"0.01"},"s",1)[0][1]["tick_size_i"]==10000
+ assert rows({"event_type":"tick_size_change","market":"m","asset_id":"a","old_tick_size":"0.01","new_tick_size":"0.001"},"s",1)[0][1]["new_tick_size_i"]==1000
 def test_other_event_is_audited():
  assert rows({"event_type":"unknown","market":"m"},"s",1)[0][0]=="other_feed_events"
