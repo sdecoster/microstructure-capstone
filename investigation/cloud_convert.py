@@ -61,7 +61,7 @@ def complete(bucket,run,source,s):
  if not b.exists():return False
  try:x=json.loads(b.download_as_text())
  except Exception:return False
- return x.get("version")==VERSION and x.get("source")==asdict(source) and bool(x.get("files"))
+ return x.get("version")==VERSION and x.get("source")==asdict(source) and bool(x.get("files")) and all(bucket.blob(f["name"]).exists() and bucket.blob(f["name"]).size==f["bytes"] for f in x["files"])
 def convert(source,raw,compact,run,stage_root,batch=50000):
  if source.kind!="regular_hour" or not source.date:raise ValueError("only classified regular hours are automatically scheduled")
  from google.cloud import storage
@@ -86,10 +86,14 @@ def convert(source,raw,compact,run,stage_root,batch=50000):
     if fp in seen:stats["duplicates_skipped"]+=1;continue
     seen.add(fp);stats["unique_payloads"]+=1;stats["event:"+str(c.get("event_type"))]+=1
     m=c.get("market")
-    if isinstance(m,(str,int)):dims["markets"].setdefault(key(m),str(m))
+    if isinstance(m,(str,int)):
+     old=dims["markets"].setdefault(key(m),str(m))
+     if old!=str(m):w.add("key_collisions",dict(source_id=s,dimension="market",stable_key=key(m),first_id=old,second_id=str(m)))
     for t,r in rows(c,s,o):
      w.add(t,r)
-     if r.get("asset_key"):dims["assets"].setdefault(r["asset_key"],r["asset_id"])
+     if r.get("asset_key"):
+      old=dims["assets"].setdefault(r["asset_key"],r["asset_id"])
+      if old!=r["asset_id"]:w.add("key_collisions",dict(source_id=s,dimension="asset",stable_key=r["asset_key"],first_id=old,second_id=r["asset_id"]))
   for t,values in dims.items():
    kc,ic=("market_key","market_id") if t=="markets" else ("asset_key","asset_id")
    for k,v in values.items():w.add(t,dict(source_id=s,**{kc:k,ic:v}))
