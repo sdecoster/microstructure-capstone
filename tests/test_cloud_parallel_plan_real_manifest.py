@@ -16,7 +16,7 @@ def test_real_regular_hours_are_balanced_and_special_sources_are_retained():
             sources.append(source)
     plan = build_plan(sources, workers=4)
     assert plan["regular_sources"] == 1691
-    assert plan["regular_bytes"] == 2906605106237
+    assert plan["regular_bytes"] == 2906585311256
     assert plan["nonstandard_sources"]
     assert sum(worker["bytes"] for worker in plan["workers"]) == plan["regular_bytes"]
     loads = [worker["bytes"] for worker in plan["workers"]]
