@@ -1,8 +1,9 @@
 ﻿"""Stream a GCS raw object once into auditable sharded Parquet."""
 from __future__ import annotations
-import argparse, hashlib, io, json, shutil, tempfile, time
+import argparse, hashlib, io, json, shutil, tempfile, time, signal, uuid
 from collections import Counter, defaultdict
 from concurrent.futures import ProcessPoolExecutor, as_completed
+from multiprocessing import Manager
 from dataclasses import asdict
 from datetime import datetime, timezone
 from decimal import Decimal
@@ -62,17 +63,19 @@ def complete(bucket,run,source,s):
  try:x=json.loads(b.download_as_text())
  except Exception:return False
  return x.get("version")==VERSION and x.get("source")==asdict(source) and bool(x.get("files")) and all(bucket.blob(f["name"]).exists() and bucket.blob(f["name"]).size==f["bytes"] for f in x["files"])
-def convert(source,raw,compact,run,stage_root,batch=50000):
+def convert(source,raw,compact,run,stage_root,batch=50000,stop=None):
  if source.kind!="regular_hour" or not source.date:raise ValueError("only classified regular hours are automatically scheduled")
+ if stop is not None and stop.is_set():return {"source":source.uri,"status":"stopped"}
  from google.cloud import storage
  import zstandard as zstd
  client=storage.Client();out=client.bucket(compact);s=key(source.uri);started=time.monotonic();last_report=started;print(json.dumps({"phase":"reading","source":source.uri}),flush=True)
  if complete(out,run,source,s):return {"source":source.uri,"status":"skipped_valid_completion"}
- stage=Path(tempfile.mkdtemp(prefix="poly-"+s[:10]+"-",dir=stage_root));w=Writer(stage,source.date,s,batch);stats=Counter();seen=set();dims={"markets":{},"assets":{}}
+ attempt=uuid.uuid4().hex;stage=Path(tempfile.mkdtemp(prefix="poly-"+s[:10]+"-",dir=stage_root));w=Writer(stage,source.date,s,batch);stats=Counter();seen=set();dims={"markets":{},"assets":{}}
  try:
   name=source.uri.split("/",3)[3]
   with client.bucket(raw).blob(name).open("rb") as f, zstd.ZstdDecompressor().stream_reader(f) as z:
    for o,line in enumerate(io.TextIOWrapper(z,encoding="utf8",errors="replace"),1):
+    if stop is not None and stop.is_set():return {"source":source.uri,"status":"stopped","attempt_id":attempt}
     if not line.strip():continue
     stats["outer_messages"]+=1
     if time.monotonic()-last_report >= 15:
@@ -94,17 +97,19 @@ def convert(source,raw,compact,run,stage_root,batch=50000):
      if r.get("asset_key"):
       old=dims["assets"].setdefault(r["asset_key"],r["asset_id"])
       if old!=r["asset_id"]:w.add("key_collisions",dict(source_id=s,dimension="asset",stable_key=r["asset_key"],first_id=old,second_id=r["asset_id"]))
+  if stop is not None and stop.is_set():return {"source":source.uri,"status":"stopped","attempt_id":attempt}
   for t,values in dims.items():
    kc,ic=("market_key","market_id") if t=="markets" else ("asset_key","asset_id")
    for k,v in values.items():w.add(t,dict(source_id=s,**{kc:k,ic:v}))
   w.close();files=[];print(json.dumps({"phase":"uploading","source":source.uri,"rows":dict(w.count),"elapsed_seconds":round(time.monotonic()-started,1)}),flush=True)
   for p in sorted(stage.rglob("*.parquet")):
-   n="runs/%s/data/%s"%(run,p.relative_to(stage).as_posix());b=out.blob(n);b.upload_from_filename(str(p));files.append(dict(name=n,bytes=p.stat().st_size,md5_hash=b.md5_hash))
+   if stop is not None and stop.is_set():return {"source":source.uri,"status":"stopped","attempt_id":attempt}
+   n="runs/%s/data/attempt=%s/%s"%(run,attempt,p.relative_to(stage).as_posix());b=out.blob(n);b.upload_from_filename(str(p));files.append(dict(name=n,bytes=p.stat().st_size,md5_hash=b.md5_hash))
    if len(files)%20==0:print(json.dumps({"phase":"uploading","source":source.uri,"files_uploaded":len(files)}),flush=True)
-  manifest=dict(version=VERSION,source=asdict(source),source_id=s,numeric_scale=SCALE,completed_at_utc=datetime.now(timezone.utc).isoformat(),stats=dict(stats),fact_rows=dict(w.count),files=files)
+  manifest=dict(version=VERSION,source=asdict(source),source_id=s,attempt_id=attempt,numeric_scale=SCALE,completed_at_utc=datetime.now(timezone.utc).isoformat(),stats=dict(stats),fact_rows=dict(w.count),files=files)
   print(json.dumps({"phase":"finalizing","source":source.uri,"files_uploaded":len(files),"elapsed_seconds":round(time.monotonic()-started,1)}),flush=True);b=out.blob(cname(run,s));b.upload_from_string(json.dumps(manifest,sort_keys=True),content_type="application/json")
   if json.loads(b.download_as_text())!=manifest:raise RuntimeError("completion manifest verification failed")
-  return {"source":source.uri,"status":"completed","rows":dict(w.count)}
+  return {"source":source.uri,"status":"completed","rows":dict(w.count),"input_bytes":source.size_bytes,"elapsed_seconds":round(time.monotonic()-started,1)}
  finally:shutil.rmtree(stage,ignore_errors=True)
 def main():
  p=argparse.ArgumentParser();p.add_argument("--raw-bucket",required=True);p.add_argument("--compact-bucket",required=True);p.add_argument("--run-id",required=True);p.add_argument("--staging-root",default="/tmp/poly-archive");p.add_argument("--batch-rows",type=int,default=50000);p.add_argument("--pilot-source");a=p.parse_args();Path(a.staging_root).mkdir(parents=True,exist_ok=True);sources=list_sources(a.raw_bucket)
@@ -116,7 +121,18 @@ def main():
  from google.cloud import storage
  storage.Client().bucket(a.compact_bucket).blob("runs/%s/plan.json"%a.run_id).upload_from_string(json.dumps(plan,sort_keys=True,indent=2),content_type="application/json")
  work=[Source(**x) for q in plan["workers"] for x in q["sources"]]
- with ProcessPoolExecutor(max_workers=4) as pool:
-  fs=[pool.submit(convert,x,a.raw_bucket,a.compact_bucket,a.run_id,a.staging_root,a.batch_rows) for x in work]
-  for f in as_completed(fs):print(json.dumps(f.result(),sort_keys=True),flush=True)
+ total_bytes=sum(x.size_bytes for x in work);started=time.monotonic();done_bytes=0;done_sources=0
+ with Manager() as manager:
+  stop=manager.Event()
+  def request_stop(signum,frame):
+   stop.set();print(json.dumps({"phase":"stop_requested","signal":signum,"message":"finishing active source cleanup; completed manifests remain resumable"}),flush=True)
+  signal.signal(signal.SIGINT,request_stop);signal.signal(signal.SIGTERM,request_stop)
+  with ProcessPoolExecutor(max_workers=4) as pool:
+   fs=[pool.submit(convert,x,a.raw_bucket,a.compact_bucket,a.run_id,a.staging_root,a.batch_rows,stop) for x in work]
+   for f in as_completed(fs):
+    result=f.result();print(json.dumps(result,sort_keys=True),flush=True)
+    if result.get("status") in ("completed","skipped_valid_completion"):
+     done_sources+=1;done_bytes+=next(x.size_bytes for x in work if x.uri==result["source"])
+     elapsed=time.monotonic()-started;remaining=max(0,round(elapsed*(total_bytes-done_bytes)/done_bytes)) if done_bytes else None
+     print(json.dumps({"phase":"run_progress","completed_sources":done_sources,"total_sources":len(work),"completed_input_bytes":done_bytes,"total_input_bytes":total_bytes,"elapsed_seconds":round(elapsed,1),"estimated_remaining_seconds":remaining}),flush=True)
 if __name__=="__main__":main()
