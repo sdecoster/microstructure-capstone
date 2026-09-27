@@ -52,7 +52,7 @@ class Writer:
   import pyarrow as pa
   import pyarrow.parquet as pq
   t,sh=k;d=self.root/("table=%s/date=%s/market_shard=%s/source=%s"%(t,self.date,sh,self.s));d.mkdir(parents=True,exist_ok=True)
-  pq.write_table(pa.Table.from_pylist(self.b[k]),d/"part-%05d.parquet"%self.parts[k],compression="zstd",compression_level=3);self.parts[k]+=1;self.b[k].clear()
+  pq.write_table(pa.Table.from_pylist(self.b[k]),d/("part-%05d.parquet"%self.parts[k]),compression="zstd",compression_level=3);self.parts[k]+=1;self.b[k].clear()
  def close(self):
   for k in list(self.b):self.flush(k)
 def cname(run,s):return "runs/%s/completions/%s.json"%(run,s)
