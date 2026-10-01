@@ -4,7 +4,7 @@ import pytest
 from tempfile import TemporaryDirectory
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"investigation"))
-from cloud_convert import SCALE,Writer,rows,scale
+from cloud_convert import SCALE,Writer,fingerprint,rows,scale
 def test_exact_scale_and_precision_rejection():
  assert scale("0.123456","price")==123456
  assert scale("1","size")==SCALE
@@ -20,3 +20,11 @@ def test_staged_writer_creates_parquet_part():
   writer.add('price_changes',{'market_key':'00','source_id':'source','price_i':1})
   writer.close()
   assert len(list(Path(temp).rglob('*.parquet')))==1
+
+def test_exact_raw_payload_fingerprint_preserves_exact_dedupe_scope():
+ assert fingerprint('{"a":1}',{'a':1})==fingerprint('{"a":1}',{'a':1})
+ assert fingerprint('{"a":1}',{'a':1})!=fingerprint('{ "a": 1 }',{'a':1})
+def test_scale_accepts_padding_but_rejects_nonzero_excess_precision():
+ assert scale('-1.2','value')==-1200000
+ assert scale('0.1000000','value')==100000
+ with pytest.raises(ValueError):scale('0.1000001','value')

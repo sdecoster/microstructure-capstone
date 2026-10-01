@@ -1,6 +1,7 @@
 ﻿"""Stream a GCS raw object once into auditable sharded Parquet."""
 from __future__ import annotations
 import argparse, hashlib, io, json, shutil, tempfile, time, signal, uuid
+from functools import lru_cache
 from collections import Counter, defaultdict
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from multiprocessing import Manager
@@ -10,12 +11,23 @@ from decimal import Decimal
 from pathlib import Path
 from cloud_parallel_plan import Source, build_plan, list_sources
 SCALE=1000000; VERSION=1
+@lru_cache(maxsize=250_000)
 def key(x): return hashlib.blake2b(str(x).encode(),digest_size=16).hexdigest()
 def scale(x,name):
-    try: n=Decimal(str(x))*SCALE
-    except Exception as e: raise ValueError("invalid %s: %r"%(name,x)) from e
-    if not n.is_finite() or n!=n.to_integral_value(): raise ValueError("%s has nonzero precision beyond 1e-6: %r"%(name,x))
-    return int(n)
+ text=str(x)
+ sign=-1 if text.startswith("-") else 1
+ if text[:1] in "+-": text=text[1:]
+ whole,sep,fraction=text.partition(".")
+ if whole.isdigit() and (not sep or fraction.isdigit()):
+  if len(fraction)>6 and any(ch!="0" for ch in fraction[6:]): raise ValueError("%s has nonzero precision beyond 1e-6: %r"%(name,x))
+  return sign*(int(whole)*SCALE+int((fraction[:6]+"000000")[:6]))
+ try: n=Decimal(str(x))*SCALE
+ except Exception as e: raise ValueError("invalid %s: %r"%(name,x)) from e
+ if not n.is_finite() or n!=n.to_integral_value(): raise ValueError("%s has nonzero precision beyond 1e-6: %r"%(name,x))
+ return int(n)
+def fingerprint(raw,decoded):
+ if isinstance(raw,str): return hashlib.blake2b(raw.encode(),digest_size=16).digest()
+ return hashlib.blake2b(json.dumps(decoded,sort_keys=True,separators=(",",":"),ensure_ascii=True).encode(),digest_size=16).digest()
 def content(x):
     if isinstance(x,dict): return x
     if isinstance(x,str):
@@ -83,9 +95,9 @@ def convert(source,raw,compact,run,stage_root,batch=50000,stop=None):
     try:e=json.loads(line)
     except json.JSONDecodeError:w.add("non_feed_envelopes",dict(source_id=s,source_ordinal=o,reason="invalid_json"));continue
     if e.get("message_type")!="feed_message":stats["non_feed_envelopes"]+=1;w.add("non_feed_envelopes",dict(source_id=s,source_ordinal=o,message_type=e.get("message_type"),reason="non_feed"));continue
-    c=content(e.get("content"))
+    raw_content=e.get("content");c=content(raw_content)
     if c is None:stats["invalid_content"]+=1;w.add("invalid_content",dict(source_id=s,source_ordinal=o,reason="not_object"));continue
-    fp=hashlib.blake2b(json.dumps(c,sort_keys=True,separators=(",",":")).encode(),digest_size=16).digest()
+    fp=fingerprint(raw_content,c)
     if fp in seen:stats["duplicates_skipped"]+=1;continue
     seen.add(fp);stats["unique_payloads"]+=1;stats["event:"+str(c.get("event_type"))]+=1
     m=c.get("market")
