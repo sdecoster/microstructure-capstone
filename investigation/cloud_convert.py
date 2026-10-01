@@ -130,30 +130,53 @@ def convert(source,raw,compact,run,stage_root,batch=50000,stop=None):
   if json.loads(b.download_as_text())!=manifest:raise RuntimeError("completion manifest verification failed")
   return {"source":source.uri,"status":"completed","rows":dict(w.count),"input_bytes":source.size_bytes,"elapsed_seconds":round(time.monotonic()-started,1)}
  finally:shutil.rmtree(stage,ignore_errors=True)
+def parse_worker_indices(value, worker_count):
+ if not value:return None
+ indices=[int(item) for item in value.split(",") if item]
+ if not indices or len(set(indices))!=len(indices) or any(item<0 or item>=worker_count for item in indices): raise ValueError("worker indices must be unique values from 0 through workers - 1")
+ return indices
+
 def main():
- p=argparse.ArgumentParser();p.add_argument("--raw-bucket",required=True);p.add_argument("--compact-bucket",required=True);p.add_argument("--run-id",required=True);p.add_argument("--staging-root",default="/tmp/poly-archive");p.add_argument("--batch-rows",type=int,default=50000);p.add_argument("--workers",type=int,default=4);p.add_argument("--pilot-source");a=p.parse_args();
+ p=argparse.ArgumentParser()
+ p.add_argument("--raw-bucket",required=True);p.add_argument("--compact-bucket",required=True);p.add_argument("--run-id",required=True)
+ p.add_argument("--staging-root",default="/tmp/poly-archive");p.add_argument("--batch-rows",type=int,default=50000)
+ p.add_argument("--workers",type=int,default=4);p.add_argument("--worker-indices");p.add_argument("--plan-object")
+ p.add_argument("--plan-only",action="store_true");p.add_argument("--pilot-source")
+ a=p.parse_args()
  if a.workers<1:raise ValueError("workers must be positive")
- Path(a.staging_root).mkdir(parents=True,exist_ok=True);sources=list_sources(a.raw_bucket)
+ indices=parse_worker_indices(a.worker_indices,a.workers)
+ Path(a.staging_root).mkdir(parents=True,exist_ok=True)
  if a.pilot_source:
-  found=[x for x in sources if x.uri==a.pilot_source]
+  sources=list_sources(a.raw_bucket);found=[x for x in sources if x.uri==a.pilot_source]
   if len(found)!=1:raise ValueError("pilot source not found exactly once")
   print(json.dumps(convert(found[0],a.raw_bucket,a.compact_bucket,a.run_id,a.staging_root,a.batch_rows),sort_keys=True));return
- plan=build_plan(sources,a.workers)
  from google.cloud import storage
- storage.Client().bucket(a.compact_bucket).blob("runs/%s/plan.json"%a.run_id).upload_from_string(json.dumps(plan,sort_keys=True,indent=2),content_type="application/json")
- work=sorted((Source(**x) for q in plan["workers"] for x in q["sources"]),key=lambda x:(x.date or "",x.hour or "",x.uri),reverse=True)
+ from google.api_core.exceptions import PreconditionFailed
+ client=storage.Client();plan_object=a.plan_object or "runs/%s/plan.json"%a.run_id;blob=client.bucket(a.compact_bucket).blob(plan_object)
+ if blob.exists():
+  plan=json.loads(blob.download_as_text())
+  if len(plan.get("workers",[]))!=a.workers:raise ValueError("existing plan has a different worker count; choose a new --plan-object")
+ else:
+  plan=build_plan(list_sources(a.raw_bucket),a.workers)
+  try:blob.upload_from_string(json.dumps(plan,sort_keys=True,indent=2),content_type="application/json",if_generation_match=0)
+  except PreconditionFailed:plan=json.loads(blob.download_as_text())
+ print(json.dumps({"phase":"plan_ready","plan_object":plan_object,"plan_workers":a.workers,"worker_indices":indices},sort_keys=True),flush=True)
+ if a.plan_only:return
+ selected=plan["workers"] if indices is None else [plan["workers"][item] for item in indices]
+ work=sorted((Source(**x) for group in selected for x in group["sources"]),key=lambda x:(x.date or "",x.hour or "",x.uri),reverse=True)
  total_bytes=sum(x.size_bytes for x in work);started=time.monotonic();done_bytes=0;done_sources=0
  with Manager() as manager:
   stop=manager.Event()
   def request_stop(signum,frame):
    stop.set();print(json.dumps({"phase":"stop_requested","signal":signum,"message":"finishing active source cleanup; completed manifests remain resumable"}),flush=True)
   signal.signal(signal.SIGINT,request_stop);signal.signal(signal.SIGTERM,request_stop)
-  with ProcessPoolExecutor(max_workers=a.workers) as pool:
+  with ProcessPoolExecutor(max_workers=len(selected)) as pool:
    fs=[pool.submit(convert,x,a.raw_bucket,a.compact_bucket,a.run_id,a.staging_root,a.batch_rows,stop) for x in work]
+   sizes={x.uri:x.size_bytes for x in work}
    for f in as_completed(fs):
     result=f.result();print(json.dumps(result,sort_keys=True),flush=True)
     if result.get("status") in ("completed","skipped_valid_completion"):
-     done_sources+=1;done_bytes+=next(x.size_bytes for x in work if x.uri==result["source"])
+     done_sources+=1;done_bytes+=sizes[result["source"]]
      elapsed=time.monotonic()-started;remaining=max(0,round(elapsed*(total_bytes-done_bytes)/done_bytes)) if done_bytes else None
      print(json.dumps({"phase":"run_progress","completed_sources":done_sources,"total_sources":len(work),"completed_input_bytes":done_bytes,"total_input_bytes":total_bytes,"elapsed_seconds":round(elapsed,1),"estimated_remaining_seconds":remaining}),flush=True)
 if __name__=="__main__":main()

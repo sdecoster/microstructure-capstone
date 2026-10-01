@@ -4,7 +4,7 @@ import pytest
 from tempfile import TemporaryDirectory
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"investigation"))
-from cloud_convert import SCALE,Writer,_scale_text,fingerprint,rows,scale
+from cloud_convert import SCALE,Writer,_scale_text,fingerprint,parse_worker_indices,rows,scale
 def test_exact_scale_and_precision_rejection():
  assert scale("0.123456","price")==123456
  assert scale("1","size")==SCALE
@@ -31,3 +31,7 @@ def test_scale_accepts_padding_but_rejects_nonzero_excess_precision():
 def test_scale_cache_keeps_exact_values():
  assert _scale_text("0.500000")==500000
  assert _scale_text("0.500000")==500000
+def test_worker_indices_are_unique_and_bounded():
+ assert parse_worker_indices("0,3,7",8)==[0,3,7]
+ with pytest.raises(ValueError):parse_worker_indices("0,0",8)
+ with pytest.raises(ValueError):parse_worker_indices("8",8)
