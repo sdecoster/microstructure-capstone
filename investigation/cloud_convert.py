@@ -77,11 +77,18 @@ class Writer:
   for k in list(self.b):self.flush(k)
 def cname(run,s):return "runs/%s/completions/%s.json"%(run,s)
 def complete(bucket,run,source,s):
+ from google.api_core.exceptions import NotFound
  b=bucket.blob(cname(run,s))
  if not b.exists():return False
  try:x=json.loads(b.download_as_text())
  except Exception:return False
- return x.get("version")==VERSION and x.get("source")==asdict(source) and bool(x.get("files")) and all(bucket.blob(f["name"]).exists() and bucket.blob(f["name"]).size==f["bytes"] for f in x["files"])
+ if x.get("version")!=VERSION or x.get("source")!=asdict(source) or not x.get("files"):return False
+ for f in x["files"]:
+  output=bucket.blob(f["name"])
+  try:output.reload()
+  except NotFound:return False
+  if output.size!=f["bytes"]:return False
+ return True
 def convert(source,raw,compact,run,stage_root,batch=50000,stop=None):
  if source.kind!="regular_hour" or not source.date:raise ValueError("only classified regular hours are automatically scheduled")
  if stop is not None and stop.is_set():return {"source":source.uri,"status":"stopped"}
