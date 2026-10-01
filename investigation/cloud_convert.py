@@ -124,12 +124,14 @@ def convert(source,raw,compact,run,stage_root,batch=50000,stop=None):
   return {"source":source.uri,"status":"completed","rows":dict(w.count),"input_bytes":source.size_bytes,"elapsed_seconds":round(time.monotonic()-started,1)}
  finally:shutil.rmtree(stage,ignore_errors=True)
 def main():
- p=argparse.ArgumentParser();p.add_argument("--raw-bucket",required=True);p.add_argument("--compact-bucket",required=True);p.add_argument("--run-id",required=True);p.add_argument("--staging-root",default="/tmp/poly-archive");p.add_argument("--batch-rows",type=int,default=50000);p.add_argument("--pilot-source");a=p.parse_args();Path(a.staging_root).mkdir(parents=True,exist_ok=True);sources=list_sources(a.raw_bucket)
+ p=argparse.ArgumentParser();p.add_argument("--raw-bucket",required=True);p.add_argument("--compact-bucket",required=True);p.add_argument("--run-id",required=True);p.add_argument("--staging-root",default="/tmp/poly-archive");p.add_argument("--batch-rows",type=int,default=50000);p.add_argument("--workers",type=int,default=4);p.add_argument("--pilot-source");a=p.parse_args();
+ if a.workers<1:raise ValueError("workers must be positive")
+ Path(a.staging_root).mkdir(parents=True,exist_ok=True);sources=list_sources(a.raw_bucket)
  if a.pilot_source:
   found=[x for x in sources if x.uri==a.pilot_source]
   if len(found)!=1:raise ValueError("pilot source not found exactly once")
   print(json.dumps(convert(found[0],a.raw_bucket,a.compact_bucket,a.run_id,a.staging_root,a.batch_rows),sort_keys=True));return
- plan=build_plan(sources,4)
+ plan=build_plan(sources,a.workers)
  from google.cloud import storage
  storage.Client().bucket(a.compact_bucket).blob("runs/%s/plan.json"%a.run_id).upload_from_string(json.dumps(plan,sort_keys=True,indent=2),content_type="application/json")
  work=[Source(**x) for q in plan["workers"] for x in q["sources"]]
@@ -139,7 +141,7 @@ def main():
   def request_stop(signum,frame):
    stop.set();print(json.dumps({"phase":"stop_requested","signal":signum,"message":"finishing active source cleanup; completed manifests remain resumable"}),flush=True)
   signal.signal(signal.SIGINT,request_stop);signal.signal(signal.SIGTERM,request_stop)
-  with ProcessPoolExecutor(max_workers=4) as pool:
+  with ProcessPoolExecutor(max_workers=a.workers) as pool:
    fs=[pool.submit(convert,x,a.raw_bucket,a.compact_bucket,a.run_id,a.staging_root,a.batch_rows,stop) for x in work]
    for f in as_completed(fs):
     result=f.result();print(json.dumps(result,sort_keys=True),flush=True)
