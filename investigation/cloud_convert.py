@@ -10,28 +10,35 @@ from datetime import datetime, timezone
 from decimal import Decimal
 from pathlib import Path
 from cloud_parallel_plan import Source, build_plan, list_sources
+try:
+ import orjson
+except ImportError:
+ orjson=None
 SCALE=1000000; VERSION=1
 @lru_cache(maxsize=250_000)
 def key(x): return hashlib.blake2b(str(x).encode(),digest_size=16).hexdigest()
-def scale(x,name):
- text=str(x)
+@lru_cache(maxsize=250_000)
+def _scale_text(text):
  sign=-1 if text.startswith("-") else 1
  if text[:1] in "+-": text=text[1:]
  whole,sep,fraction=text.partition(".")
  if whole.isdigit() and (not sep or fraction.isdigit()):
-  if len(fraction)>6 and any(ch!="0" for ch in fraction[6:]): raise ValueError("%s has nonzero precision beyond 1e-6: %r"%(name,x))
+  if len(fraction)>6 and any(ch!="0" for ch in fraction[6:]): raise ValueError("precision")
   return sign*(int(whole)*SCALE+int((fraction[:6]+"000000")[:6]))
- try: n=Decimal(str(x))*SCALE
- except Exception as e: raise ValueError("invalid %s: %r"%(name,x)) from e
- if not n.is_finite() or n!=n.to_integral_value(): raise ValueError("%s has nonzero precision beyond 1e-6: %r"%(name,x))
+ n=Decimal(text)*SCALE
+ if not n.is_finite() or n!=n.to_integral_value(): raise ValueError("precision")
  return int(n)
+def scale(x,name):
+ try:return _scale_text(str(x))
+ except Exception as e:raise ValueError("%s has nonzero precision beyond 1e-6 or is invalid: %r"%(name,x)) from e
+def loads(value): return orjson.loads(value) if orjson is not None else json.loads(value)
 def fingerprint(raw,decoded):
  if isinstance(raw,str): return hashlib.blake2b(raw.encode(),digest_size=16).digest()
  return hashlib.blake2b(json.dumps(decoded,sort_keys=True,separators=(",",":"),ensure_ascii=True).encode(),digest_size=16).digest()
 def content(x):
     if isinstance(x,dict): return x
     if isinstance(x,str):
-        try: x=json.loads(x)
+        try: x=loads(x)
         except json.JSONDecodeError:return None
         return x if isinstance(x,dict) else None
 def base(c,s,o):
@@ -92,7 +99,7 @@ def convert(source,raw,compact,run,stage_root,batch=50000,stop=None):
     stats["outer_messages"]+=1
     if time.monotonic()-last_report >= 15:
      print(json.dumps({"phase":"reading","source":source.uri,"outer_messages":stats["outer_messages"],"unique_payloads":stats["unique_payloads"],"duplicates_skipped":stats["duplicates_skipped"],"elapsed_seconds":round(time.monotonic()-started,1)}),flush=True);last_report=time.monotonic()
-    try:e=json.loads(line)
+    try:e=loads(line)
     except json.JSONDecodeError:w.add("non_feed_envelopes",dict(source_id=s,source_ordinal=o,reason="invalid_json"));continue
     if e.get("message_type")!="feed_message":stats["non_feed_envelopes"]+=1;w.add("non_feed_envelopes",dict(source_id=s,source_ordinal=o,message_type=e.get("message_type"),reason="non_feed"));continue
     raw_content=e.get("content");c=content(raw_content)
@@ -134,7 +141,7 @@ def main():
  plan=build_plan(sources,a.workers)
  from google.cloud import storage
  storage.Client().bucket(a.compact_bucket).blob("runs/%s/plan.json"%a.run_id).upload_from_string(json.dumps(plan,sort_keys=True,indent=2),content_type="application/json")
- work=[Source(**x) for q in plan["workers"] for x in q["sources"]]
+ work=sorted((Source(**x) for q in plan["workers"] for x in q["sources"]),key=lambda x:(x.date or "",x.hour or "",x.uri),reverse=True)
  total_bytes=sum(x.size_bytes for x in work);started=time.monotonic();done_bytes=0;done_sources=0
  with Manager() as manager:
   stop=manager.Event()
