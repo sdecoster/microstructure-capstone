@@ -13,7 +13,7 @@ This is an operations plan, not evidence that any additional production workers 
 
 1. Start `poly-archive-worker-2` and verify its checkout, virtual environment, service-account access, free disk, and quota status.
 2. Run `--pilot-source` for the already completed August 16 09:00 UTC source with its existing pilot run ID. It must return `skipped_valid_completion`, proving resume validation against real GCS objects without rereading raw data.
-3. Convert one ordinary source with a new pilot run ID on worker 2, with unbuffered logging. Check row counts, duplicate and event accounting, output sizes, completion manifest, and disk peak. Do not claim success merely because the process exits zero.
+3. Pull the latest tested `cloud-pipeline` revision and use a new pilot run ID with `--workers 2 --max-sources 2` on worker 2. This exercises the normal process-pool/cancellation path on the two latest sources (August 16 21:00 and 20:00, 774,827,747 compressed bytes total). Use unbuffered logging and a 20-minute runtime cap with graceful SIGTERM first. Check row counts, duplicate and event accounting, output sizes, completion manifests, CPU usage, and memory/disk peaks. The single-source `--pilot-source` path alone does not measure production coordination overhead; see `CLOUD_THROUGHPUT_AUDIT.md`.
 4. Stop worker 2 after the pilot and report measured MB/s, cost rate, and whether standard-disk I/O or memory is limiting.
 
 ## Production cutover gate (separate approval)

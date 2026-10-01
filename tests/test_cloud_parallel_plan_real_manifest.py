@@ -26,3 +26,19 @@ def test_only_regular_hour_paths_are_auto_scheduled():
     assert classify_source("gs://raw/control/urls.tsv", 1) is None
     special = classify_source("gs://raw/x/raw/2026-07-17/recovered.jsonl.zst", 1)
     assert special is not None and special.kind == "nonstandard_raw"
+
+
+def test_bounded_production_pilot_selects_latest_real_sources():
+    from cloud_convert import selected_work
+    import pytest
+    sources = [classify_source('gs://raw/' + row.destination_object, row.size)
+               for row in read_manifest()]
+    plan = build_plan([source for source in sources if source is not None], workers=2)
+    work = selected_work(plan, max_sources=2)
+    assert [(source.date, source.hour) for source in work] == [('2026-08-16', '2100'), ('2026-08-16', '2000')]
+    left = {source.uri for source in selected_work(plan, [0])}
+    right = {source.uri for source in selected_work(plan, [1])}
+    assert not left.intersection(right)
+    assert len(left | right) == 1691
+    with pytest.raises(ValueError):
+        selected_work(plan, max_sources=0)

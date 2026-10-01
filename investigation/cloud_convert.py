@@ -15,6 +15,11 @@ try:
 except ImportError:
  orjson=None
 SCALE=1000000; VERSION=1
+STOP_POLL_RECORDS=1024
+
+def should_stop(stop,ordinal=0):
+ # Manager.Event.is_set is an RPC. Never put one RPC on every input record.
+ return stop is not None and ordinal % STOP_POLL_RECORDS == 0 and stop.is_set()
 @lru_cache(maxsize=250_000)
 def key(x): return hashlib.blake2b(str(x).encode(),digest_size=16).hexdigest()
 @lru_cache(maxsize=250_000)
@@ -41,6 +46,15 @@ def content(x):
         try: x=loads(x)
         except json.JSONDecodeError:return None
         return x if isinstance(x,dict) else None
+
+def decode_feed(raw,seen):
+ # Only fingerprints of previously validated feed objects enter seen.
+ if isinstance(raw,str):
+  fp=fingerprint(raw,None)
+  if fp in seen:return None,fp
+  return content(raw),fp
+ c=content(raw)
+ return c,fingerprint(raw,c) if c is not None else None
 def base(c,s,o):
     m=c.get("market"); m=str(m) if isinstance(m,(str,int)) else None
     return dict(source_id=s,source_ordinal=o,event_timestamp_ms=c.get("timestamp"),market_id=m,market_key=key(m) if m else None)
@@ -101,7 +115,7 @@ def convert(source,raw,compact,run,stage_root,batch=50000,stop=None):
   name=source.uri.split("/",3)[3]
   with client.bucket(raw).blob(name).open("rb") as f, zstd.ZstdDecompressor().stream_reader(f) as z:
    for o,line in enumerate(io.TextIOWrapper(z,encoding="utf8",errors="replace"),1):
-    if stop is not None and stop.is_set():return {"source":source.uri,"status":"stopped","attempt_id":attempt}
+    if should_stop(stop,o):return {"source":source.uri,"status":"stopped","attempt_id":attempt}
     if not line.strip():continue
     stats["outer_messages"]+=1
     if time.monotonic()-last_report >= 15:
@@ -109,10 +123,9 @@ def convert(source,raw,compact,run,stage_root,batch=50000,stop=None):
     try:e=loads(line)
     except json.JSONDecodeError:w.add("non_feed_envelopes",dict(source_id=s,source_ordinal=o,reason="invalid_json"));continue
     if e.get("message_type")!="feed_message":stats["non_feed_envelopes"]+=1;w.add("non_feed_envelopes",dict(source_id=s,source_ordinal=o,message_type=e.get("message_type"),reason="non_feed"));continue
-    raw_content=e.get("content");c=content(raw_content)
-    if c is None:stats["invalid_content"]+=1;w.add("invalid_content",dict(source_id=s,source_ordinal=o,reason="not_object"));continue
-    fp=fingerprint(raw_content,c)
+    raw_content=e.get("content");c,fp=decode_feed(raw_content,seen)
     if fp in seen:stats["duplicates_skipped"]+=1;continue
+    if c is None:stats["invalid_content"]+=1;w.add("invalid_content",dict(source_id=s,source_ordinal=o,reason="not_object"));continue
     seen.add(fp);stats["unique_payloads"]+=1;stats["event:"+str(c.get("event_type"))]+=1
     m=c.get("market")
     if isinstance(m,(str,int)):
@@ -143,14 +156,22 @@ def parse_worker_indices(value, worker_count):
  if not indices or len(set(indices))!=len(indices) or any(item<0 or item>=worker_count for item in indices): raise ValueError("worker indices must be unique values from 0 through workers - 1")
  return indices
 
+def selected_work(plan,indices=None,max_sources=None):
+ if max_sources is not None and max_sources<1:raise ValueError("max sources must be positive")
+ selected=plan["workers"] if indices is None else [plan["workers"][item] for item in indices]
+ work=sorted((Source(**x) for group in selected for x in group["sources"]),key=lambda x:(x.date or "",x.hour or "",x.uri),reverse=True)
+ return work if max_sources is None else work[:max_sources]
+
 def main():
  p=argparse.ArgumentParser()
  p.add_argument("--raw-bucket",required=True);p.add_argument("--compact-bucket",required=True);p.add_argument("--run-id",required=True)
  p.add_argument("--staging-root",default="/tmp/poly-archive");p.add_argument("--batch-rows",type=int,default=50000)
  p.add_argument("--workers",type=int,default=4);p.add_argument("--worker-indices");p.add_argument("--plan-object")
  p.add_argument("--plan-only",action="store_true");p.add_argument("--pilot-source")
+ p.add_argument("--max-sources",type=int,help="bound the normal process-pool path for a concurrency pilot")
  a=p.parse_args()
  if a.workers<1:raise ValueError("workers must be positive")
+ if a.max_sources is not None and (a.max_sources<1 or a.pilot_source):raise ValueError("max sources must be positive and used without pilot-source")
  indices=parse_worker_indices(a.worker_indices,a.workers)
  Path(a.staging_root).mkdir(parents=True,exist_ok=True)
  if a.pilot_source:
@@ -170,7 +191,7 @@ def main():
  print(json.dumps({"phase":"plan_ready","plan_object":plan_object,"plan_workers":a.workers,"worker_indices":indices},sort_keys=True),flush=True)
  if a.plan_only:return
  selected=plan["workers"] if indices is None else [plan["workers"][item] for item in indices]
- work=sorted((Source(**x) for group in selected for x in group["sources"]),key=lambda x:(x.date or "",x.hour or "",x.uri),reverse=True)
+ work=selected_work(plan,indices,a.max_sources)
  total_bytes=sum(x.size_bytes for x in work);started=time.monotonic();done_bytes=0;done_sources=0
  with Manager() as manager:
   stop=manager.Event()

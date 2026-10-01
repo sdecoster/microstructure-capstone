@@ -6,6 +6,41 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"investigation"))
 from cloud_convert import SCALE,Writer,_scale_text,complete,fingerprint,parse_worker_indices,rows,scale
 from cloud_parallel_plan import Source
+
+def test_shutdown_polling_keeps_rpc_off_the_record_hot_path():
+ from cloud_convert import should_stop,STOP_POLL_RECORDS
+ class RequestedStop:
+  def __init__(self):self.calls=0
+  def is_set(self):self.calls+=1;return True
+ stop=RequestedStop()
+ assert should_stop(stop)  # Immediate check before starting a source.
+ for ordinal in range(1,STOP_POLL_RECORDS):
+  assert not should_stop(stop,ordinal)
+ assert stop.calls==1
+ assert should_stop(stop,STOP_POLL_RECORDS)
+ assert stop.calls==2
+
+def test_duplicate_real_payload_is_not_decoded_twice(monkeypatch):
+ import io,json,zstandard
+ import cloud_convert
+ path=ROOT/'data/market_filter_investigation/raw/2026-08-14/0900.jsonl.zst.prefix-67108864'
+ if not path.exists():pytest.skip('real cached feed unavailable')
+ payload=None
+ with path.open('rb') as raw, zstandard.ZstdDecompressor().stream_reader(raw) as decoder:
+  for ordinal,line in enumerate(io.TextIOWrapper(decoder,encoding='utf8')):
+   if ordinal>=1000:break
+   envelope=json.loads(line)
+   candidate=envelope.get('content')
+   if envelope.get('message_type')=='feed_message' and isinstance(candidate,str):
+    try:parsed=json.loads(candidate)
+    except json.JSONDecodeError:continue
+    if isinstance(parsed,dict):payload=candidate;break
+ assert payload is not None
+ decoded,fp=cloud_convert.decode_feed(payload,set())
+ assert decoded==parsed
+ def fail_decode(_):raise AssertionError('duplicate should not be parsed again')
+ monkeypatch.setattr(cloud_convert,'content',fail_decode)
+ assert cloud_convert.decode_feed(payload,{fp})==(None,fp)
 def test_exact_scale_and_precision_rejection():
  assert scale("0.123456","price")==123456
  assert scale("1","size")==SCALE
