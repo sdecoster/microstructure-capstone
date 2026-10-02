@@ -1,6 +1,19 @@
 # Multi-VM cloud conversion runbook
 
-This is an operations plan, not evidence that any additional production workers have started. Keep the raw bucket immutable. The current `ordinary-v1-20260927` four-process job remains on `poly-archive-worker-1` until a deliberate cutover.
+## Live reverse-order run (2026-10-01)
+
+The original four-process job was gracefully stopped. Its completed source manifests remain under `ordinary-v1-20260927`; incomplete source attempts will be retried when reached. Both VMs now run revision `5cb9a35` and the same production run ID using immutable plan `runs/ordinary-v1-20260927/plan-6-workers-reverse-20261001.json`. The converter schedules each VM's selected sources in reverse chronological order.
+
+| VM | Plan indices | Coordinator PID at launch | Log |
+|---|---|---:|---|
+| `poly-archive-worker-1` | `0,1,2,3` | `261903` | `~/poly-archive/logs/ordinary-v1-20260927-reverse-vm1.log` |
+| `poly-archive-worker-2` | `4,5` | `1195` | `~/poly-archive/logs/ordinary-v1-20260927-reverse-vm2.log` |
+
+The six assignments are disjoint. At launch, the six processes were each reading a different August 16 hour at about 90–98% of one CPU; memory and disk had ample headroom. The first large-file period is June 4 and earlier (roughly 5–8 GB per regular source), after a gap from June 5–17. June 18 onward contains 1,014,113,826,124 compressed bytes. The two-worker pilot's measured 2.46 MB/s would take about 4.8 days for those bytes; scaling linearly to six workers yields 1.6 days, so use 2–3 days as an initial working range rather than a firm ETA. Update the estimate from completed input bytes and resource use as this run proceeds.
+
+An hourly Codex heartbeat named `Monitor Polymarket conversion` checks both processes, logs, resource headroom, and the transition into the large-file period. It stays quiet during normal progress and notifies on failures, stalls, low resources, completion, or first entry into June 4 or earlier. This monitor does not change VM state.
+
+The historical preparation and pilot instructions below are retained for provenance. Keep the raw bucket immutable.
 
 ## Prepared state (2026-10-01)
 
