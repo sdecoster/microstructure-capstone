@@ -33,7 +33,22 @@ Reproduce: `py investigation/cloud_hotpath_audit.py --cap 50000 --processes 4 --
 - For raw string payloads already known to be valid, recognize an exact duplicate before inner JSON parsing. Invalid payloads are still audited individually; deduplication remains within one source.
 - Add `--max-sources` to cap the normal production process-pool path. The next cloud pilot must use this path, because the single-source pilot omitted the very coordination overhead that caused trouble.
 
-The running VM has not been restarted or updated with these changes. The cloud pilot remains subject to the user's go-ahead.
+The original production VM is still running its old converter process. The bounded cloud pilot below used the updated code on the second VM.
+
+## Production-path cloud pilot, 2026-10-01
+
+After a successful resume check of the existing `pilot-20260816-0900-v4` output (`skipped_valid_completion` in about 19 seconds), the updated process-pool path converted exactly two August 16 sources with two workers on `poly-archive-worker-2` (`e2-standard-4`). This was run ID `throughput-pilot-491717b-20261001`, commit `491717b`, with `--workers 2 --max-sources 2`.
+
+| Source (UTC) | Raw input bytes | Conversion plus upload time | Parquet files | Parquet bytes |
+|---|---:|---:|---:|---:|
+| 2026-08-16 20:00 | 364,476,453 | 273.5 s | 542 | 73,912,929 |
+| 2026-08-16 21:00 | 410,351,294 | 312.6 s | 591 | 84,949,615 |
+
+The concurrent run finished in 314.9 seconds of wall time, including process startup and the final completion records: 774,827,747 raw bytes, or 2.46 MB/s aggregate (decimal). Worker CPU use was about 95–97% of one CPU each and the manager used about 1%; measured total job CPU was 163% over the complete run. During conversion, the VM had roughly 11 GB of 15 GiB memory available, with no swap and near-zero I/O wait. The maximum resident set reported by `/usr/bin/time` was 2.28 GB for one process; that is not aggregate peak memory.
+
+`investigation/cloud_pilot_validate.py` checked both stored completion records and all 1,133 Parquet files. It verified cloud object size and MD5 metadata against the manifests, downloaded and decoded every file, checked table row totals and numeric-column types/non-nullness, verified all market/asset dimension keys and uniqueness, and sampled fact-to-dimension references. Both sources passed. The completed test VM was stopped after validation; the original production job was not switched over.
+
+This confirms the coordinator bottleneck was removed for these late-August sources and that the production process-pool path completes valid output. It does not establish a whole-archive ETA: the much larger May sources have different message density and memory needs, and the current production log still reflects the old code. At the pilot's aggregate byte rate, the remaining 2.60 TB would take about 12.2 days with only two such workers; linear extrapolation to more workers is a capacity scenario, not a forecast. A bounded May-source test and measured memory at increased concurrency are the next checks before choosing the production worker count and replacing the running job.
 
 ## Assumptions we can change deliberately
 
