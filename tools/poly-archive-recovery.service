@@ -1,0 +1,21 @@
+[Unit]
+Description=Polymarket remaining ordinary archive recovery
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=exec
+User=sam_decoster_baruchmfe
+WorkingDirectory=/home/sam_decoster_baruchmfe/microstructure-capstone
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/sam_decoster_baruchmfe/poly-archive/.venv/bin/python -u investigation/cloud_resume.py --raw-bucket poly-capstone-raw --compact-bucket poly-capstone-compact --run-id ordinary-v1-20260927 --plan-object runs/ordinary-v1-20260927/plan-6-workers-reverse-20261001.json --worker-indices 4,5
+ExecStopPost=+/usr/sbin/shutdown -h now
+Restart=no
+KillMode=mixed
+TimeoutStopSec=120
+RuntimeMaxSec=72h
+MemoryHigh=24G
+MemoryMax=26G
+OOMPolicy=stop
+StandardOutput=append:/home/sam_decoster_baruchmfe/poly-archive/logs/recovery-20261010.log
+StandardError=inherit
